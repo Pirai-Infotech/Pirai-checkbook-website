@@ -32,11 +32,12 @@
 body {
   
   font-family: var(--font-inter);
-  background: linear-gradient(180deg, #E0EBFB, #FFFFFF80, #E0EBFB),
-  url('/Dottedlines.svg');
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+  background: 
+    linear-gradient(180deg, #E0EBFB, #ffffff, #ffffff, #E0EBFB), 
+    url(/Dottedlines.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 h1 {
   font-size: 5.5rem;
