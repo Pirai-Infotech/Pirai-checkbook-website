@@ -3,9 +3,22 @@
 @tailwind utilities;
 
 :root {
+  --font-inter: 'Inter', sans-serif;
+  font-size: 16px;
+  --primary-color: #404040;
+  --secondary-color: #7F53E8;
+  --ptag-color: #4F535B;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,17 +30,182 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
+  font-family: var(--font-inter);
+  background: linear-gradient(180deg, #E0EBFB, #FFFFFF80, #E0EBFB),
+  url('/Dottedlines.svg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+h1 {
+  font-size: 5.5rem;
+  font-weight: 300;
+  color: var(--primary-color);
+  line-height: initial;
+}
+h2 {
+  font-size: calc(1.2vw + 1rem);
+  font-weight: 300;
+  color: var(--primary-color);
+  line-height: initial;
+}
+h1 span, h2 span, h3 span {
+  background: linear-gradient(90deg, #9281FF, #3EA8BD, #89D6FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+h3{
+  font-size: 44px;
+  color: var(--primary-color);
+  font-weight: 300;
+  line-height: initial;
+}
+h4{
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--secondary-color);
+  line-height: initial;
+  position: relative;
+  padding-left: 10px;
+}
+.lin-bf-txt h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.2px;
+  height: 30px;
+  background-color: var(--secondary-color);
+  z-index: -1; 
+}
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ptag-color);
+  font-weight: 300;
+}
+.icon-bg{
+  background-color: #ECF2FB;
+  color: #3EA8BD;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.clr-bdr {
+  border: 1px solid;
+  border-image: linear-gradient(to right, #9281FF, #3EA8BD, #E0FFFF) 1;
+  border-radius: 25px;
+}
+.bg-grad{
+  background: linear-gradient(90deg, #9281FF, #3EA8BD);
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  border-radius: 10px;
+}
+.bg-grad-sec{
+  background: linear-gradient(90deg, #E0EBFB, #FFFFFF00);
+  border-radius: 10px;
+}
+.bg-grad-1{
+  background: linear-gradient(90deg, #e0ebfb 40%, transparent);
+}
+.ant-collapse-item{
+  border-bottom: 1px dashed #7F53E8!important;
+}
+.ant-collapse-content{
+  background-color: unset!important;
+  border-top: unset!important;
+}
+.anticon-minus{
+  background: #89D6FF;
+  color: #fff!important;
+  padding: 10px;
+  border-radius: 50%;
+}
+.anticon-plus{
+  background:#404040;
+  color: #fff!important;
+  padding: 10px;
+  border-radius: 50%;
+}
+.ant-collapse-header{
+  align-items: center!important;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+
+@media only screen and (max-width: 320px) {
+  
+}
+
+
+@media only screen and (max-width: 480px) {
+  h3{
+    font-size: 35px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  
+}
+
+
+@media only screen and (max-width: 1024px) {
+  h2 {
+    font-size: 50px;
+  }
+  h4 {
+    font-size: 1.15em;
+  }
+  p{
+    font-size: 1em;
+  }
+  .no-bdr{
+    border: unset;
+  }
+  .lin-bf-txt h4::before{
+    display: none;
+  }
+  
+}
+
+
+@media only screen and (max-width: 1280px) {
+  
+}
+
+
+@media only screen and (min-width: 1400px) {
+  h3{
+    font-size: 80px;
+  }
+}
+
+
+@media only screen and (min-width: 1600px) {
+  h2 {
+    font-size: 68px;
+  }
+  h3{
+    font-size: 92px;
+  }
+  
 }
