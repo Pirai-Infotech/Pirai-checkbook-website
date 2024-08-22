@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import logo from "@/public/checkbook-logo.svg";
 import Image from "next/image";
 import CTAButton from "../ui/CTAButton";
 import signupArrow from "@/public/signup-arrow.svg";
+import ReadytoGetStart from "../ui/ReadytoGetStart";
 
 function page() {
   return (
@@ -44,7 +46,7 @@ function page() {
                 </p>
               </div>
             </div>
-            <div className="lg:w-[50%] shadow-2xl sm:px-0 rounded-[60px] sm:rounded-[0px_118px_118px_0px] lg:rounded-[118px_0px_0px_118px] bg-[#FFFFFF]">
+            <div className="lg:w-[50%] shadow-xl sm:px-0 rounded-[60px] sm:rounded-[0px_118px_118px_0px] lg:rounded-[118px_0px_0px_118px] bg-[#FFFFFF]">
               <div className="px-8 py-8 md:mx-8 lg:mx-[80px] mt-8 md:mt-12 lg:mt-[80px] mb-8 md:mb-12 lg:mb-[80px]">
                 <p className="font-inter text-[24px] md:text-[30px] lg:text-[40px] font-normal leading-[28px] md:leading-[36px] lg:leading-[48.41px] text-left text-[#282828] mx-auto lg:mx-0">
                   "Our mission is to solve the challenges of push payments by
@@ -147,6 +149,7 @@ function page() {
           content={"Join the Team"}
         />
       </div>
+      <ReadytoGetStart />
     </div>
   );
 }

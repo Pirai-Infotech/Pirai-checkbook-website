@@ -30,10 +30,8 @@
 }
 
 body {
-  
-  font-family: var(--font-inter);
-  background: linear-gradient(180deg, #E0EBFB, #FFFFFF80, #E0EBFB),
-  url('/Dottedlines.svg');
+font-family: var(--font-inter);
+background: linear-gradient(180deg, #E0EBFB, #FFFFFF, #ffffff, #E0EBFB);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
@@ -148,13 +146,24 @@ a:hover {
     text-wrap: balance;
   }
 }
-
 .borderimage {
-  border-image: linear-gradient(179.49deg, #9281FF 0.44%, #3EA8BD 59.42%, #E0FFFF 99.56%);
-  border-image-slice: 1;
-  border-image-repeat: stretch;
+  position: relative;
+  border-radius: 55px; 
 }
 
+.borderimage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 2.1px;
+  background: linear-gradient(179.49deg, #9281FF 0.44%, #3EA8BD 59.42%, #E0FFFF 99.56%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude; 
+}
 
 @media only screen and (max-width: 320px) {
   
