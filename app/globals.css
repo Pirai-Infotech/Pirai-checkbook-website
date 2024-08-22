@@ -31,3 +31,9 @@ body {
     text-wrap: balance;
   }
 }
+
+.borderimage {
+  border-image: linear-gradient(179.49deg, #9281FF 0.44%, #3EA8BD 59.42%, #E0FFFF 99.56%);
+  border-image-slice: 1;
+  border-image-repeat: stretch;
+}
