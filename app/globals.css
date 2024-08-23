@@ -30,14 +30,11 @@
 }
 
 body {
-  
-  font-family: var(--font-inter);
-  background: 
-    linear-gradient(180deg, #E0EBFB, #ffffff, #ffffff, #E0EBFB), 
-    url(/Dottedlines.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+font-family: var(--font-inter);
+background: linear-gradient(180deg, #E0EBFB, #FFFFFF, #ffffff, #E0EBFB);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 }
 h1 {
   font-size: 5.5rem;
@@ -70,7 +67,6 @@ h4{
   color: var(--secondary-color);
   line-height: initial;
   position: relative;
-  padding-left: 10px;
 }
 .lin-bf-txt h4::before {
   content: "";
@@ -149,8 +145,39 @@ a:hover {
     text-wrap: balance;
   }
 }
-
-
+.grad-border{
+  position: relative;
+}
+.grad-border::before   {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: linear-gradient(179.49deg, #9281FF 0.44%, #3EA8BD 59.42%, #E0FFFF 99.56%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude; 
+}
+.borderbutton {
+  border-radius: 0 60px 60px 60px;
+}
+.borderbutton::before  {
+  padding: 1.5px;
+}
+.bdr-sm-rds {
+  border-radius: 25px;
+}
+.bdr-sm-rds::before  {
+  padding: 1.5px;
+}
+.borderimage {
+  border-radius: 55px; 
+}
+.borderimage::before   {
+  padding: 2.1px;
+}
 
 @media only screen and (max-width: 320px) {
   
@@ -165,32 +192,36 @@ a:hover {
 
 
 @media only screen and (max-width: 768px) {
-  
+  .no-bdr.grad-border::before{
+    content: unset!important;
+  }
 }
 
 
 @media only screen and (max-width: 1024px) {
-  h2 {
-    font-size: 50px;
+  .no-bdr.grad-border::before{
+    background: #C4DCFF;
   }
+ 
   h4 {
-    font-size: 1.15em;
+    font-size: 22px;
   }
   p{
     font-size: 1em;
   }
-  .no-bdr{
-    border: unset;
-  }
-  .lin-bf-txt h4::before{
-    display: none;
-  }
+ 
   
 }
 
 
 @media only screen and (max-width: 1280px) {
+  h2 {
+    font-size: 50px;
+  }
   
+  .lin-bf-txt h4::before{
+    display: none;
+  }
 }
 
 
