@@ -4,57 +4,76 @@ import CTAButton from "./CTAButton";
 import payico from "@/public/pay-ico.svg";
 import codeico from "@/public/code-ico.svg";
 import signupArrow from "@/public/signup-arrow.svg";
+import signupArrowcolor from "@/public/signup-arrow-purple.svg";
 
 function ReadytoGetStart() {
   return (
-    <div className="flex flex-col lg:flex-row items-center px-7 md:px-10 gap-8">
-      <div className="md:p-7 clr-bdr no-bdr flex-grow-1">
-        <div className="bg-[#fff] rounded-[30px] p-5 md:p-20">
-          <h2 className="text-center md:text-left">
+    <div className="flex flex-col xl:flex-row items-center px-7 md:px-10 gap-8">
+      <div className="lg:p-7 grad-border bdr-sm-rds no-bdr flex-grow-1">
+        <div className="bg-[#fff] rounded-[30px] py-10 px-5 md:p-20">
+          <h2 className="text-center xl:text-left">
             Ready to get <br />
             <span>started?</span>
           </h2>
-          <p className="text-center md:text-left p-5">
+          <p className="text-center lg:text-left p-5">
             Explore Checkbook, or create an account instantly and start sending
             payments. You can also contact us to design a custom package for
             your business.
           </p>
-          <div className="flex flex-col lg:flex-row gap-4 w-[55%] m-auto">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#3D77EB] to-[#D289FF]"}
               textColor={"text-[#fff]"}
               content={"Create Account"}
+              classname={"w-[220px]"}
             />
             <CTAButton
-              icon={signupArrow}
-              backgroundType={"bg-gradient-to-r"}
-              backgroundColor={"from-[#3D77EB] to-[#D289FF]"}
-              textColor={"text-[#fff]"}
+              icon={signupArrowcolor}
+              backgroundType={""}
+              backgroundColor={""}
+              textColor={"text-[#404040]"}
+              classname={"grad-border borderbutton w-[220px]"}
               content={"Contact Sales"}
             />
           </div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-8 lin-bf-txt">
-        <div className="p-7 clr-bdr">
-          <div className="flex flex-row md:flex-col items-center md:items-start gap-5">
+        <div className="py-7 px-10 grad-border bdr-sm-rds">
+          <div className="flex flex-row xl:flex-col  items-center xl:items-start gap-5">
             <Image src={payico} alt="What you Pay" />
-            <h4 className="xl:w-[70%]">Always know what you pay</h4>
+            <h4 className="xl:w-[70%] lg:pl-4">Always know what you pay</h4>
           </div>
-          <p className="min-h-[120px]">
+          <p className="py-10">
             Integrated per-transaction pricing with no hidden fees.
           </p>
+          <CTAButton
+            icon={signupArrowcolor}
+            backgroundType={""}
+            backgroundColor={""}
+            textColor={"text-[#404040]"}
+            classname={"grad-border borderbutton w-[220px]"}
+            content={"Pricing Details"}
+          />
         </div>
-        <div className="p-7 clr-bdr">
-          <div className="flex flex-row md:flex-col items-center md:items-start gap-5">
+        <div className="py-7 px-10 grad-border bdr-sm-rds">
+          <div className="flex flex-row xl:flex-col  items-center xl:items-start gap-5">
             <Image src={codeico} alt="What you Pay" />
-            <h4 className="xl:w-[70%]">Start your integration</h4>
+            <h4 className="xl:w-[70%] lg:pl-4">Start your integration</h4>
           </div>
-          <p className="min-h-[120px]">
+          <p className="py-10">
             Get up and running with Checkbook in as little as 10 minutes.
           </p>
+          <CTAButton
+            icon={signupArrowcolor}
+            backgroundType={""}
+            backgroundColor={""}
+            textColor={"text-[#404040]"}
+            classname={"grad-border borderbutton w-[220px]"}
+            content={"API Reference"}
+          />
         </div>
       </div>
     </div>

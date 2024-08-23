@@ -67,7 +67,6 @@ h4{
   color: var(--secondary-color);
   line-height: initial;
   position: relative;
-  padding-left: 10px;
 }
 .lin-bf-txt h4::before {
   content: "";
@@ -146,12 +145,10 @@ a:hover {
     text-wrap: balance;
   }
 }
-.borderimage {
+.grad-border{
   position: relative;
-  border-radius: 55px; 
 }
-
-.borderimage::before {
+.grad-border::before   {
   content: '';
   position: absolute;
   top: 0;
@@ -159,10 +156,27 @@ a:hover {
   right: 0;
   bottom: 0;
   border-radius: inherit;
-  padding: 2.1px;
   background: linear-gradient(179.49deg, #9281FF 0.44%, #3EA8BD 59.42%, #E0FFFF 99.56%);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude; 
+}
+.borderbutton {
+  border-radius: 0 60px 60px 60px;
+}
+.borderbutton::before  {
+  padding: 1.5px;
+}
+.bdr-sm-rds {
+  border-radius: 25px;
+}
+.bdr-sm-rds::before  {
+  padding: 1.5px;
+}
+.borderimage {
+  border-radius: 55px; 
+}
+.borderimage::before   {
+  padding: 2.1px;
 }
 
 @media only screen and (max-width: 320px) {
@@ -178,32 +192,36 @@ a:hover {
 
 
 @media only screen and (max-width: 768px) {
-  
+  .no-bdr.grad-border::before{
+    content: unset!important;
+  }
 }
 
 
 @media only screen and (max-width: 1024px) {
-  h2 {
-    font-size: 50px;
+  .no-bdr.grad-border::before{
+    background: #C4DCFF;
   }
+ 
   h4 {
-    font-size: 1.15em;
+    font-size: 22px;
   }
   p{
     font-size: 1em;
   }
-  .no-bdr{
-    border: unset;
-  }
-  .lin-bf-txt h4::before{
-    display: none;
-  }
+ 
   
 }
 
 
 @media only screen and (max-width: 1280px) {
+  h2 {
+    font-size: 50px;
+  }
   
+  .lin-bf-txt h4::before{
+    display: none;
+  }
 }
 
 
