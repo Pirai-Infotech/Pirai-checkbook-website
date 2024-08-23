@@ -50,8 +50,8 @@ function page() {
                 <div className="lg:w-[50%] sm:px-0 rounded-[60px] sm:rounded-[0px_118px_118px_0px] lg:rounded-[118px_0px_0px_118px] bg-[#FFFFFF]">
               <div className="px-8 py-8 md:mx-8 lg:mx-[80px] mt-8 md:mt-12 lg:mt-[80px] mb-8 md:mb-12 lg:mb-[80px]">
                 <p className="font-inter text-[25px] md:text-[30px] lg:text-[40px] font-normal leading-[33px] md:leading-[36px] lg:leading-[48.41px] text-left text-[#282828] mx-auto lg:mx-0">
-                  "Our mission is to solve the challenges of push payments by
-                  building a payouts platform for the digital age."
+                &quot;Our mission is to solve the challenges of push payments by
+                  building a payouts platform for the digital age.&quot;
                 </p>
                 <p className="font-inter text-[20px] md:text-[23px] lg:text-[27px] font-normal text-left text-[#7F53E8] mt-6 md:mt-8 lg:mt-10">
                   PJ Gupta
