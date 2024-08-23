@@ -43,7 +43,8 @@ h1 {
   line-height: initial;
 }
 h2 {
-  font-size: calc(1.2vw + 1rem);
+  /* font-size: calc(1.2vw + 1rem); */
+  font-size: 50px;
   font-weight: 300;
   color: var(--primary-color);
   line-height: initial;
@@ -209,19 +210,16 @@ a:hover {
   p{
     font-size: 1em;
   }
+  .lin-bf-txt h4::before{
+    display: none;
+  }
  
   
 }
 
 
 @media only screen and (max-width: 1280px) {
-  h2 {
-    font-size: 50px;
-  }
   
-  .lin-bf-txt h4::before{
-    display: none;
-  }
 }
 
 

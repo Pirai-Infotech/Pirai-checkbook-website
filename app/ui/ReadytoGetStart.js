@@ -9,18 +9,18 @@ import signupArrowcolor from "@/public/signup-arrow-purple.svg";
 function ReadytoGetStart() {
   return (
     <div className="flex flex-col xl:flex-row items-center px-7 md:px-10 gap-8">
-      <div className="lg:p-7 grad-border bdr-sm-rds no-bdr flex-grow-1">
-        <div className="bg-[#fff] rounded-[30px] py-10 px-5 md:p-20">
+      <div className="lg:p-7 grad-border bdr-sm-rds no-bdr flex-grow-1 xl:w-[60%]">
+        <div className="bg-[#fff] rounded-[30px] py-10 px-5 2xl:p-[100px]">
           <h2 className="text-center xl:text-left">
             Ready to get <br />
             <span>started?</span>
           </h2>
-          <p className="text-center lg:text-left p-5">
+          <p className="text-center lg:text-left p-5 xl:px-0">
             Explore Checkbook, or create an account instantly and start sending
             payments. You can also contact us to design a custom package for
             your business.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-center xl:justify-start">
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
