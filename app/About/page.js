@@ -76,7 +76,7 @@ function page() {
           </div>
         </div>
         <div className="mt-10 lg:mt-28 sm:w-[50%] lg:w-auto mb-10 flex justify-center lg:px-8 xl:px-0 sm:pr-8">
-          <div className="rounded-[55px] w-[1299px] p-[40px] sm:p-[65px] border-2 border-transparent borderimage">
+          <div className="rounded-[55px] w-[1299px] p-[40px] sm:p-[65px] border-2 border-transparent grad-border borderimage">
             <h2 className="font-inter text-[27px] font-normal leading-[32.68px] text-left text-[#282828]">
               Our Story
             </h2>
