@@ -3,6 +3,7 @@ import Image from "next/image";
 import CTAButton from "./CTAButton";
 import payico from "@/public/pay-ico.svg";
 import codeico from "@/public/code-ico.svg";
+import signupArrow from "@/public/signup-arrow.svg";
 
 function ReadytoGetStart() {
   return (
@@ -13,11 +14,27 @@ function ReadytoGetStart() {
             Ready to get <br />
             <span>started?</span>
           </h2>
-          <p className="text-center md:text-left">
+          <p className="text-center md:text-left p-5">
             Explore Checkbook, or create an account instantly and start sending
             payments. You can also contact us to design a custom package for
             your business.
           </p>
+          <div className="flex flex-col lg:flex-row gap-4 w-[55%] m-auto">
+            <CTAButton
+              icon={signupArrow}
+              backgroundType={"bg-gradient-to-r"}
+              backgroundColor={"from-[#3D77EB] to-[#D289FF]"}
+              textColor={"text-[#fff]"}
+              content={"Create Account"}
+            />
+            <CTAButton
+              icon={signupArrow}
+              backgroundType={"bg-gradient-to-r"}
+              backgroundColor={"from-[#3D77EB] to-[#D289FF]"}
+              textColor={"text-[#fff]"}
+              content={"Contact Sales"}
+            />
+          </div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-8 lin-bf-txt">
