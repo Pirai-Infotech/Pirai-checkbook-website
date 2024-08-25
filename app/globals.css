@@ -31,18 +31,20 @@
 
 body {
 font-family: var(--font-inter);
-background: linear-gradient(180deg, #E0EBFB, #FFFFFF, #ffffff, #E0EBFB);
+background:  linear-gradient(180deg, #E0EBFB, #FFFFFF, #FFFFFF, #E0EBFB),
+url('/bg_dot_lines.svg') no-repeat center center;
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 }
-h1 {
+/* h1 {
   font-size: 5.5rem;
+  font-size: 50px;
   font-weight: 300;
   color: var(--primary-color);
   line-height: initial;
-}
-h2 {
+} */
+h1, h2 {
   /* font-size: calc(1.2vw + 1rem); */
   font-size: 50px;
   font-weight: 300;
@@ -118,6 +120,9 @@ a:hover {
 .bg-grad-1{
   background: linear-gradient(90deg, #e0ebfb 40%, transparent);
 }
+.btn-bg-grad{
+  background: linear-gradient(90deg, #9281FF, #3EA8BD, #89D6FF);
+}
 .ant-collapse-item{
   border-bottom: 1px dashed #7F53E8!important;
 }
@@ -172,6 +177,7 @@ a:hover {
 }
 .bdr-sm-rds::before  {
   padding: 1.5px;
+  z-index: -1;
 }
 .borderimage {
   border-radius: 55px; 
@@ -186,6 +192,9 @@ a:hover {
 
 
 @media only screen and (max-width: 480px) {
+  h1{
+    font-size: 50px;
+  }
   h3{
     font-size: 35px;
   }
@@ -203,8 +212,7 @@ a:hover {
   .no-bdr.grad-border::before{
     background: #C4DCFF;
   }
- 
-  h4 {
+ h4 {
     font-size: 22px;
   }
   p{
@@ -223,19 +231,34 @@ a:hover {
 }
 
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (max-width: 1599px) {
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    font-size: 50px;
+  }
   h3{
-    font-size: 80px;
+    font-size: 40px;
+  }
+  h4{
+    font-size: 18px;
+  }
+  p{
+    font-size: 14px;
   }
 }
 
 
 @media only screen and (min-width: 1600px) {
+  h1{
+    font-size: 88px;
+  }
   h2 {
     font-size: 68px;
   }
   h3{
-    font-size: 92px;
+    font-size: 44px;
   }
   
 }
