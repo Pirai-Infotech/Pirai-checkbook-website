@@ -160,11 +160,29 @@ a:hover {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude; 
 }
+.grad-border-compliance{
+  position: relative;
+}
+.grad-border-compliance::before   {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: linear-gradient(300.49deg, #9281FF 0.44%, #3EA8BD 59.42%, #E0FFFF 99.56%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude; 
+}
 .borderbutton {
   border-radius: 0 60px 60px 60px;
 }
 .borderbutton::before  {
   padding: 1.5px;
+}
+.bdr-compliance::before {
+  padding: 2.1px;
 }
 .bdr-sm-rds {
   border-radius: 25px;
