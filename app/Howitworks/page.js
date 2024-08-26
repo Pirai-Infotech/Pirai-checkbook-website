@@ -88,9 +88,7 @@ function page() {
       <section className="py-10">
         <Faq />
       </section>
-      <section className="w-[90%] m-auto">
         <ReadytoGetStart />
-      </section>
     </div>
   );
 }

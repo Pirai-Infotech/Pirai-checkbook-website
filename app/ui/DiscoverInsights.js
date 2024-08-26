@@ -1,4 +1,6 @@
 import React from "react";
+import CTAButton from "./CTAButton";
+import signupArrow from "@/public/signup-arrow.svg";
 
 function DiscoverInsights() {
   return (
@@ -16,6 +18,15 @@ function DiscoverInsights() {
             <p className="border-l-2 border-[#9180FF] pl-4 font-[500] text-[#404040] text-[18px] xl:text-[14px] 2xl:text-[28px]">
               FinTech Funding and Valuation versus Demand and Supply
             </p>
+            <div className="pl-4 pt-4">
+            <CTAButton
+              icon={signupArrow}
+              backgroundType={"bg-gradient-to-r"}
+              backgroundColor={"from-[#9281FF] to-[#89D6FF]"}
+              textColor={"text-[#FFF]"}
+              content={"Read More"}
+            />
+            </div>
           </div>
         </div>
         <div className="flex flex-col flex-1 gap-7">
@@ -28,6 +39,15 @@ function DiscoverInsights() {
               <p className="border-l-2 border-[#9180FF] pl-4 font-[500] text-[#404040] text-[18px] xl:text-[14px] 2xl:text-[28px]">
                 FinTech Funding and Valuation versus Demand and Supply
               </p>
+              <div className="pl-4 pt-4">
+            <CTAButton
+              icon={signupArrow}
+              backgroundType={"bg-gradient-to-r"}
+              backgroundColor={"from-[#9281FF] to-[#89D6FF]"}
+              textColor={"text-[#FFF]"}
+              content={"Read More"}
+            />
+            </div>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row ">
@@ -39,6 +59,15 @@ function DiscoverInsights() {
               <p className="border-l-2 border-[#9180FF] pl-4 font-[500] text-[#404040] text-[18px] xl:text-[14px] 2xl:text-[28px]">
                 FinTech Funding and Valuation versus Demand and Supply
               </p>
+              <div className="pl-4 pt-4">
+            <CTAButton
+              icon={signupArrow}
+              backgroundType={"bg-gradient-to-r"}
+              backgroundColor={"from-[#9281FF] to-[#89D6FF]"}
+              textColor={"text-[#FFF]"}
+              content={"Read More"}
+            />
+            </div>
             </div>
           </div>
         </div>
