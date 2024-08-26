@@ -53,7 +53,7 @@ function page() {
               <p className="py-2 mt-2 lg:pl-4 text-sm sm:text-base lg:text-lg">
                 A SOC 1 Report (System and Organization Controls Report) is a
                 report on Controls at a Service Organization which are relevant
-                to user entities' internal control over financial reporting.
+                to user entities&apos; internal control over financial reporting.
               </p>
             </div>
           </div>
