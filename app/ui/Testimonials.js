@@ -64,7 +64,7 @@ const CustomCarousel = () => {
         infinite={true}
         itemClass="carousel-item"
       >
-        {carouselItems.map((item, index) => (
+        {carouselItems?.map((item, index) => (
           <div
             key={index}
             className="item border-[1px] border-[#afafaf] rounded-lg p-[20px] w-[450px] 2xl:w-[520px] h-[340px] 2xl:h-[400px]"
