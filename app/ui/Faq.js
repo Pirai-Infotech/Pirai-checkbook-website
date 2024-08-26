@@ -1,0 +1,80 @@
+import React from "react";
+import { Collapse } from "antd";
+import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
+
+const { Panel } = Collapse;
+
+const expandIcon = ({ isActive }) =>
+  isActive ? <MinusOutlined /> : <PlusOutlined />;
+
+const questions = [
+  {
+    question: "How de I verify my bank?",
+    answer:
+      "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
+    ctaText: "Read More",
+    ctaLink: "/",
+  },
+  {
+    question: "How long does it take to receive funds?",
+    answer:
+      "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
+    ctaText: "Read More",
+    ctaLink: "/",
+  },
+  {
+    question: "How does Checkbook.io keep customer data secure?",
+    answer:
+      "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
+    ctaText: "Read More",
+    ctaLink: "/",
+  },
+  {
+    question: "How do I increase my limits?",
+    answer:
+      "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
+    ctaText: "Read More",
+    ctaLink: "/",
+  },
+  {
+    question: "How do I add a different bank account?",
+    answer:
+      "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
+    ctaText: "Read More",
+    ctaLink: "/",
+  },
+];
+const defaultActiveKey = [0];
+const Faq = () => {
+  return (
+    <div className="w-[90%] lg:w-[80%] m-auto rounded-[20px] sm:rounded-[80px] bg-grad-1 px-8 py-20 md:p-20 ">
+      <h3 className="text-center pb-10">Frequently Asked Questions</h3>
+      <Collapse
+        expandIcon={expandIcon}
+        expandIconPosition="right"
+        className="border-0 bg-[unset]"
+        defaultActiveKey={defaultActiveKey}
+      >
+        {questions.map((item, index) => (
+          <Panel
+            className="text-[#404040] text-[20px] md:text-[24px] font-[400]"
+            header={item.question}
+            key={index}
+          >
+            <p>{item.answer}</p>
+            <a
+              className="text-[18px] text-[#7F53E8] btn btn-primary"
+              href={item.ctaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {item.ctaText}
+            </a>
+          </Panel>
+        ))}
+      </Collapse>
+    </div>
+  );
+};
+
+export default Faq;
