@@ -3,7 +3,6 @@ import React from "react";
 import signupArrowcolor from "../../public/signup-arrow.svg";
 import Image from "next/image";
 import CTAButton from "../ui/CTAButton";
-import signupArrow from "@/public/signup-arrow.svg";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 import Faq from "../ui/Faq";

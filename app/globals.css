@@ -208,22 +208,6 @@ a:hover {
 }
 
 
-@media only screen and (max-width: 1024px) {
-  .no-bdr.grad-border::before{
-    background: #C4DCFF;
-  }
- h4 {
-    font-size: 22px;
-  }
-  p{
-    font-size: 1em;
-  }
-  .lin-bf-txt h4::before{
-    display: none;
-  }
- 
-  
-}
 
 
 @media only screen and (max-width: 1280px) {
@@ -262,3 +246,18 @@ a:hover {
   }
   
 }
+@media only screen and (max-width: 1024px) {
+  .no-bdr.grad-border::before{
+    background: #C4DCFF;
+  }
+ h4 {
+    font-size: 22px;
+  }
+  p{
+    font-size: 1em;
+  }
+  .lin-bf-txt h4::before{
+    display: none;
+  }
+}
+
