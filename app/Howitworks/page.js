@@ -56,7 +56,7 @@ function page() {
         </div>
       </section>
       <section className="w-[90%] lg:w-[70%] m-auto py-10 flex flex-wrap items-start lg:justify-center gap-5 lg:gap-3">
-        {sections.map((section, index) => (
+        {sections?.map((section, index) => (
           <div
             key={index}
             className={`py-7 px-10 lg:px-5 grad-border bdr-sm-rds relative ${

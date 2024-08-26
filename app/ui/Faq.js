@@ -55,7 +55,7 @@ const Faq = () => {
         className="border-0 bg-[unset]"
         defaultActiveKey={defaultActiveKey}
       >
-        {questions.map((item, index) => (
+        {questions?.map((item, index) => (
           <Panel
             className="text-[#404040] text-[20px] md:text-[24px] font-[400]"
             header={item.question}

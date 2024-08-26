@@ -60,7 +60,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/Mailed"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Mail
@@ -126,7 +126,7 @@ function Footer({ contactFormText }) {
               <ul>
                 <li>
                   <Link
-                    href=""
+                    href="/About"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     About Us
