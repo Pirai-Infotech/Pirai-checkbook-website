@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Verticalhover({ items, imageSrc }) {
   return (
-    <div className="flex flex-row items-center gap-8 py-10 pl-[10%]">
+    <div className="flex flex-row items-center gap-2 lg:gap-8 py-10 pl-[2%] lg:pl-[10%]">
       <div>
         {items.map((item, index) => (
           <div
@@ -13,7 +13,7 @@ function Verticalhover({ items, imageSrc }) {
             <h4 className="lg:pl-4 text-[#404040] 2xl:text-[40px] group-hover:text-[#7F53E7]">
               {`0${index + 1}`}
             </h4>
-            <div className="group-hover:border-l-2 border-[#7F53E7] pl-4">
+            <div className="lg:border-l-2 border-[#40404020] group-hover:border-[#7F53E7] lg:pl-4">
               <h4 className="text-[#404040] 2xl:text-[40px] group-hover:text-[#7F53E7]">
                 {item.heading}
               </h4>
@@ -25,7 +25,11 @@ function Verticalhover({ items, imageSrc }) {
         ))}
       </div>
       <div className="flex-grow-1">
-        <Image src={imageSrc} alt="Printable Check" />
+        <Image
+          src={imageSrc}
+          alt="Printable Check"
+          className="h-[500px] lg:h-[100%] object-left object-cover"
+        />
       </div>
     </div>
   );
