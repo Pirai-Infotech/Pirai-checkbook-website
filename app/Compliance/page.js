@@ -5,6 +5,8 @@ import Link from "next/link";
 import topRightarrow from "@/public/topRight.svg";
 import compliance from "@/public/complianceImg.svg";
 import complianceMobile from "@/public/complianceMobile.svg";
+import ReadytoGetStart from "../ui/ReadytoGetStart";
+import Faq from "../ui/Faq";
 
 function page() {
   return (
@@ -119,6 +121,12 @@ function page() {
             <Image src={complianceMobile} alt="compliance" />
           </div>
         </div>
+      </section>
+      <section className="mt-14 md:mt-20 md:px-4 lg:px-0 lg:mt-28">
+      <ReadytoGetStart />
+      </section>
+      <section className="mt-14 md:mt-20 md:px-4 lg:px-0 lg:mt-28">
+      <Faq />
       </section>
     </div>
   );
