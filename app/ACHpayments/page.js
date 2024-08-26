@@ -52,7 +52,7 @@ function page() {
             With Checkbook’s ACH direct deposit option, you can send funds
             directly to your recipient’s bank account - zero friction for your
             recipients. Simply provide the routing and account number of the
-            destination account, and we'll take care of the rest.
+            destination account, and we&apos;ll take care of the rest.
           </p>
           <div className="flex flex-row pt-10 gap-4 items-center justify-center xl:justify-start">
             <CTAButton

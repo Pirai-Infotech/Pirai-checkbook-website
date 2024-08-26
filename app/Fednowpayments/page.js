@@ -92,7 +92,7 @@ function page() {
           </h3>
           <p className="text-center px-10">
             Our Digital Check solution makes payments quick and easy. All you
-            need is the recipient's name, email, and the amount - that's it!
+            need is the recipient&apos;s name, email, and the amount - that&apos;s it!
             Recipients receive their Digital Check via email, where they can
             verify their bank account instantly for deposit.
           </p>
