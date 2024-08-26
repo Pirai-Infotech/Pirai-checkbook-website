@@ -8,40 +8,40 @@ import signupArrowcolor from "@/public/signup-arrow-purple.svg";
 
 function ReadytoGetStart() {
   return (
-    <div className="flex flex-col xl:flex-row items-center px-7 md:px-10 gap-8">
-      <div className="lg:p-7 grad-border bdr-sm-rds no-bdr flex-grow-1">
-        <div className="bg-[#fff] rounded-[30px] py-10 px-5 md:p-20">
+    <div className="flex flex-col lg:flex-row items-center gap-8">
+      <div className="lg:p-7 grad-border bdr-sm-rds no-bdr flex-grow-1 xl:w-[60%]">
+        <div className="bg-[#fff] rounded-[30px] py-10 px-5 2xl:p-[100px]">
           <h2 className="text-center xl:text-left">
             Ready to get <br />
             <span>started?</span>
           </h2>
-          <p className="text-center lg:text-left p-5">
+          <p className="text-center lg:text-left p-5 xl:px-0">
             Explore Checkbook, or create an account instantly and start sending
             payments. You can also contact us to design a custom package for
             your business.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-center xl:justify-start">
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#3D77EB] to-[#D289FF]"}
               textColor={"text-[#fff]"}
               content={"Create Account"}
-              classname={"w-[220px]"}
+              classname={""}
             />
             <CTAButton
               icon={signupArrowcolor}
               backgroundType={""}
               backgroundColor={""}
               textColor={"text-[#404040]"}
-              classname={"grad-border borderbutton w-[220px]"}
+              classname={"grad-border borderbutton "}
               content={"Contact Sales"}
             />
           </div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-8 lin-bf-txt">
-        <div className="py-7 px-10 grad-border bdr-sm-rds">
+        <div className="py-7 px-10  grad-border bdr-sm-rds">
           <div className="flex flex-row xl:flex-col  items-center xl:items-start gap-5">
             <Image src={payico} alt="What you Pay" />
             <h4 className="xl:w-[70%] lg:pl-4">Always know what you pay</h4>
@@ -54,7 +54,7 @@ function ReadytoGetStart() {
             backgroundType={""}
             backgroundColor={""}
             textColor={"text-[#404040]"}
-            classname={"grad-border borderbutton w-[220px]"}
+            classname={"grad-border borderbutton "}
             content={"Pricing Details"}
           />
         </div>
@@ -71,7 +71,7 @@ function ReadytoGetStart() {
             backgroundType={""}
             backgroundColor={""}
             textColor={"text-[#404040]"}
-            classname={"grad-border borderbutton w-[220px]"}
+            classname={"grad-border borderbutton "}
             content={"API Reference"}
           />
         </div>
