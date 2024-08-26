@@ -52,7 +52,11 @@ function page() {
           </p>
         </div>
         <div className="flex-1">
-          <VideoWithThumbnail />
+          <VideoWithThumbnail
+            videoUrl="/path-to-your-video.mp4"
+            videothumbnail="/Videothumbnail.svg"
+            alt="VideoThumbnail"
+          />
         </div>
       </section>
       <section className="w-[90%] lg:w-[70%] m-auto py-10 flex flex-wrap items-start lg:justify-center gap-5 lg:gap-3">
