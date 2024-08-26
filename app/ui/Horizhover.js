@@ -12,7 +12,9 @@ function Horizhover({ heading, description, items }) {
         {items.map((item, index) => (
           <div
             key={index}
-            className="py-7 px-2 lg:filter lg:blur-[1.5px] hover:blur-0"
+            className={`py-7 px-2 lg:filter ${
+              index === 0 ? "blur-0" : "md:blur-[1.5px]"
+            } hover:blur-0`}
           >
             <div className="flex flex-row xl:flex-col  items-center xl:items-start gap-5">
               <Image src={item.icon} alt={item.iconAlt} />

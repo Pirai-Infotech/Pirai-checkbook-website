@@ -13,6 +13,7 @@ import labelicon from "@/public/Whitelabel.svg";
 import DiscoverInsights from "../ui/DiscoverInsights";
 import Verticalhover from "../ui/Verticalhover";
 import Papercheck from "../../public/Papercheck.png";
+import Testimonials from "../ui/Testimonials";
 
 const items = [
   {
@@ -83,7 +84,7 @@ function page() {
         />
       </section>
       <section className="w-[100%] m-auto py-10">
-        <div className="w-[50%] m-auto">
+        <div className="w-[100%] lg:w-[50%] m-auto">
           <h3 className="text-center pb-10 md:w-[80%] m-auto">
             Printable Checks Replace <span>Paper Checks</span>
           </h3>
@@ -100,7 +101,10 @@ function page() {
       <section className="w-[90%] m-auto">
         <DiscoverInsights />
       </section>
-      <section className="w-[90%] m-auto">
+      <section className="w-[90%] py-10 m-auto relative">
+        <Testimonials />
+      </section>
+      <section className="w-[90%] py-10 m-auto">
         <ReadytoGetStart />
       </section>
       <section className=" py-10">
