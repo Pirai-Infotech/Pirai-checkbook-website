@@ -104,7 +104,7 @@ function page() {
       <section className="w-[90%] py-10 m-auto relative">
         <Testimonials />
       </section>
-      <section className="w-[90%] py-10 m-auto">
+      <section className="py-10">
         <ReadytoGetStart />
       </section>
       <section className=" py-10">

@@ -122,10 +122,10 @@ function page() {
           </div>
         </div>
       </section>
-      <section className="mt-8 md:mt-10 md:px-4 lg:px-0 lg:mt-14">
+      <section className="mt-8 md:mt-10 lg:mt-14">
       <ReadytoGetStart />
       </section>
-      <section className="lg:hidden mt-14 md:mt-20 md:px-4 lg:px-0 lg:mt-28">
+      <section className="lg:hidden mt-14 md:mt-20 lg:mt-28 w-[90%] m-auto">
       <Faq />
       </section>
     </div>
