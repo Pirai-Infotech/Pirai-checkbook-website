@@ -10,6 +10,7 @@ import Testimonials from "./ui/Testimonials";
 export default function Home() {
   return (
     <>
+      <Header />
       <div className="pt-20"></div>
       <ReadytoGetStart />
       <div className="pt-20"></div>
@@ -20,6 +21,7 @@ export default function Home() {
       <Testimonials />
       <div className="pt-20"></div>
       <main className="flex min-h-screen flex-col items-center justify-between"></main>
+      <Footer />
     </>
   );
 }
