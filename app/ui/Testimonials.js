@@ -3,8 +3,22 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
 import Profileico from "../../public/Testimonials_img1.png";
+import { useState, useEffect } from "react";
 
 const CustomCarousel = () => {
+  const [isResponsive, setIsResponsive] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const checkResponsive = () => {
+        setIsResponsive(window.innerWidth <= 768);
+      };
+      checkResponsive(); 
+      window.addEventListener("resize", checkResponsive);
+      return () => window.removeEventListener("resize", checkResponsive);
+    }
+  }, []);
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -63,6 +77,8 @@ const CustomCarousel = () => {
         centerMode={true}
         infinite={true}
         itemClass="carousel-item"
+        autoPlay={!isResponsive}
+        autoPlaySpeed={3000}
       >
         {carouselItems?.map((item, index) => (
           <div

@@ -12,7 +12,7 @@ import easyicon from "@/public/Easyprocess.svg";
 import labelicon from "@/public/Whitelabel.svg";
 import DiscoverInsights from "../ui/DiscoverInsights";
 import Verticalhover from "../ui/Verticalhover";
-import Papercheck from "../../public/Papercheck.png";
+import Papercheck from "../../public/PaperCheck.png";
 import Testimonials from "../ui/Testimonials";
 
 const items = [

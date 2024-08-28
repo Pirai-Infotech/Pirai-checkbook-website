@@ -57,24 +57,19 @@ function page() {
           items={items}
         />
       </section>
-      <section className="container m-auto pt-10">
-        <div className="px-[26%]">
-          <h3 className="text-center pb-10">
-            Receive
-            <br />
-            <span>ACH Payments</span>
-          </h3>
-          <p className="text-center">
-            Our Digital Check solution makes payments quick and easy. All you
-            need is the recipient's name, email, and the amount - that's it!
-            Recipients receive their Digital Check via email, where they can
-            verify their bank account instantly for deposit.
-          </p>
-        </div>
-      </section>
-      <Verticalhover items={itemscon} imageSrc={ACHCompliance} />
 
-      <section className="container w-[90%] m-auto">
+      <Verticalhover
+        heading="Receive"
+        spancon="ACH Payments"
+        description="Our Digital Check solution makes payments quick and easy. All you need is
+      the recipient's name, email, and the amount - that's it! Recipients
+      receive their Digital Check via email, where they can verify their bank
+      account instantly for deposit."
+        items={itemscon}
+        imageSrc={ACHCompliance}
+      />
+
+      <section className="container m-auto">
         <VideoWithThumbnail
           videoUrl="/workflow-ACH_thumbnail.mp4"
           videothumbnail="/workflow-ACH_thumbnail.png"
@@ -87,10 +82,10 @@ function page() {
       <section className=" py-10 relative">
         <Testimonials />
       </section>
-      <section className="py-10">
+      <section className="container m-auto py-10">
         <ReadytoGetStart />
       </section>
-      <section className=" py-10">
+      <section className="container m-auto py-10">
         <Faq />
       </section>
     </div>
