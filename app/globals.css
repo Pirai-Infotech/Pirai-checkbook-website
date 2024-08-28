@@ -294,6 +294,9 @@ li.react-multi-carousel-item.carousel-item {
 }
 
 @media only screen and (max-width: 1280px) {
+  .no-bdr.grad-border::before{
+    content: unset!important;
+  }
 }
 
 @media only screen and (max-width: 1599px) {
