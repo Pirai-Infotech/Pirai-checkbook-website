@@ -52,7 +52,7 @@ const CustomCarousel = () => {
   ];
 
   return (
-    <div>
+    <div className="container m-auto">
       <h3 className="text-center pb-20">Testimonials</h3>
       <Carousel
         responsive={responsive}

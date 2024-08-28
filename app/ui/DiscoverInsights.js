@@ -4,7 +4,7 @@ import signupArrow from "@/public/signup-arrow.svg";
 
 function DiscoverInsights() {
   return (
-    <div className="w-[90%] m-auto rounded-[20px] sm:rounded-[80px] px-8 py-20 2xl:p-10 ">
+    <div className="container m-auto rounded-[20px] sm:rounded-[80px] px-8 py-20 2xl:p-10 ">
       <h3 className="text-center pb-10 md:w-[80%] m-auto">
         Discover <span>insights</span> and learn how to manage ACH Payments
       </h3>
@@ -19,13 +19,13 @@ function DiscoverInsights() {
               FinTech Funding and Valuation versus Demand and Supply
             </p>
             <div className="pl-4 pt-4">
-            <CTAButton
-              icon={signupArrow}
-              backgroundType={"bg-gradient-to-r"}
-              backgroundColor={"from-[#9281FF] to-[#89D6FF]"}
-              textColor={"text-[#FFF]"}
-              content={"Read More"}
-            />
+              <CTAButton
+                icon={signupArrow}
+                backgroundType={"bg-gradient-to-r"}
+                backgroundColor={"from-[#9281FF] to-[#89D6FF]"}
+                textColor={"text-[#FFF]"}
+                content={"Read More"}
+              />
             </div>
           </div>
         </div>
@@ -40,14 +40,14 @@ function DiscoverInsights() {
                 FinTech Funding and Valuation versus Demand and Supply
               </p>
               <div className="pl-4 pt-4">
-            <CTAButton
-              icon={signupArrow}
-              backgroundType={"bg-gradient-to-r"}
-              backgroundColor={"from-[#9281FF] to-[#89D6FF]"}
-              textColor={"text-[#FFF]"}
-              content={"Read More"}
-            />
-            </div>
+                <CTAButton
+                  icon={signupArrow}
+                  backgroundType={"bg-gradient-to-r"}
+                  backgroundColor={"from-[#9281FF] to-[#89D6FF]"}
+                  textColor={"text-[#FFF]"}
+                  content={"Read More"}
+                />
+              </div>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row ">
@@ -60,14 +60,14 @@ function DiscoverInsights() {
                 FinTech Funding and Valuation versus Demand and Supply
               </p>
               <div className="pl-4 pt-4">
-            <CTAButton
-              icon={signupArrow}
-              backgroundType={"bg-gradient-to-r"}
-              backgroundColor={"from-[#9281FF] to-[#89D6FF]"}
-              textColor={"text-[#FFF]"}
-              content={"Read More"}
-            />
-            </div>
+                <CTAButton
+                  icon={signupArrow}
+                  backgroundType={"bg-gradient-to-r"}
+                  backgroundColor={"from-[#9281FF] to-[#89D6FF]"}
+                  textColor={"text-[#FFF]"}
+                  content={"Read More"}
+                />
+              </div>
             </div>
           </div>
         </div>

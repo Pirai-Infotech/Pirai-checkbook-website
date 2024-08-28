@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Horizhover({ heading, description, items }) {
   return (
-    <div className="flex p-10 flex-col xl:flex-row grad-border bdr-sm-rds items-center justify-center gap-3">
+    <div className="container m-auto flex p-10 flex-col lg:flex-row grad-border bdr-sm-rds items-center justify-center gap-3">
       <div className="p-5 sm:p-5 md:p-6 lg:p-7 flex-grow">
         <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
           {heading}
@@ -12,12 +12,12 @@ function Horizhover({ heading, description, items }) {
           {description}
         </p>
       </div>
-      <div className="flex flex-col xl:flex-row lg:items-center px-5 lg:px-0 gap-3 lin-bf-txt">
+      <div className="flex flex-col lg:flex-row lg:items-center px-5 lg:px-0 gap-3 lin-bf-txt">
         {items?.map((item, index) => (
           <div
             key={index}
             className={`py-7 px-2 lg:filter ${
-              index === 0 ? "blur-0" : "md:blur-[1.5px]"
+              index === 0 ? "first-itm" : "lg:blur-[1.5px] scond-itm"
             } hover:blur-0`}
           >
             <div className="flex flex-row xl:flex-col items-center xl:items-start gap-5">
