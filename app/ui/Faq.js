@@ -47,7 +47,7 @@ const questions = [
 const defaultActiveKey = [0];
 const Faq = () => {
   return (
-    <div className="w-[100%] lg:w-[70%] m-auto rounded-[20px] sm:rounded-[60px] bg-grad-1 px-1 py-20 md:p-20 ">
+    <div className="container m-auto rounded-[20px] sm:rounded-[60px] bg-grad-1 px-1 py-20 md:p-20 ">
       <h3 className="text-center pb-10">Frequently Asked Questions</h3>
       <Collapse
         expandIcon={expandIcon}
@@ -57,19 +57,23 @@ const Faq = () => {
       >
         {questions?.map((item, index) => (
           <Panel
-            className="text-[#404040] text-[20px] md:text-[24px] font-[400]"
+            className="text-[#4F535B] text-[20px] md:text-[24px] font-bold md:font-[400]"
             header={item.question}
             key={index}
           >
-            <p>{item.answer}</p>
-            <a
-              className="text-[18px] text-[#7F53E8] btn btn-primary"
-              href={item.ctaLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {item.ctaText}
-            </a>
+            <p className="text-[16px] lg:text-[18px]">
+              {item.answer}
+              <span className="lg:block lg:pt-5">
+                <a
+                  className="text-[18px]  font-[600] text-[#7F53E8] btn btn-primary"
+                  href={item.ctaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.ctaText}
+                </a>
+              </span>
+            </p>
           </Panel>
         ))}
       </Collapse>

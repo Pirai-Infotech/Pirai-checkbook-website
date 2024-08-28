@@ -31,11 +31,13 @@
 
 body {
   font-family: var(--font-inter);
-  background: linear-gradient(180deg, #e0ebfb, #ffffff, #ffffff, #e0ebfb),
-    url("/bg_dot_lines.svg") no-repeat center center;
+  /* background: linear-gradient(180deg, #e0ebfb, #ffffff, #ffffff, #e0ebfb), */
+  background: linear-gradient(180deg, #ffffff, #e0ebfb, #ffffff),
+    url("/bg_dot_lines.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-blend-mode: overlay;
 }
 /* h1 {
   font-size: 5.5rem;
@@ -60,6 +62,12 @@ h3 span {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+.custom-text {
+  @media (min-width: 1024px) { 
+    -webkit-text-fill-color: #404040;
+    color: #404040;
+  }
 }
 h3 {
   font-size: 44px;
@@ -224,6 +232,9 @@ a:hover {
 .borderimage::before {
   padding: 2.1px;
 }
+.scond-itm:hover .first-itm{
+  filter: blur(1.5px)!important;
+}
 
 /* Carousel Styles */
 .carousel-item {
@@ -292,9 +303,7 @@ li.react-multi-carousel-item.carousel-item {
 }
 
 @media only screen and (max-width: 1599px) {
-  h1 {
-    font-size: 50px;
-  }
+  
   h2 {
     font-size: 50px;
   }
@@ -309,7 +318,7 @@ li.react-multi-carousel-item.carousel-item {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1600px) and (max-width:2000px) {
   h1 {
     font-size: 88px;
   }
@@ -320,6 +329,7 @@ li.react-multi-carousel-item.carousel-item {
     font-size: 44px;
   }
 }
+
 @media only screen and (max-width: 1024px) {
   .no-bdr.grad-border::before {
     background: #c4dcff;
