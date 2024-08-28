@@ -31,11 +31,13 @@
 
 body {
   font-family: var(--font-inter);
-  background: linear-gradient(180deg, #e0ebfb, #ffffff, #ffffff, #e0ebfb),
-    url("/bg_dot_lines.svg") no-repeat center center;
+  /* background: linear-gradient(180deg, #e0ebfb, #ffffff, #ffffff, #e0ebfb), */
+  background: linear-gradient(180deg, #ffffff, #e0ebfb, #ffffff),
+    url("/bg_dot_lines.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-blend-mode: overlay;
 }
 /* h1 {
   font-size: 5.5rem;
@@ -301,9 +303,7 @@ li.react-multi-carousel-item.carousel-item {
 }
 
 @media only screen and (max-width: 1599px) {
-  h1 {
-    font-size: 50px;
-  }
+  
   h2 {
     font-size: 50px;
   }
