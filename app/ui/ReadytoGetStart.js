@@ -8,7 +8,7 @@ import signupArrowcolor from "@/public/signup-arrow-purple.svg";
 
 function ReadytoGetStart() {
   return (
-    <div className="flex flex-col lg:flex-row items-center gap-8 w-[90%] m-auto">
+    <div className="container m-auto flex flex-col lg:flex-row items-center gap-8 ">
       <div className="lg:p-7 grad-border bdr-sm-rds no-bdr flex-grow-1 xl:w-[60%]">
         <div className="bg-[#fff] rounded-[30px] py-10 px-5 2xl:p-[100px]">
           <h2 className="text-center xl:text-left">

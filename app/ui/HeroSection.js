@@ -6,12 +6,12 @@ import signupArrowcolor from "../../public/signup-arrow.svg";
 
 function HeroSection({ heading, spancon, description, rightimg }) {
   return (
-    <div className="w-[100%] m-auto flex flex-col lg:flex-row gap-3 items-center py-10">
-      <div className="flex-1 pl-[5%]">
-        <h1 className="text-center xl:text-left">
+    <div className="container m-auto flex flex-col lg:flex-row gap-3 items-center py-10 ">
+      <div className="flex-1 pl-[5%] 2xl:pl-[0px]">
+        <h1 className="text-center xl:text-left 2xl:text-[70px]">
           {heading} <span>{spancon}</span>
         </h1>
-        <p className="pt-5 lg:pr-[10%] text-center xl:text-left">
+        <p className="pt-5 lg:pr-[10%] text-center xl:text-left 2xl:text-[27px]">
           {description}
         </p>
         <div className="flex flex-row pt-10 gap-4 items-center justify-center xl:justify-start">

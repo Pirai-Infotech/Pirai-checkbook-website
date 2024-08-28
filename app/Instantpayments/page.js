@@ -41,8 +41,7 @@ function page() {
       <sectio>
         <HeroSection
           heading="Send"
-          spancon="Instant
-Payments Today"
+          spancon="Instant Payments Today"
           description="With Instant Pay your business can push payouts to any VISA or MasterCard branded debit or ATM card in seconds. Checkbook leverages original credit transactions (OCT) to expand our network to billions of eligible cards."
           rightimg={TopBanner}
         />
