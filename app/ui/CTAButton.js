@@ -7,6 +7,7 @@ function CTAButton({
   backgroundColor,
   textColor,
   content,
+  onClick,
   // paddingx,
   // paddingy,
   // textSize,
@@ -18,6 +19,7 @@ function CTAButton({
   return (
     <>
       <button
+        onClick={onClick}
         className={`flex items-center px-9 py-4 rounded-tr-[60px] rounded-br-[60px] rounded-bl-[40px] 
           rounded-tl-none text-[17px]
              ${backgroundType} ${backgroundColor} ${textColor}`}
