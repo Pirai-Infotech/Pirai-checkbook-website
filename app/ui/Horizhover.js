@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Horizhover({ heading, description, items }) {
   return (
-    <div className="container m-auto flex p-6 lg:p-10 2xl:p-0 flex-col lg:flex-row grad-border bdr-sm-rds items-center justify-center md:py-10 lg:py-0 lg:gap-3 lg:px-30 2xl:px-52">
+    <div className="container m-auto flex p-6 lg:p-10 2xl:p-0 flex-col lg:flex-row grad-border bdr-md-rds items-center justify-center md:py-10 lg:py-0 lg:gap-3 lg:px-30 2xl:px-52">
       <div className="p-5 sm:p-5 md:p-6 lg:p-7 flex-grow">
         <h4>
           {heading}
