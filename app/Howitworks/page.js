@@ -38,20 +38,20 @@ const sections = [
 ];
 function page() {
   return (
-    <div className="px-8 sm:px-0">
-      <section className="w-[90%] lg:w-[70%] m-auto flex flex-col lg:flex-row gap-3 items-center py-10">
-        <div className="flex-1">
-          <h1 className="text-center xl:text-left">
+    <div className="px-2 sm:px-8 sm:px-0">
+      <section className="container m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10 ">
+        <div className="flex-1 sm:px-[9%] lg:px-10 xl:pr-[17%]">
+          <h1 className="text-center lg:text-left text-[45px] lg:text-[70px] 2xl:text-[88px]">
             How it <span>Works</span>
           </h1>
-          <p className="pt-5 text-center xl:text-left">
+          <p className="pt-5 text-center lg:text-left text-[18px] 2xl:text-[27px]">
             No percentages. No hidden fees. Checkbook offers everything needed
             to disburse payments at scale. Get in touch with our sales team for
             details on volume discounts, integration assistance, and our
             dedicated support.
           </p>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 ">
           <VideoWithThumbnail
             videoUrl="/path-to-your-video.mp4"
             videothumbnail="/Videothumbnail.svg"
@@ -59,7 +59,7 @@ function page() {
           />
         </div>
       </section>
-      <section className="w-[90%] lg:w-[70%] m-auto py-10 flex flex-wrap items-start lg:justify-center gap-5 lg:gap-3">
+      <section className="container m-auto py-10 flex flex-wrap items-start lg:justify-center gap-5 lg:gap-3">
         {sections?.map((section, index) => (
           <div
             key={index}
@@ -92,7 +92,7 @@ function page() {
       <section className="py-10">
         <Faq />
       </section>
-        <ReadytoGetStart />
+      <ReadytoGetStart />
     </div>
   );
 }
