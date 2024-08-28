@@ -15,9 +15,9 @@ function page() {
           <div className="font-inter text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-[-2px] text-[#404040]">
             Meet
           </div>
-          <div className="font-inter text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-[-2px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]">
+          <span className="font-inter text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-[-2px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]">
             Checkbook
-          </div>
+          </span>
           <div className="flex justify-center mt-6 sm:mt-8 md:mt-10">
             <p className="font-circular-spotify lg:w-[770px] md:w-[546px] max-w-screen-lg text-lg md:text-xl lg:text-2xl font-light leading-relaxed text-[#666666] text-center">
               We are a dedicated bunch of trailblazers who are passionate about

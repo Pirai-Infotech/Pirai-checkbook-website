@@ -1,8 +1,21 @@
 import React from "react";
 import Image from "next/image";
 
-function Verticalhover({ items, imageSrc }) {
+function Verticalhover({ heading, spancon, description, items, imageSrc }) {
   return (
+    <>
+    <div className="container m-auto pt-10">
+    <div className="px-[26%]">
+    <h3 className="text-center pb-10">
+      {heading}
+      <br />
+      <span>{spancon}</span>
+    </h3>
+    <p className="text-center">
+      {description}
+    </p>
+  </div>
+    </div>
     <div className="container m-auto flex flex-row items-center justify-between gap-2 lg:gap-8 py-10 ">
       <div className="w-[50%] 2xl:w-[36%]">
         {items?.map((item, index) => (
@@ -32,6 +45,7 @@ function Verticalhover({ items, imageSrc }) {
         />
       </div>
     </div>
+    </>
   );
 }
 

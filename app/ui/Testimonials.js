@@ -5,6 +5,7 @@ import Image from "next/image";
 import Profileico from "../../public/Testimonials_img1.png";
 
 const CustomCarousel = () => {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -63,6 +64,8 @@ const CustomCarousel = () => {
         centerMode={true}
         infinite={true}
         itemClass="carousel-item"
+        autoPlay={!isMobile}
+        autoPlaySpeed={3000}
       >
         {carouselItems?.map((item, index) => (
           <div

@@ -61,6 +61,12 @@ h3 span {
   background-clip: text;
   color: transparent;
 }
+.custom-text {
+  @media (min-width: 1024px) { 
+    -webkit-text-fill-color: #404040;
+    color: #404040;
+  }
+}
 h3 {
   font-size: 44px;
   color: var(--primary-color);

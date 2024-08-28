@@ -12,9 +12,11 @@ function page() {
   return (
     <div className="container m-auto px-6 sm:px-0">
       <section className="px-2 py-8 sm:px-4 md:px-8 md:py-12">
-        <p className="font-inter text-[36px] sm:text-[48px] md:text-[64px] lg:text-[88px] font-light leading-tight sm:leading-[50px] md:leading-[80px] lg:leading-[106.5px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]">
-          Compliance
-        </p>
+      <div className="text-center">
+        <span className="font-inter text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-[-2px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]">
+            Compliance
+          </span>
+        </div>
         <div className="w-full flex justify-center">
           <p className="w-full max-w-[370px] px-8 md:max-w-md lg:max-w-full text-center font-circular-spotify text-[18px] sm:text-[22px] md:text-[27px] font-light leading-normal sm:leading-[30px] md:leading-[38.1px] text-[#404040] mt-4">
             Checkbook.io Audits and Compliance Reports
