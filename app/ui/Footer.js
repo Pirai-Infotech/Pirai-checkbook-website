@@ -10,7 +10,7 @@ function Footer({ contactFormText }) {
     <div className="bg-gradient-to-r from-[#9B8DFF] to-[#3E89BD]">
       <div className="container m-auto">
         <h3 className="text-[62px] text-white pt-20 pb-5 text-center font-light">
-          {contactFormText}
+          {contactFormText? contactFormText : 'Contact Us'}
         </h3>
         <p className="text-[27px] text-white mb-8 text-center font-light lg:px-[370px]">
           Our team is happy to answer your questions. Fill out the form and
