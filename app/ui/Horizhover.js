@@ -3,9 +3,9 @@ import Image from "next/image";
 
 function Horizhover({ heading, description, items }) {
   return (
-    <div className="container m-auto flex p-10 flex-col lg:flex-row grad-border bdr-sm-rds items-center justify-center gap-3">
+    <div className="container m-auto flex p-6 lg:p-10 2xl:p-0 flex-col lg:flex-row grad-border bdr-sm-rds items-center justify-center md:py-10 lg:py-0 lg:gap-3 lg:px-30 2xl:px-52">
       <div className="p-5 sm:p-5 md:p-6 lg:p-7 flex-grow">
-        <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
+        <h4>
           {heading}
         </h4>
         <p className="text-left pt-3 sm:pt-4 md:pt-5 lg:pt-5 w-full max-w-[575px] xl:px-0">
@@ -24,7 +24,7 @@ function Horizhover({ heading, description, items }) {
               <Image src={item.icon} alt={item.iconAlt} />
               <h4 className="lg:pl-4">{item.title}</h4>
             </div>
-            <p className="pt-10 lg:w-[233px] lg:h-[189px]">{item.text}</p>
+            <p className="pt-2 lg:pt-10 md:pl-16 lg:pl-0 lg:w-[233px] lg:h-[189px]">{item.text}</p>
           </div>
         ))}
       </div>

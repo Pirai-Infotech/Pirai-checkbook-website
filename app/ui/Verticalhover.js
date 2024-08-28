@@ -5,13 +5,13 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
   return (
     <>
     <div className="container m-auto pt-10">
-    <div className="px-[26%]">
-    <h3 className="text-center pb-10">
+    <div className="lg:px-[26%]">
+    <h3 className="text-center pb-6 md:10">
       {heading}
       <br />
       <span>{spancon}</span>
     </h3>
-    <p className="text-center">
+    <p className="text-center px-4 sm:px-24 md:px-32 lg:px-0">
       {description}
     </p>
   </div>
@@ -40,6 +40,7 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
       <div className="flex-grow-1">
         <Image
           src={imageSrc}
+          width={500}
           alt="Printable Check"
           className="h-[500px] lg:h-[100%] object-left object-cover"
         />

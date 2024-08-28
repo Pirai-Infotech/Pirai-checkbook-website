@@ -220,7 +220,15 @@ a:hover {
   padding: 2.1px;
 }
 .bdr-sm-rds {
-  border-radius: 25px;
+  @media only screen and (max-width: 768px) {
+    border-top-right-radius: 50px;
+    }
+  @media only screen and (min-width: 768px) {
+    border-radius: 50px;
+    }
+  @media only screen and (min-width: 1024px) {
+    border-radius: 149px;
+    }
 }
 .bdr-sm-rds::before {
   padding: 1.5px;
