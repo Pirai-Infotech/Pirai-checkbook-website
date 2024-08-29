@@ -13,6 +13,8 @@ import Testimonials from "../ui/Testimonials";
 import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 import HeroSection from "../ui/HeroSection";
 import ACHthumbnail from "@/public/workflow-ACH_thumbnail.png";
+import cartImage from "@/public/cartBackground.svg"
+import Image from "next/image";
 
 const items = [
   {
@@ -70,14 +72,17 @@ function page() {
         imageSrc={ACHCompliance}
       />
 
-      <section className="container m-auto">
+      <section className="container m-auto relative">
         <VideoWithThumbnail
           videoUrl="/workflow-ACH_thumbnail.mp4"
           videothumbnail={ACHthumbnail}
           alt="VideoThumbnail"
         />
+        <div className="absolute z-[-1] top-[-100px]">
+            <Image src={cartImage} className="w-[100%] opacity-30 sm:opacity-30 md:opacity-30 lg:opacity-70" alt="cartImage" />
+         </div>
       </section>
-      <section className="w-[90%] m-auto">
+      <section>
         <DiscoverInsights />
       </section>
       <section className=" py-10 relative">

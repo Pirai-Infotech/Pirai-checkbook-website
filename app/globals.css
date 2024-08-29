@@ -254,13 +254,15 @@ a:hover {
 /* Carousel Styles */
 .carousel-item {
   display: flex;
-  gap: 5;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   transition: all 0.3s ease;
+  margin:0% 0.5%;
 }
-
+.react-multi-carousel-track{
+  justify-content: center!important;
+}
 .react-multi-carousel-item--center .carousel-item {
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
