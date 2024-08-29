@@ -12,6 +12,7 @@ import ACHCompliance from "../../public/ACH_complaince.png";
 import Testimonials from "../ui/Testimonials";
 import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 import HeroSection from "../ui/HeroSection";
+import ACHthumbnail from "@/public/workflow-ACH_thumbnail.png";
 
 const items = [
   {
@@ -72,7 +73,7 @@ function page() {
       <section className="container m-auto">
         <VideoWithThumbnail
           videoUrl="/workflow-ACH_thumbnail.mp4"
-          videothumbnail="/workflow-ACH_thumbnail.png"
+          videothumbnail={ACHthumbnail}
           alt="VideoThumbnail"
         />
       </section>

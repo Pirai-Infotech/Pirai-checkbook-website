@@ -9,6 +9,7 @@ import Faq from "../ui/Faq";
 import checkbook from "../../public/checkbook.svg";
 import checkico from "../../public/check_ico.svg";
 import bankico from "../../public/bank_ico.svg";
+import Videothumbnail from "@/public/Videothumbnail.svg";
 
 const sections = [
   {
@@ -54,7 +55,7 @@ function page() {
         <div className="flex-1 ">
           <VideoWithThumbnail
             videoUrl="/path-to-your-video.mp4"
-            videothumbnail="/Videothumbnail.svg"
+            videothumbnail={Videothumbnail}
             alt="VideoThumbnail"
           />
         </div>
@@ -76,8 +77,8 @@ function page() {
             <p className="py-5 text-left pl-4">{section.description}</p>
             <CTAButton
               icon={signupArrowcolor}
-              backgroundType={""}
-              backgroundColor={""}
+              backgroundType={"bg-gradient-to-r"}
+              backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
               textColor={"text-[#fff]"}
               classname={"btn-bg-grad ml-4"}
               content={section.cta}

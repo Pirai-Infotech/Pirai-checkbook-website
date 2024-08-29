@@ -1,6 +1,10 @@
 import React from "react";
 import CTAButton from "./CTAButton";
 import signupArrow from "@/public/signup-arrow.svg";
+import Entrepreneurship from "@/public/Entrepreneurship.svg";
+import Businessintelligence from "@/public/Businessintelligence.svg";
+import Payments from "@/public/Payments.svg";
+import Image from "next/image";
 
 function DiscoverInsights() {
   return (
@@ -11,7 +15,7 @@ function DiscoverInsights() {
       <div className="flex flex-col md:flex-row gap-7">
         <div className="w-[100%] md:w-[50%]">
           <div className="bg-grad">
-            <img alt="example" src="/Entrepreneurship.svg" />
+            <Image src={Entrepreneurship} alt="Entrepreneurship" />
           </div>
           <div className="bg-grad-sec py-[25px] px-2 xl:pl-[30px] 2xl:pl-[30px]">
             <p className="pl-4 pb-3">SEP 01, 2023</p>
@@ -32,7 +36,7 @@ function DiscoverInsights() {
         <div className="flex flex-col flex-1 gap-7">
           <div className="flex flex-col lg:flex-row ">
             <div className="bg-grad">
-              <img alt="example" src="/Businessintelligence.svg" />
+              <Image src={Businessintelligence} alt="Businessintelligence" />
             </div>
             <div className="bg-grad-sec py-[25px] px-2 xl:pl-[30px] 2xl:pl-[30px]">
               <p className="pl-4 pb-3">SEP 01, 2023</p>
@@ -52,7 +56,7 @@ function DiscoverInsights() {
           </div>
           <div className="flex flex-col lg:flex-row ">
             <div className="bg-grad">
-              <img alt="example" src="/Payments.svg" />
+              <Image src={Payments} alt="Payments" />
             </div>
             <div className="bg-grad-sec py-[25px] px-2 xl:pl-[30px] 2xl:pl-[30px]">
               <p className="pl-4 pb-3">SEP 01, 2023</p>

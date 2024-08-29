@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import CTAButton from "../ui/CTAButton";
 import signupArrow from "@/public/signup-arrow.svg";
+import Entrepreneurship from "@/public/Entrepreneurship.svg";
+import Businessintelligence from "@/public/Businessintelligence.svg";
+import Payments from "@/public/Payments.svg";
+import Image from "next/image";
 
 const contentList = [
   {
@@ -10,49 +14,49 @@ const contentList = [
     title: "FinTech Funding and Valuation versus Demand and Supply",
     description:
       "There’s been a growing rumbling in recent months that fintech is plateauing. After all, now that AI is here, what’s to stop it from demolishing the need for fintech innovations altogether?",
-    imageUrl: "/Businessintelligence.svg",
+    imageUrl: Businessintelligence,
   },
   {
     date: "JUL 11, 2023",
     title: "The Anatomy of a 99% Completion Rate",
     description:
       "Most payments happen without payors or recipients ever having to think about them. And that’s the way it should be—in a perfect world, every transaction would be seamless. But it’s not a perfect world, and the reality is that only between 92–95% of payments are completed successfully. While at first glance, that statistic may not be jarring, but think of it this way: what if your paycheck bounced 8% of the time? Suddenly 92% seems a far cry from acceptable.",
-    imageUrl: "/Businessintelligence.svg",
+    imageUrl: Businessintelligence,
   },
   {
     date: "MAY 26, 2023",
     title: "How The Money Flows: Payments for Cash Advance",
     description:
       "There’s probably been a time in your life when you had an unexpected emergency arise and didn’t have the money to address it until your next paycheck. If you don’t have friends or family to help, there aren’t many reputable solutions that can get you money quickly. That’s where cash advance comes in: it’s a short-term lending tool designed to bridge the financial gap between paychecks. Here’s a look at the cash advance industry as a whole and how changing market conditions have made faster payments a necessity.",
-    imageUrl: "/Businessintelligence.svg",
+    imageUrl: Businessintelligence,
   },
   {
     date: "APR 15, 2023",
     title: "The Future of FinTech: A Look Ahead",
     description:
       "As the financial technology industry continues to evolve, it's important to look ahead at the emerging trends that will shape the future of fintech.",
-    imageUrl: "/Businessintelligence.svg",
+    imageUrl: Businessintelligence,
   },
   {
     date: "MAR 22, 2023",
     title: "Understanding Digital Banking Trends",
     description:
       "Digital banking is on the rise. This article explores the latest trends in the industry and what they mean for consumers and businesses alike.",
-    imageUrl: "/Businessintelligence.svg",
+    imageUrl: Businessintelligence,
   },
   {
     date: "FEB 10, 2023",
     title: "Cryptocurrency and Its Impact on FinTech",
     description:
       "Cryptocurrency is changing the landscape of financial technology. This article delves into the impact of digital currencies on the fintech industry.",
-    imageUrl: "/Businessintelligence.svg",
+    imageUrl: Businessintelligence,
   },
   {
     date: "FEB 10, 2023",
     title: "Cryptocurrency and Its Impact on FinTech",
     description:
       "Cryptocurrency is changing the landscape of financial technology. This article delves into the impact of digital currencies on the fintech industry.",
-    imageUrl: "/Businessintelligence.svg",
+    imageUrl: Businessintelligence,
   },
 ];
 
@@ -97,7 +101,7 @@ function Page() {
                 />
               </div>
               <div className="bg-grad lg:w-[40%] ">
-                <img alt="example" src={content.imageUrl} />
+                <Image alt={content.title} src={content.imageUrl} />
               </div>
             </div>
           ))}
