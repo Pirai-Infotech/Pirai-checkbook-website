@@ -219,7 +219,7 @@ a:hover {
 .bdr-compliance::before {
   padding: 2.1px;
 }
-.bdr-sm-rds {
+.bdr-md-rds {
   @media only screen and (max-width: 768px) {
     border-top-right-radius: 50px;
     }
@@ -229,6 +229,13 @@ a:hover {
   @media only screen and (min-width: 1024px) {
     border-radius: 149px;
     }
+}
+.bdr-md-rds::before {
+  padding: 1.5px;
+  z-index: -1;
+}
+.bdr-sm-rds {
+    border-radius: 25px;
 }
 .bdr-sm-rds::before {
   padding: 1.5px;
