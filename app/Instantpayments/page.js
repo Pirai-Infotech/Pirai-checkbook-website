@@ -70,7 +70,7 @@ function page() {
       </section>
 
       <section className="w-[50%] m-auto h-[300px] rounded-[40px] bg-slate-300"></section>
-      <section className="w-[90%] m-auto">
+      <section>
         <DiscoverInsights />
       </section>
       <section className="w-[90%] py-10 m-auto relative">

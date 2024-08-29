@@ -32,9 +32,9 @@ function ReadytoGetStart() {
             <CTAButton
               icon={signupArrowcolor}
               backgroundType={""}
-              backgroundColor={""}
+              backgroundColor={"grad-border borderbutton"}
               textColor={"text-[#404040]"}
-              classname={"grad-border borderbutton "}
+              classname={""}
               content={"Contact Sales"}
             />
           </div>
@@ -52,9 +52,9 @@ function ReadytoGetStart() {
           <CTAButton
             icon={signupArrowcolor}
             backgroundType={""}
-            backgroundColor={""}
+            backgroundColor={"grad-border borderbutton"}
             textColor={"text-[#404040]"}
-            classname={"grad-border borderbutton "}
+            classname={""}
             content={"Pricing Details"}
           />
         </div>
@@ -69,9 +69,9 @@ function ReadytoGetStart() {
           <CTAButton
             icon={signupArrowcolor}
             backgroundType={""}
-            backgroundColor={""}
+            backgroundColor={"grad-border borderbutton"}
             textColor={"text-[#404040]"}
-            classname={"grad-border borderbutton "}
+            classname={""}
             content={"API Reference"}
           />
         </div>

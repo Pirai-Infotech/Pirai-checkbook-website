@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 
 const VideoWithThumbnail = ({ videoUrl, videothumbnail, alt }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -10,7 +11,7 @@ const VideoWithThumbnail = ({ videoUrl, videothumbnail, alt }) => {
   return (
     <div className="flex justify-center">
       {!isPlaying ? (
-        <img
+        <Image
           src={videothumbnail}
           alt={alt}
           onClick={() => setIsPlaying(true)}

@@ -83,9 +83,9 @@ const CustomCarousel = () => {
         {carouselItems?.map((item, index) => (
           <div
             key={index}
-            className="item border-[1px] border-[#afafaf] rounded-lg p-[20px] w-[450px] 2xl:w-[520px] h-[340px] 2xl:h-[400px]"
+            className="item border-[2px] border-[#FFFFFF] md:rounded-[24px] xl:rounded-[53px] md:p-[20px] xl:p-[35px] w-[450px] 2xl:w-[620px]"
           >
-            <div className="bg-white p-[50px]">
+            <div className="bg-white md:p-[18px] xl:p-[50px] md:rounded-[13px] xl:rounded-[30px]">
               <div className="flex flex-row items-center">
                 <Image src={item.image} alt={item.altText} />
                 <p className="pl-5 text-[#365B7F]">
@@ -93,7 +93,7 @@ const CustomCarousel = () => {
                   {item.position}
                 </p>
               </div>
-              <p className="pt-5  h-[70px]">{item.quote}</p>
+              <p className="pt-5">{item.quote}</p>
             </div>
           </div>
         ))}

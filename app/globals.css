@@ -254,13 +254,15 @@ a:hover {
 /* Carousel Styles */
 .carousel-item {
   display: flex;
-  gap: 5;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   transition: all 0.3s ease;
+  margin:0% 0.5%;
 }
-
+.react-multi-carousel-track{
+  justify-content: center!important;
+}
 .react-multi-carousel-item--center .carousel-item {
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -306,6 +308,7 @@ li.react-multi-carousel-item.carousel-item {
   h3 {
     font-size: 35px;
   }
+  
 }
 
 @media only screen and (max-width: 768px) {
@@ -317,6 +320,16 @@ li.react-multi-carousel-item.carousel-item {
 @media only screen and (max-width: 1280px) {
   .no-bdr.grad-border::before{
     content: unset!important;
+  }
+  .btm-lr-n{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .bdr-sm-rds{
+    border-radius: 10px;
+  }
+  .container{
+    padding: 0% 5%;
   }
 }
 
