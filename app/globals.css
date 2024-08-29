@@ -308,6 +308,7 @@ li.react-multi-carousel-item.carousel-item {
   h3 {
     font-size: 35px;
   }
+  
 }
 
 @media only screen and (max-width: 768px) {
@@ -319,6 +320,16 @@ li.react-multi-carousel-item.carousel-item {
 @media only screen and (max-width: 1280px) {
   .no-bdr.grad-border::before{
     content: unset!important;
+  }
+  .btm-lr-n{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .bdr-sm-rds{
+    border-radius: 10px;
+  }
+  .container{
+    padding: 0% 5%;
   }
 }
 
