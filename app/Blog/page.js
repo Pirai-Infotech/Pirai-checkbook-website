@@ -8,6 +8,40 @@ import Businessintelligence from "@/public/Businessintelligence.svg";
 import Payments from "@/public/Payments.svg";
 import Image from "next/image";
 
+const buttonlists = [
+  {
+    btnname: "Blog",
+    btnlink: "",
+  },
+  {
+    btnname: "Case Studies",
+    btnlink: "",
+  },
+  {
+    btnname: "Webinar",
+    btnlink: "",
+  },
+  {
+    btnname: "Podcast",
+    btnlink: "",
+  },
+  {
+    btnname: "Videos",
+    btnlink: "",
+  },
+  {
+    btnname: "In the Press",
+    btnlink: "",
+  },
+  {
+    btnname: "Product Info/Updates",
+    btnlink: "",
+  },
+  {
+    btnname: "API Docs",
+    btnlink: "",
+  },
+];
 const contentList = [
   {
     date: "SEP 01, 2023",
@@ -61,30 +95,40 @@ const contentList = [
 ];
 
 function Page() {
-  const [visibleItems, setVisibleItems] = useState(3);
+  const [visibleItems, setVisibleItems] = useState(4);
 
   const handleLoadMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 2);
   };
 
   return (
-    <div className="px-2 sm:px-8 sm:px-0">
-      <section className="container m-auto">
-        <div className="flex-1 sm:px-[9%] lg:px-10">
-          <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px]">
+    <div>
+      <section className="">
+        <div className="container m-auto flex-1 sm:px-[9%] lg:px-10 lg:py-20">
+          <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-20 lg:px-0">
             Checkbook <span>Resources</span>
           </h1>
         </div>
-        <div className="flex flex-col sm:flex-row lg:flex-col flex-wrap gap-5 justify-center">
+        <div className="lg:container m-auto flex gap-3 justify-center py-10">
+          {buttonlists.map((contentlist, index) => (
+            <button
+              key={index}
+              className="flex items-center px-9 py-3 grad-border bdr-sm-rds text-[14px] 2xl:text-[22px] cursor-pointer"
+            >
+              {contentlist.btnname}
+            </button>
+          ))}
+        </div>
+        <div className="container m-auto flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center">
           {contentList.slice(0, visibleItems).map((content, index) => (
             <div
               key={index}
-              className="flex flex-col-reverse lg:flex-row justify-between grad-border bdr-sm-rds no-bdr gap-10 lg:p-20 mt-10 sm:w-[45%] lg:w-[100%]"
+              className="flex flex-col-reverse lg:flex-row justify-between grad-border bdr-sm-rds gap-5 lg:p-20  sm:w-[45%] lg:w-[100%] bg-[#fff] lg:bg-[#fff0]"
             >
-              <div className="lg:w-[55%] pl-10 lg:pl-0">
-                <h4 className="border-l-2 border-[#9180FF] pl-4 text-[#3EA6BB] text-[24px] mb-10 lg:mb-0">
+              <div className="lg:w-[55%] pl-10 lg:pl-0 pb-5 lg:pb-0">
+                <h4 className="border-l-2 border-[#9180FF] pl-4 text-[#404040] lg:text-[#3EA6BB] text-[18px] lg:text-[24px] mb-5 lg:mb-0">
                   {content.date}
-                  <span className="text-[#9180FF] block pt-2">
+                  <span className="text-[#404040] lg:text-[#9180FF] block pt-2">
                     {content.title}
                   </span>
                 </h4>
@@ -93,15 +137,20 @@ function Page() {
                 </p>
 
                 <CTAButton
+                  onClick={""}
                   icon={signupArrow}
                   backgroundType={"bg-gradient-to-r"}
-                  backgroundColor={"from-[#9281FF] to-[#89D6FF]"}
+                  backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
                   textColor={"text-[#FFF]"}
                   content={"Read More"}
                 />
               </div>
-              <div className="bg-grad lg:w-[40%] ">
-                <Image alt={content.title} src={content.imageUrl} />
+              <div className="bg-grad btm-lr-n lg:w-[40%] ">
+                <Image
+                  alt={content.title}
+                  src={content.imageUrl}
+                  className="object-contain"
+                />
               </div>
             </div>
           ))}
