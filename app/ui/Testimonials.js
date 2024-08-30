@@ -13,7 +13,7 @@ const CustomCarousel = () => {
       const checkResponsive = () => {
         setIsResponsive(window.innerWidth <= 768);
       };
-      checkResponsive(); 
+      checkResponsive();
       window.addEventListener("resize", checkResponsive);
       return () => window.removeEventListener("resize", checkResponsive);
     }
@@ -44,29 +44,68 @@ const CustomCarousel = () => {
       altText: "Testimonials",
       name: "Laurent Charpentier",
       position: "COO, Yooz North America",
-      quote:
-        "“Checkbook seamlessly enables our clients to send Digital Cheques with the click of a button. Their APIs are easy to work with, and the Digital Cheque product is a great alternative to paper cheques.”",
+      quote: (
+        <>
+          “Checkbook seamlessly enables our clients to send Digital Cheques with
+          the{" "}
+          <a
+            href="https://your-link-here.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            click of a button
+          </a>
+          . Their APIs are easy to work with, and the Digital Cheque product is
+          a great alternative to paper cheques.”
+        </>
+      ),
     },
     {
       image: Profileico,
       altText: "Testimonials",
       name: "John Doe",
       position: "CTO, TechCorp",
-      quote:
-        "“Checkbook seamlessly enables our clients to send Digital Cheques with the click of a button. Their APIs are easy to work with, and the Digital Cheque product is a great alternative to paper cheques.”",
+      quote: (
+        <>
+          “Checkbook seamlessly enables our clients to send Digital Cheques with
+          the{" "}
+          <a
+            href="https://your-link-here.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            click of a button
+          </a>
+          . Their APIs are easy to work with, and the Digital Cheque product is
+          a great alternative to paper cheques.”
+        </>
+      ),
     },
     {
       image: Profileico,
       altText: "Testimonials",
       name: "Jane Smith",
       position: "CEO, FinTech Solutions",
-      quote:
-        "“Checkbook seamlessly enables our clients to send Digital Cheques with the click of a button. Their APIs are easy to work with, and the Digital Cheque product is a great alternative to paper cheques.”",
+      quote: (
+        <>
+          “Checkbook seamlessly enables our clients to send Digital Cheques with
+          the{" "}
+          <a
+            href="https://your-link-here.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            click of a button
+          </a>
+          . Their APIs are easy to work with, and the Digital Cheque product is
+          a great alternative to paper cheques.”
+        </>
+      ),
     },
   ];
 
   return (
-    <div className="container m-auto">
+    <div>
       <h3 className="text-center pb-20">Testimonials</h3>
       <Carousel
         responsive={responsive}
@@ -74,7 +113,7 @@ const CustomCarousel = () => {
         arrows={false}
         renderDotsOutside={true}
         customTransition="transform 300ms ease-in-out"
-        centerMode={true}
+        centerMode={!isResponsive}
         infinite={true}
         itemClass="carousel-item"
         autoPlay={!isResponsive}
@@ -83,17 +122,19 @@ const CustomCarousel = () => {
         {carouselItems?.map((item, index) => (
           <div
             key={index}
-            className="item border-[2px] border-[#FFFFFF] md:rounded-[24px] xl:rounded-[53px] md:p-[20px] xl:p-[35px] w-[450px] 2xl:w-[620px]"
+            className="item border-[2px] border-[#FFFFFF] rounded-[25px] xl:rounded-[53px] p-5 md:p-[20px] xl:p-[35px] "
           >
-            <div className="bg-white md:p-[18px] xl:p-[50px] md:rounded-[13px] xl:rounded-[30px]">
+            <div className="bg-white p-10 md:p-[18px] xl:p-[65px] rounded-[14px] xl:rounded-[30px]">
               <div className="flex flex-row items-center">
                 <Image src={item.image} alt={item.altText} />
-                <p className="pl-5 text-[#365B7F]">
+                <p className="pl-5 text-[#365B7F] font-[400] text-[17px]">
                   {item.name},<br />
                   {item.position}
                 </p>
               </div>
-              <p className="pt-5">{item.quote}</p>
+              <p className="pt-5 text-[21px] md:text-[17px] 2xl:text-[25px] text-[#404040] font-[300]">
+                {item.quote}
+              </p>
             </div>
           </div>
         ))}

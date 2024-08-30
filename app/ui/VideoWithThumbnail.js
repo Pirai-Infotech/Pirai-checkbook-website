@@ -9,7 +9,7 @@ const VideoWithThumbnail = ({ videoUrl, videothumbnail, alt }) => {
   }
 
   return (
-    <div className="flex justify-center">
+    <div className="">
       {!isPlaying ? (
         <Image
           src={videothumbnail}
