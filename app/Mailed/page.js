@@ -42,7 +42,7 @@ const itemscon = [
 ];
 function page() {
   return (
-    <div className="px-4 sm:px-0">
+    <div>
       <HeroSection
         heading="Programmatically"
         spancon="Mail Paper Checks"
