@@ -60,13 +60,13 @@ function page() {
           />
         </div>
       </section>
-      <section className="container m-auto py-10 flex flex-wrap items-start lg:justify-center gap-5 lg:gap-3 sm:w-[95%] px-4 md:px-[0] lg:w-[80%] 2xl:w-[70%]">
+      <section className="container m-auto py-10 flex flex-wrap items-start lg:justify-center gap-10 lg:gap-3 sm:w-[95%] px-4 md:px-[0] lg:w-[80%] 2xl:w-[70%]">
         {sections?.map((section, index) => (
           <div
             key={index}
-            className={`py-7 px-10 lg:px-5 grad-border bdr-sm-rds relative ${
+            className={`py-7 px-10 lg:px-5 grad-border grad-border-compliance bdr-hiw-rds relative ${
               index === 1 && "lg:mt-[50px]"
-            } w-full sm:w-[48%] lg:w-[32%]`}
+            } w-[100%] md:w-[47%] lg:w-[32%]`}
           >
             <div className="flex flex-col items-left gap-5">
               <Image src={section.image} alt={section.title} className="ml-4" />
@@ -90,7 +90,7 @@ function page() {
               rounderBL={"rounded-bl-[40px]"}
               classname={"btn-bg-grad ml-4"}
             />
-            <div className="absolute top-[-20px] right-[-10px] bg-[#89D6FF] py-[10px] px-[17px] rounded-[50px]">
+            <div className="absolute top-[-20px] right-[-10px] text-[#fff] bg-[#89D6FF] py-[10px] px-[17px] rounded-[50px]">
               {section.num}
             </div>
           </div>

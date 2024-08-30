@@ -12,8 +12,8 @@ function page() {
   return (
     <div className="container m-auto px-6 sm:px-0">
       <section className="px-2 py-8 sm:px-4 md:px-8 md:py-12">
-      <div className="text-center">
-        <span className="font-inter text-[50px] lg:text-[88px] font-light leading-[106.5px] lg:leading-[60.51px] tracking-[-2px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]">
+        <div className="text-center">
+          <span className="font-inter text-[50px] lg:text-[88px] font-light leading-[106.5px] lg:leading-[60.51px] tracking-[-2px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]">
             Compliance
           </span>
         </div>
@@ -26,7 +26,7 @@ function page() {
       <section className="w-full grid justify-center gap-8 mt-8  md:mt-10 lg:mt-14 px-4">
         <div className="flex flex-col md:flex-row justify-between gap-8 w-full lg:max-w-[1000px] xl:max-w-[1240px]">
           <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[460px] h-auto lin-bf-txt">
-            <div className="py-7 px-10 grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
+            <div className="py-7 px-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
               <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
                 <div className="w-auto lg:w-full flex justify-start md:justify-normal lg:justify-end">
                   <Image src={topRightarrow} alt="topRightarrow" />
@@ -43,7 +43,7 @@ function page() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[747px] h-auto lin-bf-txt">
-            <div className="py-7 px-10 grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
+            <div className="py-7 px-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
               <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
                 <div className="w-auto lg:w-full flex justify-start md:justify-normal lg:justify-end">
                   <Image src={topRightarrow} alt="topRightarrow" />
@@ -55,14 +55,15 @@ function page() {
               <p className="py-2 mt-2 lg:pl-4 text-[16px] lg:text-[18px] leading-[22.58px] lg:leading-[25.4px]">
                 A SOC 1 Report (System and Organization Controls Report) is a
                 report on Controls at a Service Organization which are relevant
-                to user entities&apos; internal control over financial reporting.
+                to user entities&apos; internal control over financial
+                reporting.
               </p>
             </div>
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-8 w-full lg:max-w-[1000px] xl:max-w-[1240px]">
           <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[747px] h-auto lin-bf-txt">
-            <div className="py-7 px-10 grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
+            <div className="py-7 px-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
               <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
                 <div className="w-auto lg:w-full flex justify-start md:justify-normal lg:justify-end">
                   <Image src={topRightarrow} alt="topRightarrow" />
@@ -80,7 +81,7 @@ function page() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[460px] h-auto lin-bf-txt">
-            <div className="py-7 px-10 grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
+            <div className="py-7 px-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
               <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
                 <div className="w-auto lg:w-full flex justify-start md:justify-normal lg:justify-end">
                   <Image src={topRightarrow} alt="topRightarrow" />
@@ -125,10 +126,10 @@ function page() {
         </div>
       </section>
       <section className="mt-8 md:mt-10 lg:mt-14">
-      <ReadytoGetStart />
+        <ReadytoGetStart />
       </section>
       <section className="lg:hidden mt-14 mb-14 md:mt-20 md:mb-20 lg:mt-28">
-      <Faq />
+        <Faq />
       </section>
     </div>
   );
