@@ -88,7 +88,7 @@ function page() {
       <section className=" py-10 relative">
         <Testimonials />
       </section>
-      <section className="container m-auto py-10">
+      <section className="py-10">
         <ReadytoGetStart />
       </section>
       <section className="container m-auto py-10">
