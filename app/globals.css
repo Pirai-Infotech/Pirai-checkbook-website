@@ -32,13 +32,43 @@
 body {
   font-family: var(--font-inter);
   /* background: linear-gradient(180deg, #e0ebfb, #ffffff, #ffffff, #e0ebfb), */
-  background: linear-gradient(180deg, #ffffff, #e0ebfb, #ffffff),
+  /* background: linear-gradient(180deg, #ffffff, #e0ebfb, #ffffff),
     url("/bg_dot_lines.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-blend-mode: overlay;
+  background-blend-mode: overlay; */
 }
+.bg-one{
+  
+}
+.bg-two{
+  position: relative;
+  background: linear-gradient(180deg, #ffffff, #e0ebfb, #ffffff);
+  background-repeat: repeat-y;
+  background-size: auto 1400px;
+  position: relative;
+  height: 100%; 
+  width: 100%; 
+}
+.bg-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/bg_dot_lines.svg") repeat-y;
+  background-size: cover;
+  z-index: 0;
+  opacity: 0.4;
+}
+.bg-image{
+  position: relative;
+  z-index: 1;
+}
+
+
 /* h1 {
   font-size: 5.5rem;
   font-size: 50px;
@@ -127,13 +157,13 @@ a:hover {
   border-image: linear-gradient(to right, #9281ff, #3ea8bd, #e0ffff) 1;
   border-radius: 25px;
 }
-.bg-grad {
+/* .bg-grad {
   background: linear-gradient(90deg, #9281ff, #3ea8bd);
   display: flex;
   justify-content: center;
   padding: 50px;
   border-radius: 10px;
-}
+} */
 .bg-grad-sec {
   background: linear-gradient(90deg, #e0ebfb, #ffffff00);
   border-radius: 10px;
@@ -309,7 +339,8 @@ z-index: -1;
 }
 
 /* Carousel Styles */
-.carousel-item {
+
+/* .carousel-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -319,15 +350,18 @@ z-index: -1;
 }
 .react-multi-carousel-track{
   justify-content: center!important;
+  transform: translate3d(0px, 0px, 0px)!important;
 }
 .react-multi-carousel-item--center .carousel-item {
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
+
 
 li.react-multi-carousel-item.carousel-item {
   filter: blur(1px);
   opacity: 0.5;
+  margin: 0px 1.7%;
 }
 .react-multi-carousel-item--active {
   filter: blur(0px) !important;
@@ -342,13 +376,6 @@ li.react-multi-carousel-item.carousel-item {
 }
 .react-multi-carousel-dot--active button {
   background: #0560a8 !important;
-}
-
-.react-multi-carousel-dot button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: 0 5px;
 }
 
 .react-multi-carousel-dot--active button {
@@ -391,9 +418,12 @@ li.react-multi-carousel-item.carousel-item {
   .bdr-sm-rds{
     border-radius: 10px;
   }
-  .container{
-    padding: 0% 5%;
+  li.react-multi-carousel-item.carousel-item {
+    margin:0px 1%;
   }
+  /* .container{
+    padding: 0% 5%;
+  } */
 }
 
 @media only screen and (max-width: 1599px) {
