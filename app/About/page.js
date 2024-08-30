@@ -9,7 +9,7 @@ import ReadytoGetStart from "../ui/ReadytoGetStart";
 
 function page() {
   return (
-    <div className="py-8">
+    <div className="py-8 px-5">
       <section className="container m-auto sm:px-4 md:px-8 md:py-12">
         <div className="text-center">
           <div className="font-inter text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-[-2px] text-[#404040]">
@@ -19,7 +19,7 @@ function page() {
             Checkbook
           </span>
           <div className="flex justify-center mt-6 sm:mt-8 md:mt-10">
-            <p className="font-circular-spotify px-[0px] md:px-[60px] lg:px-[120px] xl:px-[170px] 2xl:px-[300px] text-[18px] lg:text-[22px] xl:text-[27px] font-light leading-relaxed text-[#666666] text-center">
+            <p className="font-circular-spotify px-[0px] md:px-[60px] lg:px-[120px] xl:px-[170px] 2xl:px-[300px] text-[18px] lg:text-[22px] xl:text-[27px] font-light leading-[25.4px] lg:leading-[38.1px] text-[#666666] text-center">
               We are a dedicated bunch of trailblazers who are passionate about
               innovation in the payments space. We understand payments
               inside-out - from a technical as well as a business perspective.
@@ -30,7 +30,7 @@ function page() {
         </div>
       </section>
       <section className="lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-white mt-11 sm:mt-8 md:mt-10">
-        <div className="p-10 lg:p-0 relative block sm:flex lg:block sm:w-[100%] sm:gap-8">
+        <div className="py-10 lg:py-0 relative block sm:flex lg:block sm:w-[100%] sm:gap-8">
         <div className="sm:w-[50%] lg:w-auto">
           <div className="block lg:flex lg:w-[100%]">
             <div className="lg:w-[50%] flex lg:items-center lg:justify-center lg:h-[500px] sm:pl-8">
