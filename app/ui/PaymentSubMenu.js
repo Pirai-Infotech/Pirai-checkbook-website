@@ -9,12 +9,14 @@ function PaymentSubMenu() {
     <>
       <div className="flex items-center">
         <div className="w-[18%]">
-          <div className="bg-[#DCD9FF] w-16 h-16 rounded-xl px-2 py-2 flex items-center justify-center">
+          <div className="lg:bg-[#DCD9FF] bg-[#80D1FF] w-16 h-16 rounded-xl px-2 py-2 flex items-center justify-center">
             <Image src={paymentIcon} alt="paymentIcon" />
           </div>
         </div>
-        <div className="w-[80%]">
-          <h3 className="text-xl font-black">PAYMENTS</h3>
+        <div className="lg:w-[80%] lg:ml-0 w-[75%] ml-[5%]">
+          <h3 className="lg:text-xl lg:font-black text-base text-white">
+            PAYMENTS
+          </h3>
           <p className="text-lg font-light">
             Send a single check or a million, we have the solution for you
           </p>
