@@ -47,7 +47,7 @@ const questions = [
 const defaultActiveKey = [0];
 const Faq = () => {
   return (
-    <div className="container m-auto rounded-[20px] sm:rounded-[60px] bg-grad-1 px-1 py-20 md:p-20 ">
+    <div className="container m-auto rounded-[20px] sm:rounded-[60px] bg-grad-1 py-20 md:p-20  sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
       <h3 className="text-center pb-10">Frequently Asked Questions</h3>
       <Collapse
         expandIcon={expandIcon}

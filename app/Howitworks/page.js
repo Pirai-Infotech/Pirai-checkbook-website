@@ -39,10 +39,10 @@ const sections = [
 ];
 function page() {
   return (
-    <div className="px-2 sm:px-8 sm:px-0">
-      <section className="container m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10 ">
-        <div className="flex-1 sm:px-[9%] lg:px-10 xl:pr-[17%]">
-          <h1 className="text-center lg:text-left text-[45px] lg:text-[70px] 2xl:text-[88px]">
+    <div className="">
+      <section className="container m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10   sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
+        <div className="flex-1 px-[0%] sm:px-[7%] lg:px-[0%] lg:pr-[5%] 2xl:pr-[2%]">
+          <h1 className="text-center lg:text-left text-[45px] xl:text-[70px] 2xl:text-[88px]">
             How it <span>Works</span>
           </h1>
           <p className="pt-5 text-center lg:text-left text-[18px] 2xl:text-[27px]">
@@ -52,7 +52,7 @@ function page() {
             dedicated support.
           </p>
         </div>
-        <div className="flex-1 ">
+        <div className="flex-1">
           <VideoWithThumbnail
             videoUrl="/path-to-your-video.mp4"
             videothumbnail={Videothumbnail}
@@ -60,7 +60,7 @@ function page() {
           />
         </div>
       </section>
-      <section className="container m-auto py-10 flex flex-wrap items-start lg:justify-center gap-5 lg:gap-3">
+      <section className="container m-auto py-10 flex flex-wrap items-start lg:justify-center gap-5 lg:gap-3 sm:w-[95%] px-4 md:px-[0] lg:w-[80%] 2xl:w-[70%]">
         {sections?.map((section, index) => (
           <div
             key={index}
