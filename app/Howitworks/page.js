@@ -45,7 +45,7 @@ function page() {
           <h1 className="text-center lg:text-left text-[45px] xl:text-[70px] 2xl:text-[88px]">
             How it <span>Works</span>
           </h1>
-          <p className="pt-5 text-center lg:text-left text-[18px] 2xl:text-[27px]">
+          <p className="pt-5 text-center lg:text-left text-[18px] 2xl:text-[27px] 2xl:pr-[5%]">
             No percentages. No hidden fees. Checkbook offers everything needed
             to disburse payments at scale. Get in touch with our sales team for
             details on volume discounts, integration assistance, and our
@@ -80,8 +80,15 @@ function page() {
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
               textColor={"text-[#fff]"}
-              classname={"btn-bg-grad ml-4"}
               content={section.cta}
+              paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
+              paddingy={"py-3 md:py-4"}
+              textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
+              rounderTL={"rounded-tl-none"}
+              rounderTR={"rounded-tr-[60px]"}
+              rounderBR={"rounded-br-[60px]"}
+              rounderBL={"rounded-bl-[40px]"}
+              classname={"btn-bg-grad ml-4"}
             />
             <div className="absolute top-[-20px] right-[-10px] bg-[#89D6FF] py-[10px] px-[17px] rounded-[50px]">
               {section.num}
