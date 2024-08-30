@@ -84,18 +84,18 @@ function page() {
           </div>
         </div>
         <div className="mt-10 sm:mt-0 lg:mt-28 sm:w-[50%] lg:w-auto mb-10 flex lg:hidden justify-center lg:px-8 xl:px-0 sm:pr-8">
-          <div className="rounded-[55px] w-[1299px] p-[40px] sm:p-[30px] md:p-[45px] lg:p-[65px] border-2 border-transparent grad-border borderimage">
+          <div className="rounded-[55px] w-[1385px] p-[40px] sm:p-[30px] md:p-[45px] lg:p-[60px] border-2 border-transparent grad-border borderimage">
             <h2 className="font-inter text-[16px] lg:text-[27px] font-medium leading-[19.36px] md:leading-[32.68px] text-left text-[#282828]">
               Our Story
             </h2>
-            <p className="mt-4 lg:mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="mt-4 lg:mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
              <span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
               Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
               neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
               ligula sollicitudin laoreet viverra, tortor libero sodales leo,
               eget blandit nunc tortor eu nibh.
               </span>
-              <span className="lg:block hidden">Nullam mollis. Ut justo. Suspendisse potenti.
+              <span className="lg:inline hidden">Nullam mollis. Ut justo. Suspendisse potenti.
               Sed egestas, ante et vulputate volutpat, eros
               pede semper est, vitae luctus metus libero eu augue. Morbi purus
               libero, faucibus adipiscing, commodo quis, gravida id, est. Sed
@@ -105,7 +105,7 @@ function page() {
               arcu, dapibus eu, fermentum et, dapibus sed, urna.
               </span>
             </p>
-            <p className="lg:block hidden mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="lg:block hidden mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
               Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia,
               magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae
               facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis,
@@ -114,7 +114,7 @@ function page() {
               mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede,
               ornare a, lacinia eu, vulputate vel, nisl.
             </p>
-            <p className="lg:block hidden mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="lg:block hidden mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
               Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a
               diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a
               sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem
@@ -135,20 +135,20 @@ function page() {
             <div className="flex justify-center my-10 lg:my-14">
               <Image src={logo} className="w-[200px] lg:w-[300px]" height={93} alt="Checkbook" />
             </div>
-            <p className="lg:hidden block mt-5 mb-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="lg:hidden block mt-5 mb-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
             Nullam mollis. Ut justo. Suspendisse potenti.
             </p>
             <h2 className="font-inter text-[16px] md:text-[27px] font-medium leading-[19.36px] md:leading-[32.68px] text-left text-[#282828]">
               Our Values
             </h2>
-            <p className="lg:hidden hidden md:block mt-4 lg:mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="lg:hidden hidden md:block mt-4 lg:mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
               Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia,
               magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae
               facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis,
               adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse
               ac urna.
             </p>
-            <p className="lg:hidden block md:hidden mt-5 md:mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="lg:hidden block md:hidden mt-5 md:mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
               Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia,
               magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae
               facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis,
@@ -157,7 +157,7 @@ function page() {
               mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede,
               ornare a, lacinia eu, vulputate vel, nisl.
             </p>
-            <p className="hidden lg:block mt-5 md:mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="hidden lg:block mt-5 md:mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
               Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
               neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
@@ -177,18 +177,18 @@ function page() {
       </section>
       <section className="hidden lg:block container m-auto">
       <div className="mt-10 sm:mt-0 lg:mt-28 sm:w-[50%] lg:w-auto mb-10 flex justify-center lg:px-8 xl:px-0 sm:pr-8">
-          <div className="rounded-[55px] w-[1299px] p-[40px] lg:p-[65px] border-2 border-transparent grad-border borderimage">
+          <div className="rounded-[55px] w-[1385px] p-[40px] lg:p-[60px] border-2 border-transparent grad-border borderimage">
             <h2 className="font-inter text-[16px] md:text-[27px] font-medium leading-[19.36px] md:leading-[32.68px] text-left text-[#282828]">
               Our Story
             </h2>
-            <p className="mt-5 lg:mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="mt-5 lg:mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
              <span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
               Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
               neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
               ligula sollicitudin laoreet viverra, tortor libero sodales leo,
               eget blandit nunc tortor eu nibh.
               </span>
-              <span className="lg:block hidden">Nullam mollis. Ut justo. Suspendisse potenti.
+              <span className="lg:inline hidden"> Nullam mollis. Ut justo. Suspendisse potenti.
               Sed egestas, ante et vulputate volutpat, eros
               pede semper est, vitae luctus metus libero eu augue. Morbi purus
               libero, faucibus adipiscing, commodo quis, gravida id, est. Sed
@@ -198,7 +198,7 @@ function page() {
               arcu, dapibus eu, fermentum et, dapibus sed, urna.
               </span>
             </p>
-            <p className="lg:block hidden mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="lg:block hidden mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
               Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia,
               magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae
               facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis,
@@ -207,7 +207,7 @@ function page() {
               mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede,
               ornare a, lacinia eu, vulputate vel, nisl.
             </p>
-            <p className="lg:block hidden mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="lg:block hidden mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
               Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a
               diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a
               sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem
@@ -228,20 +228,20 @@ function page() {
             <div className="flex justify-center my-10 md:my-14">
               <Image src={logo} className="w-[200px] lg:w-[300px]" height={93} alt="Checkbook" />
             </div>
-            <p className="lg:hidden block mt-4 lg:mt-10 mb-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="lg:hidden block mt-4 lg:mt-10 mb-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
             Nullam mollis. Ut justo. Suspendisse potenti.
             </p>
             <h2 className="font-inter text-[16px] md:text-[27px] font-medium leading-[19.36px] md:leading-[32.68px] text-left text-[#282828]">
               Our Values
             </h2>
-            <p className="lg:hidden hidden md:block mt-5 md:mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="lg:hidden hidden md:block mt-5 md:mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
               Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia,
               magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae
               facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis,
               adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse
               ac urna.
             </p>
-            <p className="lg:hidden block md:hidden mt-5 md:mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="lg:hidden block md:hidden mt-5 md:mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
               Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia,
               magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae
               facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis,
@@ -250,7 +250,7 @@ function page() {
               mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede,
               ornare a, lacinia eu, vulputate vel, nisl.
             </p>
-            <p className="hidden lg:block mt-5 md:mt-10 font-circular-spotify text-[16px] lg:text-[27px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
+            <p className="hidden lg:block mt-5 md:mt-10 font-circular-spotify text-[16px] lg:text-[20px] font-light leading-[22.58px] lg:leading-[31px] text-left text-[#4F535B]">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
               Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
               neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
