@@ -92,6 +92,16 @@ h4 {
   background-color: var(--secondary-color);
   z-index: -1;
 }
+.lin-bf-txt2 h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.2px;
+  height: 30px;
+  background-color: var(--secondary-color);
+  z-index: -1;
+}
 p {
   font-size: 18px;
   line-height: 1.6;
@@ -190,6 +200,46 @@ a:hover {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
+.grad-border-rtgs {
+  position: relative;
+}
+.grad-border-rtgs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    90.49deg,
+    #9281ff 0.44%,
+    #3ea8bd 59.42%,
+    #e0ffff 99.56%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+.grad-border-syi {
+  position: relative;
+}
+.grad-border-syi::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    217.49deg,
+    #9281ff 0.44%,
+    #3ea8bd 59.42%,
+    #e0ffff 99.56%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
 .grad-border-compliance {
   position: relative;
 }
@@ -214,7 +264,7 @@ a:hover {
   border-radius: 0 60px 60px 60px;
 }
 .borderbutton::before {
-  padding: 1.5px;
+  padding: 2.1px;
 }
 .bdr-compliance::before {
   padding: 2.1px;
@@ -238,8 +288,15 @@ a:hover {
     border-radius: 25px;
 }
 .bdr-sm-rds::before {
-  padding: 1.5px;
+  padding: 2.1px;
   z-index: -1;
+}
+.bdr-sm-rtgs {
+  border-radius: 25px;
+}
+.bdr-sm-rtgs::before {
+padding: 2.1px;
+z-index: -1;
 }
 .borderimage {
   border-radius: 55px;
@@ -315,11 +372,17 @@ li.react-multi-carousel-item.carousel-item {
   .no-bdr.grad-border::before {
     content: unset !important;
   }
+  .no-bdr.grad-border-rtgs::before{
+    content: unset !important;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
   .no-bdr.grad-border::before{
     content: unset!important;
+  }
+  .no-bdr.grad-border-rtgs::before{
+    content: unset !important;
   }
   .btm-lr-n{
     border-bottom-left-radius: 0px;
@@ -372,6 +435,9 @@ li.react-multi-carousel-item.carousel-item {
     font-size: 1em;
   }
   .lin-bf-txt h4::before {
+    display: none;
+  }
+  .lin-bf-txt2 h4::before {
     display: none;
   }
 }
