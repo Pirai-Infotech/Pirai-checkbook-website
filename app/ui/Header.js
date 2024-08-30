@@ -51,14 +51,14 @@ function Header() {
                   </div>
                 </div>
                 <div className="flex items-start justify-between mt-5 flex-wrap">
-                  <div className="sm:w-[45%] w-full">
+                  <div className="sm:w-[47%] w-full">
                     <ul>
                       <li className="text-white text-xl font-extrabold border-b border-white py-4 uppercase">
                         Home
                       </li>
-                      <li className="text-white text-xl font-extrabold border-b border-white py-4 uppercase flex flex-wrap">
+                      <li className="text-white text-xl font-extrabold border-b border-white py-4 uppercase flex flex-wrap lg:bg-none bg-white bg-opacity-10 p-5 lg:p-0">
                         Products
-                        {/* <PaymentSubMenu /> */}
+                        <PaymentSubMenu />
                       </li>
                       <li className="text-white text-xl font-extrabold border-b border-white py-4 uppercase">
                         Solutions
@@ -68,7 +68,7 @@ function Header() {
                       </li>
                     </ul>
                   </div>
-                  <div className="sm:w-[45%] w-full">
+                  <div className="sm:w-[47%] w-full">
                     <ul>
                       <li className="text-white text-xl font-extrabold border-b border-white py-4 uppercase">
                         Industries
