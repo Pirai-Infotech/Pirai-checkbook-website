@@ -23,7 +23,7 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
   </div>
     </div>
     <div className="container m-auto flex flex-row items-center justify-between gap-2 lg:gap-8 py-10 ">
-      <div className="w-[50%] 2xl:w-[36%] h-[500px]">
+      <div className="w-[60%] 2xl:w-[36%] h-[500px]">
         {items?.map((item, index) => (
           <div
             key={index}
@@ -37,9 +37,8 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
               <h4 className="text-[#404040] lg:pr-24 text-[25px] leading-[28.62px] xl:text-[39px] xl:leading-[44.65px] group-hover:text-[#7F53E7] pb-3">
                 {item.heading}
               </h4>
-              <p className={`text-[#404040] transition-opacity duration-300 ease-in-out ${
-                  toHandelhover(index) ? 'opacity-100 visible' : 'opacity-0 invisible'
-                } lg:group-hover:opacity-100 lg:group-hover:visible group-hover:text-[#7F53E7] text-[18px] leading-[25.4px] xl:text-[25px] xl:leading-[35.28px]`}>
+              <p className={`text-[#404040] ${toHandelhover(index) ? `block` : `hidden`} lg:group-hover:block group-hover:text-[#7F53E7] text-[18px] leading-[25.4px] xl:text-[25px] xl:leading-[35.28px]`}
+              >
                 {item.text}
               </p>
             </div>
@@ -50,7 +49,7 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
         <Image
           src={imageSrc}
           alt="Printable Check"
-          className="h-[500px] md:w-[500px] lg:w-[775px] lg:h-[100%] object-left object-cover"
+          className="h-[500px] w-[150px] md:w-[500px] lg:w-[775px] lg:h-[100%] object-left object-cover"
         />
       </div>
     </div>
