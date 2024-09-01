@@ -124,10 +124,10 @@ const CustomCarousel = () => {
             key={index}
             className="item border-[2px] border-[#FFFFFF] rounded-[25px] xl:rounded-[53px] p-5 md:p-[20px] xl:p-[35px] "
           >
-            <div className="bg-white p-10 md:p-[18px] xl:p-[65px] rounded-[14px] xl:rounded-[30px]">
+            <div className="bg-white p-5 md:p-[18px] xl:p-[65px] rounded-[14px] xl:rounded-[30px]">
               <div className="flex flex-row items-center">
                 <Image src={item.image} alt={item.altText} />
-                <p className="pl-5 text-[#365B7F] font-[400] text-[17px]">
+                <p className="pl-3 md:pl-5 text-[#365B7F] font-[400] text-[14px] md:text-[17px]">
                   {item.name},<br />
                   {item.position}
                 </p>

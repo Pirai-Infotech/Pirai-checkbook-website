@@ -45,7 +45,7 @@ function page() {
           <h1 className="text-center lg:text-left text-[45px] xl:text-[70px] 2xl:text-[88px]">
             How it <span>Works</span>
           </h1>
-          <p className="pt-5 text-center lg:text-left text-[18px] 2xl:text-[27px]">
+          <p className="pt-5 text-center lg:text-left text-[18px] 2xl:text-[27px] 2xl:pr-[5%]">
             No percentages. No hidden fees. Checkbook offers everything needed
             to disburse payments at scale. Get in touch with our sales team for
             details on volume discounts, integration assistance, and our
@@ -60,13 +60,13 @@ function page() {
           />
         </div>
       </section>
-      <section className="container m-auto py-10 flex flex-wrap items-start lg:justify-center gap-5 lg:gap-3 sm:w-[95%] px-4 md:px-[0] lg:w-[80%] 2xl:w-[70%]">
+      <section className="container m-auto py-10 flex flex-wrap items-start lg:justify-center gap-10 lg:gap-3 sm:w-[95%] px-4 md:px-[0] lg:w-[80%] 2xl:w-[70%]">
         {sections?.map((section, index) => (
           <div
             key={index}
-            className={`py-7 px-10 lg:px-5 grad-border bdr-sm-rds relative ${
+            className={`py-7 px-10 lg:px-5 grad-border grad-border-compliance bdr-hiw-rds relative ${
               index === 1 && "lg:mt-[50px]"
-            } w-full sm:w-[48%] lg:w-[32%]`}
+            } w-[100%] md:w-[47%] lg:w-[32%]`}
           >
             <div className="flex flex-col items-left gap-5">
               <Image src={section.image} alt={section.title} className="ml-4" />
@@ -80,10 +80,17 @@ function page() {
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
               textColor={"text-[#fff]"}
-              classname={"btn-bg-grad ml-4"}
               content={section.cta}
+              paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
+              paddingy={"py-3 md:py-4"}
+              textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
+              rounderTL={"rounded-tl-none"}
+              rounderTR={"rounded-tr-[60px]"}
+              rounderBR={"rounded-br-[60px]"}
+              rounderBL={"rounded-bl-[40px]"}
+              classname={"btn-bg-grad ml-4"}
             />
-            <div className="absolute top-[-20px] right-[-10px] bg-[#89D6FF] py-[10px] px-[17px] rounded-[50px]">
+            <div className="absolute top-[-20px] right-[-10px] text-[#fff] bg-[#89D6FF] py-[10px] px-[17px] rounded-[50px]">
               {section.num}
             </div>
           </div>
