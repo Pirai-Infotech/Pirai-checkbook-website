@@ -248,7 +248,6 @@ a:hover {
     #3ea8bd 59.42%,
     #e0ffff 99.56%
   );
- 
 }
 .grad-border-syi::before {
  background: linear-gradient(
@@ -278,6 +277,12 @@ a:hover {
   border-radius: 0 60px 60px 60px;
 }
 .borderbutton::before {
+  background: linear-gradient(
+    90.49deg,
+    #9281ff 0.44%,
+    #3ea8bd 59.42%,
+    #e0ffff 99.56%
+  );
   padding: 2.1px;
 }
 .bdr-compliance::before {
@@ -396,7 +401,7 @@ li.react-multi-carousel-item.carousel-item {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .no-bdr.grad-border::before {
     content: unset !important;
   }
@@ -406,18 +411,9 @@ li.react-multi-carousel-item.carousel-item {
 }
 
 @media only screen and (max-width: 1280px) {
-  .no-bdr.grad-border::before {
-    content: unset !important;
-  }
-  .no-bdr.grad-border-rtgs::before {
-    content: unset !important;
-  }
   .btm-lr-n {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-  }
-  .bdr-sm-rds {
-    border-radius: 10px;
   }
   li.react-multi-carousel-item.carousel-item {
     margin: 0px 1%;
