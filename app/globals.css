@@ -233,7 +233,7 @@ a:hover {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
-.grad-border-def{
+.grad-border-def::before{
   background: linear-gradient(
     179.49deg,
     #9281ff 0.44%,
@@ -290,7 +290,8 @@ a:hover {
 }
 .bdr-md-rds {
   @media only screen and (max-width: 768px) {
-    border-top-right-radius: 50px;
+    border-radius: 50px;
+    border-top-left-radius: 0px !important;
   }
   @media only screen and (min-width: 768px) {
     border-radius: 50px;
@@ -316,7 +317,7 @@ a:hover {
   z-index: -1;
 }
 .bdr-md-rds::before {
-  padding: 1.5px;
+  padding: 2.1px;
   z-index: -1;
 }
 .bdr-sm-rds {

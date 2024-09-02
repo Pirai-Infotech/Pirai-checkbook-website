@@ -13,10 +13,10 @@ function page() {
     <div className="pt-8 px-5">
       <section className="container m-auto sm:px-4 md:px-8 md:py-12">
         <div className="text-center">
-          <div className="font-inter text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-[-2px] text-[#404040]">
+          <div className="font-inter text-[50px] leading-[60.51px] lg:text-[88px] lg:leading-[106.5px] font-light tracking-[-2px] text-[#404040]">
             Meet
           </div>
-          <span className="font-inter text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-[-2px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]">
+          <span className="font-inter text-[50px] leading-[60.51px] lg:text-[88px] lg:leading-[106.5px] font-light tracking-[-2px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]">
             Checkbook
           </span>
           <div className="flex justify-center mt-6 sm:mt-8 md:mt-10">
@@ -85,7 +85,7 @@ function page() {
           </div>
         </div>
         <div className="mt-10 sm:mt-0 lg:mt-28 sm:w-[50%] lg:w-auto mb-10 flex lg:hidden justify-center lg:px-8 xl:px-0 sm:pr-8">
-          <div className="rounded-[55px] w-[1385px] p-[40px] sm:p-[30px] md:p-[45px] lg:p-[60px] border-2 border-transparent grad-border borderimage">
+          <div className="rounded-[55px] w-[1385px] p-[40px] sm:p-[30px] md:p-[45px] lg:p-[60px] border-2 border-transparent grad-border grad-border-def borderimage">
             <h2 className="font-inter text-[16px] lg:text-[27px] font-medium leading-[19.36px] md:leading-[32.68px] text-left text-[#282828]">
               Our Story
             </h2>
@@ -178,7 +178,7 @@ function page() {
       </section>
       <section className="hidden lg:block container m-auto">
       <div className="mt-10 sm:mt-0 lg:mt-28 sm:w-[50%] lg:w-auto mb-10 flex justify-center lg:px-8 xl:px-0 sm:pr-8">
-          <div className="rounded-[55px] w-[1385px] p-[40px] lg:p-[60px] border-2 border-transparent grad-border borderimage">
+          <div className="rounded-[55px] w-[1385px] p-[40px] lg:p-[60px] border-2 border-transparent grad-border grad-border-def borderimage">
             <h2 className="font-inter text-[16px] md:text-[27px] font-medium leading-[19.36px] md:leading-[32.68px] text-left text-[#282828]">
               Our Story
             </h2>

@@ -11,13 +11,13 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
   return (
     <>
     <div className="pt-10">
-    <div className="container m-auto lg:px-[26%]">
+    <div className="container m-auto lg:px-[20%]">
     <h3 className="text-center pb-6 md:10">
       {heading}
       <br />
       <span>{spancon}</span>
     </h3>
-    <p className="text-center px-4 sm:px-24 md:px-32 lg:px-0">
+    <p className="text-center font-circular-spotify text-[18px] leading-[25.4px] lg:text-[20px] lg:leading-[28.22px] px-4 sm:px-24 md:px-32 lg:px-0">
       {description}
     </p>
   </div>

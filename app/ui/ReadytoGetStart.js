@@ -12,7 +12,7 @@ function ReadytoGetStart() {
   return (
     <div className="px-5 sm:px-0 container m-auto flex flex-col lg:flex-row items-center gap-8 py-10">
       <div className="lg:p-7 grad-border grad-border-rtgs bdr-sm-rds no-bdr flex-grow-1 xl:w-[60%]">
-        <div className="bg-[#fff] sm:border-[#C4DCFF] sm:border-2 lg:border-none lg:border-0 rounded-[30px] py-10 px-7 md:px-[15%] md:py-12 lg:px-[10%] 2xl:py-[100px] 2xl:px-[80px]">
+        <div className="bg-[#fff] sm:border-[#C4DCFF] sm:border-2 lg:border-none lg:border-0 rounded-[30px] py-10 md:px-[15%] md:py-12 lg:px-[10%] 2xl:py-[100px] 2xl:px-[80px]">
           <h2 className="text-center xl:text-left">
             Ready to get <br />
             <span>started?</span>
@@ -57,7 +57,7 @@ function ReadytoGetStart() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-8">
-        <div className="py-10 px-10 sm:px-20 md:py-10 md:px-10 lg:p-[20px] xl:p-[70px] grad-border grad-border-compliance bdr-sm-rtgs lin-bf-txt2">
+        <div className="py-10 w-full px-10 sm:px-20 md:py-10 md:px-10 lg:p-[20px] xl:p-[70px] grad-border grad-border-compliance bdr-sm-rtgs lin-bf-txt2">
           <div className="flex flex-row lg:flex-col  items-center xl:items-start gap-5">
             <Image
               src={payicogray}
@@ -90,7 +90,7 @@ function ReadytoGetStart() {
             content={"Pricing Details"}
           />
         </div>
-        <div className="py-10 px-10 sm:px-20 md:py-10 md:px-10 lg:p-[20px] xl:p-[70px] grad-border grad-border-syi bdr-sm-rtgs lin-bf-txt">
+        <div className="py-10 w-full px-10 sm:px-20 md:py-10 md:px-10 lg:p-[20px] xl:p-[70px] grad-border grad-border-syi bdr-sm-rtgs lin-bf-txt">
           <div className="flex flex-row lg:flex-col  items-center xl:items-start gap-5">
             <Image
               src={codeicogray}
