@@ -9,7 +9,8 @@ import ReadytoGetStart from "../ui/ReadytoGetStart";
 
 function page() {
   return (
-    <div className="py-8 px-5">
+    <>
+    <div className="pt-8 px-5">
       <section className="container m-auto sm:px-4 md:px-8 md:py-12">
         <div className="text-center">
           <div className="font-inter text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-[-2px] text-[#404040]">
@@ -283,10 +284,9 @@ function page() {
           content={"Join the Team"}
         />
       </div>
-      <section>
-      <ReadytoGetStart />
-      </section>
     </div>
+    <ReadytoGetStart />
+    </>
   );
 }
 
