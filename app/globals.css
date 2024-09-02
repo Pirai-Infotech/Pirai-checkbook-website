@@ -230,74 +230,41 @@ a:hover {
   right: 0;
   bottom: 0;
   border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+.grad-border-def{
   background: linear-gradient(
     179.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
     #e0ffff 99.56%
   );
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-}
-.grad-border-rtgs {
-  position: relative;
 }
 .grad-border-rtgs::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  background: linear-gradient(
+ background: linear-gradient(
     90.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
     #e0ffff 99.56%
   );
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-}
-.grad-border-syi {
-  position: relative;
+ 
 }
 .grad-border-syi::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  background: linear-gradient(
+ background: linear-gradient(
     217.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
     #e0ffff 99.56%
   );
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-}
-.grad-border-compliance {
-  position: relative;
 }
 .grad-border-compliance::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
   background: linear-gradient(
     300.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
     #e0ffff 99.56%
   );
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
 }
 .borderbutton {
   border-radius: 0 60px 60px 60px;
@@ -318,6 +285,21 @@ a:hover {
   @media only screen and (min-width: 1024px) {
     border-radius: 149px;
   }
+}
+.bdr-hiw-rds{
+  @media only screen and (max-width: 768px) {
+    border-radius: 25px;
+  }
+  @media only screen and (min-width: 768px) {
+    border-radius: 25px;
+  }
+  @media only screen and (min-width: 1024px) {
+    border-radius: 56px;
+  }
+}
+.bdr-hiw-rds::before{
+  padding: 2.1px;
+  z-index: -1;
 }
 .bdr-md-rds::before {
   padding: 1.5px;

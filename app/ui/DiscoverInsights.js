@@ -38,6 +38,14 @@ function DiscoverInsights() {
                     }
                     textColor={"text-[#FFF]"}
                     content={"Read More"}
+                    paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
+                    paddingy={"py-3 md:py-4"}
+                    textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
+                    rounderTL={"rounded-tl-none"}
+                    rounderTR={"rounded-tr-[60px]"}
+                    rounderBR={"rounded-br-[60px]"}
+                    rounderBL={"rounded-bl-[40px]"}
+                    classname={"btn-bg-grad ml-4"}
                   />
                 </div>
               </div>
@@ -63,6 +71,14 @@ function DiscoverInsights() {
                   backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
                   textColor={"text-[#FFF]"}
                   content={"Read More"}
+                  paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
+                  paddingy={"py-3 md:py-4"}
+                  textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
+                  rounderTL={"rounded-tl-none"}
+                  rounderTR={"rounded-tr-[60px]"}
+                  rounderBR={"rounded-br-[60px]"}
+                  rounderBL={"rounded-bl-[40px]"}
+                  classname={"btn-bg-grad ml-4"}
                 />
               </div>
             </div>
@@ -85,6 +101,14 @@ function DiscoverInsights() {
                   backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
                   textColor={"text-[#FFF]"}
                   content={"Read More"}
+                  paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
+                  paddingy={"py-3 md:py-4"}
+                  textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
+                  rounderTL={"rounded-tl-none"}
+                  rounderTR={"rounded-tr-[60px]"}
+                  rounderBR={"rounded-br-[60px]"}
+                  rounderBL={"rounded-bl-[40px]"}
+                  classname={"btn-bg-grad ml-4"}
                 />
               </div>
             </div>
