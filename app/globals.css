@@ -51,12 +51,27 @@ body {
   background-size: auto 1400px;
 }
 .bg-thr {
-  background: linear-gradient(to bottom, #E0EBFB 1vh,#ffffff, #ffffff,#ffffff, #ffffff, #E0EBFB);
+  background: linear-gradient(
+    to bottom,
+    #e0ebfb 1vh,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #e0ebfb
+  );
   background-repeat: no-repeat;
 }
 .bg-about {
   @apply bg-gradient-to-b from-transparent via-[rgba(224,235,251,0.5)] to-transparent;
-  background: linear-gradient(180deg, rgba(224, 235, 251, 0) 0%, rgba(224, 235, 251, 0.5) 5%, rgba(224, 235, 251, 0.5) 50.5%, rgba(224, 235, 251, 0.5) 75.25%, rgba(224, 235, 251, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(224, 235, 251, 0) 0%,
+    rgba(224, 235, 251, 0.5) 5%,
+    rgba(224, 235, 251, 0.5) 50.5%,
+    rgba(224, 235, 251, 0.5) 75.25%,
+    rgba(224, 235, 251, 0) 100%
+  );
 }
 .cb-bg::before {
   content: "";
@@ -67,7 +82,7 @@ body {
   bottom: 0;
   background: url("/bg_dot_lines.svg") repeat-y;
   background-size: cover;
-  z-index: 0;
+  z-index: -9;
   opacity: 0.4;
 }
 .bg-image {
@@ -242,7 +257,7 @@ a:hover {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
-.grad-border-def::before{
+.grad-border-def::before {
   background: linear-gradient(
     179.49deg,
     #9281ff 0.44%,
@@ -251,7 +266,7 @@ a:hover {
   );
 }
 .grad-border-rtgs::before {
- background: linear-gradient(
+  background: linear-gradient(
     90.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
@@ -259,7 +274,7 @@ a:hover {
   );
 }
 .grad-border-syi::before {
- background: linear-gradient(
+  background: linear-gradient(
     217.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
@@ -275,11 +290,7 @@ a:hover {
   );
 }
 .grad-border-price::before {
-  background: linear-gradient(
-    300.49deg,
-    #9281FF ,
-    #3EA8BD 
-  );
+  background: linear-gradient(300.49deg, #9281ff, #3ea8bd);
   z-index: -1;
 }
 .borderbutton {
@@ -299,14 +310,14 @@ a:hover {
 }
 
 /* Privacy Policy styles start*/
-.cb-pp h5{
+.cb-pp h5 {
   font-size: 24px;
   font-weight: 500;
   color: var(--primary-color);
   padding-bottom: 30px;
   padding-top: 10px;
 }
-.cb-pp h6{
+.cb-pp h6 {
   font-size: 19px;
   font-weight: 500;
   color: var(--primary-color);
@@ -314,25 +325,26 @@ a:hover {
   padding-top: 10px;
 }
 
-.cb-pp p, .cb-pp span{
+.cb-pp p,
+.cb-pp span {
   font-size: 19px;
   font-weight: 300;
   line-height: 26.8px;
   color: var(--primary-color);
   padding-bottom: 30px;
 }
-.cb-pp ul{
+.cb-pp ul {
   padding-left: 26px;
   padding-bottom: 30px;
 }
-.cb-pp li{
+.cb-pp li {
   font-size: 19px;
   font-weight: 300;
   line-height: 27px;
   list-style-type: disc;
 }
-.cb-pp::marker{
-  font-size:2.5em;
+.cb-pp::marker {
+  font-size: 2.5em;
 }
 /* privacy Policy styles end */
 
@@ -348,7 +360,7 @@ a:hover {
     border-radius: 149px;
   }
 }
-.bdr-hiw-rds{
+.bdr-hiw-rds {
   @media only screen and (max-width: 768px) {
     border-radius: 25px;
   }
@@ -360,7 +372,7 @@ a:hover {
   }
 }
 
-.bdr-hiw-rds::before{
+.bdr-hiw-rds::before {
   padding: 2.1px;
   z-index: -1;
 }
@@ -391,8 +403,8 @@ a:hover {
 .scond-itm:hover .first-itm {
   filter: blur(1.5px) !important;
 }
-.custom-list li::marker{
-  font-size: 1.5em; 
+.custom-list li::marker {
+  font-size: 1.5em;
 }
 /* Carousel Styles */
 
@@ -436,10 +448,10 @@ li.react-multi-carousel-item.carousel-item {
   background-color: #333;
 }
 
-@media only screen and (min-width: 768px){
-.cb-con{
-  max-width: 783px;
-}
+@media only screen and (min-width: 768px) {
+  .cb-con {
+    max-width: 783px;
+  }
 }
 @media only screen and (max-width: 480px) {
   h1 {
@@ -467,7 +479,6 @@ li.react-multi-carousel-item.carousel-item {
   li.react-multi-carousel-item.carousel-item {
     margin: 0px 1%;
   }
- 
 }
 
 @media only screen and (max-width: 1599px) {
@@ -484,7 +495,6 @@ li.react-multi-carousel-item.carousel-item {
     font-size: 14px;
   }
 }
-
 
 @media only screen and (max-width: 1024px) {
   .no-bdr.grad-border::before {
