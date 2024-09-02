@@ -2,6 +2,8 @@
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Faq from "../ui/Faq";
+import Verticalhover from "../ui/Verticalhover";
+import PricingEasytosend from "../../public/Pricing_Easytosend.png";
 
 const plans = [
   {
@@ -197,7 +199,20 @@ const plans = [
     ],
   },
 ];
-
+const itemscon = [
+  {
+    heading: "Real-time tracking",
+    text: "No percentages. No hidden fees. Only pay for the payments you send.",
+  },
+  {
+    heading: "No hidden fees",
+    text: "No percentages. No hidden fees. Only pay for the payments you send.",
+  },
+  {
+    heading: "Monthly Billing",
+    text: "No percentages. No hidden fees. Only pay for the payments you send.",
+  },
+];
 function page() {
   return (
     <div>
@@ -258,7 +273,13 @@ function page() {
           ))}
         </div>
       </section>
-
+      <Verticalhover
+        heading="All Plans Include"
+        spancon=""
+        description=""
+        items={itemscon}
+        imageSrc={PricingEasytosend}
+      />
       <Faq />
       <ReadytoGetStart />
     </div>

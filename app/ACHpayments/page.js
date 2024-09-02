@@ -42,7 +42,7 @@ const itemscon = [
 ];
 function page() {
   return (
-    <div className="px-8 sm:px-0">
+    <div className="px-5 sm:px-0">
       <HeroSection
         heading="Send"
         spancon="ACH Payments"

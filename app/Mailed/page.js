@@ -42,7 +42,7 @@ const itemscon = [
 ];
 function page() {
   return (
-    <div>
+    <div className="px-5 sm:px-0">
       <HeroSection
         heading="Programmatically"
         spancon="Mail Paper Checks"
@@ -72,7 +72,7 @@ function page() {
         imageSrc={Papercheck}
       />
 
-      <section className="w-[50%] m-auto h-[300px] rounded-[40px] bg-slate-300"></section>
+      <section className="w-full sm:w-[80%] container m-auto h-[300px] rounded-[40px] bg-slate-300"></section>
       <section>
         <DiscoverInsights />
       </section>
