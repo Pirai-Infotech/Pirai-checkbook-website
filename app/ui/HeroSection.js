@@ -7,7 +7,7 @@ import signupArrowcolor from "../../public/signup-arrow-purple.svg";
 function HeroSection({ heading, spancon, description, rightimg }) {
   return (
     <div className="lg:relative lg:flex lg:items-center">
-      <div className="container lg:my-[85px] xl:my-[95px] 2xl:my-[160px] mx-auto flex flex-col lg:flex-row gap-3 items-center">
+      <div className="container lg:my-[90px] xl:my-[100px] 2xl:my-[190px] mx-auto flex flex-col lg:flex-row gap-3 items-center">
         <div className="flex-1">
           <h1 className="text-center lg:text-left text-[43px] leading-[52.04px] 2xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[20%] md:px-[25%] lg:px-0 lg:pr-[10%]">
             {heading} <span className="custom-text">{spancon}</span>

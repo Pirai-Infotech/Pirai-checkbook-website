@@ -4,7 +4,7 @@ import Footer from "../ui/Footer";
 
 const layout = ({ children }) => {
   return (
-    <div className="bg-one">
+    <div className="cb-bg bg-about">
       <Header />
       {children}
       <Footer />
