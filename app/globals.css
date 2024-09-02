@@ -266,6 +266,14 @@ a:hover {
     #e0ffff 99.56%
   );
 }
+.grad-border-price::before {
+  background: linear-gradient(
+    300.49deg,
+    #9281FF ,
+    #3EA8BD 
+  );
+  z-index: -1;
+}
 .borderbutton {
   border-radius: 0 60px 60px 60px;
 }
@@ -297,6 +305,7 @@ a:hover {
     border-radius: 56px;
   }
 }
+
 .bdr-hiw-rds::before{
   padding: 2.1px;
   z-index: -1;
@@ -328,7 +337,9 @@ a:hover {
 .scond-itm:hover .first-itm {
   filter: blur(1.5px) !important;
 }
-
+.custom-list li::marker{
+  font-size: 1.5em; 
+}
 /* Carousel Styles */
 
 /* .carousel-item {
@@ -371,9 +382,11 @@ li.react-multi-carousel-item.carousel-item {
   background-color: #333;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 768px){
+.cb-con{
+  max-width: 783px;
 }
-
+}
 @media only screen and (max-width: 480px) {
   h1 {
     font-size: 50px;
