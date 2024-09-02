@@ -26,7 +26,7 @@ function ReadytoGetStart() {
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
-              backgroundColor={"from-[#3D77EB] to-[#D289FF]"}
+              backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
               textColor={"text-[#fff]"}
               paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
               paddingy={"py-3 md:py-4"}
