@@ -8,6 +8,7 @@ import Image from "next/image";
 import Nav from "./Nav";
 import CTAButton from "./CTAButton";
 import PaymentSubMenu from "./PaymentSubMenu";
+import Link from "next/link";
 
 function Header() {
   const [mobileMenuFlag, setMobileMenuFlag] = useState(false);
@@ -16,7 +17,9 @@ function Header() {
     <>
       <div className="container m-auto flex justify-between items-center py-[35px] px-[5%] sm:px-0">
         <div className="lg:w-[17%] 2xl:w-[15%] md:w-[28%]">
-          <Image src={logo} alt="Checkbook" />
+          <Link href={"/"}>
+            <Image src={logo} alt="Checkbook" />
+          </Link>
         </div>
         <div className="hidden justify-between items-center w-[75%] lg:flex">
           <Nav />

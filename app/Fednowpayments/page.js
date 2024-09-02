@@ -58,17 +58,31 @@ function page() {
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
-              backgroundColor={"from-[#3D77EB] to-[#D289FF]"}
-              textColor={"text-[#fff]"}
+              backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
+              textColor={"text-white"}
+              paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
+              paddingy={"py-2 md:py-4"}
+              textSize={"text-[17px]"}
+              rounderTL={"rounded-tl-none"}
+              rounderTR={"rounded-tr-[60px]"}
+              rounderBR={"rounded-br-[60px]"}
+              rounderBL={"rounded-bl-[40px]"}
               content={"Sign Up"}
               classname={""}
             />
             <CTAButton
               icon={signupArrowcolor}
               backgroundType={""}
-              backgroundColor={""}
+              backgroundColor={"grad-border borderbutton"}
               textColor={"text-[#404040]"}
-              classname={"grad-border borderbutton "}
+              paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
+              paddingy={"py-2 md:py-4"}
+              textSize={"text-[17px]"}
+              rounderTL={"rounded-tl-none"}
+              rounderTR={"rounded-tr-[60px]"}
+              rounderBR={"rounded-br-[60px]"}
+              rounderBL={"rounded-bl-[40px]"}
+              classname={""}
               content={"Try Our Demo"}
             />
           </div>
@@ -92,9 +106,9 @@ function page() {
           </h3>
           <p className="text-center px-10">
             Our Digital Check solution makes payments quick and easy. All you
-            need is the recipient&apos;s name, email, and the amount - that&apos;s it!
-            Recipients receive their Digital Check via email, where they can
-            verify their bank account instantly for deposit.
+            need is the recipient&apos;s name, email, and the amount -
+            that&apos;s it! Recipients receive their Digital Check via email,
+            where they can verify their bank account instantly for deposit.
           </p>
         </div>
         <Verticalhover items={itemscon} imageSrc={ACHCompliance} />
