@@ -54,6 +54,10 @@ body {
   background: linear-gradient(to bottom, #E0EBFB 1vh,#ffffff, #ffffff,#ffffff, #ffffff, #E0EBFB);
   background-repeat: no-repeat;
 }
+.bg-about {
+  @apply bg-gradient-to-b from-transparent via-[rgba(224,235,251,0.5)] to-transparent;
+  background: linear-gradient(180deg, rgba(224, 235, 251, 0) 0%, rgba(224, 235, 251, 0.5) 5%, rgba(224, 235, 251, 0.5) 50.5%, rgba(224, 235, 251, 0.5) 75.25%, rgba(224, 235, 251, 0) 100%);
+}
 .cb-bg::before {
   content: "";
   position: absolute;
