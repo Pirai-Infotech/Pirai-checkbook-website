@@ -4,13 +4,11 @@ import Footer from "../ui/Footer";
 
 const layout = ({ children }) => {
   return (
-    // <div className="bg-two">
-    <div className=" bg-image">
+    <div>
       <Header />
       {children}
       <Footer />
     </div>
-    // </div>
   );
 };
 

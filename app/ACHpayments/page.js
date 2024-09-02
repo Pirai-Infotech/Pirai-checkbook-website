@@ -2,7 +2,7 @@
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Faq from "../ui/Faq";
-import TopBanner from "../../public/printablecheckesbanner.png";
+import TopBanner from "@/public/digitalcheck.svg";
 import Horizhover from "../ui/Horizhover";
 import easyicon from "@/public/Easyprocess.svg";
 import labelicon from "@/public/Whitelabel.svg";
@@ -42,7 +42,7 @@ const itemscon = [
 ];
 function page() {
   return (
-    <div className="px-8 sm:px-0">
+    <div className="px-5 sm:px-0">
       <HeroSection
         heading="Send"
         spancon="ACH Payments"
