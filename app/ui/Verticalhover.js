@@ -12,12 +12,12 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
     <>
     <div className="pt-20">
     <div className="container m-auto lg:px-[20%]">
-    <h3 className="text-center pb-6 md:10">
+    <h3 className="text-center pb-6 md:10 font-inter text-[45px] leading-[54.46px] xl:text-[70px] xl:leading-[84.72px]">
       {heading}
       <br />
       <span>{spancon}</span>
     </h3>
-    <p className="text-center font-circular-spotify text-[18px] leading-[25.4px] lg:text-[20px] lg:leading-[28.22px] px-4 sm:px-24 md:px-32 lg:px-0">
+    <p className="text-center font-circular-spotify font-light text-[#666666] text-[18px] leading-[25.4px] lg:text-[20px] lg:leading-[28.22px] px-4 sm:px-24 md:px-32 lg:px-0">
       {description}
     </p>
   </div>
@@ -34,10 +34,10 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
               {`0${index + 1}`}
             </h4>
             <div className={`transition-opacity transition-visibility duration-500 opacity-100 lg:border-l-2 border-[#40404020] ${toHandelhover(index) ? `border-[#7F53E7] opacity-100` : `opacity-0`} lg:pl-4 px-4`}>
-              <h4 className={`transition-opacity transition-visibility duration-500 opacity-100 ${toHandelhover(index) ? `text-[#7F53E7] opacity-100` : `text-[#404040] opacity-0`} lg:pr-24 text-[25px] leading-[28.62px] xl:text-[39px] xl:leading-[44.65px] group-hover:text-[#7F53E7] pb-3`}>
+              <h4 className={`transition-opacity transition-visibility duration-500 opacity-100 ${toHandelhover(index) ? `text-[#7F53E7] opacity-100` : `text-[#404040] opacity-0`} lg:pr-24 font-circular-spotify font-light text-[25px] leading-[28.62px] xl:text-[39px] xl:leading-[44.65px] group-hover:text-[#7F53E7] pb-3`}>
                 {item.heading}
               </h4>
-              <p className={`transition-opacity transition-visibility duration-500 ${toHandelhover(index) ? `block text-[#7F53E7] opacity-100` : `opacity-0 hidden text-[#404040]`} lg:group-hover:block text-[18px] leading-[25.4px] xl:text-[25px] xl:leading-[35.28px]`}
+              <p className={`transition-opacity transition-visibility duration-500 ${toHandelhover(index) ? `block text-[#7F53E7] opacity-100` : `opacity-0 hidden text-[#404040]`} lg:group-hover:block font-circular-spotify font-light text-[18px] leading-[25.4px] xl:text-[25px] xl:leading-[35.28px]`}
               >
                 {item.text}
               </p>
