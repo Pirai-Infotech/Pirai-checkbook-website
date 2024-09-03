@@ -10,7 +10,7 @@ import ReadytoGetStart from "../ui/ReadytoGetStart";
 function page() {
   return (
     <>
-    <div className="pt-8 px-5">
+    <div className="pt-8 sm:pt-0 px-5 md:px-0">
       <section className="container m-auto sm:px-4 md:px-8 md:py-12">
         <div className="text-center">
           <div className="font-inter text-[50px] leading-[60.51px] lg:text-[88px] lg:leading-[106.5px] font-light tracking-[-2px] text-[#404040]">
@@ -30,11 +30,11 @@ function page() {
           </div>
         </div>
       </section>
-      <section className="lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-white mt-11 sm:mt-8 md:mt-10">
+      <section className="md:max-lg:container m-auto lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-white mt-11 sm:mt-8 md:mt-10">
         <div className="py-10 lg:py-0 relative block sm:flex lg:block sm:w-[100%] sm:gap-8">
         <div className="sm:w-[50%] lg:w-auto">
           <div className="block lg:flex lg:w-[100%]">
-            <div className="lg:w-[50%] flex lg:items-center lg:justify-center lg:h-[500px] sm:pl-8">
+            <div className="lg:w-[50%] flex lg:items-center lg:justify-center lg:h-[500px]">
               <div>
                 <h2 className="font-inter text-[16px] lg:text-[27px] font-medium leading-[19.36px] lg:leading-[32.68px] text-left text-[#282828]">
                   The future of payments
@@ -55,10 +55,10 @@ function page() {
                 &quot;Our mission is to solve the challenges of push payments by
                   building a payouts platform for the digital age.&quot;
                 </p>
-                <p className="font-inter text-[23px] lg:text-[27px] font-normal text-left text-[#7F53E8] mt-6 md:mt-8 lg:mt-10">
+                <p className="font-inter text-[23px] lg:text-[27px] font-normal leading-[28.17px] md:leading-[28.17px] lg:leading-[29.83px] text-left text-[#7F53E8] mt-6 md:mt-8 lg:mt-10">
                   PJ Gupta
                 </p>
-                <p className="font-circular-spotify text-[17px] md:text-[18px] lg:text-[18px] font-light leading-[22px] md:leading-[25.4px] lg:leading-[29.83px] text-left">
+                <p className="font-circular-spotify text-[#282828] text-[17px] md:text-[18px] lg:text-[18px] font-light leading-[28.17px] md:leading-[28.17px] lg:leading-[29.83px] text-left">
                   CEO & Founder
                 </p>
               </div>
@@ -66,7 +66,7 @@ function page() {
               <div className="absolute z-[-1] right-[0%] md:right-[7%] lg:right-[14%] top-[200px] md:top-[300px] lg:top-[-100px] xl:top-[-150px] 2xl:top-[-180px]">
                 <Image src={cartImage} className="w-[100%] opacity-30 sm:opacity-30 md:opacity-30 lg:opacity-70" alt="cartImage" />
                 </div>
-            <div className="hidden justify-center mb-10 sm:block lg:hidden sm:pl-8">
+            <div className="hidden justify-start mb-10 sm:block lg:hidden">
               <CTAButton
                 icon={signupArrow}
                 backgroundType={"bg-gradient-to-r"}
@@ -84,7 +84,7 @@ function page() {
             </div>
           </div>
         </div>
-        <div className="mt-10 sm:mt-0 lg:mt-28 sm:w-[50%] lg:w-auto mb-10 flex lg:hidden justify-center lg:px-8 xl:px-0 sm:pr-8">
+        <div className="mt-10 sm:mt-0 lg:mt-28 sm:w-[50%] lg:w-auto mb-10 flex lg:hidden justify-center lg:px-8 xl:px-0">
           <div className="rounded-[55px] w-[1385px] p-[40px] sm:p-[30px] md:p-[45px] lg:p-[60px] border-2 border-transparent grad-border grad-border-def borderimage">
             <h2 className="font-inter text-[16px] lg:text-[27px] font-medium leading-[19.36px] md:leading-[32.68px] text-left text-[#282828]">
               Our Story
