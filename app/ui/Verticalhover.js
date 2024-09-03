@@ -10,7 +10,7 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
 
   return (
     <>
-    <div className="pt-10">
+    <div className="pt-20">
     <div className="container m-auto lg:px-[20%]">
     <h3 className="text-center pb-6 md:10">
       {heading}
