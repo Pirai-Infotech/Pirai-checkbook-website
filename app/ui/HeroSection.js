@@ -9,10 +9,10 @@ function HeroSection({ heading, spancon, description, rightimg }) {
     <div className="lg:relative lg:flex lg:items-center">
       <div className="container lg:my-[90px] xl:my-[100px] 2xl:my-[190px] mx-auto flex flex-col lg:flex-row gap-3 items-center">
         <div className="flex-1">
-          <h1 className="text-center lg:text-left text-[43px] leading-[52.04px] 2xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[20%] md:px-[25%] lg:px-0 lg:pr-[10%]">
-            {heading} <span className="custom-text">{spancon}</span>
+          <h1 className="text-center font-light lg:text-left text-[43px] leading-[52.04px] 2xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[20%] md:px-[25%] lg:px-0 lg:pr-[10%]">
+            {heading} <span className="custom-text font-normal">{spancon}</span>
           </h1>
-          <p className="pt-5 font-circular-spotify text-center lg:text-left text-[18px] leading-[25.4px] xl:text-[27px] xl:leading-[38.1px] md:px-[12%] lg:px-0 lg:w-auto">
+          <p className="pt-5 font-circular-spotify text-[#404040] font-light text-center lg:text-left text-[18px] leading-[25.4px] xl:text-[27px] xl:leading-[38.1px] md:px-[12%] lg:px-0 lg:w-auto">
             {description}
           </p>
           <div className="flex flex-row pt-10 gap-4 items-center justify-center lg:justify-start">

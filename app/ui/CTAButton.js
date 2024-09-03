@@ -18,7 +18,7 @@ function CTAButton({
   return (
     <>
       <button
-        className={`flex items-center
+        className={`flex items-center cursor-pointer
              ${backgroundType} ${backgroundColor} ${textColor} ${paddingx}
              ${paddingy} ${textSize} ${rounderTL} ${rounderTR} ${rounderBR} ${rounderBL}`}
       >

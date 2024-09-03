@@ -55,12 +55,11 @@ body {
     to bottom,
     #e0ebfb 1vh,
     #ffffff,
-    #ffffff,
-    #ffffff,
-    #ffffff,
+    #e3ebf7,
     #e0ebfb
   );
   background-repeat: no-repeat;
+  z-index: -1;
 }
 .bg-about {
   @apply bg-gradient-to-b from-transparent via-[rgba(224,235,251,0.5)] to-transparent;
@@ -72,6 +71,8 @@ body {
     rgba(224, 235, 251, 0.5) 75.25%,
     rgba(224, 235, 251, 0) 100%
   );
+  background-repeat: repeat-y;
+  background-size: auto 1000px;
 }
 .cb-bg::before {
   content: "";
@@ -264,6 +265,7 @@ a:hover {
     #3ea8bd 59.42%,
     #e0ffff 99.56%
   );
+  z-index: -5;
 }
 .grad-border-rtgs::before {
   background: linear-gradient(
