@@ -35,7 +35,7 @@ function PaymentSubMenu() {
           <li>
             <Link
               href={""}
-              className="g:text-[#9281FF] text-[#80D1FF] underline text-lg"
+              className="lg:text-[#9281FF] text-[#80D1FF] underline text-lg"
             >
               Digital Checks
             </Link>
@@ -43,7 +43,7 @@ function PaymentSubMenu() {
           <li>
             <Link
               href={""}
-              className="g:text-[#9281FF] text-[#80D1FF] underline text-lg"
+              className="lg:text-[#9281FF] text-[#80D1FF] underline text-lg"
             >
               Mailed Checks
             </Link>
@@ -51,7 +51,7 @@ function PaymentSubMenu() {
           <li>
             <Link
               href={""}
-              className="g:text-[#9281FF] text-[#80D1FF] underline text-lg"
+              className="lg:text-[#9281FF] text-[#80D1FF] underline text-lg"
             >
               FedNow Payment
             </Link>
@@ -61,7 +61,7 @@ function PaymentSubMenu() {
           <li>
             <Link
               href={""}
-              className="g:text-[#9281FF] text-[#80D1FF] underline text-lg"
+              className="lg:text-[#9281FF] text-[#80D1FF] underline text-lg"
             >
               Real-Time
             </Link>
@@ -69,7 +69,7 @@ function PaymentSubMenu() {
           <li>
             <Link
               href={""}
-              className="g:text-[#9281FF] text-[#80D1FF] underline text-lg"
+              className="lg:text-[#9281FF] text-[#80D1FF] underline text-lg"
             >
               Payments Instant
             </Link>
@@ -77,7 +77,7 @@ function PaymentSubMenu() {
           <li>
             <Link
               href={""}
-              className="g:text-[#9281FF] text-[#80D1FF] underline text-lg"
+              className="lg:text-[#9281FF] text-[#80D1FF] underline text-lg"
             >
               Pay Virtual Cards
             </Link>
@@ -85,7 +85,7 @@ function PaymentSubMenu() {
           <li>
             <Link
               href={""}
-              className="g:text-[#9281FF] text-[#80D1FF] underline text-lg"
+              className="lg:text-[#9281FF] text-[#80D1FF] underline text-lg"
             >
               Zelle Payments
             </Link>
