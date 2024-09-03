@@ -50,6 +50,12 @@ body {
   background-repeat: repeat-y;
   background-size: auto 1400px;
 }
+.bg-compliance {
+  background: linear-gradient(180deg, #e0ebfb, #ffffff, #e0ebfb);
+  background-repeat: repeat-y;
+  background-size: auto 1400px;
+  z-index: -1;
+}
 .bg-thr {
   background: linear-gradient(
     to bottom,
@@ -71,8 +77,6 @@ body {
     rgba(224, 235, 251, 0.5) 75.25%,
     rgba(224, 235, 251, 0) 100%
   );
-  background-repeat: repeat-y;
-  background-size: auto 1000px;
 }
 .cb-bg::before {
   content: "";

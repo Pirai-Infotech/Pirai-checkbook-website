@@ -11,25 +11,25 @@ import signupArrowcolor from "@/public/signup-arrow-purple.svg";
 function ReadytoGetStart() {
   return (
     <div className="px-5 sm:px-0 container m-auto flex flex-col lg:flex-row items-center gap-8 py-10">
-      <div className="lg:p-7 grad-border grad-border-rtgs bdr-sm-rds no-bdr flex-grow-1 lg:w-[90%] xl:w-[60%] 2xl:w-[70%]">
+      <div className="lg:p-7 grad-border grad-border-rtgs bdr-sm-rds no-bdr flex-grow-1 lg:w-[90%] xl:w-[60%] 2xl:w-[90%] 3xl:w-[100%]">
         <div className="bg-[#fff] md:border-[#C4DCFF] md:border-2 lg:border-none lg:border-0 rounded-[30px] py-10 md:px-[15%] md:py-12 lg:px-[10%] 2xl:py-[100px] 2xl:px-[80px]">
           <h2 className="text-center lg:text-left font-inter font-light text-[50px] leading-[60.51px] lg:text-[55px] 2xl:text-[68px] lg:leading-[82.3px]">
             Ready to get <br />
             <span>started?</span>
           </h2>
-          <p className="text-center lg:text-left text-[18px] leading-[25.4px] lg:text-[18px] lg:leading-[25.4px] text-[#4F535B] font-light font-circular-spotify px-8 py-5 md:px-0 md:py-10 xl:px-0">
+          <p className="text-center lg:text-left text-[18px] leading-[25.4px] lg:text-[18px] lg:leading-[25.4px] text-[#4F535B] font-light font-circular-spotify px-8 py-5 md:px-0 md:py-10 xl:px-0 2xl:pr-20">
             Explore Checkbook, or create an account instantly and start sending
             payments. You can also contact us to design a custom package for
             your business.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-center xl:justify-start">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-5 lg:gap-6 xl:gap-4 2xl:gap-7 items-center justify-center xl:justify-start">
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
               textColor={"text-[#fff]"}
               paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
-              paddingy={"py-2 md:py-3 xl:py-4"}
+              paddingy={"py-3 md:py-3 xl:py-4"}
               textSize={"text-[17px] lg:text-[10px] xl:text-[14px] 2xl:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
@@ -43,8 +43,8 @@ function ReadytoGetStart() {
               backgroundType={""}
               backgroundColor={"grad-border borderbutton"}
               textColor={"text-[#4D4D4D]"}
-              paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
-              paddingy={"py-2 md:py-3 xl:py-4"}
+              paddingx={"px-8 lg:px-3 xl:px-5 2xl:px-6"}
+              paddingy={"py-3 md:py-3 xl:py-4"}
               textSize={"text-[17px] lg:text-[10px] xl:text-[14px] 2xl:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
@@ -80,7 +80,7 @@ function ReadytoGetStart() {
             backgroundColor={"grad-border borderbutton"}
             textColor={"text-[#4D4D4D]"}
             paddingx={"px-6 lg:px-3 xl:px-6"}
-            paddingy={"py-2 md:py-3 xl:py-4"}
+            paddingy={"py-3 md:py-3 xl:py-4"}
             textSize={"text-[17px] lg:text-[10px] xl:text-[14px] 2xl:text-[17px]"}
             rounderTL={"rounded-tl-none"}
             rounderTR={"rounded-tr-[60px]"}
@@ -113,7 +113,7 @@ function ReadytoGetStart() {
             backgroundColor={"grad-border borderbutton"}
             textColor={"text-[#4D4D4D]"}
             paddingx={"px-6 lg:px-3 xl:px-6"}
-            paddingy={"py-2 md:py-3 xl:py-4"}
+            paddingy={"py-3 md:py-3 xl:py-4"}
             textSize={"text-[17px] lg:text-[10px] xl:text-[14px] 2xl:text-[17px]"}
             rounderTL={"rounded-tl-none"}
             rounderTR={"rounded-tr-[60px]"}
