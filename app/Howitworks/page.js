@@ -42,10 +42,10 @@ function page() {
     <div className="">
       <section className="container m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10   sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
         <div className="flex-1 px-[0%] sm:px-[7%] lg:px-[0%] lg:pr-[5%] 2xl:pr-[2%]">
-          <h1 className="text-center lg:text-left text-[45px] xl:text-[70px] 2xl:text-[88px]">
+          <h1 className="text-center lg:text-left text-[45px] xl:text-[70px] 2xl:text-[88px] whitespace-nowrap">
             How it <span>Works</span>
           </h1>
-          <p className="pt-5 text-center lg:text-left text-[18px] 2xl:text-[27px] 2xl:pr-[5%]">
+          <p className="pt-5 text-center lg:text-left text-[18px]  2xl:text-[22px] 3xl:text-[27px] 2xl:pr-[5%]">
             No percentages. No hidden fees. Checkbook offers everything needed
             to disburse payments at scale. Get in touch with our sales team for
             details on volume discounts, integration assistance, and our
@@ -60,41 +60,51 @@ function page() {
           />
         </div>
       </section>
-      <section className="container m-auto py-10 flex flex-wrap items-start lg:justify-center gap-10 lg:gap-3 sm:w-[95%] px-4 md:px-[0] lg:w-[80%] 2xl:w-[70%]">
-        {sections?.map((section, index) => (
-          <div
-            key={index}
-            className={`py-7 px-10 lg:px-5 grad-border grad-border-compliance bdr-hiw-rds relative ${
-              index === 1 && "lg:mt-[50px]"
-            } w-[100%] md:w-[47%] lg:w-[32%]`}
-          >
-            <div className="flex flex-col items-left gap-5">
-              <Image src={section.image} alt={section.title} className="ml-4" />
-              <h4 className="xl:w-[70%] pl-4 lg:pl-4 border-l-2 border-[#9180FF]">
-                {section.title}
-              </h4>
+      <section className="container m-auto py-10  px-7 md:px-[0] sm:w-[95%] lg:w-[80%] 2xl:w-[70%]">
+        <h2 className="hidden 2xl:block text-[44px] text-[#404040] text-center pb-10">
+          3 Simple Steps
+        </h2>
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 items-start lg:justify-center gap-10 ">
+          {sections?.map((section, index) => (
+            <div
+              key={index}
+              className={`py-7 px-8 lg:px-5 grad-border grad-border-compliance bdr-hiw-rds relative ${
+                index === 1 && "xl:mt-[50px]"
+              } `}
+            >
+              <div className="flex flex-col items-left gap-5">
+                <Image
+                  src={section.image}
+                  alt={section.title}
+                  className="ml-4"
+                />
+                <h4 className="pl-4 border-l-2 border-[#9180FF]  text-[22px] 2xl:text-[24px] ">
+                  {section.title}
+                </h4>
+              </div>
+              <p className="py-5 text-left pl-4 text-[18px]">
+                {section.description}
+              </p>
+              <CTAButton
+                icon={signupArrowcolor}
+                backgroundType={"bg-gradient-to-r"}
+                backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
+                textColor={"text-[#fff]"}
+                content={section.cta}
+                paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 ml-4"}
+                paddingy={"py-3"}
+                textSize={"text-[16px] xl:text-[18px]"}
+                rounderTL={"rounded-tl-none"}
+                rounderTR={"rounded-tr-[60px]"}
+                rounderBR={"rounded-br-[60px]"}
+                rounderBL={"rounded-bl-[40px]"}
+              />
+              <div className="absolute top-[-10px] right-[0px] text-[#fff] bg-[#89D6FF] py-[10px] px-[17px] rounded-[50px]">
+                {section.num}
+              </div>
             </div>
-            <p className="py-5 text-left pl-4">{section.description}</p>
-            <CTAButton
-              icon={signupArrowcolor}
-              backgroundType={"bg-gradient-to-r"}
-              backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
-              textColor={"text-[#fff]"}
-              content={section.cta}
-              paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
-              paddingy={"py-3 md:py-4"}
-              textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
-              rounderTL={"rounded-tl-none"}
-              rounderTR={"rounded-tr-[60px]"}
-              rounderBR={"rounded-br-[60px]"}
-              rounderBL={"rounded-bl-[40px]"}
-              classname={"btn-bg-grad ml-4"}
-            />
-            <div className="absolute top-[-20px] right-[-10px] text-[#fff] bg-[#89D6FF] py-[10px] px-[17px] rounded-[50px]">
-              {section.num}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       <section className="py-10">
