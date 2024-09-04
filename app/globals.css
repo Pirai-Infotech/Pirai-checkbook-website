@@ -56,6 +56,12 @@ body {
   background-size: auto 1400px;
   z-index: -1;
 }
+.bg-ach {
+  background: linear-gradient(180deg, #e0ebfb, #ffffff, #e0ebfb);
+  background-repeat: repeat-y;
+  background-size: auto 2000px;
+  z-index: 1;
+}
 .bg-thr {
   background: linear-gradient(
     to bottom,
