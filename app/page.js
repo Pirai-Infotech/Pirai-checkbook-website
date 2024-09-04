@@ -186,7 +186,7 @@ export default function Home() {
         items={itemscon}
         imageSrc={Hmenggprodt}
       />
-      <DiscoverInsights />
+      <DiscoverInsights insightType = "your payments" />
 
       <Footer />
     </>

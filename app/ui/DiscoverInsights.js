@@ -6,11 +6,11 @@ import Businessintelligence from "@/public/Businessintelligence.svg";
 import Payments from "@/public/Payments.svg";
 import Image from "next/image";
 
-function DiscoverInsights() {
+function DiscoverInsights( {insightType} ) {
   return (
     <div className="container m-auto px-[1%] md-[0%] mt-14 py-8 md:py-14">
       <h3 className="text-center sm:px-8 md:px-10 lg:px-[20%] 2xl:px-10 text-[35px] lg:text-[40px] xl:text-[50px] 2xl:text-[70px] 3xl:text-[92px] 3xl:leading-[111.34px] m-auto">
-        Discover <span>insights</span> and learn how to manage ACH Payments
+        Discover <span>insights</span> and learn how to manage {insightType}
       </h3>
       <div className="flex flex-col md:flex-row gap-10 pt-14">
         <div className="w-[100%] md:w-[48%] lg:w-[38%]">

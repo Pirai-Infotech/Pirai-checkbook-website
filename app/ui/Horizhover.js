@@ -34,7 +34,7 @@ function Horizhover({ heading, description, items }) {
                 {item.title}
               </h4>
             </div>
-            <p className="pt-2 lg:pt-10 md:pl-16 lg:pl-0 lg:w-[233px] lg:h-[189px] text-[16px] leading-[22.58px] xl:text-[18px] xl:leading-[25.04px]">
+            <p className="pt-2 lg:pt-6 md:pl-16 lg:pl-0 lg:w-[233px] lg:h-[189px] text-[16px] leading-[22.58px] xl:text-[18px] xl:leading-[25.04px]">
               {item.text}
             </p>
           </div>
