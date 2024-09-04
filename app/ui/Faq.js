@@ -52,7 +52,7 @@ const Faq = () => {
         <h3 className="text-center pb-10">Frequently Asked Questions</h3>
         <Collapse
           expandIcon={expandIcon}
-          expandIconPosition="right"
+          expandIconPosition="end"
           className="border-0 bg-[unset]"
           defaultActiveKey={defaultActiveKey}
         >
