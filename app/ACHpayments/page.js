@@ -72,7 +72,7 @@ function page() {
         imageSrc={ACHCompliance}
       />
 
-      <section className="container m-auto relative">
+      <section className="container xl:w-[1238px] m-auto relative">
         <VideoWithThumbnail
           videoUrl="/workflow-ACH_thumbnail.mp4"
           videothumbnail={ACHthumbnail}
