@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       screens: {
         "3xl": "1700px",
-      },
+        "4xl":"1920px",
+            },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -20,5 +21,20 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities(
+        {
+          ".scrollbar-hide": {
+            "&::-webkit-scrollbar": {
+              display: "none",
+            },
+            "-ms-overflow-style": "none",
+            "scrollbar-width": "none",
+          },
+        },
+        ["responsive", "hover"]
+      );
+    },
+  ],
 };

@@ -1,15 +1,16 @@
 import { useState } from "react";
 import Image from "next/image";
+// import videofile from "@/public/predebit.mp4"
 
 const VideoWithThumbnail = ({ videoUrl, videothumbnail, alt }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   if (!videoUrl) {
     return <p>No video available</p>;
   }
 
   return (
-    <div className="">
+    <div>
       {!isPlaying ? (
         <Image
           src={videothumbnail}
@@ -19,14 +20,17 @@ const VideoWithThumbnail = ({ videoUrl, videothumbnail, alt }) => {
         />
       ) : (
         <video
-          width="600"
-          controls
+          width="100%"
+          controls={false}
           autoPlay
-          onEnded={() => setIsPlaying(false)}
+          muted
+          loop
+          className="rounded-[15px] md:rounded-[23.08px] lg:rounded-[102px] cursor-pointer"
         >
-          <source src={videoUrl} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <source src="/predebit.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       )}
     </div>
   );

@@ -42,7 +42,7 @@ const itemscon = [
 ];
 function page() {
   return (
-    <div className="px-5 sm:px-0">
+    <div className="px-5 py-10 lg:py-0 sm:px-0">
       <HeroSection
         heading="Send"
         spancon="ACH Payments"
@@ -72,7 +72,7 @@ function page() {
         imageSrc={ACHCompliance}
       />
 
-      <section className="container m-auto relative">
+      <section className="container xl:w-[1238px] m-auto relative">
         <VideoWithThumbnail
           videoUrl="/workflow-ACH_thumbnail.mp4"
           videothumbnail={ACHthumbnail}

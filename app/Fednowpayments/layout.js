@@ -4,10 +4,10 @@ import Footer from "../ui/Footer";
 
 const layout = ({ children }) => {
   return (
-    <div className="bg-about cb-bg">
+    <div className="cb-bg bg-ach">
       <Header />
       {children}
-      <Footer />
+      <Footer contactFormText = "Enroll in FedNow Payments" />
     </div>
   );
 };

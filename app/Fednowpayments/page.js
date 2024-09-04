@@ -12,6 +12,9 @@ import ACHCompliance from "../../public/ACMEfednow.svg";
 import Testimonials from "../ui/Testimonials";
 import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 import HeroSection from "../ui/HeroSection";
+import ACHthumbnail from "@/public/workflow-ACH_thumbnail.png";
+import cartImage from "@/public/cartBackground.svg"
+import Image from "next/image";
 
 const items = [
   {
@@ -39,7 +42,7 @@ const itemscon = [
 ];
 function page() {
   return (
-    <div className="px-8 sm:px-0">
+    <div className="px-8 py-10 lg:py-0 sm:px-0">
       <HeroSection
         heading="Send"
         spancon="FedNow Payments"
@@ -63,17 +66,26 @@ function page() {
         items={itemscon}
         imageSrc={ACHCompliance}
       />
-      <section className="w-[50%] m-auto h-[300px] rounded-[40px] bg-slate-300"></section>
+      <section className="container xl:w-[1238px] m-auto relative">
+        <VideoWithThumbnail
+          videoUrl="/workflow-ACH_thumbnail.mp4"
+          videothumbnail={ACHthumbnail}
+          alt="VideoThumbnail"
+        />
+        <div className="absolute z-[-1] top-[-100px]">
+            <Image src={cartImage} className="w-[100%] opacity-30 sm:opacity-30 md:opacity-30 lg:opacity-70" alt="cartImage" />
+         </div>
+      </section>
       <section>
         <DiscoverInsights />
       </section>
-      <section className="w-[90%] py-10 m-auto relative">
+      <section className="py-10 relative">
         <Testimonials />
       </section>
-      <section className="py-10">
+      <section className="pt-10">
         <ReadytoGetStart />
       </section>
-      <section className=" py-10">
+      <section className="py-20">
         <Faq />
       </section>
     </div>
