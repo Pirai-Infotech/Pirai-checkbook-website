@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-function Horizhover({ heading, description, listitems }) {
+function Horizhoverhm({ heading, description, listitems }) {
   const [hoveredIndex, setHoveredIndex] = useState(0);
 
   function toHandelhover(params) {
@@ -36,4 +36,4 @@ function Horizhover({ heading, description, listitems }) {
   );
 }
 
-export default Horizhover;
+export default Horizhoverhm;

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 function DiscoverInsights() {
   return (
-    <div className="container m-auto px-[1%] md-[0%] mt-14">
+    <div className="container m-auto px-8 md-[0%] mt-14">
       <h3 className="text-center sm:px-8 md:px-10 lg:px-[20%] 2xl:px-10 text-[35px] md:text-[40px] xl:text-[50px] 2xl:text-[92px] pb-10 m-auto">
         Discover <span>insights</span> and learn how to manage ACH Payments
       </h3>
