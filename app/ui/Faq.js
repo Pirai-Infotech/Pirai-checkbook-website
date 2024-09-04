@@ -1,6 +1,9 @@
 import React from "react";
 import { Collapse } from "antd";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
+import cartImage from "@/public/cartBackground.svg"
+import Image from "next/image";
+
 
 const { Panel } = Collapse;
 
@@ -47,7 +50,7 @@ const questions = [
 const defaultActiveKey = [0];
 const Faq = () => {
   return (
-    <section className="px-8 sm:px-0">
+    <section className="px-8 sm:px-0 relative">
       <div className="container m-auto rounded-[20px] sm:rounded-[60px] bg-grad-1 px-6 sm:px-10 py-10 lg:px-[100px] lg:py-[60px] sm:w-[95%] lg:w-[80%] 2xl:w-[70%]">
         <h3 className="text-center pb-10">Frequently Asked Questions</h3>
         <Collapse
@@ -79,6 +82,9 @@ const Faq = () => {
           ))}
         </Collapse>
       </div>
+      <div className="absolute z-[-1] top-[80px] left-[-500px] md:left-[0]">
+            <Image src={cartImage} className="w-[100%] opacity-30 sm:opacity-30 md:opacity-30 lg:opacity-70" alt="cartImage" />
+         </div>
     </section>
   );
 };
