@@ -54,7 +54,13 @@ body {
   background: linear-gradient(180deg, #e0ebfb, #ffffff, #e0ebfb);
   background-repeat: repeat-y;
   background-size: auto 1400px;
-  z-index: -1;
+  z-index: 1;
+}
+.bg-ach {
+  background: linear-gradient(180deg, #e0ebfb, #ffffff, #e0ebfb);
+  background-repeat: repeat-y;
+  background-size: auto 2000px;
+  z-index: 1;
 }
 .bg-thr {
   background: linear-gradient(
@@ -65,7 +71,7 @@ body {
     #e0ebfb
   );
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: 1;
 }
 .bg-about {
   @apply bg-gradient-to-b from-transparent via-[rgba(224,235,251,0.5)] to-transparent;
@@ -85,7 +91,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("/bg_dot_lines.svg") repeat-y;
+  background: url("https://pirai-infotech.github.io/Pirai-checkbook-website/bg_dot_lines.svg") repeat-y;
   background-size: cover;
   z-index: -9;
   opacity: 0.4;

@@ -4,13 +4,11 @@ import Footer from "../ui/Footer";
 
 const layout = ({ children }) => {
   return (
-    // <div className="bg-two">
-    <div className=" bg-image">
+    <div className="cb-bg bg-ach">
       <Header />
       {children}
-      <Footer />
+      <Footer contactFormText= "Enroll in ACH Payments" />
     </div>
-    // </div>
   );
 };
 

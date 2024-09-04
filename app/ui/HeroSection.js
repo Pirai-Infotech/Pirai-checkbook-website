@@ -6,13 +6,13 @@ import signupArrowcolor from "../../public/signup-arrow-purple.svg";
 
 function HeroSection({ heading, spancon, description, rightimg }) {
   return (
-    <div className="lg:relative lg:flex lg:items-center">
-      <div className="container lg:my-[90px] xl:my-[100px] 2xl:my-[190px] mx-auto flex flex-col lg:flex-row gap-3 items-center">
-        <div className="flex-1">
-          <h1 className="text-center font-light lg:text-left text-[43px] leading-[52.04px] 2xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[20%] md:px-[25%] lg:px-0 lg:pr-[10%]">
+    <div className="lg:relative lg:flex lg:items-center 4xl:w-[1920px] m-auto">
+      <div className="mx-auto flex flex-col lg:flex-row gap-3 items-center">
+        <div className="flex-1 pl-[5%] xl:pl-[10%] 2xl:w-[15%] 3xl:pl-[5%]">
+          <h1 className="text-center font-light lg:text-left text-[43px] leading-[52.04px] 2xl:text-[55px] 3xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[20%] md:px-[25%] lg:px-0 lg:pr-[10%]">
             {heading} <span className="custom-text font-normal">{spancon}</span>
           </h1>
-          <p className="pt-5 font-circular-spotify text-[#404040] font-light text-center lg:text-left text-[18px] leading-[25.4px] xl:text-[27px] xl:leading-[38.1px] md:px-[12%] lg:px-0 lg:w-auto">
+          <p className="pt-5 font-circular-spotify text-[#404040] font-light text-center lg:text-left text-[18px] leading-[25.4px] 2xl:text-[22px] 3xl:text-[27px] 2xl:leading-[30.1px] 3xl:leading-[38.1px] md:px-[12%] lg:px-0 lg:w-auto">
             {description}
           </p>
           <div className="flex flex-row pt-10 gap-4 items-center justify-center lg:justify-start">
@@ -48,13 +48,15 @@ function HeroSection({ heading, spancon, description, rightimg }) {
             />
           </div>
         </div>
-        <div className="hidden lg:block flex-1"></div>
-      </div>
-      <div className="lg:absolute my-0 lg:w-[50%] top-0 right-0 flex items-center justify-end">
-        <div>
+        <div className="flex-1">
           <Image src={rightimg} alt="Printable Check" />
         </div>
       </div>
+      {/* <div className="lg:absolute my-0 lg:w-[50%] top-0 right-0 flex items-center justify-end">
+        <div>
+          <Image src={rightimg} alt="Printable Check" />
+        </div>
+      </div> */}
     </div>
   );
 }
