@@ -11,7 +11,9 @@ function Horizhover({ heading, description, items }) {
   return (
     <div className="container m-auto flex p-6 pb-10 md:p-10 md:w-[75%] lg:w-full lg:p-10 2xl:p-0 flex-col lg:flex-row grad-border grad-border-rtgs bdr-md-rds items-center justify-center md:py-10 lg:py-0 lg:gap-3 lg:px-30 2xl:px-52">
       <div className="p-5 sm:p-5 md:pt-6 md:pb-6 md:pr-12 md:pl-0  lg:p-7 flex-grow">
-        <h4 className="font-inter font-medium text-[24px] leading-[29.05px] xl:text-[28px] xl:leading-[33.89px] text-[#9180FF]">{heading}</h4>
+        <h4 className="font-inter font-medium text-[24px] leading-[29.05px] xl:text-[28px] xl:leading-[33.89px] text-[#9180FF]">
+          {heading}
+        </h4>
         <p className="font-circular-spotify font-light text-[16px] leading-[22.58px] xl:text-[20px] xl:leading-[28.22px] text-left pt-3 sm:pt-4 md:pt-5 lg:pt-5 w-full max-w-[575px] xl:px-0">
           {description}
         </p>
@@ -20,13 +22,17 @@ function Horizhover({ heading, description, items }) {
         {items?.map((item, index) => (
           <div
             key={index}
-            className={`pt-10 px-2 lg:filter ${toHandelhover(index) ? `first-itm` : `lg:blur-[1.5px] scond-itm`} hover:blur-0`}
+            className={`pt-10 px-2 lg:filter ${
+              toHandelhover(index) ? `first-itm` : `lg:blur-[1.5px] scond-itm`
+            } hover:blur-0`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(index)}
           >
             <div className="flex flex-row xl:flex-col items-center xl:items-start gap-5">
               <Image src={item.icon} alt={item.iconAlt} />
-              <h4 className="lg:pl-4 font-inter font-normal text-[22px] leading-[26.63px] xl:text-[24px] xl:leading-[29.05px] text-[#9180FF]">{item.title}</h4>
+              <h4 className="lg:pl-4 font-inter font-normal text-[22px] leading-[26.63px] xl:text-[24px] xl:leading-[29.05px] text-[#9180FF]">
+                {item.title}
+              </h4>
             </div>
             <p className="pt-2 lg:pt-10 md:pl-16 lg:pl-0 lg:w-[233px] lg:h-[189px] text-[16px] leading-[22.58px] xl:text-[18px] xl:leading-[25.04px]">
               {item.text}
