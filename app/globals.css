@@ -190,13 +190,13 @@ a:hover {
   border-image: linear-gradient(to right, #9281ff, #3ea8bd, #e0ffff) 1;
   border-radius: 25px;
 }
-/* .bg-grad {
+.bg-grad {
   background: linear-gradient(90deg, #9281ff, #3ea8bd);
   display: flex;
   justify-content: center;
   padding: 50px;
   border-radius: 10px;
-} */
+}
 .bg-grad-sec {
   background: linear-gradient(90deg, #e0ebfb, #ffffff00);
   border-radius: 10px;
@@ -243,6 +243,22 @@ a:hover {
     text-wrap: balance;
   }
 }
+.shaded-border {
+  position: relative;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.shaded-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px; 
+  border-radius: 50px;
+  background: linear-gradient(to right, #ffffff, #3EA8BD, #9281FF);
+}
 .grad-border {
   position: relative;
 }
@@ -257,7 +273,14 @@ a:hover {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
-.grad-border-def::before {
+.grad-border-blog-tag::before {
+  background: linear-gradient(
+    90deg,
+    #3D77EB,
+    #D289FF 
+  );
+}
+.grad-border-def::before{
   background: linear-gradient(
     179.49deg,
     #9281ff 0.44%,
