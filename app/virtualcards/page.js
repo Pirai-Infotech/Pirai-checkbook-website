@@ -8,7 +8,7 @@ import easyicon from "@/public/Easyprocess.svg";
 import labelicon from "@/public/Whitelabel.svg";
 import DiscoverInsights from "../ui/DiscoverInsights";
 import Verticalhover from "../ui/Verticalhover";
-import ACHCompliance from "../../public/ACH_complaince.png";
+import virtual from "../../public/virtual.svg";
 import Testimonials from "../ui/Testimonials";
 import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 import HeroSection from "../ui/HeroSection";
@@ -63,7 +63,7 @@ function page() {
         spancon="Fast Payments"
         description="There are 55 million adults in the US who are unbanked or underbanked. Checkbook’s virtual cards are a great choice for serving recipients who do not have sufficient access to a bank account or are reluctant to provide sensitive bank information."
         items={itemscon}
-        imageSrc={ACHCompliance}
+        imageSrc={virtual}
       />
 
       <section className="container xl:w-[1238px] m-auto relative">
