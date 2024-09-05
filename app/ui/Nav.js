@@ -1,36 +1,33 @@
 import React from "react";
-import { Dropdown } from "antd";
+import { Popover } from "antd";
 import PaymentSubMenu from "./PaymentSubMenu";
 
 function Nav() {
   return (
-    <div className="w-[55%]">
-      <ul className="flex items-center justify-between">
-        <li className="text-xl text-[#404040] font-light cursor-pointer">
+    <div className="w-[70%]">
+      <ul className="flex items-center justify-between w-full">
+        <li className="2xl:text-xl xl:text-lg lg:text-base text-[#404040] font-light cursor-pointer hover:text-[#3D77E9]">
           Home
         </li>
-        <li className="text-xl text-[#404040] font-light cursor-pointer">
-          {/* <Dropdown menu={<></>} placement="bottom" arrow>
+        <li className="2xl:text-xl xl:text-lg lg:text-base text-[#404040] font-light cursor-pointer hover:text-[#3D77E9]">
+          <Popover placement="bottom" content={<PaymentSubMenu />}>
             Products
-          </Dropdown> */}
+          </Popover>
         </li>
-        <li className="text-xl text-[#404040] font-light cursor-pointer">
+        <li className="2xl:text-xl xl:text-lg lg:text-base text-[#404040] font-light cursor-pointer hover:text-[#3D77E9]">
           Solutions
         </li>
-        <li className="text-xl text-[#404040] font-light cursor-pointer">
+        <li className="2xl:text-xl xl:text-lg lg:text-base text-[#404040] font-light cursor-pointer hover:text-[#3D77E9]">
           Resources
         </li>
-        <li className="text-xl text-[#404040] font-light cursor-pointer">
+        <li className="2xl:text-xl xl:text-lg lg:text-base text-[#404040] font-light cursor-pointer hover:text-[#3D77E9]">
           Industries
         </li>
-        <li className="text-xl text-[#404040] font-light cursor-pointer">
+        <li className="2xl:text-xl xl:text-lg lg:text-base text-[#404040] font-light cursor-pointer hover:text-[#3D77E9]">
           ROI Calculator
         </li>
-        <li className="text-xl text-[#404040] font-light cursor-pointer">
+        <li className="2xl:text-xl xl:text-lg lg:text-base text-[#404040] font-light cursor-pointer hover:text-[#3D77E9]">
           Pricing
-        </li>
-        <li>
-          <PaymentSubMenu />
         </li>
       </ul>
     </div>

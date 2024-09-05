@@ -10,9 +10,9 @@ function Footer({ contactFormText }) {
     <div className="bg-gradient-to-r from-[#9B8DFF] to-[#3E89BD]">
       <div className="container m-auto">
         <h3 className="text-[62px] text-white pt-20 pb-5 text-center font-light">
-          {contactFormText}
+          {contactFormText ? contactFormText : "Contact Us"}
         </h3>
-        <p className="text-[27px] text-white mb-8 text-center font-light px-[370px]">
+        <p className="text-[27px] text-white mb-8 text-center font-light lg:px-[370px]">
           Our team is happy to answer your questions. Fill out the form and
           we’ll be in touch as soon as possible.
         </p>
@@ -23,20 +23,27 @@ function Footer({ contactFormText }) {
             backgroundColor={"bg-[#FFF]"}
             textColor={"text-[#608BD5]"}
             content={"Contact Us"}
+            paddingx={"px-[33px]"}
+            paddingy={"py-[12px]"}
+            textSize={"xl:text-[17px] lg:text-[15px]"}
+            rounderTL={"rounded-tl-none"}
+            rounderTR={"rounded-tr-[60px]"}
+            rounderBR={"rounded-br-[60px]"}
+            rounderBL={"rounded-bl-[40px]"}
           />
         </div>
 
-        <div className="flex justify-between mt-24 pb-14 w-[85%] m-auto">
-          <div className="w-[20%]">
+        <div className="flex justify-between items-start flex-wrap mt-24 pb-14 w-[85%] m-auto">
+          <div className="w-full lg:w-[20%] order-2 flex justify-center border-t border-solid border-[#FFF] mt-24 pt-10 lg:pt-0 lg:mt-0 lg:border-none lg:order-2">
             <Image src={logo} alt="Checkbook" />
           </div>
-          <div className="w-[70%] flex justify-between">
-            <div className="w-[20%]">
+          <div className="w-full lg:w-[70%] flex justify-between flex-wrap lg:order-2 order-1">
+            <div className="lg:w-[20%] w-[45%] mb-8 md:mb-0 md:w-[30%]">
               <h4 className="text-[#FFF] text-lg mb-4">Products</h4>
               <ul>
                 <li>
                   <Link
-                    href=""
+                    href="/ACHpayments"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     ACH Payments
@@ -84,7 +91,7 @@ function Footer({ contactFormText }) {
                 </li>
               </ul>
             </div>
-            <div className="w-[17%]">
+            <div className="lg:w-[17%] w-[45%] md:w-[30%]">
               <h4 className="text-[#FFF] text-lg mb-4">Solutions</h4>
               <ul>
                 <li>
@@ -121,7 +128,7 @@ function Footer({ contactFormText }) {
                 </li>
               </ul>
             </div>
-            <div className="w-[20%]">
+            <div className="lg:w-[20%] w-[45%] md:w-[30%] mb-8 md:mb-0">
               <h4 className="text-[#FFF] text-lg mb-4">Resources</h4>
               <ul>
                 <li>
@@ -134,7 +141,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/Howitworks"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     How it Works
@@ -190,7 +197,7 @@ function Footer({ contactFormText }) {
                 </li>
               </ul>
             </div>
-            <div className="w-[17%]">
+            <div className="lg:w-[17%] w-[45%] md:w-[30%]">
               <h4 className="text-[#FFF] text-lg mb-4">Social</h4>
               <ul>
                 <li>
@@ -235,7 +242,7 @@ function Footer({ contactFormText }) {
                 </li>
               </ul>
             </div>
-            <div className="w-[20%]">
+            <div className="lg:w-[20%] w-[45%] md:w-[30%] md:mt-8 lg:mt-0">
               <h4 className="text-[#FFF] text-lg mb-4">Industries</h4>
               <ul>
                 <li>
@@ -258,7 +265,7 @@ function Footer({ contactFormText }) {
             </div>
           </div>
         </div>
-        <div className="flex pb-10 w-[85%] m-auto">
+        <div className="flex pb-10 w-[85%] m-auto justify-center lg:justify-start">
           <ul className="flex items-center">
             <li className="mr-8">
               <Link href={""} className="text-[#FFF] text-sm font-light">

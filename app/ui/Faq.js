@@ -1,6 +1,9 @@
 import React from "react";
 import { Collapse } from "antd";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
+import cartImage from "@/public/cartBackground.svg"
+import Image from "next/image";
+
 
 const { Panel } = Collapse;
 
@@ -47,33 +50,42 @@ const questions = [
 const defaultActiveKey = [0];
 const Faq = () => {
   return (
-    <div className="w-[100%] lg:w-[70%] m-auto rounded-[20px] sm:rounded-[60px] bg-grad-1 px-1 py-20 md:p-20 ">
-      <h3 className="text-center pb-10">Frequently Asked Questions</h3>
-      <Collapse
-        expandIcon={expandIcon}
-        expandIconPosition="right"
-        className="border-0 bg-[unset]"
-        defaultActiveKey={defaultActiveKey}
-      >
-        {questions?.map((item, index) => (
-          <Panel
-            className="text-[#404040] text-[20px] md:text-[24px] font-[400]"
-            header={item.question}
-            key={index}
-          >
-            <p>{item.answer}</p>
-            <a
-              className="text-[18px] text-[#7F53E8] btn btn-primary"
-              href={item.ctaLink}
-              target="_blank"
-              rel="noopener noreferrer"
+    <section className="px-8 sm:px-0 relative">
+      <div className="container m-auto rounded-[20px] sm:rounded-[60px] bg-grad-1 px-6 sm:px-10 py-10 lg:px-[100px] lg:py-[60px] sm:w-[95%] lg:w-[80%] 2xl:w-[70%]">
+        <h3 className="text-center pb-10">Frequently Asked Questions</h3>
+        <Collapse
+          expandIcon={expandIcon}
+          expandIconPosition="end"
+          className="border-0 bg-[unset]"
+          defaultActiveKey={defaultActiveKey}
+        >
+          {questions?.map((item, index) => (
+            <Panel
+              className="text-[#4F535B] text-[20px] md:text-[24px] font-bold md:font-[400]"
+              header={item.question}
+              key={index}
             >
-              {item.ctaText}
-            </a>
-          </Panel>
-        ))}
-      </Collapse>
-    </div>
+              <p className="text-[16px] lg:text-[18px]">
+                {item.answer}
+                <span className="lg:block lg:pt-5">
+                  <a
+                    className="text-[18px]  font-[600] text-[#7F53E8] btn btn-primary"
+                    href={item.ctaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.ctaText}
+                  </a>
+                </span>
+              </p>
+            </Panel>
+          ))}
+        </Collapse>
+      </div>
+      <div className="absolute z-[-1] top-[80px] left-[-500px] md:left-[0]">
+            <Image src={cartImage} className="w-[100%] opacity-30 sm:opacity-30 md:opacity-30 lg:opacity-70" alt="cartImage" />
+         </div>
+    </section>
   );
 };
 

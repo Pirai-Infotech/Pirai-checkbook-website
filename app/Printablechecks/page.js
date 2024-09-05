@@ -12,7 +12,7 @@ import easyicon from "@/public/Easyprocess.svg";
 import labelicon from "@/public/Whitelabel.svg";
 import DiscoverInsights from "../ui/DiscoverInsights";
 import Verticalhover from "../ui/Verticalhover";
-import Papercheck from "../../public/Papercheck.png";
+import Papercheck from "../../public/PaperCheck.png";
 import Testimonials from "../ui/Testimonials";
 
 const items = [
@@ -98,7 +98,7 @@ function page() {
         <Verticalhover items={itemscon} imageSrc={Papercheck} />
       </section>
       <section className="w-[50%] m-auto h-[300px] rounded-[40px] bg-slate-300"></section>
-      <section className="w-[90%] m-auto">
+      <section>
         <DiscoverInsights />
       </section>
       <section className="w-[90%] py-10 m-auto relative">

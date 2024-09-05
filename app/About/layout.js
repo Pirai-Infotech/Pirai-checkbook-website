@@ -1,7 +1,15 @@
 import React from "react";
+import Header from "../ui/Header";
+import Footer from "../ui/Footer";
 
 const layout = ({ children }) => {
-  return <div>{children}</div>;
+  return (
+    <div className="cb-bg bg-thr">
+      <Header />
+      {children}
+      <Footer />
+    </div>
+  );
 };
 
 export default layout;
