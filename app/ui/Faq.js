@@ -61,15 +61,15 @@ const Faq = () => {
         >
           {questions?.map((item, index) => (
             <Panel
-              className="text-[#4F535B] text-[20px] md:text-[24px] font-bold md:font-[400]"
+              className="text-[300] text-[20px] md:text-[24px] font-[450] lg:font-[400]"
               header={item.question}
               key={index}
             >
-              <p className="text-[16px] lg:text-[18px]">
+              <p className="text-[16px] font-light lg:text-[18px]">
                 {item.answer}
                 <span className="lg:block lg:pt-5">
                   <a
-                    className="text-[18px]  font-[600] text-[#7F53E8] btn btn-primary"
+                    className="text-[16px] lg:text-[18px] font-[600] text-[#7F53E8] btn btn-primary"
                     href={item.ctaLink}
                     target="_blank"
                     rel="noopener noreferrer"

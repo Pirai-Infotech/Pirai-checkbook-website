@@ -83,7 +83,7 @@ function page() {
          </div>
       </section>
       <section>
-        <DiscoverInsights />
+        <DiscoverInsights insightType = "ACH payments" />
       </section>
       <section className=" py-10 relative">
         <Testimonials />
