@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import signupArrowcolor from "../../public/signup-arrow.svg";
+import ACHthumbnail from "@/public/workflow-ACH_thumbnail.png";
+import cartImage from "@/public/cartBackground.svg";
 import Image from "next/image";
-import CTAButton from "../ui/CTAButton";
-import signupArrow from "@/public/signup-arrow.svg";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Faq from "../ui/Faq";
 import TopBanner from "../../public/mailCheckbook.svg";
@@ -15,6 +14,7 @@ import Verticalhover from "../ui/Verticalhover";
 import Papercheck from "../../public/MailBox.svg";
 import Testimonials from "../ui/Testimonials";
 import HeroSection from "../ui/HeroSection";
+import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 
 const items = [
   {
@@ -72,9 +72,22 @@ function page() {
         imageSrc={Papercheck}
       />
 
-      <section className="w-full sm:w-[80%] container m-auto h-[300px] rounded-[40px] bg-slate-300"></section>
+      <section className="container xl:w-[1238px] m-auto relative">
+        <VideoWithThumbnail
+          videoUrl="/workflow-ACH_thumbnail.mp4"
+          videothumbnail={ACHthumbnail}
+          alt="VideoThumbnail"
+        />
+        <div className="absolute z-[-1] top-[-100px]">
+          <Image
+            src={cartImage}
+            className="w-[100%] opacity-30 sm:opacity-30 md:opacity-30 lg:opacity-70"
+            alt="cartImage"
+          />
+        </div>
+      </section>
       <section>
-        <DiscoverInsights />
+        <DiscoverInsights insightType="Mail Paper Checks" />
       </section>
       <section className="py-14 lg:py-20 relative">
         <Testimonials />

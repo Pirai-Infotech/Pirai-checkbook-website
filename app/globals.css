@@ -392,7 +392,7 @@ a:hover {
     border-radius: 50px;
   }
   @media only screen and (min-width: 1024px) {
-    border-radius: 149px;
+    border-radius: 149px !important;
   }
 }
 .bdr-hiw-rds {

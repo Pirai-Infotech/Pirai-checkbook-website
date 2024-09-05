@@ -239,7 +239,7 @@ export default function Home() {
         vhoveritems={itemscon}
         imageSrc={Hmenggprodt}
       />
-      <DiscoverInsights />
+      <DiscoverInsights insightType = "your payments" />
 
       <Footer />
     </>

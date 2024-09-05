@@ -11,6 +11,11 @@ import Verticalhover from "../ui/Verticalhover";
 import Instantbnr from "../../public/InstantPayment_centerbnr1.png";
 import Testimonials from "../ui/Testimonials";
 import HeroSection from "../ui/HeroSection";
+import VideoWithThumbnail from "../ui/VideoWithThumbnail";
+import ACHthumbnail from "@/public/workflow-ACH_thumbnail.png";
+import cartImage from "@/public/cartBackground.svg";
+import Image from "next/image";
+
 const items = [
   {
     icon: easyicon,
@@ -37,49 +42,54 @@ const itemscon = [
 ];
 function page() {
   return (
-    <div className="px-8 sm:px-0">
-      <sectio>
-        <HeroSection
-          heading="Send"
-          spancon="Instant Payments Today"
-          description="With Instant Pay your business can push payouts to any VISA or MasterCard branded debit or ATM card in seconds. Checkbook leverages original credit transactions (OCT) to expand our network to billions of eligible cards."
-          rightimg={TopBanner}
-        />
-      </sectio>
-      <section className="w-[100%] sm:w-[90%] m-auto">
+    <div className="px-5 py-10 lg:py-0 sm:px-0">
+      <HeroSection
+        heading="Send"
+        spancon="Instant Payments Today"
+        description="With Instant Pay your business can push payouts to any VISA or MasterCard branded debit or ATM card in seconds. Checkbook leverages original credit transactions (OCT) to expand our network to billions of eligible cards."
+        rightimg={TopBanner}
+      />
+
+      <section>
         <Horizhover
           heading="Funds Delivered Immediately with Instant Pay"
           description="Instant Pay allows our users to receive funds in seconds, directly to their debit card, any day of the week. All card data is tokenized and protected in our PCI DSS service provider level 1 systems."
           items={items}
         />
       </section>
-      <section className="w-[100%] m-auto py-10">
-        <div className="w-[100%] lg:w-[50%] m-auto">
-          <h3 className="text-center pb-10 md:w-[70%] m-auto">
-            Recipients Expect <br />
-            <span>Instant Payments</span>
-          </h3>
-          <p className="text-center px-10">
-            Checkbook eliminates pain points for frustrated customers waiting on
-            checks in the mail, reluctant to provide sensitive bank information
-            or those without bank accounts. Satisfy your customers by enabling
-            them to receive payments instantly, 365 days a year.
-          </p>
-        </div>
-        <Verticalhover items={itemscon} imageSrc={Instantbnr} />
-      </section>
 
-      <section className="w-[50%] m-auto h-[300px] rounded-[40px] bg-slate-300"></section>
-      <section>
-        <DiscoverInsights />
+      <Verticalhover
+        heading="Recipients Expect"
+        spancon="Instant Paymentss"
+        description="Checkbook eliminates pain points for frustrated customers waiting on checks in the mail, reluctant to provide sensitive bank information or those without bank accounts. Satisfy your customers by enabling them to receive payments instantly, 365 days a year."
+        items={itemscon}
+        imageSrc={Instantbnr}
+      />
+
+      <section className="container xl:w-[1238px] m-auto relative">
+        <VideoWithThumbnail
+          videoUrl="/workflow-ACH_thumbnail.mp4"
+          videothumbnail={ACHthumbnail}
+          alt="VideoThumbnail"
+        />
+        <div className="absolute z-[-1] top-[-100px]">
+          <Image
+            src={cartImage}
+            className="w-[100%] opacity-30 sm:opacity-30 md:opacity-30 lg:opacity-70"
+            alt="cartImage"
+          />
+        </div>
       </section>
-      <section className="w-[90%] py-10 m-auto relative">
+      <section>
+        <DiscoverInsights insightType="Instant Payments" />
+      </section>
+      <section className=" py-10 relative">
         <Testimonials />
       </section>
       <section className="py-10">
         <ReadytoGetStart />
       </section>
-      <section className=" py-10">
+      <section className="container m-auto py-10">
         <Faq />
       </section>
     </div>
