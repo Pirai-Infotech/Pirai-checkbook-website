@@ -372,11 +372,16 @@ a:hover {
   padding-left: 26px;
   padding-bottom: 30px;
 }
+.cb-pp ul ul{
+  padding-top: 15px;
+  padding-bottom: 0px;
+}
 .cb-pp li {
   font-size: 19px;
   font-weight: 300;
   line-height: 27px;
   list-style-type: disc;
+  padding-bottom: 15px;
 }
 .cb-pp::marker {
   font-size: 2.5em;
