@@ -14,6 +14,7 @@ function CTAButton({
   rounderTR,
   rounderBR,
   rounderBL,
+  onClick,
 }) {
   return (
     <>
@@ -21,6 +22,7 @@ function CTAButton({
         className={`flex items-center cursor-pointer
              ${backgroundType} ${backgroundColor} ${textColor} ${paddingx}
              ${paddingy} ${textSize} ${rounderTL} ${rounderTR} ${rounderBR} ${rounderBL}`}
+        onClick={onClick}
       >
         {content}
         {icon && <Image src={icon} alt="Arrow" className="ml-4" />}
