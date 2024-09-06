@@ -226,7 +226,7 @@ a:hover {
   box-shadow: 0 25px 30px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
 }
-.ant-collapse-item {
+.cb-faq .ant-collapse-item {
   border-bottom: 1px dashed #7f53e8 !important;
 }
 .ant-collapse-content {
@@ -388,6 +388,13 @@ a:hover {
 }
 /* privacy Policy styles end */
 
+.prss-awrd .ant-collapse-header-text{
+  font-weight: 700;
+}
+.prss-awrd .ant-collapse-item:last-child{
+  border-radius: 60px!important;
+}
+
 .bdr-md-rds {
   @media only screen and (max-width: 768px) {
     border-radius: 50px;
@@ -422,6 +429,13 @@ a:hover {
 }
 .bdr-sm-rds {
   border-radius: 25px;
+}
+.bdr-prsawd-rds {
+  border-radius: 60px;
+}
+.bdr-prsawd-rds::before {
+  padding: 2.1px;
+  z-index: -1;
 }
 .bdr-sm-rds::before {
   padding: 2.1px;
@@ -486,6 +500,9 @@ li.react-multi-carousel-item.carousel-item {
 
 .react-multi-carousel-dot--active button {
   background-color: #333;
+}
+.prss-awrd .ant-collapse-header{
+ border-left: 2px solid #9180FF;;
 }
 
 @media only screen and (min-width: 768px) {
