@@ -7,7 +7,7 @@ const layout = ({ children }) => {
     <div className="cb-bg bg-ach">
       <Header />
       {children}
-      <Footer contactFormText= "Enroll in Mail Paper Checks" />
+      <Footer contactFormText= "Enroll in Virtual Cards" />
     </div>
   );
 };

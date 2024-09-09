@@ -1,13 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import CTAButton from "../ui/CTAButton";
-import signupArrow from "@/public/signup-arrow.svg";
 import signupArrowcolor from "@/public/signup-arrow-purple.svg";
-import Entrepreneurship from "@/public/Entrepreneurship.svg";
 import Businessintelligence from "@/public/Businessintelligence.svg";
 import Synctera from "@/public/Synctera.svg";
-import Payments from "@/public/Payments.svg";
+import Blogcon from "../ui/Blogcon";
 import Image from "next/image";
 
 const buttonlists = [
@@ -97,12 +95,6 @@ const contentList = [
 ];
 
 function Page() {
-  const [visibleItems, setVisibleItems] = useState(4);
-
-  const handleLoadMore = () => {
-    setVisibleItems((prevVisibleItems) => prevVisibleItems + 2);
-  };
-
   return (
     <div>
       <section className="">
@@ -121,14 +113,14 @@ function Page() {
             </button>
           ))}
         </div>
-        <div className="container m-auto flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center">
-          <div className="grad-border grad-border-compliance bdr-sm-rds  p-9 lg:p-20  w-[100%] bg-[#3D77EB] ">
+        <div className="container m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center">
+          <div className="grad-border grad-border-compliance bdr-sm-rds  p-9 lg:p-20  w-[100%] bg-[#3D77EB]">
             <h4 className="pl-4 text-[#ffffff] text-[18px] lg:text-[24px] font-[700] pb-4 lg:pb-[66px]  lg:mb-0">
               FEATURED
             </h4>
-            <div className="flex flex-row-reverse lg:flex-row justify-between  gap-5 ">
-              <div className="lg:w-[55%] pl-10 lg:pl-0 pb-5 lg:pb-0">
-                <h4 className="lg:border-l-2 border-[#fff] pl-4 text-[#ffffff]  text-[18px] lg:text-[24px] mb-5 lg:mb-0">
+            <div className="flex flex-col-reverse md:flex-row justify-between  gap-5 ">
+              <div className="lg:w-[55%] sm:pl-10 lg:pl-0 pb-5 lg:pb-0">
+                <h4 className="lg:border-l-2 border-[#fff] sm:pl-4 text-[#ffffff]  text-[18px] lg:text-[24px] mb-5 lg:mb-0">
                   MAR 06, 2024
                   <span className="text-[#fff] text-[24px] block pt-2">
                     Checkbook & Synctera: Revolutionizing Payments Together
@@ -144,7 +136,7 @@ function Page() {
                   backgroundColor={"from-[#fff] to-[#fff]"}
                   textColor={"text-[#3D77EB]"}
                   content={"Read More"}
-                  paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 ml-4"}
+                  paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 "}
                   paddingy={"py-3"}
                   textSize={"text-[16px] xl:text-[18px]"}
                   rounderTL={"rounded-tl-none"}
@@ -153,7 +145,7 @@ function Page() {
                   rounderBL={"rounded-bl-[40px]"}
                 />
               </div>
-              <div className="bg-grad btm-lr-n lg:w-[40%] border-[6px] border-[#fff]">
+              <div className="bg-grad btm-lr-n w-[100%] sm:w-[40%] border-[6px] border-[#fff]">
                 <Image
                   alt="Synctera"
                   src={Synctera}
@@ -162,66 +154,8 @@ function Page() {
               </div>
             </div>
           </div>
-          {contentList.slice(0, visibleItems).map((content, index) => (
-            <div
-              key={index}
-              className="flex flex-col-reverse lg:flex-row justify-between grad-border grad-border-compliance bdr-sm-rds gap-5 lg:p-20  sm:w-[45%] lg:w-[100%] bg-[#fff] lg:bg-[#fff0]"
-            >
-              <div className="lg:w-[55%] pl-10 lg:pl-0 pb-5 lg:pb-0">
-                <h4 className="border-l-2 border-[#9180FF] pl-4 text-[#404040] lg:text-[#3EA6BB] text-[18px] lg:text-[24px] mb-5 lg:mb-0">
-                  {content.date}
-                  <span className="text-[#404040] lg:text-[#9180FF] block pt-2">
-                    {content.title}
-                  </span>
-                </h4>
-                <p className="text-[18px] pl-4 pt-10 hidden lg:block min-h-60">
-                  {content.description}
-                </p>
-
-                <CTAButton
-                  icon={signupArrow}
-                  backgroundType={"bg-gradient-to-r"}
-                  backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
-                  textColor={"text-[#fff]"}
-                  content={"Read More"}
-                  paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 ml-4"}
-                  paddingy={"py-3"}
-                  textSize={"text-[16px] xl:text-[18px]"}
-                  rounderTL={"rounded-tl-none"}
-                  rounderTR={"rounded-tr-[60px]"}
-                  rounderBR={"rounded-br-[60px]"}
-                  rounderBL={"rounded-bl-[40px]"}
-                />
-              </div>
-              <div className="bg-grad btm-lr-n lg:w-[40%] ">
-                <Image
-                  alt={content.title}
-                  src={content.imageUrl}
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          ))}
         </div>
-        {visibleItems < contentList.length && (
-          <div className="flex justify-center mt-10">
-            <CTAButton
-              onClick={handleLoadMore}
-              icon={signupArrow}
-              backgroundType={"bg-gradient-to-r"}
-              backgroundColor={"from-[#9281FF]  to-[#89D6FF]"}
-              textColor={"text-[#fff]"}
-              content={"OLDER POSTS"}
-              paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 ml-4"}
-              paddingy={"py-3"}
-              textSize={"text-[16px] xl:text-[18px]"}
-              rounderTL={"rounded-tl-none"}
-              rounderTR={"rounded-tr-[60px]"}
-              rounderBR={"rounded-br-[60px]"}
-              rounderBL={"rounded-bl-[40px]"}
-            />
-          </div>
-        )}
+        <Blogcon contentList={contentList} />
       </section>
 
       <ReadytoGetStart />

@@ -9,7 +9,7 @@ function Horizhover({ heading, description, items }) {
   }
 
   return (
-    <div className="container m-auto flex p-6 pb-10 md:p-10 md:w-[75%] lg:w-full 3xl:w-[84%] lg:p-10 2xl:p-0 flex-col lg:flex-row grad-border grad-border-rtgs bdr-md-rds items-center justify-center md:py-10 lg:py-0 lg:gap-3 3xl:gap-8 lg:px-30 2xl:px-52">
+    <div className="container m-auto flex p-6 pb-10 md:p-10 md:w-[75%] lg:w-full 3xl:w-[84%] flex-col lg:flex-row grad-border grad-border-rtgs bdr-md-rds items-center justify-center md:py-10 lg:py-5 lg:gap-3 3xl:gap-8 lg:px-30 2xl:px-52">
       <div className="p-5 sm:p-5 md:pt-6 md:pb-6 md:pr-12 md:pl-0  lg:p-7 flex-grow">
         <h4 className="font-inter font-medium text-[24px] leading-[29.05px] xl:text-[28px] xl:leading-[33.89px] text-[#9180FF]">
           {heading}
@@ -34,7 +34,7 @@ function Horizhover({ heading, description, items }) {
                 {item.title}
               </h4>
             </div>
-            <p className="pt-2 lg:pt-10 md:pl-16 lg:pl-0 lg:w-[233px] lg:h-[189px] text-[16px] leading-[22.58px] xl:text-[18px] xl:leading-[25.04px]">
+            <p className="pt-2 lg:pt-6 md:pl-16 lg:pl-0 lg:w-[233px] lg:h-[189px] text-[16px] leading-[22.58px] xl:text-[18px] xl:leading-[25.04px]">
               {item.text}
             </p>
           </div>

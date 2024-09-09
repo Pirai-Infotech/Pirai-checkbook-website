@@ -4,10 +4,10 @@ import Footer from "../ui/Footer";
 
 const layout = ({ children }) => {
   return (
-    <div className="cb-bg bg-ach">
+    <div>
       <Header />
       {children}
-      <Footer contactFormText= "Enroll in Mail Paper Checks" />
+      <Footer />
     </div>
   );
 };
