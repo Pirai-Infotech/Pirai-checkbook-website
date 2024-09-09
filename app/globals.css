@@ -175,6 +175,16 @@ h4 {
   background-color: var(--secondary-color);
   z-index: -1;
 }
+.lin-bf-txt3 h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.2px;
+  height: 30px;
+  background-color: var(--secondary-color);
+  z-index: -1;
+}
 p {
   font-size: 18px;
   line-height: 1.6;
@@ -283,6 +293,9 @@ a:hover {
   border-radius: inherit;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
+}
+.no-border-bottom {
+  border-bottom: none;
 }
 .grad-border-blog-tag::before {
   background: linear-gradient(
@@ -422,6 +435,21 @@ a:hover {
   padding: 2.1px;
   z-index: -1;
 }
+.bdr-rds-prd {
+  border-radius: 199px;
+}
+.bdr-rds-prd::before {
+  padding: 2.1px;
+  z-index: -1;
+}
+.bdr-rds-prd-tdata {
+  border-radius: 49px;
+  margin-left: 10%;
+}
+.bdr-rds-prd-tdata::before {
+  padding: 2.1px;
+  z-index: -1;
+}
 .bdr-sm-rtgs {
   border-radius: 25px;
 }
@@ -440,6 +468,11 @@ a:hover {
 }
 .custom-list li::marker {
   font-size: 1.5em;
+}
+@layer components {
+  .remove-last-border tr:last-child td {
+    border-bottom-width: 0;
+  }
 }
 /* Carousel Styles */
 
@@ -496,7 +529,11 @@ li.react-multi-carousel-item.carousel-item {
     font-size: 35px;
   }
 }
-
+@media only screen and (min-width: 1024px) {
+  .no-bdr-prd.grad-border::before {
+    content: unset
+  }
+}
 @media only screen and (max-width: 1024px) {
   .no-bdr.grad-border::before {
     content: unset !important;
@@ -530,7 +567,11 @@ li.react-multi-carousel-item.carousel-item {
     font-size: 14px;
   }
 }
-
+@media only screen and (min-width: 1024px) {
+  .no-bdr-prd.grad-border::before {
+    background: #c4dcff;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .no-bdr.grad-border::before {
     background: #c4dcff;
