@@ -16,7 +16,7 @@ function DiscoverInsights( {insightType} ) {
         <div className="w-[100%] md:w-[48%] lg:w-[38%]">
           <div className="flex flex-col flex-1 gap-7">
             <div>
-              <div className="bg-gradient-to-r from-[#9281FF]  to-[#3EA8BD] px-[56px] py-[25px] 2xl:px-[104px] 2xl:py-[46px] rounded-[15px]">
+              <div className="bg-gradient-to-r from-[#9281FF]  to-[#3EA8BD] px-[56px] py-[25px] 2xl:px-[104px] 2xl:py-[46px] rounded-[8.13px] lg:rounded-[15px]">
                 <Image
                   src={Entrepreneurship}
                   alt="Entrepreneurship"
@@ -51,7 +51,7 @@ function DiscoverInsights( {insightType} ) {
               </div>
             </div>
             <div className="hidden md:block lg:hidden">
-              <div className="flex bg-gradient-to-b from-[#9281FF]  to-[#3EA8BD] rounded-[15px] px-[56px] py-[28px] lg:py-[75px] 2xl:px-[50px] 2xl:py-[95px]">
+              <div className="flex bg-gradient-to-b from-[#9281FF]  to-[#3EA8BD] rounded-[8.13px] lg:rounded-[15px] px-[56px] py-[28px] lg:py-[75px] 2xl:px-[50px] 2xl:py-[95px]">
                 <Image src={Businessintelligence} alt="Payments" />
               </div>
               <div className="bg-grad-sec py-[25px] px-7 xl:px-[40px] lg:pt-[70px] 2xl:pt-[120px]">
@@ -86,7 +86,7 @@ function DiscoverInsights( {insightType} ) {
         </div>
         <div className="flex flex-col flex-1 gap-7">
           <div className="flex flex-col lg:flex-row ">
-            <div className="flex bg-gradient-to-b from-[#9281FF]  to-[#3EA8BD] rounded-[15px] px-[56px] py-[28px] lg:py-[75px] 2xl:px-[50px] 2xl:py-[95px]">
+            <div className="flex bg-gradient-to-b from-[#9281FF]  to-[#3EA8BD] rounded-[8.13px] lg:rounded-[15px] px-[56px] py-[28px] lg:py-[75px] 2xl:px-[50px] 2xl:py-[95px]">
               <Image src={Payments} alt="Payments" />
             </div>
             <div className="bg-grad-sec py-[25px] px-7 xl:px-[40px]  lg:pt-[70px] 2xl:pt-[120px]">
@@ -116,7 +116,7 @@ function DiscoverInsights( {insightType} ) {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row ">
-            <div className="flex bg-gradient-to-b from-[#9281FF]  to-[#3EA8BD] rounded-[15px] px-[56px] py-[28px] lg:py-[75px] 2xl:px-[50px] 2xl:py-[95px]">
+            <div className="flex bg-gradient-to-b from-[#9281FF]  to-[#3EA8BD] rounded-[8.13px] lg:rounded-[15px] px-[56px] py-[28px] lg:py-[75px] 2xl:px-[50px] 2xl:py-[95px]">
               <Image src={Businessintelligence} alt="Payments" />
             </div>
             <div className="bg-grad-sec py-[25px] px-7 xl:px-[40px] lg:pt-[70px] 2xl:pt-[120px]">
