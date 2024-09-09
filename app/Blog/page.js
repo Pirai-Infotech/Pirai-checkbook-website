@@ -113,7 +113,7 @@ function Page() {
             </button>
           ))}
         </div>
-        <div className="container m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center">
+        <div className="container m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center mb-10 lg:mb-0">
           <div className="grad-border grad-border-compliance bdr-sm-rds  p-9 lg:p-20  w-[100%] bg-[#3D77EB]">
             <h4 className="pl-4 text-[#ffffff] text-[18px] lg:text-[24px] font-[700] pb-4 lg:pb-[66px]  lg:mb-0">
               FEATURED
@@ -145,7 +145,7 @@ function Page() {
                   rounderBL={"rounded-bl-[40px]"}
                 />
               </div>
-              <div className="bg-grad btm-lr-n w-[100%] sm:w-[40%] border-[6px] border-[#fff]">
+              <div className="bg-grad btm-lr-n w-[284px] h-[181px] lg:w-[470px] lg:h-[300px] border-[6px] border-[#fff]">
                 <Image
                   alt="Synctera"
                   src={Synctera}

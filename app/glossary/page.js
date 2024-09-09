@@ -1,54 +1,105 @@
 "use client";
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
-import PressAwards from "../ui/PressAwards";
+import Glossary from "../ui/glossary";
 
 const contentList = [
   {
-    question: "2024",
+    question: "ACH",
+    description:
+      "ACH (Automated Clearing House) is a payment processing network that’s used to send money electronically between banks in the United States.",
     content: [
       {
-        spancon: "[Press release]",
-        month: "May 2024",
-        description:
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",
+        ques: "ACH API",
+        answer:
+          "ACH (Automated Clearing House) is a payment processing network that’s used to send money electronically between banks and financial institutions in the United States",
+        cta: "Read More",
       },
       {
-        spancon: "[Press release]",
-        month: "May 2024",
-        description:
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",
+        ques: "ACH Credit",
+        answer: "",
+        cta: "Read More",
       },
       {
-        spancon: "[Press release]",
-        month: "May 2024",
-        description:
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",
+        ques: "ACH Payment Returns",
+        answer: "",
+        cta: "Read More",
+      },
+      {
+        ques: "ACH Return Codes",
+        answer: "",
+        cta: "Read More",
+      },
+      {
+        ques: "ACH Return Codes",
+        answer: "",
+        cta: "Read More",
+      },
+      {
+        ques: "ACH Return Codes",
+        answer: "",
+        cta: "Read More",
+      },
+      {
+        ques: "ACH Return Codes",
+        answer: "",
+        cta: "Read More",
+      },
+      {
+        ques: "ACH Return Codes",
+        answer: "",
+        cta: "Read More",
+      },
+      {
+        ques: "ACH Return Codes",
+        answer: "",
+        cta: "Read More",
+      },
+      {
+        ques: "ACH Return Codes",
+        answer: "",
+        cta: "Read More",
       },
     ],
   },
   {
-    question: "2023",
+    question: "RTP",
     content: "",
   },
   {
-    question: "2022",
+    question: "FedNow",
     content: "",
   },
   {
-    question: "2021",
+    question: "Wire Transfers",
     content: "",
   },
   {
-    question: "2020",
+    question: "International Payment Rails",
     content: "",
   },
   {
-    question: "2019",
+    question: "Ledgering",
     content: "",
   },
   {
-    question: "2018",
+    question: "payment Operations",
+    content: "",
+  },
+  {
+    question: "Bank Accounts",
+    content: "",
+  },
+  {
+    question: "Treasury Management",
+    content: "",
+  },
+  {
+    question: "Core Banking Systems",
+    content: "",
+  },
+  {
+    question: "Payment Industry Bodies",
     content: "",
   },
 ];
@@ -66,7 +117,7 @@ function Page() {
           </p>
         </div>
       </section>
-      <PressAwards contentList={contentList} />
+      <Glossary contentList={contentList} />
       <ReadytoGetStart />
     </div>
   );

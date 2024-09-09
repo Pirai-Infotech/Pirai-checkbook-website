@@ -25,7 +25,7 @@ const Blogcon = ({ contentList }) => {
                   {content.title}
                 </span>
               </h4>
-              <p className="text-[16px] lg:text-[18px] lg:pl-4 pt-2 sm:pt-5 pb-5">
+              <p className="hidden lg:block text-[16px] lg:text-[18px] lg:pl-4 pt-2 sm:pt-5 pb-5">
                 {content.description}
               </p>
 
