@@ -61,7 +61,7 @@ function Page() {
             Checkbook <span>Press & Media</span>
           </h1>
           <p className="pt-5 lg:pt-[30px] text-center text-[18px] font-[400] 2xl:text-[27px] w-[100%] lg:w-[75%] m-auto">
-            We've been busy! Here's the full list of our press releases,
+            We&apos;ve been busy! Here&apos;s the full list of our press releases,
             newsletters, and other media moments. For questions, reach us at
             <a className="text-[#9180FF]"> press@checkbook.io.</a>
           </p>

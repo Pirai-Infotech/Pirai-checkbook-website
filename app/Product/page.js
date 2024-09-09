@@ -71,7 +71,7 @@ function page() {
           </h1>
           <div className="flex justify-center mt-4 sm:mt-5 md:mt-6 md:px-20 lg:px-40 xl:px-60 2xl:px-80">
             <p className="font-circular-spotify font-light leading-[25.4px] lg:leading-[38.1px] text-[18px] lg:text-[27px] text-[#404040] text-center">
-              Send payments with Checkbook's powerful APIs and software
+              Send payments with Checkbook&apos;s powerful APIs and software
               solutions designed to help you facilitate your funds flows.
             </p>
           </div>
@@ -143,7 +143,7 @@ function page() {
                   </div>
                 </div>
                 <p className="py-2 lg:mt-2 lg:pl-4 text-[16px] lg:text-[18px] leading-[22.58px] lg:leading-[25.4px]">
-                  Push funds directly to your recipient's bank account via the
+                  Push funds directly to your recipient&apos;s bank account via the
                   automated clearing house network.
                 </p>
               </div>
@@ -278,7 +278,7 @@ function page() {
                 </h4>
               </div>
               <p className="py-2 mt-2 lg:pl-4 text-[16px] lg:text-[18px] leading-[22.58px] lg:leading-[25.4px]">
-                Push funds directly to your recipient's bank account via the
+                Push funds directly to your recipient&apos;s bank account via the
                 automated clearing house network.
               </p>
             </div>
