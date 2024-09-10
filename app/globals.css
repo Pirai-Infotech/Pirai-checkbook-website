@@ -550,6 +550,9 @@ li.react-multi-carousel-item.carousel-item {
   }
 }
 @media only screen and (max-width: 480px) {
+  .container{
+    width: 95% !important;
+  }
   h1 {
     font-size: 50px;
   }
@@ -582,6 +585,9 @@ li.react-multi-carousel-item.carousel-item {
 }
 
 @media only screen and (max-width: 1599px) {
+  .container{
+    width: 95% !important;
+  }
   h2 {
     font-size: 50px;
   }
@@ -593,6 +599,11 @@ li.react-multi-carousel-item.carousel-item {
   }
   p {
     font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1599px) {
+  .container{
+    width: 90% !important;
   }
 }
 @media only screen and (min-width: 1024px) {

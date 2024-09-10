@@ -8,7 +8,7 @@ function HeroSection({ heading, spancon, description, rightimg }) {
   return (
     <div className="lg:relative lg:flex lg:items-center 4xl:w-[1920px] m-auto">
       <div className="mx-auto flex flex-col lg:flex-row gap-3 items-center">
-        <div className="flex-1 pl-[5%] xl:pl-[10%] 2xl:w-[15%] 3xl:pl-[5%]">
+        <div className="flex-1 lg:pl-[5%] xl:pl-[10%] 2xl:w-[15%] 3xl:pl-[5%]">
           <h1 className="text-center font-light lg:text-left text-[43px] leading-[52.04px] 2xl:text-[55px] 3xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[20%] md:px-[25%] lg:px-0 lg:pr-[10%]">
             {heading}<b className="block lg:hidden" /> <span className="custom-text font-normal">{spancon}</span>
           </h1>
