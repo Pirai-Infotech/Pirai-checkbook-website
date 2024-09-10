@@ -19,7 +19,7 @@ function Verticalhoverhm({
   return (
     <>
       <div
-        className={` flex flex-col md:flex-row ${flexReverse} items-center justify-center gap-2 lg:gap-8 py-10`}
+        className={` flex flex-col ${flexReverse} items-center justify-center gap-2 lg:gap-8 py-10`}
       >
         <div className="w-[100%] lg:w-[50%]">
           <Image
@@ -28,7 +28,7 @@ function Verticalhoverhm({
             className="w-[100%] object-left object-cover"
           />
         </div>
-        <div className="w-[100%] 2xl:w-[20%]  px-8 lg:px-0">
+        <div className="w-[100%] 2xl:w-[22%] px-8 lg:px-0">
           <div className="">
             <h3 className="text-center lg:text-left pb-6 md:10 font-[400] text-[30px] xl:text-[49px]">
               {heading}
@@ -42,7 +42,7 @@ function Verticalhoverhm({
           {vhoveritems.map((item, index) => (
             <div
               key={index}
-              className="group flex flex-col xl:flex-row xl:items-start gap-5 lg:filter pt-6 md:pt-8 lg:pt-10 lg:blur-[1.5px] hover:blur-0 opacity-50 hover:opacity-100 lg:pr-[45px]"
+              className="group flex flex-col xl:flex-row xl:items-start gap-5 lg:filter pt-4 lg:pt-10 lg:blur-[1.5px] hover:blur-0 opacity-50 hover:opacity-100 lg:pr-[45px]"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(index)}
             >

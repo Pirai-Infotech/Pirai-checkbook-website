@@ -3,7 +3,7 @@ import Image from "next/image";
 import CTAButton from "../ui/CTAButton";
 import signupArrow from "@/public/signup-arrow.svg";
 
-const Blogcon = ({ contentList }) => {
+const Blogcon = ({ contentList, classlist }) => {
   const [visibleItems, setVisibleItems] = useState(4);
 
   const handleLoadMore = () => {
@@ -16,14 +16,12 @@ const Blogcon = ({ contentList }) => {
         {contentList.slice(0, visibleItems).map((content, index) => (
           <div
             key={index}
-            className="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-sm-rtgs gap-5 p-10 lg:p-20 sm:w-[45%] lg:w-[85%] 2xl:w-[75%] m-auto  lg:bg-[#fff0]"
+            className="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-sm-rtgs gap-5 p-10 xl:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] m-auto  lg:bg-[#fff0]"
           >
-            <div className="lg:w-[60%] xl:pl-10 lg:pl-0 pb-5 lg:pb-0">
+            <div className="lg:w-[60%]  lg:pl-0 pb-5 lg:pb-0">
               <h4 className="border-l-2 border-[#9180FF] pl-4 text-[#404040] lg:text-[#3EA6BB] text-[18px] lg:text-[24px] mb-5 lg:mb-0">
                 {content.date}
-                <span className="text-[#404040] lg:text-[#9180FF] font-[400] lg:text-[28px] 3xl:text-[40px] block pt-2 pr-20">
-                  {content.title}
-                </span>
+                <span className={`${classlist}`}>{content.title}</span>
               </h4>
               <p className="hidden lg:block text-[16px] lg:text-[18px] lg:pl-4 pt-2 sm:pt-5 pb-5">
                 {content.description}
@@ -56,7 +54,7 @@ const Blogcon = ({ contentList }) => {
       </div>
 
       {visibleItems < contentList.length && (
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center my-20">
           <CTAButton
             onClick={handleLoadMore}
             icon={signupArrow}

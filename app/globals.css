@@ -45,6 +45,16 @@ body {
   height: 100%;
   width: 100%;
 }
+.bg-pp{
+  background: linear-gradient(180deg, rgba(224, 235, 251, 1) 1%, rgba(224, 235, 251, 0) 5%, rgba(255, 255, 255, 0) 80%, rgba(224, 235, 251, 0) 80%, rgba(224, 235, 251, 1) 99%);
+}
+.tmnl-bg{
+  background: linear-gradient(180deg, 
+  #FFFFFF 0%, 
+    #E0EBFB 50%, 
+    #FFFFFF 100% 
+);
+}
 .bg-two {
   background: linear-gradient(180deg, #ffffff, #e0ebfb, #ffffff);
   background-repeat: repeat-y;
@@ -364,6 +374,7 @@ a:hover {
   color: var(--primary-color);
   padding-bottom: 30px;
   padding-top: 10px;
+  line-height: 29px;
 }
 .cb-pp h6 {
   font-size: 19px;
@@ -394,7 +405,7 @@ a:hover {
   font-weight: 300;
   line-height: 27px;
   list-style-type: disc;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 .cb-pp::marker {
   font-size: 2.5em;
@@ -407,10 +418,6 @@ a:hover {
 .prss-awrd .ant-collapse-item:last-child{
   border-radius: 60px!important;
 }
-
-
-
-
 .bdr-hiw-rds::before {
   padding: 2.1px;
   z-index: -1;
@@ -421,6 +428,13 @@ a:hover {
 }
 .bdr-sm-rds {
   border-radius: 25px;
+}
+.bdr-hm-rds::before {
+  padding: 2.1px;
+  z-index: -1;
+}
+.bdr-hm-rds {
+  border-radius: 126px;
 }
 .bdr-prsawd-rds {
   border-radius: 60px;
@@ -528,12 +542,7 @@ li.react-multi-carousel-item.carousel-item {
   .main-con{
     width: 98%;
   }
-  h1 {
-    font-size: 50px;
-  }
-  h3 {
-    font-size: 35px;
-  }
+  
   .bdr-md-rds{
     border-radius: 50px;
     border-top-left-radius: 0px !important;
@@ -559,6 +568,9 @@ li.react-multi-carousel-item.carousel-item {
 @media only screen and (max-width: 1024px) {
   .no-bdr.grad-border::before {
     content: unset !important;
+  }
+  .bdr-hm-rds {
+    border-radius: 50px;
   }
   .no-bdr.grad-border-rtgs::before {
     content: unset !important;

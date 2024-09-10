@@ -16,7 +16,7 @@ function page() {
         </div>
       </section>
 
-      <section className="container main-con m-auto cb-pp rounded-[60px] p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%]">
+      <section className="container main-con m-auto cb-pp rounded-[60px] p-[32px] lg:p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%]">
         <div>
           <p>
             Checkbook inc. (“Checkbook”) is committed to protecting the privacy

@@ -13,7 +13,7 @@ import Testimonials from "../ui/Testimonials";
 import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 import HeroSection from "../ui/HeroSection";
 import ACHthumbnail from "@/public/workflow-ACH_thumbnail.png";
-import cartImage from "@/public/cartBackground.svg"
+import cartImage from "@/public/cartBackground.svg";
 import Image from "next/image";
 
 const items = [
@@ -79,11 +79,15 @@ function page() {
           alt="VideoThumbnail"
         />
         <div className="absolute z-[-1] top-[-100px]">
-            <Image src={cartImage} className="w-[100%] opacity-30 sm:opacity-30 md:opacity-30 lg:opacity-70" alt="cartImage" />
-         </div>
+          <Image
+            src={cartImage}
+            className="w-[100%] opacity-30 sm:opacity-30 md:opacity-30 lg:opacity-70"
+            alt="cartImage"
+          />
+        </div>
       </section>
       <section>
-        <DiscoverInsights insightType = "ACH payments" />
+        <DiscoverInsights insightType="ACH payments" />
       </section>
       <section className=" py-10 relative">
         <Testimonials />
