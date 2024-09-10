@@ -38,8 +38,8 @@ function DiscoverInsights( {insightType} ) {
                     }
                     textColor={"text-[#FFF]"}
                     content={"Read More"}
-                    paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
-                    paddingy={"py-3 md:py-4"}
+                    paddingx={"px-7 lg:px-6 2xl:px-7"}
+                    paddingy={"py-2 md:py-3"}
                     textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
                     rounderTL={"rounded-tl-none"}
                     rounderTR={"rounded-tr-[60px]"}
@@ -70,8 +70,8 @@ function DiscoverInsights( {insightType} ) {
                     }
                     textColor={"text-[#FFF]"}
                     content={"Read More"}
-                    paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
-                    paddingy={"py-3 md:py-4"}
+                    paddingx={"px-7 lg:px-6 2xl:px-7"}
+                    paddingy={"py-2 md:py-3"}
                     textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
                     rounderTL={"rounded-tl-none"}
                     rounderTR={"rounded-tr-[60px]"}
@@ -103,8 +103,8 @@ function DiscoverInsights( {insightType} ) {
                   backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
                   textColor={"text-[#FFF]"}
                   content={"Read More"}
-                  paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
-                  paddingy={"py-3 md:py-4"}
+                  paddingx={"px-7 lg:px-6 2xl:px-7"}
+                  paddingy={"py-2 md:py-3"}
                   textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
                   rounderTL={"rounded-tl-none"}
                   rounderTR={"rounded-tr-[60px]"}
@@ -133,8 +133,8 @@ function DiscoverInsights( {insightType} ) {
                   backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
                   textColor={"text-[#FFF]"}
                   content={"Read More"}
-                  paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
-                  paddingy={"py-3 md:py-4"}
+                  paddingx={"px-7 lg:px-6 2xl:px-7"}
+                  paddingy={"py-2 md:py-3"}
                   textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
                   rounderTL={"rounded-tl-none"}
                   rounderTR={"rounded-tr-[60px]"}
