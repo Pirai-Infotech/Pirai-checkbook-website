@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
+import Link from "next/link";
 
 function page() {
   return (
@@ -438,7 +439,12 @@ function page() {
             <br />
             650-761-0008
             <br />
-            support@checkbook.io
+            <Link
+              href="#"
+              className="font-circular-spotify text-[#3D77EA] cursor-pointer"
+            >
+              support@checkbook.io
+            </Link>
           </p>
         </div>
       </section>
