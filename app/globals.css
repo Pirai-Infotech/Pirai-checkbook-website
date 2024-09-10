@@ -591,8 +591,7 @@ li.react-multi-carousel-item.carousel-item {
 }
 @media only screen and (min-width: 1024px) {
   .cb-bg::before {
-    background: url("https://pirai-infotech.github.io/Pirai-checkbook-website/bg_dot_lines.svg");
-    background-size: contain;
+    background: url("https://pirai-infotech.github.io/Pirai-checkbook-website/bg_dot_lines.svg") repeat-y;
   }
   .no-bdr-prd.grad-border::before {
     content: unset

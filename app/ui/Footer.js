@@ -51,7 +51,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/realtimepayments"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Real-Time Payments
@@ -59,7 +59,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/Instantpayments"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Instant Payments
@@ -67,7 +67,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href="/Mailed"
+                    href="/mailed"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Mail
@@ -75,7 +75,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/virtualcards"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Virtual Card
@@ -83,7 +83,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/printablechecks"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Print
@@ -133,7 +133,7 @@ function Footer({ contactFormText }) {
               <ul>
                 <li>
                   <Link
-                    href="/About"
+                    href="/about"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     About Us
@@ -141,7 +141,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href="/Howitworks"
+                    href="/howitworks"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     How it Works
@@ -149,7 +149,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/press"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Press
@@ -157,7 +157,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/pricing"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Pricing
@@ -181,7 +181,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/Blog"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Blog
