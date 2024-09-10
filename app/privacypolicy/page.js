@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
+import Link from "next/link";
 
 function page() {
   return (
@@ -16,7 +17,7 @@ function page() {
         </div>
       </section>
 
-      <section className="container main-con m-auto cb-pp rounded-[60px] p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%]">
+      <section className="container main-con m-auto cb-pp rounded-[60px] p-[32px] lg:p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%]">
         <div>
           <p>
             Checkbook inc. (“Checkbook”) is committed to protecting the privacy
@@ -438,7 +439,12 @@ function page() {
             <br />
             650-761-0008
             <br />
-            support@checkbook.io
+            <Link
+              href="#"
+              className="font-circular-spotify text-[#3D77EA] cursor-pointer"
+            >
+              support@checkbook.io
+            </Link>
           </p>
         </div>
       </section>

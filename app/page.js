@@ -21,6 +21,7 @@ import Horizhoverhm from "./ui/Horizhoverhm";
 import Hmmobilesec from "@/public/hm_mobile_sec.svg";
 import Verticalhoverhm from "./ui/Verticalhoverhm";
 import singlepaymentimg from "@/public/singlepayment.png";
+import Easytouse from "@/public/easytouseapi_hm.png";
 
 const poweruppayment = [
   {
@@ -97,7 +98,13 @@ const listitems = [
 ];
 export default function Home() {
   return (
-    <>
+    <div className="cb-bg bg-pp">
+      <div className="hidden lg:block bg-gradient-to-r from-[#00FFB2] to-[#00E0FF] text-center py-5 ">
+        <p className="font-[400] text-[#4d4d4d] text-[17px]">
+          <span className="font-[700]">SED EGESTAS, ANTE ET.</span> VULPUTATE
+          VOLUTPAT, ERAS PEDE SEMPER EST.
+        </p>
+      </div>
       <Header />
       <section className="container main-con m-auto sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 py-10   md:px-[0]">
         <div className="flex flex-col items-center px-[0%] sm:px-[7%] lg:px-[0%]">
@@ -129,8 +136,8 @@ export default function Home() {
         </div>
       </section>
       <section className="container main-con m-auto relative pt-[10%] overflow-hidden">
-        <div className=" my-10 grad-border grad-border-rtgs bdr-md-rds no-bdr gap-20 px-8 lg:px-[12%] py-[5%]">
-          <p className="w-[58%] text-[18px] lg:text-[27px] text-[#404040]">
+        <div className=" my-10 grad-border grad-border-rtgs bdr-hm-rds no-bdr gap-20 px-4 lg:px-[12%] py-[5%]">
+          <p className="w-[53%] sm:w-[58%] text-[18px] lg:text-[27px] text-[#404040]">
             Whether you’re sending hundreds or millions of payments,{" "}
             <a
               href="https://www.checkbook.io"
@@ -142,24 +149,24 @@ export default function Home() {
             your customers.
           </p>
         </div>
-        <div className="pt-[100px] px-8 lg:pt-[0px]">
+        <div className="pt-[100px] sm:px-8 lg:pt-[0px]">
           <Horizhoverhm heading="" description="" listitems={listitems} />
         </div>
-        <div className="absolute  right-[-250px] top-0 lg:right-[12%]">
+        <div className="absolute right-[-230px] top-0 lg:right-[2%] 2xl:right-[12%]">
           <Image
             src={Hmmobilesec}
-            className="w-[68%] lg:w-[100%]"
+            className="w-[68%] lg:w-[85%] xl:w-[90%] 2xl:w-[100%]"
             alt="Mobile Payment Screen"
           />
         </div>
       </section>
-      <section className="container main-con m-auto px-8">
-        <div className=" my-10 flex flex-col lg:flex-row items-center grad-border grad-border-rtgs bdr-md-rds gap-10 lg:gap-20 p-[60px] lg:px-[12%] lg:py-[5%] md:w-[75%] lg:w-full m-auto">
+      <section className="container main-con m-auto px-4">
+        <div className=" my-10 flex flex-col lg:flex-row items-center grad-border grad-border-rtgs bdr-hm-rds gap-10 lg:gap-20 p-[60px] 2xl:px-[12%] lg:py-[5%] md:w-[75%] lg:w-full m-auto">
           <div>
-            <h4 className="text-center lg:text-left text-[30px] xl:text-[35px] 3xl:text-[41px] text-[#404040] ">
+            <h4 className="text-center lg:text-left text-[30px] 2xl:text-[32px] 3xl:text-[41px] text-[#404040] ">
               Searching for the best enterprise SEO solution?
             </h4>
-            <p className="text-center lg:text-left text-[20px] xl:text-[22px] 3xl:text-[27px] font-[400] leading-[24px] text-[#404040] pt-5">
+            <p className="text-center lg:text-left text-[20px] 2xl:text-[22px] 3xl:text-[27px] font-[400] leading-[24px] text-[#404040] pt-5">
               So are you competitors! Schedule a personalized demo today.
             </p>
           </div>
@@ -182,66 +189,69 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container main-con mx-auto px-8">
+      <section className="container mx-auto lg:px-8">
         <Verticalhoverhm
           heading="Let us"
           spancon="power up"
           headingtwo="your payments"
           description=""
-          flexReverse=""
+          flexReverse="md:flex-row"
           vhoveritems={poweruppayment}
-          imageSrc={Hmenggprodt}
+          imageSrc={Easytouse}
         />
       </section>
-      <section>
+      <section className="container m-auto lg:px-8">
         <Verticalhoverhm
           heading=""
           spancon=""
           headingtwo=""
           description=""
-          flexReverse="flex-row-reverse"
+          flexReverse="md:flex-row-reverse"
           vhoveritems={singlepayment}
           imageSrc={singlepaymentimg}
         />
       </section>
-      <section className="container main-con m-auto">
+      <section className="container main-con m-auto pb-20">
         <h5 className="text-[50px] lg:text-[92px] text-[#404040] text-center font-[400]">
           They <span className="font-[300] italic shaded-border">trust us</span>
         </h5>
-        {/* <div className="flex flex-wrap gap-10 py-[80px] justify-center">
-          <Image
-            src={Anydesk}
-            className="w-1/3 md:w-1/3 lg:w-1/6"
-            alt="AnyDesk"
-          />
-          <Image
-            src={MassMutual}
-            className="w-1/3 md:w-1/3 lg:w-1/6"
-            alt="MassMutual"
-          />
-          <Image src={Arm} className="w-1/3 md:w-1/3 lg:w-1/6" alt="Arm" />
-          <Image src={Visa} className="w-1/3 md:w-1/3 lg:w-1/6" alt="Visa" />
-          <Image
-            src={Stampli}
-            className="w-1/3 md:w-1/3 lg:w-1/6"
-            alt="Stampli"
-          />
-          <Image src={Kin} className="w-1/3 md:w-1/3 lg:w-1/6" alt="Kin" />
-        </div> */}
+        <div className="flex flex-wrap gap-[4%] 2xl:gap-[7%] py-[80px] justify-center">
+          <div className="flex justify-center pb-10 lg:pb-0 w-[40%] sm:w-[30%] lg:w-auto">
+            <Image src={Anydesk} className="" alt="AnyDesk" />
+          </div>
+          <div className="flex justify-center pb-10 lg:pb-0 w-[40%] sm:w-[30%] lg:w-auto">
+            <Image src={MassMutual} className="" alt="MassMutual" />
+          </div>
+          <div className="flex justify-center pb-10 lg:pb-0 w-[40%] sm:w-[30%] lg:w-auto">
+            <Image src={Arm} className="" alt="Arm" />
+          </div>
+          <div className="flex justify-center pb-10 lg:pb-0 w-[40%] sm:w-[30%] lg:w-auto">
+            <Image src={Visa} className="" alt="Visa" />
+          </div>
+          <div className="flex justify-center pb-10 lg:pb-0 w-[40%] sm:w-[30%] lg:w-auto">
+            <Image src={Stampli} className="" alt="Stampli" />
+          </div>
+          <div className="flex justify-center pb-10 lg:pb-0 w-[40%] sm:w-[30%] lg:w-auto">
+            <Image src={Kin} className="" alt="Kin" />
+          </div>
+        </div>
       </section>
-      <Testimonials />
-
-      <Verticalhoverhm
-        heading="Discover"
-        spancon="Our Solutions"
-        description=""
-        flexReverse="flex-row-reverse"
-        vhoveritems={itemscon}
-        imageSrc={Hmenggprodt}
-      />
-      <DiscoverInsights insightType = "your payments" />
+      <section className="tmnl-bg">
+        <Testimonials />
+      </section>
+      <section className="container m-auto">
+        <Verticalhoverhm
+          heading="Discover"
+          spancon="Our Solutions"
+          description=""
+          flexReverse="md:flex-row-reverse"
+          vhoveritems={itemscon}
+          imageSrc={Hmenggprodt}
+        />
+      </section>
+      <DiscoverInsights insightType="your payments" />
 
       <Footer />
-    </>
+    </div>
   );
 }

@@ -59,7 +59,7 @@ function Page() {
   return (
     <div>
       <section className="container main-con m-auto pb-20">
-        <div className="w-[80%] sm:w-[50%] m-auto">
+        <div className="w-[80%] sm:w-[70%] m-auto">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-20 lg:px-0">
             Upcoming <span>Events</span>
           </h1>
@@ -68,7 +68,10 @@ function Page() {
           </p>
         </div>
       </section>
-      <Blogcon contentList={contentList} />
+      <Blogcon
+        contentList={contentList}
+        classlist="text-[#404040] lg:text-[#9180FF] font-[400] lg:text-[28px] 3xl:text-[40px] block pt-2 pr-20"
+      />
       <ReadytoGetStart />
     </div>
   );

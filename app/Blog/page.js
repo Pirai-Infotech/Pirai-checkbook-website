@@ -103,7 +103,7 @@ function Page() {
             Checkbook <span>Resources</span>
           </h1>
         </div>
-        <div className="container main-con m-auto flex gap-3 justify-start xl:justify-center py-10 overflow-scroll scrollbar-hide">
+        <div className=" m-auto flex gap-3 justify-start xl:justify-center py-10 overflow-scroll scrollbar-hide">
           {buttonlists.map((contentlist, index) => (
             <button
               key={index}
@@ -113,13 +113,13 @@ function Page() {
             </button>
           ))}
         </div>
-        <div className="container main-con m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center">
-          <div className="grad-border grad-border-compliance bdr-sm-rds  p-9 lg:p-20  w-[100%] bg-[#3D77EB]">
+        <div className="container main-con m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center pb-10">
+          <div className="grad-border grad-border-compliance bdr-sm-rds p-10 xl:p-20  lg:w-[95%] 3xl:w-[78%] m-auto bg-[#3D77EB]">
             <h4 className="pl-4 text-[#ffffff] text-[18px] lg:text-[24px] font-[700] pb-4 lg:pb-[66px]  lg:mb-0">
               FEATURED
             </h4>
-            <div className="flex flex-col-reverse md:flex-row justify-between  gap-5 ">
-              <div className="lg:w-[55%] sm:pl-10 lg:pl-0 pb-5 lg:pb-0">
+            <div className="flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-between  gap-5 ">
+              <div className="lg:w-[58%] sm:pl-10 lg:pl-0 pb-5 lg:pb-0">
                 <h4 className="lg:border-l-2 border-[#fff] sm:pl-4 text-[#ffffff]  text-[18px] lg:text-[24px] mb-5 lg:mb-0">
                   MAR 06, 2024
                   <span className="text-[#fff] text-[24px] block pt-2">
@@ -155,7 +155,10 @@ function Page() {
             </div>
           </div>
         </div>
-        <Blogcon contentList={contentList} />
+        <Blogcon
+          contentList={contentList}
+          classlist="text-[#404040] lg:text-[#9180FF] font-[400] text-[20px] 3xl:text-[24px] block pt-2 pr-10"
+        />
       </section>
 
       <ReadytoGetStart />
