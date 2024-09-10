@@ -40,7 +40,7 @@ const sections = [
 function page() {
   return (
     <div className="">
-      <section className="container m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10   sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
+      <section className="container main-con m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10   sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
         <div className="flex-1 px-[0%] sm:px-[7%] lg:px-[0%] lg:pr-[5%] 2xl:pr-[2%]">
           <h1 className="text-center lg:text-left text-[45px] xl:text-[70px] 2xl:text-[88px] whitespace-nowrap">
             How it <span>Works</span>
@@ -60,7 +60,7 @@ function page() {
           />
         </div>
       </section>
-      <section className="container m-auto py-10  px-7 md:px-[0] sm:w-[95%] lg:w-[80%] 2xl:w-[70%]">
+      <section className="container main-con m-auto py-10  px-7 md:px-[0] sm:w-[95%] lg:w-[80%] 2xl:w-[70%]">
         <h2 className="hidden 2xl:block text-[44px] text-[#404040] text-center pb-10">
           3 Simple Steps
         </h2>

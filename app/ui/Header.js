@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <>
-      <div className="container m-auto flex justify-between items-center py-[35px] px-[5%] sm:px-0">
+      <div className="container main-con main-con m-auto flex justify-between items-center py-[35px] px-[5%] sm:px-0 ">
         <div className="lg:w-[17%] 2xl:w-[15%] md:w-[28%]">
           <Link href={"/"}>
             <Image src={logo} alt="Checkbook" />
@@ -43,7 +43,7 @@ function Header() {
         {mobileMenuFlag ? (
           <>
             <div className="block lg:hidden absolute w-full bg-[#3D77EB] px-[5%] pt-[40px] pb-14 left-0 top-0 z-50 shadow-4xl">
-              <div className="container m-auto">
+              <div className="container main-con main-con m-auto">
                 <div className="flex items-center justify-between">
                   <div className="lg:w-[17%] 2xl:w-[15%] md:w-[28%]">
                     <Image

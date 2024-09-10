@@ -61,7 +61,7 @@ function page() {
 
   return (
     <div className="px-5">
-      <section className="container m-auto sm:px-4 px-2 py-8 md:px-8 md:py-12">
+      <section className="container main-con m-auto sm:px-4 px-2 py-8 md:px-8 md:py-12">
         <div className="text-center">
           <h1 className="font-inter font-light leading-[49.62px] lg:leading-[106.5px] text-center text-[41px] lg:text-[88px] text-[#404040]">
             A Complete
@@ -109,7 +109,7 @@ function page() {
         </div>
       </section>
       {/* first box */}
-      <section className="container m-auto py-8 md:py-10 lg:py-14">
+      <section className="container main-con m-auto py-8 md:py-10 lg:py-14">
         <div className="px-[35px] py-[60px] rounded-[69px] md:px-[60px] md:py-[60px] lg:px-[150px] lg:py-[50px] xl:px-[250px] xl:py-[80px] 2xl:px-[350px] 2xl:py-[100px] md:rounded-[69px] lg:rounded-[199px] bg-gradient-to-r from-[#E0EBFB] via-[#E0EBFB] to-transparent">
           <div className="lg:flex gap-6">
             <h3 className="font-normal text-left w-full text-[27px] leading-[34.99px] text-[#404040]">
@@ -126,7 +126,7 @@ function page() {
         </div>
       </section>
       {/* list box for tab and mobile*/}
-      <section className="md:flex lg:grid container m-auto gap-8">
+      <section className="md:flex lg:grid container main-con m-auto gap-8">
         <div className="grid md:w-[50%] lg:w-full justify-center lg:gap-8">
           <div className="flex flex-col lg:flex-row justify-between gap-8 w-full lg:max-w-[1000px] xl:max-w-[1240px] rounded-[25px] grad-border grad-border-def borderimage no-bdr-prd py-12 lg:px-0 lg:py-0">
             <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[460px] h-auto lin-bf-txt3">
@@ -265,7 +265,7 @@ function page() {
         </div>
       </section>
       {/* list box for web*/}
-      <section className="hidden container m-auto w-full justify-center gap-8">
+      <section className="hidden container main-con m-auto w-full justify-center gap-8">
         <div className="flex flex-col md:flex-row justify-between gap-8 w-full lg:max-w-[1000px] xl:max-w-[1240px]">
           <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[460px] h-auto lin-bf-txt3">
             <div className="py-7 px-10 lg:pb-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
@@ -370,7 +370,7 @@ function page() {
         </div>
       </section>
       {/* second box */}
-      <section className="hidden lg:block container m-auto md:py-10 lg:py-14">
+      <section className="hidden lg:block container main-con m-auto md:py-10 lg:py-14">
         <div className="md:px-[60px] md:py-[60px] lg:px-[150px] lg:py-[50px] xl:px-[250px] xl:py-[80px] 2xl:px-[350px] 2xl:py-[100px] grad-border grad-border-rtgs bdr-rds-prd">
           <div className="lg:flex gap-6">
             <h3 className="font-normal text-left w-full text-[27px] leading-[34.99px] text-[#404040]">
@@ -436,7 +436,7 @@ function page() {
           </tbody>
         </table>
       </section>
-      <section className="container m-auto mt-8 md:mt-10 lg:mt-14">
+      <section className="container main-con m-auto mt-8 md:mt-10 lg:mt-14">
         <ReadytoGetStart />
       </section>
     </div>
