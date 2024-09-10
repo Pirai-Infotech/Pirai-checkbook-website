@@ -10,7 +10,7 @@ import Faq from "../ui/Faq";
 
 function page() {
   return (
-    <div className="container m-auto px-6 sm:px-0 lg:mt-14">
+    <div className="container main-con m-auto px-6 sm:px-0 lg:mt-14">
       <section className="px-2 py-8 sm:px-4 md:px-8 md:py-12">
         <div className="text-center">
           <span className="font-inter text-[50px] lg:text-[88px] font-light leading-[106.5px] lg:leading-[60.51px] tracking-[-2px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]">

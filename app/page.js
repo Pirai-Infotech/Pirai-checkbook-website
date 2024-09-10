@@ -99,7 +99,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <section className="container m-auto sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 py-10   md:px-[0]">
+      <section className="container main-con m-auto sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 py-10   md:px-[0]">
         <div className="flex flex-col items-center px-[0%] sm:px-[7%] lg:px-[0%]">
           <h1 className="text-center text-[50px] xl:text-[70px] 2xl:text-[80px] 3xl:text-[88px]">
             Enabling Businesses to
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container m-auto relative pt-[10%] overflow-hidden">
+      <section className="container main-con m-auto relative pt-[10%] overflow-hidden">
         <div className=" my-10 grad-border grad-border-rtgs bdr-md-rds no-bdr gap-20 px-8 lg:px-[12%] py-[5%]">
           <p className="w-[58%] text-[18px] lg:text-[27px] text-[#404040]">
             Whether you’re sending hundreds or millions of payments,{" "}
@@ -153,7 +153,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="container m-auto px-8">
+      <section className="container main-con m-auto px-8">
         <div className=" my-10 flex flex-col lg:flex-row items-center grad-border grad-border-rtgs bdr-md-rds gap-10 lg:gap-20 p-[60px] lg:px-[12%] lg:py-[5%] md:w-[75%] lg:w-full m-auto">
           <div>
             <h4 className="text-center lg:text-left text-[30px] xl:text-[35px] 3xl:text-[41px] text-[#404040] ">
@@ -182,7 +182,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container mx-auto px-8">
+      <section className="container main-con mx-auto px-8">
         <Verticalhoverhm
           heading="Let us"
           spancon="power up"
@@ -204,7 +204,7 @@ export default function Home() {
           imageSrc={singlepaymentimg}
         />
       </section>
-      <section className="container m-auto">
+      <section className="container main-con m-auto">
         <h5 className="text-[50px] lg:text-[92px] text-[#404040] text-center font-[400]">
           They <span className="font-[300] italic shaded-border">trust us</span>
         </h5>

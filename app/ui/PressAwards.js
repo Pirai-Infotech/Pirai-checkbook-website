@@ -16,7 +16,7 @@ const defaultActiveKey = [0];
 
 const PressAwards = ({ contentList }) => {
   return (
-    <section className="container m-auto prss-awrd">
+    <section className="container main-con m-auto prss-awrd">
       <div className="rounded-[20px] sm:rounded-[60px] px-6 sm:px-10 lg:px-[100px] sm:w-[95%] 3xl:w-[85%] m-auto">
         <Collapse
           expandIcon={expandIcon}

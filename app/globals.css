@@ -408,29 +408,8 @@ a:hover {
   border-radius: 60px!important;
 }
 
-.bdr-md-rds {
-  @media only screen and (max-width: 768px) {
-    border-radius: 50px;
-    border-top-left-radius: 0px !important;
-  }
-  @media only screen and (min-width: 768px) {
-    border-radius: 50px;
-  }
-  @media only screen and (min-width: 1024px) {
-    border-radius: 149px !important;
-  }
-}
-.bdr-hiw-rds {
-  @media only screen and (max-width: 768px) {
-    border-radius: 25px;
-  }
-  @media only screen and (min-width: 768px) {
-    border-radius: 25px;
-  }
-  @media only screen and (min-width: 1024px) {
-    border-radius: 56px;
-  }
-}
+
+
 
 .bdr-hiw-rds::before {
   padding: 2.1px;
@@ -544,14 +523,10 @@ li.react-multi-carousel-item.carousel-item {
   border-bottom: unset!important;
 }
 
-@media only screen and (min-width: 768px) {
-  .cb-con {
-    max-width: 783px;
-  }
-}
+
 @media only screen and (max-width: 480px) {
-  .container{
-    width: 95% !important;
+  .main-con{
+    width: 98%;
   }
   h1 {
     font-size: 50px;
@@ -559,10 +534,26 @@ li.react-multi-carousel-item.carousel-item {
   h3 {
     font-size: 35px;
   }
+  .bdr-md-rds{
+    border-radius: 50px;
+    border-top-left-radius: 0px !important;
+  }
 }
-@media only screen and (min-width: 1024px) {
-  .no-bdr-prd.grad-border::before {
-    content: unset
+@media only screen and (max-width: 768px) {
+  .bdr-md-rds{
+  border-radius: 50px;
+  border-top-left-radius: 0px !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-con{
+    width: 95%;
+  }
+  .cb-con {
+    max-width: 783px;
+  }
+  .bdr-md-rds{
+    border-radius: 50px !important;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -572,46 +563,9 @@ li.react-multi-carousel-item.carousel-item {
   .no-bdr.grad-border-rtgs::before {
     content: unset !important;
   }
-}
-
-@media only screen and (max-width: 1280px) {
-  .btm-lr-n {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+  .bdr-hiw-rds {
+    border-radius: 25px;
   }
-  li.react-multi-carousel-item.carousel-item {
-    margin: 0px 1%;
-  }
-}
-
-@media only screen and (max-width: 1599px) {
-  .container{
-    width: 95% !important;
-  }
-  h2 {
-    font-size: 50px;
-  }
-  h3 {
-    font-size: 40px;
-  }
-  h4 {
-    font-size: 18px;
-  }
-  p {
-    font-size: 14px;
-  }
-}
-@media only screen and (min-width: 1599px) {
-  .container{
-    width: 90% !important;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .no-bdr-prd.grad-border::before {
-    background: #c4dcff;
-  }
-}
-@media only screen and (max-width: 1024px) {
   .no-bdr.grad-border::before {
     background: #c4dcff;
   }
@@ -628,3 +582,47 @@ li.react-multi-carousel-item.carousel-item {
     display: none;
   }
 }
+@media only screen and (min-width: 1024px) {
+ 
+  .no-bdr-prd.grad-border::before {
+    content: unset
+  }
+  .bdr-hiw-rds {
+    border-radius: 56px;
+  }
+  .bdr-md-rds{
+    border-radius: 149px !important;
+  }
+  .no-bdr-prd.grad-border::before {
+    background: #c4dcff;
+  }
+}
+@media only screen and (max-width: 1280px) {
+   .main-con{
+    width: 95%;
+  }
+  .btm-lr-n {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  li.react-multi-carousel-item.carousel-item {
+    margin: 0px 1%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .main-con{
+    width: 88%;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  .main-con{
+    width: 88%;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .main-con{
+    width: 95%;
+  }
+}
+
+

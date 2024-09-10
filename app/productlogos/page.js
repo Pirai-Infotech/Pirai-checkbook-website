@@ -28,7 +28,7 @@ function page() {
             <p className="font-[Circular Spotify Text] text-[18px] font-light leading-[25.4px] text-left text-[#404040] pt-4">
               The Checkbook logo is available in two colors. Blue is designed
               for lighter backgrounds, while white works best on dark
-              backgrounds. Please don't alter the logo in any way.
+              backgrounds. Please don&apos;t alter the logo in any way.
             </p>
             <div>
               <Image src={Checkbooklogo} alt="Checkbook Logo" />

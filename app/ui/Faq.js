@@ -50,7 +50,7 @@ const defaultActiveKey = [0];
 const Faq = () => {
   return (
     <section className="px-8 sm:px-0 relative cb-faq">
-      <div className="container m-auto rounded-[20px] sm:rounded-[60px] bg-grad-1 px-6 sm:px-10 py-10 lg:px-[100px] lg:py-[60px] sm:w-[95%] lg:w-[80%] 2xl:w-[70%]">
+      <div className="container main-con m-auto rounded-[20px] sm:rounded-[60px] bg-grad-1 px-6 sm:px-10 py-10 lg:px-[100px] lg:py-[60px] sm:w-[95%] lg:w-[80%] 2xl:w-[70%]">
         <h3 className="text-center pb-10">Frequently Asked Questions</h3>
         <Collapse
           expandIcon={expandIcon}
