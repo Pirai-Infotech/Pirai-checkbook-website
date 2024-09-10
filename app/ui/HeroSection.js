@@ -9,7 +9,7 @@ function HeroSection({ heading, spancon, description, rightimg }) {
     <div className="lg:relative lg:flex lg:items-center 4xl:w-[1920px] m-auto">
       <div className="mx-auto flex flex-col lg:flex-row gap-3 items-center">
         <div className="flex-1 lg:pl-[3%] xl:pl-[8%] 2xl:w-[12%] 3xl:pl-[3%]">
-          <h1 className="text-center font-light lg:text-left text-[43px] leading-[52.04px] 2xl:text-[55px] 3xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[20%] md:px-[25%] lg:px-0 lg:pr-[10%]">
+          <h1 className="text-center font-light lg:text-left text-[41px] leading-[52.04px] 2xl:text-[55px] 3xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[15%] md:px-[20%] lg:px-0 lg:pr-[10%]">
             {heading}<b className="block lg:hidden" /> <span className="custom-text font-normal">{spancon}</span>
           </h1>
           <p className="pt-5 font-circular-spotify text-[#404040] font-light text-center lg:text-left text-[18px] leading-[25.4px] 2xl:text-[22px] 3xl:text-[27px] 2xl:leading-[30.1px] 3xl:leading-[38.1px] md:px-[12%] lg:px-0 lg:w-auto">
