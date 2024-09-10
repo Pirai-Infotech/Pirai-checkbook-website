@@ -145,7 +145,7 @@ function Page() {
                   rounderBL={"rounded-bl-[40px]"}
                 />
               </div>
-              <div className="bg-grad btm-lr-n w-[100%] sm:w-[40%] border-[6px] border-[#fff]">
+              <div className="bg-grad btm-lr-n w-[284px] h-[181px] lg:w-[470px] lg:h-[300px] border-[6px] border-[#fff]">
                 <Image
                   alt="Synctera"
                   src={Synctera}

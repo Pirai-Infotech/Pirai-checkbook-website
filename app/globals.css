@@ -516,6 +516,12 @@ li.react-multi-carousel-item.carousel-item {
 .prss-awrd .ant-collapse-header{
  border-left: 2px solid #9180FF;;
 }
+.nes-acr .ant-collapse-header{
+  border-left: none!important;
+}
+.nes-acr .ant-collapse-item{
+  border-bottom: unset!important;
+}
 
 
 @media only screen and (max-width: 480px) {
