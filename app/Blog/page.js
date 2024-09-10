@@ -98,12 +98,12 @@ function Page() {
   return (
     <div>
       <section className="">
-        <div className="container m-auto flex-1 sm:px-[9%] lg:px-10 lg:py-20">
+        <div className="container main-con m-auto flex-1 sm:px-[9%] lg:px-10 lg:py-20">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-20 lg:px-0">
             Checkbook <span>Resources</span>
           </h1>
         </div>
-        <div className="container m-auto flex gap-3 justify-start xl:justify-center py-10 overflow-scroll scrollbar-hide">
+        <div className="container main-con m-auto flex gap-3 justify-start xl:justify-center py-10 overflow-scroll scrollbar-hide">
           {buttonlists.map((contentlist, index) => (
             <button
               key={index}
@@ -113,7 +113,7 @@ function Page() {
             </button>
           ))}
         </div>
-        <div className="container m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center">
+        <div className="container main-con m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center">
           <div className="grad-border grad-border-compliance bdr-sm-rds  p-9 lg:p-20  w-[100%] bg-[#3D77EB]">
             <h4 className="pl-4 text-[#ffffff] text-[18px] lg:text-[24px] font-[700] pb-4 lg:pb-[66px]  lg:mb-0">
               FEATURED

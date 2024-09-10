@@ -66,7 +66,7 @@ function page() {
         items={itemscon}
         imageSrc={ACHCompliance}
       />
-      <section className="container xl:w-[1238px] m-auto relative">
+      <section className="container main-con xl:w-[1238px] m-auto relative">
         <VideoWithThumbnail
           videoUrl="/workflow-ACH_thumbnail.mp4"
           videothumbnail={ACHthumbnail}

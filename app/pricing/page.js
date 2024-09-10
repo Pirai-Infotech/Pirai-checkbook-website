@@ -216,7 +216,7 @@ const itemscon = [
 function page() {
   return (
     <div>
-      <section className="container m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10   sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
+      <section className="container main-con m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10   sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
         <div className="flex-1 px-[0%] sm:px-[7%] lg:px-[0%] lg:pr-[5%] 2xl:pr-[2%]">
           <h1 className="text-center text-[45px] xl:text-[70px] 2xl:text-[88px]">
             Scalable Pricing to
@@ -228,7 +228,7 @@ function page() {
           </p>
         </div>
       </section>
-      <section className="container m-auto sm:w-[99%] lg:w-[80%] 2xl:w-[75%] px-[28px] md:px-[0px]">
+      <section className="container main-con m-auto sm:w-[99%] lg:w-[80%] 2xl:w-[75%] px-[28px] md:px-[0px]">
         <div className="flex flex-col md:flex-wrap md:flex-row xl:flex-nowrap gap-[30px]">
           {plans.map((plan, index) => (
             <div

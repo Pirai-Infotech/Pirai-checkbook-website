@@ -11,7 +11,7 @@ function page() {
           <span className="custom-text-security">Security</span>
         </h1>
       </section>
-      <section className="container m-auto py-10">
+      <section className="container main-con m-auto py-10">
         <Faq />
       </section>
       <section className="py-10">

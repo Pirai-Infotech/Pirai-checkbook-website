@@ -72,7 +72,7 @@ function page() {
         imageSrc={Papercheck}
       />
 
-      <section className="container xl:w-[1238px] m-auto relative">
+      <section className="container main-con xl:w-[1238px] m-auto relative">
         <VideoWithThumbnail
           videoUrl="/workflow-ACH_thumbnail.mp4"
           videothumbnail={ACHthumbnail}
@@ -95,7 +95,7 @@ function page() {
       <section className="py-10">
         <ReadytoGetStart />
       </section>
-      <section className="container m-auto py-10">
+      <section className="container main-con m-auto py-10">
         <Faq />
       </section>
     </div>

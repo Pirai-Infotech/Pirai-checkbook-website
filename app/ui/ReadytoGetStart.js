@@ -10,7 +10,7 @@ import signupArrowcolor from "@/public/signup-arrow-purple.svg";
 
 function ReadytoGetStart() {
   return (
-    <div className="px-5 sm:px-0 container m-auto flex flex-col lg:flex-row items-center gap-8 py-10">
+    <div className="px-5 sm:px-0 container main-con m-auto flex flex-col lg:flex-row items-center gap-8 py-10">
       <div className="lg:p-7 grad-border grad-border-rtgs bdr-sm-rds no-bdr flex-grow-1 lg:w-[90%] xl:w-[60%] 2xl:w-[90%] 3xl:w-[100%]">
         <div className="bg-[#fff] md:border-[#C4DCFF] md:border-2 lg:border-none lg:border-0 rounded-[30px] py-10 md:px-[15%] md:py-12 lg:px-[10%] 2xl:py-[100px] 2xl:px-[80px]">
           <h2 className="text-center lg:text-left font-inter font-light text-[50px] leading-[60.51px] lg:text-[55px] 2xl:text-[68px] lg:leading-[82.3px]">

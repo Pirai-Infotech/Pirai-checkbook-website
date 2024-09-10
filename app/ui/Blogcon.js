@@ -12,7 +12,7 @@ const Blogcon = ({ contentList }) => {
 
   return (
     <section>
-      <div className="container m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap content-center gap-10 justify-center">
+      <div className="container main-con m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap content-center gap-10 justify-center">
         {contentList.slice(0, visibleItems).map((content, index) => (
           <div
             key={index}

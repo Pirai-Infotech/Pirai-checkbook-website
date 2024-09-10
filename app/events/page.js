@@ -58,7 +58,7 @@ const contentList = [
 function Page() {
   return (
     <div>
-      <section className="container m-auto pb-20">
+      <section className="container main-con m-auto pb-20">
         <div className="w-[80%] sm:w-[50%] m-auto">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-20 lg:px-0">
             Upcoming <span>Events</span>
