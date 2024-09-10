@@ -98,6 +98,12 @@ const listitems = [
 export default function Home() {
   return (
     <>
+      <div className="hidden lg:block bg-gradient-to-r from-[#00FFB2] to-[#00E0FF] text-center py-5 ">
+        <p className="font-[400] text-[#4d4d4d] text-[17px]">
+          <span className="font-[700]">SED EGESTAS, ANTE ET.</span> VULPUTATE
+          VOLUTPAT, ERAS PEDE SEMPER EST.
+        </p>
+      </div>
       <Header />
       <section className="container m-auto sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 py-10   md:px-[0]">
         <div className="flex flex-col items-center px-[0%] sm:px-[7%] lg:px-[0%]">
@@ -128,8 +134,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container m-auto relative pt-[10%] overflow-hidden">
-        <div className=" my-10 grad-border grad-border-rtgs bdr-md-rds no-bdr gap-20 px-8 lg:px-[12%] py-[5%]">
+      <section className="relative pt-[10%] overflow-hidden">
+        <div className=" container m-auto  my-10 grad-border grad-border-rtgs bdr-md-rds no-bdr gap-20 px-8 lg:px-[12%] py-[5%]">
           <p className="w-[58%] text-[18px] lg:text-[27px] text-[#404040]">
             Whether you’re sending hundreds or millions of payments,{" "}
             <a
@@ -145,10 +151,10 @@ export default function Home() {
         <div className="pt-[100px] px-8 lg:pt-[0px]">
           <Horizhoverhm heading="" description="" listitems={listitems} />
         </div>
-        <div className="absolute  right-[-250px] top-0 lg:right-[12%]">
+        <div className="absolute right-[-250px] top-0 lg:right-[12%]">
           <Image
             src={Hmmobilesec}
-            className="w-[68%] lg:w-[100%]"
+            className="w-[68%] lg:w-[85%] xl:w-[90%] 2xl:w-[100%]"
             alt="Mobile Payment Screen"
           />
         </div>
@@ -193,7 +199,7 @@ export default function Home() {
           imageSrc={Hmenggprodt}
         />
       </section>
-      <section>
+      <section className="container m-auto px-8">
         <Verticalhoverhm
           heading=""
           spancon=""
@@ -230,16 +236,17 @@ export default function Home() {
         </div> */}
       </section>
       <Testimonials />
-
-      <Verticalhoverhm
-        heading="Discover"
-        spancon="Our Solutions"
-        description=""
-        flexReverse="flex-row-reverse"
-        vhoveritems={itemscon}
-        imageSrc={Hmenggprodt}
-      />
-      <DiscoverInsights insightType = "your payments" />
+      <section className="container m-auto">
+        <Verticalhoverhm
+          heading="Discover"
+          spancon="Our Solutions"
+          description=""
+          flexReverse="flex-row-reverse"
+          vhoveritems={itemscon}
+          imageSrc={Hmenggprodt}
+        />
+      </section>
+      <DiscoverInsights insightType="your payments" />
 
       <Footer />
     </>
