@@ -33,7 +33,7 @@ function page() {
               <p className="text-[18px] font-light leading-[25.4px] text-center lg:text-left text-[#404040] pb-7">
                 The Checkbook logo is available in two colors. Blue is designed
                 for lighter backgrounds, while white works best on dark
-                backgrounds. Please don't alter the logo in any way.
+                backgrounds. Please don&apos;t alter the logo in any way.
               </p>
               <div className="flex justify-center lg:justify-start">
                 <CTAButton
