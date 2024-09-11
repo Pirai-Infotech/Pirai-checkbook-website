@@ -215,7 +215,7 @@ const itemscon = [
     text: "No percentages. No hidden fees. Only pay for the payments you send.",
   },
 ];
-function page() {
+function Page() {
   const [isResponsive, setIsResponsive] = useState(false);
 
   useEffect(() => {
@@ -301,4 +301,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
