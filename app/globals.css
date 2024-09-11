@@ -39,6 +39,14 @@ body {
   background-size: contain;
   background-blend-mode: overlay; */
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
 .cb-bg {
   position: relative;
   position: relative;
@@ -489,6 +497,10 @@ a:hover {
 .borderimage::before {
   padding: 2.1px;
 }
+.onlyfor-bdr::before {
+  padding: 2.1px;
+  z-index: -1;
+}
 .scond-itm:hover .first-itm {
   filter: blur(1.5px) !important;
 }
@@ -528,7 +540,7 @@ li.react-multi-carousel-item.carousel-item {
   opacity: 1 !important;
 }
 .react-multi-carousel-dot-list {
-  bottom: -30px;
+  bottom: -30px !important;
 }
 .react-multi-carousel-dot button {
   border-width: 1.5px !important;
