@@ -70,6 +70,7 @@ function Page() {
       </section>
       <Blogcon
         contentList={contentList}
+        borderclasslist="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-sm-blg gap-5 p-10 xl:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] m-auto  lg:bg-[#fff0]"
         classlist="text-[#404040] lg:text-[#9180FF] font-[400] lg:text-[28px] 3xl:text-[40px] block pt-2 pr-20"
       />
       <ReadytoGetStart />

@@ -2,11 +2,14 @@
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import CTAButton from "../ui/CTAButton";
-import signupArrowcolor from "@/public/signup-arrow-purple.svg";
+import Arrowclr from "@/public/Arrow_r_clr.svg";
 import Businessintelligence from "@/public/Businessintelligence.svg";
+import Enterpreneurship from "@/public/Entrepreneurship.svg";
+import Payments from "@/public/Payments.svg";
 import Synctera from "@/public/Synctera.svg";
 import Blogcon from "../ui/Blogcon";
 import Image from "next/image";
+import Faq from "../ui/Faq";
 
 const buttonlists = [
   {
@@ -48,14 +51,14 @@ const contentList = [
     title: "FinTech Funding and Valuation versus Demand and Supply",
     description:
       "There’s been a growing rumbling in recent months that fintech is plateauing. After all, now that AI is here, what’s to stop it from demolishing the need for fintech innovations altogether?",
-    imageUrl: Businessintelligence,
+    imageUrl: Enterpreneurship,
   },
   {
     date: "JUL 11, 2023",
     title: "The Anatomy of a 99% Completion Rate",
     description:
       "Most payments happen without payors or recipients ever having to think about them. And that’s the way it should be—in a perfect world, every transaction would be seamless. But it’s not a perfect world, and the reality is that only between 92–95% of payments are completed successfully. While at first glance, that statistic may not be jarring, but think of it this way: what if your paycheck bounced 8% of the time? Suddenly 92% seems a far cry from acceptable.",
-    imageUrl: Businessintelligence,
+    imageUrl: Payments,
   },
   {
     date: "MAY 26, 2023",
@@ -69,7 +72,7 @@ const contentList = [
     title: "The Future of FinTech: A Look Ahead",
     description:
       "As the financial technology industry continues to evolve, it's important to look ahead at the emerging trends that will shape the future of fintech.",
-    imageUrl: Businessintelligence,
+    imageUrl: Enterpreneurship,
   },
   {
     date: "MAR 22, 2023",
@@ -97,7 +100,7 @@ const contentList = [
 function Page() {
   return (
     <div>
-      <section className="">
+      <section className="blg-pg">
         <div className="container main-con m-auto flex-1 sm:px-[9%] lg:px-10 lg:py-20">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-20 lg:px-0">
             Checkbook <span>Resources</span>
@@ -126,12 +129,12 @@ function Page() {
                     Checkbook & Synctera: Revolutionizing Payments Together
                   </span>
                 </h4>
-                <p className="text-[18px] text-[#fff] pl-4 pt-10 hidden lg:block min-h-40">
+                <p className="text-[18px] text-[#fff] md:pl-4 2xl:pt-10 lg:min-h-40">
                   Checkbook Synctera Partnership
                 </p>
 
                 <CTAButton
-                  icon={signupArrowcolor}
+                  icon={Arrowclr}
                   backgroundType={"bg-gradient-to-r"}
                   backgroundColor={"from-[#fff] to-[#fff]"}
                   textColor={"text-[#3D77EB]"}
@@ -157,11 +160,15 @@ function Page() {
         </div>
         <Blogcon
           contentList={contentList}
+          borderclasslist="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-sm-blg gap-5 xl:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] m-auto  lg:bg-[#fff0]"
           classlist="text-[#404040] lg:text-[#9180FF] font-[400] text-[20px] 3xl:text-[24px] block pt-2 pr-10"
         />
       </section>
 
       <ReadytoGetStart />
+      <section className="lg:hidden">
+        <Faq />
+      </section>
     </div>
   );
 }

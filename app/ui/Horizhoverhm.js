@@ -9,12 +9,12 @@ function Horizhoverhm({ heading, description, listitems }) {
   }
 
   return (
-    <div className="container main-con m-auto  p-6 pb-10 md:p-10 md:w-[75%] lg:w-full 2xl:p-0 grad-border grad-border-rtgs bdr-md-rds md:py-10 lg:gap-3 lg:px-30 2xl:px-52 2xl:py-[100px]">
-      <div className="flex flex-col lg:flex-row justify-center lg:items-center px-5 md:px-0 gap-5 lin-bf-txt">
+    <div className="container m-auto p-6 pb-10 md:p-10 md:w-[75%] lg:w-full 2xl:p-0 grad-border grad-border-rtgs bdr-md-rds md:py-10 lg:gap-3 lg:px-30 2xl:px-52 2xl:py-[100px]">
+      <div className="flex flex-col lg:flex-row justify-center lg:items-center px-5 md:px-0 sm:gap-0 xl:gap-5 lin-bf-txt">
         {listitems?.map((item, index) => (
           <div
             key={index}
-            className={`pt-10 px-2 lg:filter ${
+            className={`pt-10 xl:px-2 lg:filter ${
               toHandelhover(index) ? `first-itm` : `lg:blur-[1.5px] scond-itm`
             } hover:blur-0`}
             onMouseEnter={() => setHoveredIndex(index)}
@@ -26,7 +26,7 @@ function Horizhoverhm({ heading, description, listitems }) {
                 {item.title}
               </h4>
             </div>
-            <p className="pt-2 lg:pt-10 md:pl-16 lg:pl-0 lg:w-[233px] lg:h-[189px] text-[16px] leading-[22.58px] xl:text-[18px] xl:leading-[25.04px]">
+            <p className="pt-2 lg:pt-10 md:pl-16 lg:pl-0 xl:w-[233px] xl:h-[189px] text-[16px] leading-[22.58px] xl:text-[18px] xl:leading-[25.04px] sm:pr-10 xl:pr-0">
               {item.text}
             </p>
           </div>

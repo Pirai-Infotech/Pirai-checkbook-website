@@ -484,6 +484,13 @@ a:hover {
   padding: 2.1px;
   z-index: -1;
 }
+.bdr-sm-blg {
+  border-radius: 60px;
+}
+.bdr-sm-blg::before {
+  padding: 2.1px;
+  z-index: -1;
+}
 .bdr-sm-rtgs {
   border-radius: 25px;
 }
@@ -599,8 +606,17 @@ li.react-multi-carousel-item.carousel-item {
   .bdr-wbnr-rds{
     border-radius: 40px;
   }
+  .blg-pg .blg-img{
+    width: 100%;
+  }
   .no-bdr.grad-border::before {
     content: unset !important;
+  }
+  .blg-pg .bdr-sm-blg{
+    border-radius: 10px;
+  }
+  .blg-pg .blg-btn{
+    margin-left: 20px;
   }
   .bdr-hm-rds {
     border-radius: 50px;
