@@ -341,6 +341,14 @@ a:hover {
 .grad-border-compliance::before {
   background: linear-gradient(
     300.49deg,
+    #9281FF 0.44%,
+    #3EA8BD 59.42%,
+    #E0FFFF 99.56%
+  );
+}
+.grad-border-webinar::before {
+  background: linear-gradient(
+    300.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
     #e0ffff 99.56%
@@ -434,6 +442,13 @@ a:hover {
 }
 .bdr-hm-rds {
   border-radius: 126px;
+}
+.bdr-wbnr-rds::before {
+  padding: 2.1px;
+  z-index: -1;
+}
+.bdr-wbnr-rds {
+  border-radius: 60px;
 }
 .bdr-prsawd-rds {
   border-radius: 60px;
@@ -569,6 +584,9 @@ li.react-multi-carousel-item.carousel-item {
   }
 }
 @media only screen and (max-width: 1024px) {
+  .bdr-wbnr-rds{
+    border-radius: 40px;
+  }
   .no-bdr.grad-border::before {
     content: unset !important;
   }
