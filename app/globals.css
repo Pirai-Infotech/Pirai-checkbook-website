@@ -499,7 +499,7 @@ li.react-multi-carousel-item.carousel-item {
   opacity: 1 !important;
 }
 .react-multi-carousel-dot-list {
-  bottom: -30px;
+  bottom: -30px !important;
 }
 .react-multi-carousel-dot button {
   border-width: 1.5px !important;

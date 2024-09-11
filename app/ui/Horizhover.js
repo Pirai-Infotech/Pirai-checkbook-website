@@ -28,7 +28,7 @@ function Horizhover({ heading, description, items }) {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(index)}
           >
-            <div className="flex flex-row xl:flex-col items-center xl:items-start gap-5">
+            <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
               <Image src={item.icon} alt={item.iconAlt} />
               <h4 className="lg:pl-4 font-inter font-normal text-[22px] leading-[26.63px] xl:text-[24px] xl:leading-[29.05px] text-[#9180FF]">
                 {item.title}
