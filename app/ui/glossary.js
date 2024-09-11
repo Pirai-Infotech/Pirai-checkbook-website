@@ -5,6 +5,7 @@ import downArrow from "@/public/cb_down_arrow.svg";
 import GrayupArrow from "@/public/Gray_Arrow_up.svg";
 import GraydownArrow from "@/public/Gray_Arrow_dn.svg";
 import { useState } from "react";
+import Image from "next/image";
 
 const { Panel } = Collapse;
 
@@ -24,7 +25,7 @@ const expandsmallIcon = ({ isActive }) =>
 
 const defaultActiveKey = [0];
 
-const Glossary = ({ contentList }) => {
+const Glossary = ({ contentList, currency }) => {
   const [activeKey, setActiveKey] = useState(defaultActiveKey);
   const handlePanelChange = (key) => {
     setActiveKey(key);
@@ -41,7 +42,20 @@ const Glossary = ({ contentList }) => {
           {contentList?.map((item, index) => (
             <Panel
               className="text-[24px] 3xl:text-[38px] font-[450] grad-border grad-border-compliance bdr-prsawd-rds mb-10 p-10 2xl:p-20"
-              header={item?.question || "No title available"}
+              header={
+                item?.content ? (
+                  <span className="flex items-center gap-5">
+                    <Image src={currency} alt="" />
+                    <span className="lft-bdr pl-5">
+                      {item?.question || "No title available"}
+                    </span>
+                  </span>
+                ) : (
+                  <span className="lft-bdr pl-5">
+                    {item?.question || "No title available"}
+                  </span>
+                )
+              }
               key={index}
             >
               <div className="flex flex-col lg:flex-row justify-between nes-acr">
