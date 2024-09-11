@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function Footer({ contactFormText }) {
   return (
-    <div className="bg-gradient-to-r from-[#9B8DFF] to-[#3E89BD] mt-10">
+    <div className="bg-gradient-to-r from-[#9B8DFF] to-[#3E89BD] lg:mt-10">
       <div className="container main-con m-auto">
         <h3 className="text-[40px] lg:text-[62px] leading-[48.41px] lg:leading-[75.03px] text-white pt-20 pb-5 text-center font-normal">
           {contactFormText ? contactFormText : "Contact Us"}
@@ -83,7 +83,7 @@ function Footer({ contactFormText }) {
                 </li>
                 <li>
                   <Link
-                    href="/printablechecks"
+                    href="/Printablechecks"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Print
