@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
+import Link from "next/link";
 
 function page() {
   return (
@@ -10,17 +11,41 @@ function page() {
           <h1 className="text-center text-[45px] xl:text-[70px] 2xl:text-[88px]">
             <span>Terms & Conditions</span>
           </h1>
-          <p className="pt-[30px] text-center text-[18px] 2xl:text-[27px]">
+          <p className="pt-[30px] text-center text-[18px] lg:text-[48px]">
             For Individuals
           </p>
         </div>
       </section>
 
       <section className="container main-con m-auto cb-pp rounded-[60px] p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%]">
-        <div>
-          <p>For Businesses T&C, click here</p>
-          <p>For PayFac Marketplace T&C, click here</p>
-          <p>For NDA, click here</p>
+        <div className="lg:border-b-2 lg:border-dashed border-[#9281FF] lg:mb-8">
+          <p>
+            For Businesses T&C,{" "}
+            <Link
+              href="#"
+              className="font-circular-spotify text-[22px] lg:text-[27px] font-light leading-[31.04px] lg:leading-[38.1px] text-[#3D77EA]"
+            >
+              click here
+            </Link>
+          </p>
+          <p>
+            For PayFac Marketplace T&C,{" "}
+            <Link
+              href="#"
+              className="font-circular-spotify text-[22px] lg:text-[27px] font-light leading-[31.04px] lg:leading-[38.1px] text-[#3D77EA]"
+            >
+              click here
+            </Link>
+          </p>
+          <p>
+            For NDA,{" "}
+            <Link
+              href="#"
+              className="font-circular-spotify text-[22px] lg:text-[27px] font-light leading-[31.04px] lg:leading-[38.1px] text-[#3D77EA]"
+            >
+              click here
+            </Link>
+          </p>
         </div>
         <div>
           <h5>1. Information</h5>
@@ -415,7 +440,7 @@ function page() {
             other URL as Checkbook may provide for this purpose from time to
             time).
           </p>
-          <h5>Liability; Limitations On Liability; Indemnity</h5>
+          <h5>13. Liability; Limitations On Liability; Indemnity</h5>
           <p>
             Checkbook shall be responsible only for performing the services
             expressly provided for in this Agreement, and shall be liable only
@@ -503,13 +528,7 @@ function page() {
           </p>
         </div>
         <div>
-          <p>
-            Customer Support Team
-            <br />
-            650-761-0008
-            <br />
-            support@checkbook.io
-          </p>
+          <p>Current as of: 19 Sep 2022</p>
         </div>
       </section>
 

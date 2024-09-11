@@ -11,19 +11,19 @@ const contentList = [
         spancon: "[Press release]",
         month: "May 2024",
         description:
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.",
       },
       {
         spancon: "[Press release]",
         month: "May 2024",
         description:
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",
+          "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. ",
       },
       {
         spancon: "[Press release]",
         month: "May 2024",
         description:
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.",
+          "Praesent dapibus, neque id cursus faucibus, tortor.",
       },
     ],
   },
@@ -55,7 +55,7 @@ const contentList = [
 function Page() {
   return (
     <div>
-      <section className="container main-con m-auto pb-5 xl:pb-20">
+      <section className="container main-con m-auto mt-8 mg:mt-10 lg:mt-14 pb-10 md:pb-12 lg:pb-20">
         <div className="w-[80%] sm:w-[70%] m-auto">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-[18%] lg:px-20 xl:px-0">
             Checkbook <span>Press & Media</span>

@@ -27,7 +27,7 @@ const PressAwards = ({ contentList }) => {
           {contentList?.map((item, index) => (
             <Panel
               className="text-[24px] 2xl:text-[38px] font-[450] grad-border grad-border-compliance bdr-prsawd-rds mb-10 p-10 2xl:p-20"
-              header={item?.question || "No title available"}
+              header={<span className="lft-bdr pl-5">{item?.question || "No title available"}</span>}
               key={index}
             >
               {item?.content?.length > 0 &&
