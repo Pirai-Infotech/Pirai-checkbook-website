@@ -384,7 +384,7 @@ function page() {
         </div>
       </section>
       {/* table */}
-      <section className="px-8 pt-10 my-14 overflow-x-scroll">
+      <section className="px-8 pt-10 my-14 overflow-x-scroll no-scrollbar">
         <table className="min-w-[1459px] m-auto table-auto text-center font-inter font-semibold text-[21px] leading-[25px] text-[#7F53E8]">
           <thead className="grad-border grad-border-rtgs rounded-[149px] bdr-rds-prd bottom-10">
             <tr className="text-[#7F53E8] font-inter font-semibold text-[21px] leading-[25.41px]">

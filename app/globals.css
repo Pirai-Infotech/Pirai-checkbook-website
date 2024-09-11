@@ -39,6 +39,14 @@ body {
   background-size: contain;
   background-blend-mode: overlay; */
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
 .cb-bg {
   position: relative;
   position: relative;
