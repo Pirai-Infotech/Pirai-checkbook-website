@@ -125,7 +125,7 @@ function page() {
           </div>
         </div>
       </section>
-      {/* list box for tab and mobile*/}
+      {/* list box for tab and mobile and web*/}
       <section className="md:flex lg:grid container main-con m-auto gap-8">
         <div className="grid md:w-[50%] lg:w-full justify-center lg:gap-8">
           <div className="flex flex-col lg:flex-row justify-between gap-8 w-full lg:max-w-[1000px] xl:max-w-[1240px] rounded-[25px] grad-border grad-border-def borderimage no-bdr-prd py-12 lg:px-0 lg:py-0">
@@ -259,111 +259,6 @@ function page() {
                 Our platform gives you the freedom to offer various payment
                 rails to your customers depending on what best fits your
                 business.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* list box for web*/}
-      <section className="hidden container main-con m-auto w-full justify-center gap-8">
-        <div className="flex flex-col md:flex-row justify-between gap-8 w-full lg:max-w-[1000px] xl:max-w-[1240px]">
-          <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[460px] h-auto lin-bf-txt3">
-            <div className="py-7 px-10 lg:pb-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
-              <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
-                <div className="w-auto lg:w-full flex justify-start md:justify-normal lg:justify-end">
-                  <Image src={topRightarrow} alt="topRightarrow" />
-                </div>
-                <h4 className="pt-10 sm:pt-0 text-[22px] lg:text-[24px] leading-[30.77px] lg:leading-[25.4px] lg:w-[70%] lg:pl-4">
-                  ACH Payments
-                </h4>
-              </div>
-              <p className="py-2 mt-2 lg:pl-4 text-[16px] lg:text-[18px] leading-[22.58px] lg:leading-[25.4px]">
-                Push funds directly to your recipient&apos;s bank account via the
-                automated clearing house network.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[747px] h-auto lin-bf-txt3">
-            <div className="py-7 px-10 lg:pb-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
-              <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
-                <div className="w-auto lg:w-full flex justify-start md:justify-normal lg:justify-end">
-                  <Image src={topRightarrow} alt="topRightarrow" />
-                </div>
-                <h4 className="pt-10 sm:pt-0 text-[22px] lg:text-[24px] leading-[30.77px] lg:leading-[25.4px] lg:w-[70%] lg:pl-4">
-                  Real-Time Payments
-                </h4>
-              </div>
-              <p className="py-2 mt-2 lg:pl-4 xl:pr-56 2xl:pr-60 text-[16px] lg:text-[18px] leading-[22.58px] lg:leading-[25.4px]">
-                Deposit funds directly to your bank account in less than 60
-                seconds with our real-time payments solution.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col md:flex-row justify-between gap-8 w-full lg:max-w-[1000px] xl:max-w-[1240px]">
-          <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[747px] h-auto lin-bf-txt">
-            <div className="py-7 px-10 lg:pb-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
-              <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
-                <div className="w-auto lg:w-full flex justify-start md:justify-normal lg:justify-end">
-                  <Image src={topRightarrow} alt="topRightarrow" />
-                </div>
-                <h4 className="pt-10 sm:pt-0 text-[22px] lg:text-[24px] leading-[30.77px] lg:leading-[25.4px] lg:w-[70%] lg:pl-4">
-                  Instant Payments
-                </h4>
-              </div>
-              <p className="py-2 mt-2 lg:pl-4 xl:pr-56 2xl:pr-60 text-[16px] lg:text-[18px] leading-[22.58px] lg:leading-[25.4px]">
-                Accept money instantly with your existing VISA or MasterCard
-                debit and ATM cards.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[460px] h-auto lin-bf-txt">
-            <div className="py-7 px-10 lg:pb-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
-              <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
-                <div className="w-auto lg:w-full flex justify-start md:justify-normal lg:justify-end">
-                  <Image src={topRightarrow} alt="topRightarrow" />
-                </div>
-                <h4 className="pt-10 sm:pt-0 text-[22px] lg:text-[24px] leading-[30.77px] lg:leading-[25.4px] lg:w-[70%] lg:pl-4">
-                  Print
-                </h4>
-              </div>
-              <p className="py-2 mt-2 lg:pl-4 text-[16px] lg:text-[18px] leading-[22.58px] lg:leading-[25.4px]">
-                Print a physical check and deposit with your banking mobile app
-                or in person at a local branch or ATM.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col md:flex-row justify-between gap-8 w-full lg:max-w-[1000px] xl:max-w-[1240px]">
-          <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[460px] h-auto lin-bf-txt">
-            <div className="py-7 px-10 lg:pb-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
-              <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
-                <div className="w-auto lg:w-full flex justify-start md:justify-normal lg:justify-end">
-                  <Image src={topRightarrow} alt="topRightarrow" />
-                </div>
-                <h4 className="pt-10 sm:pt-0 text-[22px] lg:text-[24px] leading-[30.77px] lg:leading-[25.4px] lg:w-[70%] lg:pl-4">
-                  Mail
-                </h4>
-              </div>
-              <p className="py-2 mt-2 lg:pl-4 text-[16px] lg:text-[18px] leading-[22.58px] lg:leading-[25.4px]">
-                Send a paper check via USPS, and deposit with your banking
-                mobile app or in person at a local branch.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[747px] h-auto lin-bf-txt">
-            <div className="py-7 px-10 lg:pb-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
-              <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
-                <div className="w-auto lg:w-full flex justify-start md:justify-normal lg:justify-end">
-                  <Image src={topRightarrow} alt="topRightarrow" />
-                </div>
-                <h4 className="pt-10 sm:pt-0 text-[22px] lg:text-[24px] leading-[30.77px] lg:leading-[25.4px] lg:w-[70%] lg:pl-4">
-                  Virtual Card *
-                </h4>
-              </div>
-              <p className="py-2 mt-2 lg:pl-4 xl:pr-56 2xl:pr-60 text-[16px] lg:text-[18px] leading-[22.58px] lg:leading-[25.4px]">
-                No bank account necessary! Accept funds in seconds with a
-                virtual card and use it just like a debit card.
               </p>
             </div>
           </div>

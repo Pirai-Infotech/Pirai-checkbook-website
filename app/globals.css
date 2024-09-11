@@ -482,6 +482,10 @@ a:hover {
 .borderimage::before {
   padding: 2.1px;
 }
+.onlyfor-bdr::before {
+  padding: 2.1px;
+  z-index: -1;
+}
 .scond-itm:hover .first-itm {
   filter: blur(1.5px) !important;
 }
