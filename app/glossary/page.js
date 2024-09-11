@@ -2,6 +2,7 @@
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Glossary from "../ui/glossary";
+import currency from "@/public/currency.svg"
 
 const contentList = [
   {
@@ -10,7 +11,7 @@ const contentList = [
       "ACH (Automated Clearing House) is a payment processing network that’s used to send money electronically between banks in the United States.",
     content: [
       {
-        ques: "ACH API",
+        ques: "What is ACH?",
         answer:
           "ACH (Automated Clearing House) is a payment processing network that’s used to send money electronically between banks and financial institutions in the United States",
         cta: "Read More",
@@ -31,32 +32,32 @@ const contentList = [
         cta: "Read More",
       },
       {
-        ques: "ACH Return Codes",
+        ques: "FedACH",
         answer: "",
         cta: "Read More",
       },
       {
-        ques: "ACH Return Codes",
+        ques: "FedGlobal ACH",
         answer: "",
         cta: "Read More",
       },
       {
-        ques: "ACH Return Codes",
+        ques: "ODFI vs. RDFI",
         answer: "",
         cta: "Read More",
       },
       {
-        ques: "ACH Return Codes",
+        ques: "What are Payment Rails?",
         answer: "",
         cta: "Read More",
       },
       {
-        ques: "ACH Return Codes",
+        ques: "What is Global ACH?",
         answer: "",
         cta: "Read More",
       },
       {
-        ques: "ACH Return Codes",
+        ques: "What is an International ACH Transfer?",
         answer: "",
         cta: "Read More",
       },
@@ -106,7 +107,7 @@ const contentList = [
 function Page() {
   return (
     <div>
-      <section className="container m-auto pb-5 xl  :pb-20">
+      <section className="container m-auto mt-8 md:mt-10 lg:mt-14 pb-10 md:pb-12 lg:pb-20">
         <div className="w-[80%] sm:w-[70%] m-auto">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-[18%] lg:px-20 xl:px-0">
             Insights <span>Learn</span>
@@ -117,7 +118,7 @@ function Page() {
           </p>
         </div>
       </section>
-      <Glossary contentList={contentList} />
+      <Glossary contentList={contentList} currency={currency} />
       <ReadytoGetStart />
     </div>
   );
