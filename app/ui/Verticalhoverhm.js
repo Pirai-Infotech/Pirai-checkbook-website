@@ -21,7 +21,7 @@ function Verticalhoverhm({
       <div
         className={` flex flex-col ${flexReverse} items-center justify-center gap-2 lg:gap-8 py-10`}
       >
-        <div className="w-[100%] lg:w-[50%]">
+        <div className="w-[100%] 2xl:w-[50%]">
           <Image
             src={imageSrc}
             alt="Printable Check"

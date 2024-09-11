@@ -135,10 +135,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container main-con m-auto relative pt-[10%] overflow-hidden">
-        <div className=" my-10 grad-border grad-border-rtgs bdr-hm-rds no-bdr gap-20 px-4 lg:px-[12%] py-[5%]">
+      <section className=" relative pt-[10%] sm:px-8 overflow-hidden">
+        <div className="container m-auto md:w-[75%] lg:w-full my-10 grad-border grad-border-rtgs bdr-hm-rds no-bdr gap-20 px-4 lg:px-[12%] py-[5%]">
           <p className="w-[53%] sm:w-[58%] text-[18px] lg:text-[27px] text-[#404040]">
-            Whether you’re sending hundreds or millions of payments,{" "}
+            Whether you’re sending hundreds or millions of payments,
             <a
               href="https://www.checkbook.io"
               className="text-[#9281FF] underline"
@@ -149,10 +149,10 @@ export default function Home() {
             your customers.
           </p>
         </div>
-        <div className="pt-[100px] sm:px-8 lg:pt-[0px]">
+        <div className="pt-[100px] px-8 lg:pt-[0px]">
           <Horizhoverhm heading="" description="" listitems={listitems} />
         </div>
-        <div className="absolute right-[-230px] top-0 lg:right-[2%] 2xl:right-[12%]">
+        <div className="absolute right-[-230px] top-0 md:right-[-50px] lg:right-[2%] 2xl:right-[12%]">
           <Image
             src={Hmmobilesec}
             className="w-[68%] lg:w-[85%] xl:w-[90%] 2xl:w-[100%]"
