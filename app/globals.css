@@ -39,6 +39,14 @@ body {
   background-size: contain;
   background-blend-mode: overlay; */
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
 .cb-bg {
   position: relative;
   position: relative;
@@ -473,6 +481,10 @@ a:hover {
 }
 .borderimage::before {
   padding: 2.1px;
+}
+.onlyfor-bdr::before {
+  padding: 2.1px;
+  z-index: -1;
 }
 .scond-itm:hover .first-itm {
   filter: blur(1.5px) !important;

@@ -22,6 +22,7 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
           </p>
         </div>
       </div>
+      {items ? (
       <div className="4xl:w-[1920px] 4xl:m-auto ml-2 pl-2 sm:ml-10 sm:pl-10 md:ml-14 md:pl-14 2xl:ml-36 2xl:pl-36 flex flex-row items-center justify-between gap-2 lg:gap-8 py-10">
         <div className="w-[60%] 2xl:w-[36%] h-[500px]">
           {items?.map((item, index) => (
@@ -77,6 +78,11 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
           />
         </div>
       </div>
+        ) : (
+          <div className="container lg:w-[60%] xl:w-[50%] m-auto pt-4 my-10 lg:pt-10 lg:my-14">
+            <Image src={imageSrc} alt="Printable Check" className="" />
+          </div>
+        )}
     </>
   );
 }
