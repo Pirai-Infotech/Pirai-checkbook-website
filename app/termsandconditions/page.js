@@ -17,7 +17,7 @@ function page() {
         </div>
       </section>
 
-      <section className="container main-con m-auto cb-pp rounded-[60px] p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%]">
+      <section className="container main-con m-auto cb-pp rounded-[60px] p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%] mb-8 lg:mb-10">
         <div className="lg:border-b-2 lg:border-dashed border-[#9281FF] lg:mb-8">
           <p>
             For Businesses T&C,{" "}
