@@ -14,11 +14,7 @@ const Blogcon = ({ contentList, classlist, borderclasslist }) => {
     <section>
       <div className="container main-con m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap content-center gap-10 justify-center">
         {contentList.slice(0, visibleItems).map((content, index) => (
-          <div
-            key={index}
-            // className="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-sm-blg gap-5 p-10 xl:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] m-auto  lg:bg-[#fff0]"
-            className={`${borderclasslist}`}
-          >
+          <div key={index} className={`${borderclasslist}`}>
             <div className="lg:w-[60%]  lg:pl-0 pb-5 lg:pb-0">
               <h4 className="border-l-2 border-[#9180FF] pl-4 text-[#404040] lg:text-[#3EA6BB] text-[18px] lg:text-[24px] mb-5 lg:mb-0">
                 {content.date}
