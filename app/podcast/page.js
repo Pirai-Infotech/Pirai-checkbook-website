@@ -70,18 +70,21 @@ const contentList = [
 function Page() {
   return (
     <div>
-      <section className="container m-auto pb-20">
+      <section className="container m-auto pb-4 md:pb-8 lg:pb-20 mt-0 md:mt-[40px] lg:mt-[80px]">
         <div className="w-[80%] lg:w-[60%] m-auto">
           <h1 className="text-center text-[45px] sm:text-[70px] 2xl:text-[88px] md:px-20 lg:px-0">
             Checkbook <span>Podcast</span>
           </h1>
+          <p className="block lg:hidden pt-5 lg:pt-[30px] text-center font-[400] text-[18px] lg:text-[20px] 3xl:text-[27px]">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna
+          </p>
           <div className="grid sm:grid-cols-2 xl:grid-cols-4 justify-items-center gap-5 justify-center py-10">
             <Image alt="" src={GooglePodcasts} className="object-contain" />
             <Image alt="" src={AmazonPodcasts} className="object-contain" />
             <Image alt="" src={ApplePodcasts} className="object-contain" />
             <Image alt="" src={SpotifyPodcasts} className="object-contain" />
           </div>
-          <p className="pt-5 lg:pt-[30px] text-center font-[400] text-[18px] lg:text-[20px] 3xl:text-[27px]">
+          <p className="hidden lg:block pt-5 lg:pt-[30px] text-center font-[400] text-[18px] lg:text-[20px] 3xl:text-[27px]">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
             hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
             aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula
@@ -89,6 +92,9 @@ function Page() {
           </p>
         </div>
       </section>
+       <h3 className="justify-center flex mb-14 font-normal">
+        Latest Episodes
+      </h3>
       <Podcastcon contentList={contentList} />
       <ReadytoGetStart />
     </div>

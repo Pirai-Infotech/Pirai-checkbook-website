@@ -465,6 +465,10 @@ a:hover {
   padding: 2.1px;
   z-index: -1;
 }
+.bdr-webinar-rds::before {
+  padding: 2.1px;
+  z-index: -1;
+}
 .bdr-sm-rds::before {
   padding: 2.1px;
   z-index: -1;
@@ -646,6 +650,9 @@ li.react-multi-carousel-item.carousel-item {
     background: url("https://pirai-infotech.github.io/Pirai-checkbook-website/bg_dot_line_md.svg");
     background-size: contain;
   }
+  .bdr-webinar-rds {
+    border-radius: 52px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .cb-bg::before {
@@ -662,6 +669,9 @@ li.react-multi-carousel-item.carousel-item {
   }
   .no-bdr-prd.grad-border::before {
     background: #c4dcff;
+  }
+  .bdr-webinar-rds {
+    border-radius: 60px;
   }
 }
 @media only screen and (max-width: 1280px) {
