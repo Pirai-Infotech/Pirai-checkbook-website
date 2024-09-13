@@ -98,6 +98,7 @@ const contentList = [
 ];
 
 function Page() {
+  const btnName = "Read More";
   return (
     <div>
       <section className="blg-pg">
@@ -116,20 +117,23 @@ function Page() {
             </button>
           ))}
         </div>
-        <div className="container main-con m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center pb-10">
+        <div className="container main-con m-auto sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center pb-10">
           <div className="grad-border grad-border-compliance bdr-sm-rds p-10 xl:p-20  lg:w-[95%] 3xl:w-[78%] m-auto bg-[#3D77EB]">
-            <h4 className="pl-4 text-[#ffffff] text-[18px] lg:text-[24px] font-[700] pb-4 lg:pb-[66px]  lg:mb-0">
+          <h4 className="block lg:hidden lg:pl-4 text-[#ffffff] text-[18px] lg:text-[24px] font-[700] pb-4 lg:pb-[40px]  lg:mb-0">
               FEATURED
             </h4>
-            <div className="flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-between  gap-5 ">
-              <div className="lg:w-[58%] sm:pl-10 lg:pl-0 pb-5 lg:pb-0">
-                <h4 className="lg:border-l-2 border-[#fff] sm:pl-4 text-[#ffffff]  text-[18px] lg:text-[24px] mb-5 lg:mb-0">
+            <div className="flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-between gap-5 md:gap-14 lg:gap-5 ">
+            <div className="lg:w-[58%] pb-5 lg:pb-0">
+            <h4 className="hidden lg:block lg:pl-4 text-[#ffffff] text-[18px] lg:text-[24px] font-[700] pb-4 lg:pb-[40px]  lg:mb-0">
+              FEATURED
+            </h4>
+                <h4 className="lg:border-l-2 border-[#fff] lg:pl-4 text-[#ffffff]  text-[18px] lg:text-[24px] mb-5 lg:mb-0">
                   MAR 06, 2024
                   <span className="text-[#fff] text-[24px] block pt-2">
                     Checkbook & Synctera: Revolutionizing Payments Together
                   </span>
                 </h4>
-                <p className="text-[18px] text-[#fff] md:pl-4 2xl:pt-10 lg:min-h-40">
+                <p className="text-[18px] text-[#fff] lg:pl-4 lg:pt-10 min-h-14 lg:min-h-32">
                   Checkbook Synctera Partnership
                 </p>
 
@@ -148,7 +152,7 @@ function Page() {
                   rounderBL={"rounded-bl-[40px]"}
                 />
               </div>
-              <div className="bg-grad btm-lr-n w-[284px] h-[181px] lg:w-[470px] lg:h-[300px] border-[6px] border-[#fff]">
+              <div className="bg-grad w-[300px] h-[181px] md:w-[400px] md:h-[200px] lg:w-[470px] lg:h-[300px] border-[6px] border-[#fff]">
                 <Image
                   alt="Synctera"
                   src={Synctera}
@@ -160,8 +164,13 @@ function Page() {
         </div>
         <Blogcon
           contentList={contentList}
-          borderclasslist="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-sm-blg gap-5 xl:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] m-auto  lg:bg-[#fff0]"
+          btnName = {btnName}
+          borderclasslist="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-sm-blg gap-5 lg:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] lg:bg-[#fff0]"
           classlist="text-[#404040] lg:text-[#9180FF] font-[400] text-[20px] 3xl:text-[24px] block pt-2 pr-10"
+          classdescription="hidden lg:block text-[16px] lg:text-[18px] lg:pl-4 pt-2 sm:pt-5 pb-5"
+          classImage = "blg-img bg-grad w-[284px] h-[250px] md:h-[181px] lg:w-[470px] lg:h-[300px]"
+          blogpx = "px-8"
+          textcolor = "text-[#404040] lg:text-[#3EA6BB]"
         />
       </section>
 
