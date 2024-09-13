@@ -90,7 +90,7 @@ function Page() {
           {Contentlist?.map((conlist, index) => (
             <div key={index} className="pb-20">
               {conlist?.heading && (
-                <h6 className="text-[30px] lg:text-[35px] text-center lg:text-left text-[#4F535B] font-[450] px-10 sm:px-20 lg:px-0">
+                <h6 className="text-[30px] lg:text-[35px] text-center lg:text-left text-[#4F535B] font-[450] px-5 sm:px-20 lg:px-0">
                   {conlist.heading}
                 </h6>
               )}
