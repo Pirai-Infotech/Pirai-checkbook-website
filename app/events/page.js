@@ -2,7 +2,7 @@
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Blogcon from "../ui/Blogcon";
-import Businessintelligence from "@/public/Businessintelligence.svg";
+import Businessintelligence from "@/public/Entrepreneurship.svg";
 
 const contentList = [
   {
@@ -56,6 +56,7 @@ const contentList = [
   },
 ];
 function Page() {
+ const btnName = "Register";
   return (
     <div>
       <section className="container main-con m-auto pb-20">
@@ -70,8 +71,12 @@ function Page() {
       </section>
       <Blogcon
         contentList={contentList}
-        borderclasslist="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-sm-blg gap-5 p-10 xl:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] m-auto  lg:bg-[#fff0]"
-        classlist="text-[#404040] lg:text-[#9180FF] font-[400] lg:text-[28px] 3xl:text-[40px] block pt-2 pr-20"
+        btnName = {btnName}
+        borderclasslist="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-webinar-rds gap-5 p-10 xl:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] m-auto  lg:bg-[#fff0]"
+        classlist="text-[#9180FF] font-[400] lg:text-[28px] 3xl:text-[40px] block pt-2 3xl:pr-20"
+        classdescription="text-[16px] lg:text-[18px] lg:pl-4 pt-2 sm:pt-5 pb-5"
+        classImage = "blg-img bg-grad w-[284px] sm:w-[230px] md:w-[250px] h-[250px] md:h-[181px] lg:w-[470px] lg:h-[300px]"
+        textcolor = "text-[#3EA6BB]"
       />
       <ReadytoGetStart />
     </div>
