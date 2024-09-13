@@ -16,7 +16,7 @@ const Webinarcon = ({ contentList, classlist }) => {
         {contentList.slice(0, visibleItems).map((content, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-between grad-border grad-border-compliance bdr-sm-rtgs gap-5 p-7 xl:p-10 w-[100%] md:w-[47%] 2xl:w-[30%] m-auto  lg:bg-[#fff0]"
+            className="flex flex-col items-center justify-between grad-border grad-border-compliance bdr-webinar-rds gap-5 p-7 xl:p-10 w-[100%] md:w-[47%] 2xl:w-[30%] m-auto  lg:bg-[#fff0]"
           >
             <div className="">
               <Image
@@ -40,7 +40,7 @@ const Webinarcon = ({ contentList, classlist }) => {
                 backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
                 textColor={"text-[#fff]"}
                 content={"More"}
-                paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
+                paddingx={"px-7 lg:px-4 xl:px-6 2xl:px-7"}
                 paddingy={"py-3"}
                 textSize={"text-[16px] xl:text-[18px]"}
                 rounderTL={"rounded-tl-none"}
@@ -54,7 +54,7 @@ const Webinarcon = ({ contentList, classlist }) => {
       </div>
 
       {visibleItems < contentList.length && (
-        <div className="flex justify-center my-20">
+        <div className="flex justify-center my-10 lg:my-20">
           <CTAButton
             onClick={handleLoadMore}
             icon={signupArrow}

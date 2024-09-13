@@ -4,7 +4,7 @@ import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Webinarph from "@/public/webinar_ph.svg";
 import Image from "next/image";
 import CTAButton from "../ui/CTAButton";
-import signupArrowcolor from "@/public/signup-arrow-purple.svg";
+import signupArrowcolor from "@/public/sign-up-voilet.svg";
 import Webinarcon from "../ui/Webinarcon";
 
 const contentList = [
@@ -80,12 +80,12 @@ function Page() {
           </p>
         </div>
       </section>
-      <section className="container m-auto pb-20 sm:pb-10 px-[30px] sm:px-0">
+      <section className="container m-auto pb-20 md:pb-30 px-[30px] sm:px-0">
         <h2 className="text-center text-[30px] lg:text-[44px] font-[400] md:px-[18%] py-8 lg:px-20 xl:px-0">
           Upcoming Webinars
         </h2>
         <div className="p-10 xl:p-20 lg:w-[95%] 3xl:w-[78%] m-auto bg-gradient-to-r from-[#9281FF]  to-[#3E89BD] grad-border grad-border-webinar bdr-wbnr-rds shadow-bottom">
-          <div className="flex flex-col-reverse sm:flex-row-reverse justify-between items-center sm:items-start lg:items-center gap-5 ">
+          <div className="flex flex-col-reverse sm:flex-row-reverse lg:flex-row justify-between items-center sm:items-start lg:items-center gap-5 ">
             <div className="w-[92%] lg:w-[58%] sm:pl-10 lg:pl-0 md:pb-5 lg:pb-0">
               <h4 className="border-0 lg:border-l-2 border-[#fff] lg:pl-4 text-[#ffffff] text-[18px]  font-[400] md:mb-5 lg:mb-0 md:py-5">
                 THURSDAY, JULY 11TH
@@ -93,7 +93,7 @@ function Page() {
                   Elevate Expense Audits: AI Insights for Productivity & Policy
                 </span>
               </h4>
-              <p className="text-[18px] text-[#fff] lg:pl-4 pb-5 lg:pb-0 py-5 ">
+              <p className="text-[18px] text-[#fff] lg:pl-4 pb-5 lg:pb-10 py-5 ">
                 As finance organizations continue to take a closer look at
                 spending to help drive business growth and reduce cost, auditors
                 face a daunting challen...
@@ -103,9 +103,9 @@ function Page() {
                 icon={signupArrowcolor}
                 backgroundType={"bg-gradient-to-r"}
                 backgroundColor={"from-[#fff] to-[#fff]"}
-                textColor={"text-[#3D77EB]"}
+                textColor={"text-[#8883F7]"}
                 content={"Sign Up"}
-                paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 "}
+                paddingx={"px-8 lg:px-6 xl:px-7 2xl:px-8"}
                 paddingy={"py-3"}
                 textSize={"text-[16px] xl:text-[18px]"}
                 rounderTL={"rounded-tl-none"}
@@ -115,6 +115,7 @@ function Page() {
               />
             </div>
             <div className="">
+              <h4 className="block lg:hidden text-[#ffffff] text-[18px]  font-semibold mb-4">FEATURED</h4>
               <Image
                 alt="Webinarph"
                 src={Webinarph}
