@@ -465,6 +465,13 @@ a:hover {
   padding: 2.1px;
   z-index: -1;
 }
+.bdr-idstry-rds {
+  border-radius: 33px;
+}
+.bdr-idstry-rds::before {
+  padding: 2.1px;
+  z-index: -1;
+}
 .bdr-webinar-rds::before {
   padding: 2.1px;
   z-index: -1;
