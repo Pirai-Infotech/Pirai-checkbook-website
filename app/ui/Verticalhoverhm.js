@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 
 function Verticalhoverhm({
@@ -9,6 +10,7 @@ function Verticalhoverhm({
   vhoveritems = [],
   imageSrc,
   flexReverse,
+  imgMessage,
 }) {
   const [hoveredIndex, setHoveredIndex] = useState(0);
 
@@ -18,10 +20,16 @@ function Verticalhoverhm({
 
   return (
     <>
+    <h3 className="block lg:hidden text-center font-[400] text-[30px] mt-14">
+              {heading}
+              <span> {spancon} </span>
+              {headingtwo}
+            </h3>
       <div
         className={` flex flex-col ${flexReverse} items-center justify-center gap-2 lg:gap-8 py-10`}
       >
         <div className="w-[100%] 2xl:w-[50%]">
+          { imgMessage && <span className="hidden md:flex pl-24 justify-center font-inter font-normal text-[22px] lg:text-[27px]">{imgMessage}</span>}
           <Image
             src={imageSrc}
             alt="Printable Check"
@@ -30,7 +38,7 @@ function Verticalhoverhm({
         </div>
         <div className="w-[100%] 2xl:w-[22%] px-8 lg:px-0">
           <div className="">
-            <h3 className="text-center lg:text-left pb-6 md:10 font-[400] text-[30px] xl:text-[49px]">
+            <h3 className="hidden lg:block text-center lg:text-left pb-6 md:10 font-[400] text-[30px] xl:text-[49px]">
               {heading}
               <span> {spancon} </span>
               {headingtwo}
