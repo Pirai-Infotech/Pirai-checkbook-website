@@ -9,8 +9,8 @@ function Horizhoverhm({ heading, description, listitems }) {
   }
 
   return (
-    <div className="container m-auto p-6 pb-10 md:p-10 md:w-[75%] lg:w-full 2xl:p-0 grad-border grad-border-rtgs bdr-md-rds md:py-10 lg:gap-3 lg:px-30 2xl:px-52 2xl:py-[100px]">
-      <div className="flex flex-col lg:flex-row justify-center lg:items-center px-5 md:px-0 sm:gap-0 xl:gap-5 lin-bf-txt">
+    <div className="container m-auto p-6 pb-10 md:p-10 md:w-[75%] lg:w-full 2xl:p-0 grad-border grad-border-rtgs bdr-home-rds md:py-10 lg:gap-3 lg:px-30 2xl:px-52 2xl:py-[100px]">
+      <div className="flex flex-col lg:flex-row justify-center lg:items-center px-5 lg:px-10 md:px-0 sm:gap-0 lg:gap-5 2xl:gap-20 lin-bf-txt">
         {listitems?.map((item, index) => (
           <div
             key={index}

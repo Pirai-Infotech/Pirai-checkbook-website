@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
@@ -22,6 +23,57 @@ import Hmmobilesec from "@/public/hm_mobile_sec.svg";
 import Verticalhoverhm from "./ui/Verticalhoverhm";
 import singlepaymentimg from "@/public/singlepayment.png";
 import Easytouse from "@/public/easytouseapi_hm.png";
+import React from 'react';
+import { Tabs } from 'antd';
+
+const onChange = (key) => {
+  console.log(key);
+};
+
+const itemscon = [
+  {
+    heading: "Compliance and Legal (PCI vs Non-PCI)",
+    text: "Easy integration into a unified, white labeled platform and enhaced customer experience.",
+  },
+  {
+    heading: "Finance and Treasury",
+    text: "Easy integration into a unified, white labeled platform and enhaced customer experience.",
+  },
+  {
+    heading: "Engineering and Product",
+    text: "Easy integration into a unified, white labeled platform and enhaced customer experience.",
+  },
+  {
+    heading: "Accounting",
+    text: "Easy integration into a unified, white labeled platform and enhaced customer experience.",
+  },
+];
+
+const items = [
+  {
+    key: '1',
+    label: <span className="font-spotify text-[20px] font-light leading-[28.22px] text-cente">DEPARTMENTS (04)</span>,
+    children: <Verticalhoverhm
+    discoverheading={true}
+    heading=""
+    spancon=""
+    description=""
+    flexReverse="md:flex-row lg:flex-row-reverse"
+    vhoveritems={itemscon}
+    imageSrc={Hmenggprodt}
+  />,
+  },
+  {
+    key: '2',
+    label: <span className="font-spotify text-[20px] font-light leading-[28.22px] text-cente">INDUSTRIES (08) </span>,
+    children: '',
+  },
+  {
+    key: '3',
+    label: <span className="font-spotify text-[20px] font-light leading-[28.22px] text-cente">USE CASES (05)</span>,
+    children: '',
+  },
+];
 
 const poweruppayment = [
   {
@@ -52,24 +104,6 @@ const singlepayment = [
   },
 ];
 
-const itemscon = [
-  {
-    heading: "Compliance and Legal (PCI vs Non-PCI)",
-    text: "Easy integration into a unified, white labeled platform and enhaced customer experience.",
-  },
-  {
-    heading: "Finance and Treasury",
-    text: "Easy integration into a unified, white labeled platform and enhaced customer experience.",
-  },
-  {
-    heading: "Engineering and Product",
-    text: "Easy integration into a unified, white labeled platform and enhaced customer experience.",
-  },
-  {
-    heading: "Accounting",
-    text: "Easy integration into a unified, white labeled platform and enhaced customer experience.",
-  },
-];
 const listitems = [
   {
     icon: simpleicon,
@@ -97,6 +131,20 @@ const listitems = [
   },
 ];
 export default function Home() {
+
+  const [isResponsive, setIsResponsive] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const checkResponsive = () => {
+        setIsResponsive(window.innerWidth <= 1024);
+      };
+      checkResponsive();
+      window.addEventListener("resize", checkResponsive);
+      return () => window.removeEventListener("resize", checkResponsive);
+    }
+  }, []);
+
   return (
     <div className="cb-bg bg-pp">
       <div className="hidden lg:block bg-gradient-to-r from-[#00FFB2] to-[#00E0FF] text-center py-5 ">
@@ -136,7 +184,7 @@ export default function Home() {
         </div>
       </section>
       <section className=" relative pt-[10%] sm:px-8 overflow-hidden">
-        <div className="container m-auto md:w-[75%] lg:w-full my-10 grad-border grad-border-rtgs bdr-hm-rds no-bdr gap-20 px-4 lg:px-[12%] py-[5%]">
+        <div className="container m-auto md:w-[75%] lg:w-full my-10 grad-border grad-border-rtgs bdr-hm-rds no-bdr gap-20 px-10 md:px-0 lg:px-[12%] py-[5%]">
           <p className="w-[53%] sm:w-[58%] text-[18px] lg:text-[27px] text-[#404040]">
             Whether you’re sending hundreds or millions of payments,
             <a
@@ -149,7 +197,7 @@ export default function Home() {
             your customers.
           </p>
         </div>
-        <div className="pt-[100px] px-8 lg:pt-[0px]">
+        <div className="pt-[100px] px-8 lg:px-0 lg:pt-[0px]">
           <Horizhoverhm heading="" description="" listitems={listitems} />
         </div>
         <div className="absolute right-[-230px] top-0 md:right-[-50px] lg:right-[2%] 2xl:right-[12%]">
@@ -177,8 +225,8 @@ export default function Home() {
               backgroundColor={"from-[#3D77EB]  to-[#D289FF]"}
               textColor={"text-[#FFF]"}
               content={"Get Started"}
-              paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
-              paddingy={"py-3 md:py-4"}
+              paddingx={"px-8 lg:px-6 xl:px-7 2xl:px-8"}
+              paddingy={"py-2 md:py-3"}
               textSize={"text-[17px] lg:text-[10px] xl:text-[26px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
@@ -191,27 +239,29 @@ export default function Home() {
       </section>
       <section className="container mx-auto lg:px-8">
         <Verticalhoverhm
-          heading="Let us"
-          spancon="power up"
-          headingtwo="your payments"
+          heading={!isResponsive ? "Let us" : "Let us power up your payments"}
+          spancon={!isResponsive ? "power up" : ""}
+          headingtwo={!isResponsive ? "your payments" : ""}
           description=""
           flexReverse="md:flex-row"
           vhoveritems={poweruppayment}
           imageSrc={Easytouse}
+          imgMessage="Single, easy-to-use API"
         />
       </section>
       <section className="container m-auto lg:px-8">
         <Verticalhoverhm
-          heading=""
+          heading={!isResponsive ? "" : "A no code/low code option and a seamless Dashboard"}
           spancon=""
           headingtwo=""
           description=""
           flexReverse="md:flex-row-reverse"
           vhoveritems={singlepayment}
-          imageSrc={singlepaymentimg}
+          imageSrc={singlepaymentimg} 
+          imgMessage={isResponsive ? "" : "A no code/low code option and a seamless Dashboard"}
         />
       </section>
-      <section className="container main-con m-auto pb-20">
+      <section className="container main-con m-auto pb-0 md:pb-10 lg:pb-20">
         <h5 className="text-[50px] lg:text-[92px] text-[#404040] text-center font-[400]">
           They <span className="font-[300] italic shaded-border">trust us</span>
         </h5>
@@ -240,14 +290,16 @@ export default function Home() {
         <Testimonials />
       </section>
       <section className="container m-auto">
-        <Verticalhoverhm
-          heading="Discover"
-          spancon="Our Solutions"
-          description=""
-          flexReverse="md:flex-row-reverse"
-          vhoveritems={itemscon}
-          imageSrc={Hmenggprodt}
-        />
+      <h3 className="text-center mt-14 font-[300] text-[30px] xl:text-[92px]">
+               Discover
+              <span> Our Sulation </span>
+            </h3>
+      <Tabs
+        defaultActiveKey="1"
+        items={items}
+        onChange={onChange}
+        className="noBorderTabs pt-10 block sm:inline-flex"
+      />
       </section>
       <DiscoverInsights insightType="your payments" />
 
