@@ -703,6 +703,12 @@ li.react-multi-carousel-item.carousel-item {
   .main-con{
     width: 88%;
   }
+  .text-dk span{
+    color: #404040;
+    font-weight: 400;
+    background:unset;
+    -webkit-text-fill-color: unset;
+  }
 }
 @media only screen and (min-width: 1536px) {
   .main-con{
