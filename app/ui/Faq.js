@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { Collapse } from "antd";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
@@ -12,7 +13,7 @@ const expandIcon = ({ isActive }) =>
 
 const questions = [
   {
-    question: "How de I verify my bank?",
+    question: "How do I verify my bank?",
     answer:
       "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
     ctaText: "Read More",

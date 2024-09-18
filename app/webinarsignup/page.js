@@ -4,6 +4,7 @@ import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Chronicles from "@/public/cb_chronicles.svg";
 import Image from "next/image";
 import SpeakerPh from "@/public/Speaker_ph.svg";
+import Forms from "../ui/Forms";
 
 function Page() {
   return (
@@ -116,7 +117,7 @@ function Page() {
           </div>
         </div>
       </section>
-
+      <Forms />
       <ReadytoGetStart />
     </div>
   );

@@ -53,7 +53,7 @@ const Webinarcon = ({ contentList, classlist }) => {
         ))}
       </div>
 
-      {visibleItems < contentList.length && (
+      {visibleItems < contentList?.length && (
         <div className="flex justify-center my-10 lg:my-20">
           <CTAButton
             onClick={handleLoadMore}
