@@ -55,7 +55,7 @@ const Podcastcon = ({ contentList }) => {
         ))}
       </div>
 
-      {visibleItems < contentList.length && (
+      {visibleItems < contentList?.length && (
         <div className="flex justify-center mt-14">
           <CTAButton
             onClick={handleLoadMore}

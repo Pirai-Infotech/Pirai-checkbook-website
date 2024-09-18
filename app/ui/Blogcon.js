@@ -42,7 +42,7 @@ const Blogcon = ({
   return (
     <section>
       <div className="container main-con m-auto sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap content-center gap-10 justify-center">
-        {contentList.map((content, index) => (
+        {contentList?.map((content, index) => (
           <div
             key={index}
             // className="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-sm-blg gap-5 p-10 xl:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] m-auto  lg:bg-[#fff0]"
@@ -89,7 +89,7 @@ const Blogcon = ({
         ))}
       </div>
 
-      {visibleItems < contentList.length && (
+      {visibleItems < contentList?.length && (
         <div className="flex justify-center py-[50px] lg:py-[90px]">
           <CTAButton
             onClick={handleLoadMore}

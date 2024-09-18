@@ -99,9 +99,9 @@ const buttonlists = [
 
 const fetchPosts = async () => {
   try {
-    const response = await fetch('https://api.hubapi.com/cms/v3/blogs/posts/', {
+    const response = await fetch(process.env.NEXT_PUBLIC_HUBSPOT_API_URL, {
       headers: {
-        'Authorization': `Bearer pat-eu1-59b6813f-aa1e-405a-9854-d772957a2729`,
+        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_API_KEY}`,
         'Content-Type': 'application/json',
       },
     });
