@@ -6,53 +6,60 @@ import Businessintelligence from "@/public/Entrepreneurship.svg";
 
 const contentList = [
   {
-    date: "JUNE 25-26, 2024",
-    title: "SSON Finance Transformation Virtual Summit",
-    description:
+    created: "JUNE 25-26, 2024",
+    htmlTitle: "SSON Finance Transformation Virtual Summit",
+    metaDescription:
       "Join our session during the SSON Finance Transformation Virtual Summit on Tuesday, June 25th at 9:00am ET! VP of Global Solutions Consulting, Andy Foster, will discuss how you should be evaluating generative AI for your finance functions. Learn how to ask the right questions to get the answers you need to effectively evaluate things like ROI, implementation, and benefits of generative AI for your team. This event is free to join!",
-    imageUrl: Businessintelligence,
+    featuredImage: Businessintelligence,
+    featuredImageAltText:""
   },
   {
-    date: "JUNE 25-26, 2024",
-    title: "SSON Finance Transformation Virtual Summit",
-    description:
+    created: "JUNE 25-26, 2024",
+    htmlTitle: "SSON Finance Transformation Virtual Summit",
+    metaDescription:
       "Join our session during the SSON Finance Transformation Virtual Summit on Tuesday, June 25th at 9:00am ET! VP of Global Solutions Consulting, Andy Foster, will discuss how you should be evaluating generative AI for your finance functions. Learn how to ask the right questions to get the answers you need to effectively evaluate things like ROI, implementation, and benefits of generative AI for your team. This event is free to join!",
-    imageUrl: Businessintelligence,
+    featuredImage: Businessintelligence,
+    featuredImageAltText:""
   },
   {
-    date: "JUNE 25-26, 2024",
-    title: "SSON Finance Transformation Virtual Summit",
-    description:
+    created: "JUNE 25-26, 2024",
+    htmlTitle: "SSON Finance Transformation Virtual Summit",
+    metaDescription:
       "Join our session during the SSON Finance Transformation Virtual Summit on Tuesday, June 25th at 9:00am ET! VP of Global Solutions Consulting, Andy Foster, will discuss how you should be evaluating generative AI for your finance functions. Learn how to ask the right questions to get the answers you need to effectively evaluate things like ROI, implementation, and benefits of generative AI for your team. This event is free to join!",
-    imageUrl: Businessintelligence,
+    featuredImage: Businessintelligence,
+    featuredImageAltText:""
   },
   {
-    date: "JUNE 25-26, 2024",
-    title: "SSON Finance Transformation Virtual Summit",
-    description:
+    created: "JUNE 25-26, 2024",
+    htmlTitle: "SSON Finance Transformation Virtual Summit",
+    metaDescription:
       "Join our session during the SSON Finance Transformation Virtual Summit on Tuesday, June 25th at 9:00am ET! VP of Global Solutions Consulting, Andy Foster, will discuss how you should be evaluating generative AI for your finance functions. Learn how to ask the right questions to get the answers you need to effectively evaluate things like ROI, implementation, and benefits of generative AI for your team. This event is free to join!",
-    imageUrl: Businessintelligence,
+    featuredImage: Businessintelligence,
+    featuredImageAltText:""
   },
   {
-    date: "JUNE 25-26, 2024",
-    title: "SSON Finance Transformation Virtual Summit",
-    description:
+    created: "JUNE 25-26, 2024",
+    htmlTitle: "SSON Finance Transformation Virtual Summit",
+    metaDescription:
       "Join our session during the SSON Finance Transformation Virtual Summit on Tuesday, June 25th at 9:00am ET! VP of Global Solutions Consulting, Andy Foster, will discuss how you should be evaluating generative AI for your finance functions. Learn how to ask the right questions to get the answers you need to effectively evaluate things like ROI, implementation, and benefits of generative AI for your team. This event is free to join!",
-    imageUrl: Businessintelligence,
+    featuredImage: Businessintelligence,
+    featuredImageAltText:""
   },
   {
-    date: "JUNE 25-26, 2024",
-    title: "SSON Finance Transformation Virtual Summit",
-    description:
+    created: "JUNE 25-26, 2024",
+    htmlTitle: "SSON Finance Transformation Virtual Summit",
+    metaDescription:
       "Join our session during the SSON Finance Transformation Virtual Summit on Tuesday, June 25th at 9:00am ET! VP of Global Solutions Consulting, Andy Foster, will discuss how you should be evaluating generative AI for your finance functions. Learn how to ask the right questions to get the answers you need to effectively evaluate things like ROI, implementation, and benefits of generative AI for your team. This event is free to join!",
-    imageUrl: Businessintelligence,
+    featuredImage: Businessintelligence,
+    featuredImageAltText:""
   },
   {
-    date: "JUNE 25-26, 2024",
-    title: "SSON Finance Transformation Virtual Summit",
-    description:
+    created: "JUNE 25-26, 2024",
+    htmlTitle: "SSON Finance Transformation Virtual Summit",
+    metaDescription:
       "Join our session during the SSON Finance Transformation Virtual Summit on Tuesday, June 25th at 9:00am ET! VP of Global Solutions Consulting, Andy Foster, will discuss how you should be evaluating generative AI for your finance functions. Learn how to ask the right questions to get the answers you need to effectively evaluate things like ROI, implementation, and benefits of generative AI for your team. This event is free to join!",
-    imageUrl: Businessintelligence,
+    featuredImage: Businessintelligence,
+    featuredImageAltText:""
   },
 ];
 function Page() {
