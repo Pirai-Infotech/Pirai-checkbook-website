@@ -604,6 +604,40 @@ li.react-multi-carousel-item.carousel-item {
   }
 } */
 
+/* Blog content style start*/
+.blog-con h1, .blog-con h2, .blog-con strong{
+  font-size: 50px;
+  font-weight: 400;
+  color: #404040;
+  line-height: initial;
+  padding-bottom: 30px;
+}
+.blog-con ul, .blog-con li{
+font-size: 20px;
+font-weight: 300;
+line-height: 32.64px;
+text-align: left;
+}
+.blog-con p, .blog-con span {
+  line-height: 32.64px;
+  font-size: 18px;
+  color: #404040;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.blog-con a{
+    color: #3498db;
+    text-decoration: none;
+}
+.blog-con a:hover {
+  text-decoration: underline;
+}
+.blog-con img{
+  margin: auto;
+}
+
+/* Blog content style end*/
+
 @media only screen and (max-width: 480px) {
   .main-con{
     width: 98%;
@@ -618,6 +652,13 @@ li.react-multi-carousel-item.carousel-item {
   }
 }
 @media only screen and (max-width: 768px) {
+  .blog-con h1, .blog-con h2, .blog-con strong{
+    font-size: 30px;
+    font-weight: 400;
+    color: #404040;
+    line-height: initial;
+    padding-bottom: 20px;
+  }
   .bdr-md-rds{
   border-radius: 50px;
   border-top-left-radius: 0px !important;
@@ -639,6 +680,22 @@ li.react-multi-carousel-item.carousel-item {
   }
 }
 @media only screen and (max-width: 1024px) {
+  .blog-con h1, .blog-con h2, .blog-con strong{
+    font-size: 24px;
+    font-weight: 400;
+    color: #404040;
+    line-height: initial;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  .blog-con p, .blog-con span {
+    line-height: 30.64px;
+    font-size: 16px;
+    color: #404040;
+    font-weight: 300;
+    margin-bottom: 8px;
+    text-align: center;
+  }
   .bdr-home-rds{
     border-radius: 50px;
   }
