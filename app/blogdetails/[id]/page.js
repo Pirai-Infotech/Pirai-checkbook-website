@@ -26,10 +26,18 @@ const fetchPosts = async (id) => {
 };
 
 export async function generateStaticParams() {
-  const ids = ["115017689320", "123456", "789012"]; 
+  const response = await fetch(`${process.env.NEXT_PUBLIC_HUBSPOT_API_URL}`, {
+    headers: {
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+  });
 
-  return ids.map((id) => ({
-    id,
+  const data = await response.json();
+  const posts = data?.results;
+
+  return posts.map((post) => ({
+    id: post.id, 
   }));
 }
 
