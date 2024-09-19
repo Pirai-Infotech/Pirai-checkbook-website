@@ -117,7 +117,7 @@ function Page() {
           </div>
         </div>
       </section>
-      <Forms />
+      <Forms headerText="Save your spot" headerSpan="Thursday, July 11th | 9:00 am PT"/>
       <ReadytoGetStart />
     </div>
   );
