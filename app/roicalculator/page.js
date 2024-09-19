@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
+import Forms from "@/app/ui/Forms"
 
 const items = [
   { value: "1,000", label: "CUSTOMERS" },
@@ -33,6 +34,7 @@ function Page() {
           </div>
         </div>
       </section>
+      <Forms />
       <ReadytoGetStart />
     </div>
   );

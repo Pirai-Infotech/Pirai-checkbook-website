@@ -1,4 +1,5 @@
-import React, { Suspense } from "react";
+import React from "react";
+import parse from "html-react-parser";
 
 const fetchPosts = async (id) => {
   try {
@@ -20,12 +21,12 @@ const fetchPosts = async (id) => {
     return data?.results[0];
   } catch (error) {
     console.error("Error fetching data:", error.message);
-    return [];
+    return null;
   }
 };
 
-const Page = async ({ searchParams }) => {
-  const { id } = searchParams;
+const Page = async ({ params }) => {
+  const { id } = params;
 
   if (!id) {
     return <div>No ID provided</div>;
@@ -33,16 +34,18 @@ const Page = async ({ searchParams }) => {
 
   const apidata = await fetchPosts(id);
 
+  if (!apidata) {
+    return <div>No data found</div>;
+  }
+
   return (
-    <div className="container main-con m-auto blog-con py-4 md:py-10 lg:py-14">
-      <Suspense>
-        <p>{apidata?.created}</p>
-        <h1>{apidata?.metaDescription}</h1>
-        <p>{apidata?.authorName}</p>
-        {apidata && (
-          <p dangerouslySetInnerHTML={{ __html: apidata?.postBody }}></p>
-        )}
-      </Suspense>
+    <div className="container m-auto blog-con w-[90%] lg:w-[75%] xl:w-[65%] 2xl:w-[60%] py-4 md:py-10 lg:py-14">
+      <p>{apidata.created}</p>
+      <h1>{apidata.metaDescription}</h1>
+      <p>{apidata.authorName}</p>
+      <div>
+        {apidata.postBody && parse(apidata.postBody)}
+      </div>
     </div>
   );
 };

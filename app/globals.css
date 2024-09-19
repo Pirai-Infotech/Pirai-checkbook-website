@@ -696,6 +696,12 @@ text-align: left;
     margin-bottom: 8px;
     text-align: center;
   }
+  .blog-con ul, .blog-con li{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32.64px;
+    text-align: center;
+    }
   .bdr-home-rds{
     border-radius: 50px;
   }
