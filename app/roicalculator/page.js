@@ -34,7 +34,7 @@ function Page() {
           </div>
         </div>
       </section>
-      <Forms />
+      <Forms headerText="Get Your Custom ROI Report" headerSpan=""/>
       <ReadytoGetStart />
     </div>
   );

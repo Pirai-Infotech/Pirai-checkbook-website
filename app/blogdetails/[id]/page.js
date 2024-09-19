@@ -25,6 +25,14 @@ const fetchPosts = async (id) => {
   }
 };
 
+export async function generateStaticParams() {
+  const ids = ["115017689320", "123456", "789012"]; 
+
+  return ids.map((id) => ({
+    id,
+  }));
+}
+
 const Page = async ({ params }) => {
   const { id } = params;
 
