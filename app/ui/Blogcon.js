@@ -19,7 +19,7 @@ const Blogcon = ({
   const router = useRouter();
 
   const handleClick = (id) => {
-    router.push(`/blogdetails?id=${id}`);
+    router.push(`/blogdetails/${id}`);
   };
 
   const handleLoadMore = () => {
