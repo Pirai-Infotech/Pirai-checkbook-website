@@ -10,7 +10,7 @@ import ACME_getpaid from "@/public/ACME_getpaid.svg";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import CBIsolation from "@/public/cb_isolation_mode.png";
 
-function page() {
+function Page() {
   const [isResponsive, setIsResponsive] = useState(false);
 
   useEffect(() => {
@@ -272,4 +272,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
