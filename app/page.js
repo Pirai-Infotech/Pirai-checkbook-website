@@ -303,7 +303,7 @@ export default function Home() {
       </section>
       <DiscoverInsights insightType="your payments" />
 
-      <Footer />
+      <Footer isForm = {true}/>
     </div>
   );
 }

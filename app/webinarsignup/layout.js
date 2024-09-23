@@ -8,7 +8,7 @@ const layout = ({ children }) => {
       <div className="bg-image">
         <Header />
         {children}
-        <Footer />
+        <Footer isForm = {true}/>
       </div>
     </div>
   );
