@@ -1,38 +1,58 @@
+"use client";
 import React from "react";
 import CTAButton from "./CTAButton";
-import signupArrow from "@/public/signup-arrow-purple.svg";
+import signupArrow from "@/public/sign-up-voilet.svg";
 import logo from "@/public/footer-checkbook-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "./ContactForm";
+import { useState } from "react";
+import FooterForm from "./FooterForm";
 
-function Footer({ contactFormText }) {
+function Footer({ contactFormText, isForm }) {
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
   return (
     <div className="bg-gradient-to-r from-[#9B8DFF] to-[#3E89BD] lg:mt-10">
       <div className="container main-con m-auto">
         <h3 className="text-[40px] lg:text-[62px] leading-[48.41px] lg:leading-[75.03px] text-white pt-20 pb-5 text-center font-normal">
           {contactFormText ? contactFormText : "Contact Us"}
         </h3>
-        <p className="text-[18px] lg:text-[27px] leading-[25.4px] lg:leading-[38.1px] text-white mb-8 text-center font-light px-[30px] sm:px-[60px] md:px-[130px] lg:px-[180px] xl:px-[300px] 3xl:px-[550px]">
-          Our team is happy to answer your questions. Fill out the form and
-          we’ll be in touch as soon as possible.
-        </p>
-        <div className="flex justify-center w-full pb-14 lg:pb-24 border-b border-solid border-[#FFF]">
-          <CTAButton
-            icon={signupArrow}
-            backgroundType={""}
-            backgroundColor={"bg-[#FFF]"}
-            textColor={"text-[#608BD5]"}
-            content={"Contact Us"}
-            paddingx={"px-[33px]"}
-            paddingy={"py-[12px]"}
-            textSize={"xl:text-[17px] lg:text-[15px]"}
-            rounderTL={"rounded-tl-none"}
-            rounderTR={"rounded-tr-[60px]"}
-            rounderBR={"rounded-br-[60px]"}
-            rounderBL={"rounded-bl-[40px]"}
-          />
-        </div>
-
+        {isForm ? (
+          <div className="flex justify-center w-full pb-14 lg:pb-24 border-b border-solid border-[#FFF]">
+            <FooterForm />
+          </div>
+        ) : (
+          <div>
+            <p className="text-[18px] lg:text-[27px] leading-[25.4px] lg:leading-[38.1px] text-white mb-8 text-center font-light px-[30px] sm:px-[60px] md:px-[130px] lg:px-[180px] xl:px-[300px] 3xl:px-[550px]">
+              Our team is happy to answer your questions. Fill out the form and
+              we’ll be in touch as soon as possible.
+            </p>
+            <div className="flex justify-center w-full pb-14 lg:pb-24 border-b border-solid border-[#FFF]">
+              <CTAButton
+                onClick={toggleModal}
+                icon={signupArrow}
+                backgroundType={""}
+                backgroundColor={"bg-[#FFF]"}
+                textColor={"text-[#608BD5]"}
+                content={"Contact Us"}
+                paddingx={"px-[33px]"}
+                paddingy={"py-[12px]"}
+                textSize={"xl:text-[17px] lg:text-[15px]"}
+                rounderTL={"rounded-tl-none"}
+                rounderTR={"rounded-tr-[60px]"}
+                rounderBR={"rounded-br-[60px]"}
+                rounderBL={"rounded-bl-[40px]"}
+              />
+              {showModal && (
+                <ContactForm showModal={showModal} toggleModal={toggleModal} />
+              )}
+            </div>
+          </div>
+        )}
         <div className="flex justify-between items-start flex-wrap mt-24 pb-14 w-[85%] m-auto">
           <div className="w-full lg:w-[20%] order-2 flex justify-center border-t border-solid border-[#FFF] mt-24 pt-10 lg:pt-0 lg:mt-0 lg:border-none lg:order-2">
             <Image src={logo} alt="Checkbook" />

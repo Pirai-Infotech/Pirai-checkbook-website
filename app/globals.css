@@ -638,6 +638,34 @@ text-align: left;
 
 /* Blog content style end*/
 
+  /* Custom style to handle the floating label */
+  .floating-label {
+    position: relative;
+    padding-top: 13px;
+}
+.floating-label label {
+    position: absolute;
+    top: 10;
+    left: 0;
+    color: #fff;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+    transform: translateY(-20px);
+    font-size: 0.75rem; 
+    color: #fff; 
+}
+.floating-label textarea:focus + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+    transform: translateY(-20px);
+    font-size: 0.75rem; 
+    color: #fff; 
+}
+
+/* Media quary */
+
 @media only screen and (max-width: 480px) {
   .main-con{
     width: 98%;
