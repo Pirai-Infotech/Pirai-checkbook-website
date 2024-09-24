@@ -139,7 +139,7 @@ const Page = async () => {
           ))}
         </div>
         <div className="container main-con m-auto sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center pb-10">
-          <div className="grad-border grad-border-compliance bdr-sm-rds p-10 xl:p-20  lg:w-[95%] 3xl:w-[78%] m-auto bg-[#3D77EB]">
+          <div className="grad-border grad-border-compliance bdr-sm-rds p-10 xl:p-20 lg:w-[95%] 3xl:w-[78%] m-auto bg-[#3D77EB]">
           <h4 className="block lg:hidden lg:pl-4 text-[#ffffff] text-[18px] lg:text-[24px] font-[700] pb-4 lg:pb-[40px]  lg:mb-0">
               FEATURED
             </h4>
@@ -163,8 +163,8 @@ const Page = async () => {
                   backgroundColor={"from-[#fff] to-[#fff]"}
                   textColor={"text-[#3D77EB]"}
                   content={"Read More"}
-                  paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 "}
-                  paddingy={"py-3"}
+                  paddingx={"px-4 sm:px-6 lg:px-3 xl:px-5 2xl:px-6 "}
+                  paddingy={"py-2 sm:py-3"}
                   textSize={"text-[16px] xl:text-[18px]"}
                   rounderTL={"rounded-tl-none"}
                   rounderTR={"rounded-tr-[60px]"}
@@ -172,7 +172,7 @@ const Page = async () => {
                   rounderBL={"rounded-bl-[40px]"}
                 />
               </div>
-              <div className="bg-grad w-[300px] h-[181px] md:w-[400px] md:h-[200px] lg:w-[470px] lg:h-[300px] border-[6px] border-[#fff]">
+              <div className="bg-grad sm:w-[300px] h-[181px] md:w-[400px] md:h-[200px] lg:w-[470px] lg:h-[300px] border-[6px] border-[#fff]">
                 <Image
                   alt="Synctera"
                   src={Synctera}

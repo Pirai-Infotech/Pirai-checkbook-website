@@ -55,7 +55,7 @@ const Faq = () => {
     setActiveKey(key);
   };
   return (
-    <section className="relative cb-faq py-10">
+    <section className="relative cb-faq pb-14">
       <div className="container main-con m-auto rounded-[20px] sm:rounded-[60px] bg-grad-1 px-6 sm:px-10 py-10 lg:px-[100px] lg:py-[60px] sm:w-[95%] lg:w-[80%] 2xl:w-[70%]">
         <h3 className="text-center pb-10">Frequently Asked Questions</h3>
         <Collapse

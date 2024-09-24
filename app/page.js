@@ -173,7 +173,7 @@ export default function Home() {
               textColor={"text-[#fff]"}
               content={"Get Started"}
               paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 ml-4"}
-              paddingy={"py-3"}
+              paddingy={"py-2 sm:py-3"}
               textSize={"text-[16px] xl:text-[22px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
@@ -197,10 +197,10 @@ export default function Home() {
             your customers.
           </p>
         </div>
-        <div className="pt-[100px] px-8 lg:px-0 lg:pt-[0px]">
+        <div className="pt-8 md:pt-[100px] px-8 lg:px-0 lg:pt-[0px]">
           <Horizhoverhm heading="" description="" listitems={listitems} />
         </div>
-        <div className="absolute right-[-230px] top-0 md:right-[-50px] lg:right-[2%] 2xl:right-[12%]">
+        <div className="absolute right-[-290px] sm:right-[-230px] top-0 md:right-[-50px] lg:right-[2%] 2xl:right-[12%]">
           <Image
             src={Hmmobilesec}
             className="w-[68%] lg:w-[85%] xl:w-[90%] 2xl:w-[100%]"

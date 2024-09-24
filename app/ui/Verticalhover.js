@@ -10,7 +10,7 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
 
   return (
     <>
-      <div className="pt-20">
+      <div className="pt-8 md:pt-14 lg:pt-20">
         <div className="container main-con m-auto">
           <h3 className="text-center pb-6 md:10 font-inter text-[45px] leading-[54.46px] xl:text-[70px] xl:leading-[84.72px]">
             {heading}
@@ -58,7 +58,7 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
                   {item.heading}
                 </h4>
                 <p
-                  className={`transition-opacity transition-visibility duration-500 ${
+                  className={`max-h-[200px] h-auto overflow-scroll sm:h-full sm:max-h-full sm:overflow-hidden transition-opacity transition-visibility duration-500 ${
                     toHandelhover(index)
                       ? `block text-[#7F53E7] opacity-100`
                       : `opacity-0 hidden text-[#404040]`

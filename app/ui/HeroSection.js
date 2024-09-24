@@ -12,7 +12,7 @@ function HeroSection({ heading, spancon, description, rightimg }) {
           <h1 className="text-center font-light lg:text-left text-[41px] leading-[52.04px] 2xl:text-[55px] 3xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[15%] md:px-[20%] lg:px-0 lg:pr-[10%]">
             {heading}<b className="block lg:hidden" /> <span className="custom-text font-normal">{spancon}</span>
           </h1>
-          <p className="pt-5 font-circular-spotify text-[#404040] font-light text-center lg:text-left text-[18px] leading-[25.4px] 2xl:text-[22px] 3xl:text-[27px] 2xl:leading-[30.1px] 3xl:leading-[38.1px] md:px-[12%] lg:px-0 lg:w-auto">
+          <p className="pt-5 font-circular-spotify text-[#404040] font-light text-center lg:text-left text-[18px] leading-[25.4px] 2xl:text-[22px] 3xl:text-[27px] 2xl:leading-[30.1px] 3xl:leading-[38.1px] sm:px-[12%] lg:px-0 lg:w-auto">
             {description}
           </p>
           <div className="flex flex-row pt-10 lg:pt-6 xl:pt-10  gap-4 lg:gap-8 items-center justify-center lg:justify-start">
@@ -23,7 +23,7 @@ function HeroSection({ heading, spancon, description, rightimg }) {
               textColor={"text-white"}
               paddingx={"px-6 lg:px-4 xl:px-6 2xl:px-9"}
               paddingy={"py-2 md:py-3"}
-              textSize={"text-[17px]"}
+              textSize={"text-[15px] sm:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
               rounderBR={"rounded-br-[60px]"}
@@ -38,7 +38,7 @@ function HeroSection({ heading, spancon, description, rightimg }) {
               textColor={"text-[#404040]"}
               paddingx={"px-6 lg:px-4 xl:px-6 2xl:px-9"}
               paddingy={"py-2 md:py-3"}
-              textSize={"text-[17px]"}
+              textSize={"text-[15px] sm:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
               rounderBR={"rounded-br-[60px]"}

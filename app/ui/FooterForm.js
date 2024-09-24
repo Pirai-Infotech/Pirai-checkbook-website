@@ -62,7 +62,7 @@ function ContactForm() {
                 textColor={"text-[#608BD5]"}
                 content={"Submit"}
                 paddingx={"px-[33px]"}
-                paddingy={"py-[12px]"}
+                paddingy={"py-2 sm:py-[12px]"}
                 textSize={"text-[18px] lg:text-[25.26px]"}
                 rounderTL={"rounded-tl-none"}
                 rounderTR={"rounded-tr-[60px]"}

@@ -7,8 +7,8 @@ import signupArrowcolor from "@/public/signup-arrow-purple.svg";
 
 function page() {
   return (
-    <div>
-      <section className="container main-con m-auto mb-10">
+    <div className="px-4 sm:px-0">
+      <section className="container main-con m-auto mb-8 lg:mb-10">
         <div className="text-center">
           <h1 className="font-inter font-light text-center text-[41px] lg:text-[72px] 3xl:text-[88px] text-[#404040]">
             Checkbook <br />
@@ -22,7 +22,7 @@ function page() {
           </div>
         </div>
 
-        <div className="grad-border grad-border-rtgs rounded-[50px] lg:rounded-[149px] onlyfor-bdr mt-24 px-[10%] py-[10%] lg:py-[6%]">
+        <div className="grad-border grad-border-rtgs rounded-[50px] lg:rounded-[149px] onlyfor-bdr mt-8 md:mt-14 lg:mt-24 px-[10%] py-[10%] lg:py-[6%]">
           <div className="flex flex-col lg:flex-row  gap-6">
             <div className="flex-1 order-2 lg:order-1">
               <h3 className="font-normal text-center lg:text-left w-full text-[27px] leading-[34.99px] text-[#404040]">
@@ -42,7 +42,7 @@ function page() {
                   backgroundColor={"grad-border borderbutton"}
                   textColor={"text-[#4D4D4D]"}
                   paddingx={"px-6 lg:px-3 xl:px-6"}
-                  paddingy={"py-3 md:py-3 xl:py-4"}
+                  paddingy={"py-2 md:py-3 xl:py-4"}
                   textSize={
                     "text-[17px] lg:text-[10px] xl:text-[14px] 2xl:text-[17px]"
                   }

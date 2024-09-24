@@ -60,8 +60,8 @@ function page() {
   ];
 
   return (
-    <div className="px-5">
-      <section className="container main-con m-auto sm:px-4 px-2 py-8 md:px-8 md:py-12">
+    <div className="px-4">
+      <section className="container main-con m-auto md:px-8 md:py-12">
         <div className="text-center">
           <h1 className="font-inter font-light leading-[49.62px] lg:leading-[106.5px] text-center text-[41px] lg:text-[88px] text-[#404040]">
             A Complete
@@ -81,9 +81,9 @@ function page() {
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
               textColor={"text-[#FFF]"}
-              paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-10"}
-              paddingy={"py-3 md:py-4"}
-              textSize={"text-[17px]"}
+              paddingx={"px-5 sm:px-6 lg:px-3 xl:px-5 2xl:px-10"}
+              paddingy={"py-2 sm:py-3 md:py-4"}
+              textSize={"text-[15px] sm:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
               rounderBR={"rounded-br-[60px]"}
@@ -95,9 +95,9 @@ function page() {
               backgroundType={""}
               backgroundColor={"grad-border borderbutton"}
               textColor={"text-[#404040]"}
-              paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-10"}
-              paddingy={"py-3 md:py-4"}
-              textSize={"text-[17px]"}
+              paddingx={"px-5 sm:px-6 lg:px-3 xl:px-5 2xl:px-10"}
+              paddingy={"py-2 sm:py-3 md:py-4"}
+              textSize={"text-[15px] sm:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
               rounderBR={"rounded-br-[60px]"}
@@ -112,9 +112,9 @@ function page() {
       <section className="container main-con m-auto py-8 md:py-10 lg:py-14">
         <div className="px-[35px] py-[60px] rounded-[69px] md:px-[60px] md:py-[60px] lg:px-[150px] lg:py-[50px] xl:px-[250px] xl:py-[80px] 2xl:px-[350px] 2xl:py-[100px] md:rounded-[69px] lg:rounded-[199px] bg-gradient-to-r from-[#E0EBFB] via-[#E0EBFB] to-transparent">
           <div className="lg:flex gap-6">
-            <h3 className="font-normal text-left w-full text-[27px] leading-[34.99px] text-[#404040]">
+            <h5 className="font-normal text-left w-full text-[27px] leading-[34.99px] text-[#404040]">
               Solutions to fit your needs
-            </h3>
+            </h5>
             <p className="font-[Circular Spotify Text] text-[18px] font-light leading-[25.4px] pt-4 md:pt-6 lg:pt-0 text-left text-[#404040] lg:px-14">
               Future proof your accounts payable - our payment rails give you
               flexibility where you need it and control when you want it.
@@ -252,9 +252,9 @@ function page() {
           </div>
           <div className="lg:hidden md:mb-24 px-[35px] py-[60px] rounded-[69px] bg-gradient-to-r from-[#E0EBFB] via-[#E0EBFB] to-transparent">
             <div className="lg:flex gap-6">
-              <h3 className="font-normal text-left w-full text-[27px] leading-[34.99px] text-[#404040]">
+              <h5 className="font-normal text-left w-full text-[27px] leading-[34.99px] text-[#404040]">
                 Payment Rail Comparison
-              </h3>
+              </h5>
               <p className="font-[Circular Spotify Text] text-[18px] font-light leading-[25.4px] text-left text-[#404040] pt-4">
                 Our platform gives you the freedom to offer various payment
                 rails to your customers depending on what best fits your
@@ -268,9 +268,9 @@ function page() {
       <section className="hidden lg:block container main-con m-auto md:py-10 lg:py-14">
         <div className="md:px-[60px] md:py-[60px] lg:px-[150px] lg:py-[50px] xl:px-[250px] xl:py-[80px] 2xl:px-[350px] 2xl:py-[100px] grad-border grad-border-rtgs bdr-rds-prd">
           <div className="lg:flex gap-6">
-            <h3 className="font-normal text-left w-full text-[27px] leading-[34.99px] text-[#404040]">
+            <h5 className="font-normal text-left w-full text-[27px] leading-[34.99px] text-[#404040]">
               Payment Rail Comparison
-            </h3>
+            </h5>
             <p className="font-[Circular Spotify Text] text-[18px] font-light leading-[25.4px] text-left text-[#404040] lg:px-14">
               Our platform gives you the freedom to offer various payment rails
               to your customers depending on what best fits your business.

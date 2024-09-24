@@ -7,16 +7,16 @@ import Link from "next/link";
 function PaymentSubMenu() {
   return (
     <>
-      <div className="flex items-center lg:mt-0 mt-3">
+      <div className="flex justify-between gap-4 lg:mt-0 mt-3">
         <div className="w-[18%]">
           <div className="lg:bg-[#DCD9FF] bg-[#80D1FF] w-16 h-16 rounded-xl px-2 py-2 flex items-center justify-center">
             <Image src={paymentIcon} alt="paymentIcon" />
           </div>
         </div>
         <div className="lg:w-[80%] lg:ml-0 w-[75%] ml-[5%]">
-          <h3 className="lg:text-xl lg:font-black font-extrabold text-base text-white lg:text-black">
+          <h4 className="lg:text-xl lg:font-black font-extrabold text-base text-white lg:text-black">
             PAYMENTS
-          </h3>
+          </h4>
           <p className="lg:text-lg text-base font-normal lg:font-light text-white lg:text-black">
             Send a single check or a million, we have the solution for you
           </p>
@@ -92,16 +92,16 @@ function PaymentSubMenu() {
           </li>
         </ul>
       </div>
-      <div className="flex items-center mt-5">
+      <div className="flex justify-between gap-4 mt-5">
         <div className="w-[18%]">
           <div className="lg:bg-[#DCD9FF] bg-[#80D1FF] w-16 h-16 rounded-xl px-2 py-2 flex items-center justify-center">
             <Image src={paymentInvoiceIcon} alt="paymentIcon" />
           </div>
         </div>
         <div className="lg:w-[80%] lg:ml-0 w-[75%] ml-[5%]">
-          <h3 className="lg:text-xl lg:font-black font-extrabold text-base text-white lg:text-black uppercase">
+          <h4 className="lg:text-xl lg:font-black font-extrabold text-base text-white lg:text-black uppercase">
             Send a Digital Invoice or a million.
-          </h3>
+          </h4>
           <p className="lg:text-lg text-base font-normal lg:font-light text-white lg:text-black">
             Get paid by bank account or credit/debit card
           </p>

@@ -106,7 +106,7 @@ const CustomCarousel = () => {
 
   return (
     <div className="relative 4xl:w-[1920px] 4xl:m-auto">
-      <h3 className="text-center pb-20 font-inter font-normal text-[35px] leading-[42.36px] xl:text-[46px] xl:leading-[55.67px] text-[#404040]">Testimonials</h3>
+      <h3 className="text-center pb-8 lg:pb-14 lg:pb-20 font-inter font-normal text-[35px] leading-[42.36px] xl:text-[46px] xl:leading-[55.67px] text-[#404040]">Testimonials</h3>
       <Carousel
         responsive={responsive}
         showDots={true}

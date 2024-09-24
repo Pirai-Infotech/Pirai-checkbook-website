@@ -69,7 +69,7 @@ function Header() {
                           Home
                         </p>
                       </li>
-                      <li className="border-b border-white py-4 flex flex-wrap lg:bg-none bg-white bg-opacity-10 p-5 lg:p-0">
+                      <li className="border-b border-white py-4 flex flex-wrap lg:bg-none bg-white bg-opacity-10 p-2 sm:p-5 lg:p-0">
                         <p className="text-white text-xl font-extrabold uppercase">
                           Products
                         </p>

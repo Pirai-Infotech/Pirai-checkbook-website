@@ -29,7 +29,7 @@ function ReadytoGetStart() {
               backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
               textColor={"text-[#fff]"}
               paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
-              paddingy={"py-3 md:py-3 xl:py-4"}
+              paddingy={"py-2 sm:py-3 md:py-3 xl:py-4"}
               textSize={"text-[17px] lg:text-[10px] xl:text-[14px] 2xl:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
@@ -44,7 +44,7 @@ function ReadytoGetStart() {
               backgroundColor={"grad-border borderbutton"}
               textColor={"text-[#4D4D4D]"}
               paddingx={"px-8 lg:px-3 xl:px-5 2xl:px-6"}
-              paddingy={"py-3 md:py-3 xl:py-4"}
+              paddingy={"py-2 sm:py-3 md:py-3 xl:py-4"}
               textSize={"text-[17px] lg:text-[10px] xl:text-[14px] 2xl:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
@@ -80,7 +80,7 @@ function ReadytoGetStart() {
             backgroundColor={"grad-border borderbutton"}
             textColor={"text-[#4D4D4D]"}
             paddingx={"px-6 lg:px-3 xl:px-6"}
-            paddingy={"py-3 md:py-3 xl:py-4"}
+            paddingy={"py-2 sm:py-3 md:py-3 xl:py-4"}
             textSize={"text-[17px] lg:text-[10px] xl:text-[14px] 2xl:text-[17px]"}
             rounderTL={"rounded-tl-none"}
             rounderTR={"rounded-tr-[60px]"}
@@ -113,7 +113,7 @@ function ReadytoGetStart() {
             backgroundColor={"grad-border borderbutton"}
             textColor={"text-[#4D4D4D]"}
             paddingx={"px-6 lg:px-3 xl:px-6"}
-            paddingy={"py-3 md:py-3 xl:py-4"}
+            paddingy={"py-2 sm:py-3 md:py-3 xl:py-4"}
             textSize={"text-[17px] lg:text-[10px] xl:text-[14px] 2xl:text-[17px]"}
             rounderTL={"rounded-tl-none"}
             rounderTR={"rounded-tr-[60px]"}

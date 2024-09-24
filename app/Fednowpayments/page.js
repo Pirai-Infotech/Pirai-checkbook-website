@@ -42,7 +42,7 @@ const itemscon = [
 ];
 function page() {
   return (
-    <div className="px-8 py-10 lg:py-0 sm:px-0">
+    <div className="px-5 md:py-10 lg:py-0 sm:px-0">
       <HeroSection
         heading="Send"
         spancon="FedNow Payments"
@@ -86,10 +86,10 @@ function page() {
       <section className="py-10 relative">
         <Testimonials />
       </section>
-      <section className="pt-10">
+      <section>
         <ReadytoGetStart />
       </section>
-      <section className="py-20">
+      <section>
         <Faq />
       </section>
     </div>

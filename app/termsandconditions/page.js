@@ -5,8 +5,8 @@ import Link from "next/link";
 
 function page() {
   return (
-    <div>
-      <section className="container main-con m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10   sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
+    <div className="px-4 md:px-0">
+      <section className="container main-con m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center md:py-10 sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
         <div className="flex-1 px-[0%] sm:px-[7%] lg:px-[0%] lg:pr-[5%] 2xl:pr-[2%]">
           <h1 className="text-center text-[45px] xl:text-[70px] 2xl:text-[88px]">
             <span>Terms & Conditions</span>
@@ -17,7 +17,7 @@ function page() {
         </div>
       </section>
 
-      <section className="container main-con m-auto cb-pp rounded-[60px] p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%] mb-8 lg:mb-10">
+      <section className="container main-con m-auto cb-pp rounded-[20px] lg:rounded-[60px] p-[30px] md:p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%] mb-8 lg:mb-10">
         <div className="lg:border-b-2 lg:border-dashed border-[#9281FF] lg:mb-8">
           <p>
             For Businesses T&C,{" "}

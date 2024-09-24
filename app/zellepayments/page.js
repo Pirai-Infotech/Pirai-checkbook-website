@@ -32,7 +32,7 @@ const items = [
 ];
 function page() {
   return (
-    <div className="px-5 py-10 lg:py-0 sm:px-0">
+    <div className="px-4 md:py-10 lg:py-0 sm:px-0">
       <HeroSection
         heading="Send"
         spancon="Zelle Payments"
@@ -78,7 +78,7 @@ function page() {
       <section className="py-10">
         <ReadytoGetStart />
       </section>
-      <section className="container main-con m-auto py-10">
+      <section>
         <Faq />
       </section>
     </div>

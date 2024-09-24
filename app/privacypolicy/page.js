@@ -5,8 +5,8 @@ import Link from "next/link";
 
 function page() {
   return (
-    <div>
-      <section className="container main-con m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10   sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
+    <div className="px-4 md:px-0">
+      <section className="container main-con m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center md:py-10 sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
         <div className="flex-1 px-[0%] sm:px-[7%] lg:px-[0%] lg:pr-[5%] 2xl:pr-[2%]">
           <h1 className="text-center text-[45px] xl:text-[70px] 2xl:text-[88px]">
             <span>Privacy Policy</span>
@@ -17,7 +17,7 @@ function page() {
         </div>
       </section>
 
-      <section className="container main-con m-auto cb-pp rounded-[60px] p-[32px] lg:p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%]">
+      <section className="container main-con m-auto cb-pp rounded-[35px] lg:rounded-[60px] p-[20px] sm:p-[32px] lg:p-[63px] bg-gradient-to-r from-[#E0EBFBCC] to-[#E0EBFB00] sm:w-[99%] lg:w-[80%] 2xl:w-[78%]">
         <div>
           <p>
             Checkbook inc. (“Checkbook”) is committed to protecting the privacy
@@ -386,7 +386,8 @@ function page() {
           </p>
           <p>
             You may also opt out of being tracked by Google Analytics by
-            visiting this link: http://tools.google.com/dlpage/gaoptout.
+            visiting this link: http://tools.google.com
+            /dlpage/gaoptout.
           </p>
           <h5>Compromise of Personal Information</h5>
           <p>

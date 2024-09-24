@@ -11,7 +11,7 @@ import SpeakerPh from "@/public/Speaker_ph.svg";
 function page() {
   return (
     <>
-      <div className="pt-8 sm:pt-0 px-5 md:px-0">
+      <div className="pt-8 sm:pt-0 px-3 md:px-0">
         <section className="container main-con m-auto sm:px-4 md:px-8 md:py-12">
           <div className="text-center">
             <div className="font-inter text-[50px] leading-[60.51px] lg:text-[88px] lg:leading-[106.5px] font-light tracking-[-2px] text-[#404040]">
