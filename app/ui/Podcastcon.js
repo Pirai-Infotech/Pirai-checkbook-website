@@ -36,7 +36,7 @@ const Podcastcon = ({ contentList }) => {
                 textColor={"text-[#fff]"}
                 content={"Listen Now"}
                 paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6"}
-                paddingy={"py-3"}
+                paddingy={"py-2 sm:py-3"}
                 textSize={"text-[16px] xl:text-[18px]"}
                 rounderTL={"rounded-tl-none"}
                 rounderTR={"rounded-tr-[60px]"}
@@ -65,7 +65,7 @@ const Podcastcon = ({ contentList }) => {
             textColor={"text-[#fff]"}
             content={"VIEW ALL"}
             paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 ml-4"}
-            paddingy={"py-3"}
+            paddingy={"py-2 sm:py-3"}
             textSize={"text-[16px] xl:text-[18px]"}
             rounderTL={"rounded-tl-none"}
             rounderTR={"rounded-tr-[60px]"}

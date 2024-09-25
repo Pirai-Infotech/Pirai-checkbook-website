@@ -106,8 +106,8 @@ const contentList = [
 ];
 function Page() {
   return (
-    <div>
-      <section className="container m-auto mt-8 md:mt-10 lg:mt-14 pb-10 md:pb-12 lg:pb-20">
+    <div className="px-4 sm:px-0">
+      <section className="container main-con m-auto mt-8 md:mt-10 lg:mt-14 pb-10 md:pb-12 lg:pb-20">
         <div className="w-[80%] sm:w-[70%] m-auto">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-[18%] lg:px-20 xl:px-0">
             Insights <span>Learn</span>

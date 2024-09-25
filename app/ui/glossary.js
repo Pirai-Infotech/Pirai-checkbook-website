@@ -1,9 +1,9 @@
 import React from "react";
 import { Collapse } from "antd";
-import upArrow from "@/public/cb_up_arrow.svg";
-import downArrow from "@/public/cb_down_arrow.svg";
-import GrayupArrow from "@/public/Gray_Arrow_up.svg";
-import GraydownArrow from "@/public/Gray_Arrow_dn.svg";
+import upArrow from "@/public/cb_uparrow_sm.svg";
+import downArrow from "@/public/cb_downarrow_sm.svg";
+import GrayupArrow from "@/public/cb_uparrow_sm.svg";
+import GraydownArrow from "@/public/cb_downarrow_sm.svg";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -31,8 +31,8 @@ const Glossary = ({ contentList, currency }) => {
     setActiveKey(key);
   };
   return (
-    <section className="container m-auto prss-awrd">
-      <div className="rounded-[20px] sm:rounded-[60px] px-6 sm:px-10 lg:px-[100px] sm:w-[95%] 3xl:w-[85%] m-auto">
+    <section className="container main-con m-auto prss-awrd">
+      <div className="rounded-[20px] sm:rounded-[60px] sm:w-[95%] lg:w-[90%] 3xl:w-[85%] m-auto">
         <Collapse
           expandIcon={expandIcon}
           expandIconPosition="end"
@@ -41,7 +41,7 @@ const Glossary = ({ contentList, currency }) => {
         >
           {contentList?.map((item, index) => (
             <Panel
-              className="text-[24px] 3xl:text-[38px] font-[450] grad-border grad-border-compliance bdr-prsawd-rds mb-10 p-10 2xl:p-20"
+              className="text-[24px] 3xl:text-[38px] font-[450] grad-border grad-border-compliance bdr-prsawd-rds mb-10 p-6 sm:p-10 2xl:p-20"
               header={
                 item?.content ? (
                   <span className="flex items-center gap-5">

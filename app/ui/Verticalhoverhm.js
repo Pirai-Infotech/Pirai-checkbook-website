@@ -20,7 +20,7 @@ function Verticalhoverhm({
 
   return (
     <>
-    {heading && <h3 className="block lg:hidden text-center font-[400] text-[30px] mt-14">
+    {heading && <h3 className="px-6 sm:px-0 block lg:hidden text-center font-[400] text-[30px] mt-14">
               {heading}
               <span> {spancon} </span>
               {headingtwo}

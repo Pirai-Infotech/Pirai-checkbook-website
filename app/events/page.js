@@ -65,8 +65,8 @@ const contentList = [
 function Page() {
  const btnName = "Register";
   return (
-    <div>
-      <section className="container main-con m-auto pb-20">
+    <div className="px-4 sm:px-0">
+      <section className="container main-con m-auto pb-10 md:pb-20">
         <div className="w-[80%] sm:w-[70%] m-auto">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-20 lg:px-0">
             Upcoming <span>Events</span>
@@ -76,6 +76,7 @@ function Page() {
           </p>
         </div>
       </section>
+      <section className="blg-pg">
       <Blogcon
         contentList={contentList}
         btnName = {btnName}
@@ -85,6 +86,7 @@ function Page() {
         classImage = "blg-img bg-grad w-[284px] sm:w-[230px] md:w-[250px] h-[250px] md:h-[181px] lg:w-[470px] lg:h-[300px]"
         textcolor = "text-[#3EA6BB]"
       />
+      </section>
       <ReadytoGetStart />
     </div>
   );

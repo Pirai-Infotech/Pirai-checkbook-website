@@ -96,7 +96,9 @@ function Page() {
         Latest Episodes
       </h3>
       <Podcastcon contentList={contentList} />
+      <section className="px-[30px] sm:px-[10px]">
       <ReadytoGetStart />
+      </section>
     </div>
   );
 }

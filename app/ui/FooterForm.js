@@ -4,8 +4,8 @@ import signupArrow from "@/public/sign-up-voilet.svg";
 
 function ContactForm() {
   return (
-    <div>
-      <div class="w-[338px] md:w-[567px] lg:w-auto">
+    <div className="px-4 sm:px-0">
+      <div class="w-[310px] sm:w-[338px] md:w-[567px] lg:w-auto">
         <form className="lg:flex lg:gap-8">
           <div>
             <div class="mb-4">

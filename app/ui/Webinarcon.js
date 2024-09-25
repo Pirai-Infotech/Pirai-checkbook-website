@@ -12,7 +12,7 @@ const Webinarcon = ({ contentList, classlist }) => {
 
   return (
     <section>
-      <div className="container lg:w-[95%] 3xl:w-[78%] m-auto px-[30px] sm:px-[10px] flex flex-wrap content-center gap-10 justify-center">
+      <div className="flex flex-wrap content-center gap-10 justify-center">
         {contentList.slice(0, visibleItems).map((content, index) => (
           <div
             key={index}
@@ -41,7 +41,7 @@ const Webinarcon = ({ contentList, classlist }) => {
                 textColor={"text-[#fff]"}
                 content={"More"}
                 paddingx={"px-7 lg:px-4 xl:px-6 2xl:px-7"}
-                paddingy={"py-3"}
+                paddingy={"py-2 sm:py-3"}
                 textSize={"text-[16px] xl:text-[18px]"}
                 rounderTL={"rounded-tl-none"}
                 rounderTR={"rounded-tr-[60px]"}
@@ -63,7 +63,7 @@ const Webinarcon = ({ contentList, classlist }) => {
             textColor={"text-[#fff]"}
             content={"VIEW ALL"}
             paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 ml-4"}
-            paddingy={"py-3"}
+            paddingy={"py-2 sm:py-3"}
             textSize={"text-[16px] xl:text-[18px]"}
             rounderTL={"rounded-tl-none"}
             rounderTR={"rounded-tr-[60px]"}

@@ -121,7 +121,7 @@ const Page = async () => {
   const apidata = await fetchPosts();
   const btnName = "Read More";
   return (
-    <div>
+    <div className="px-4 sm:px-0">
       <section className="blg-pg">
         <div className="container main-con m-auto flex-1 sm:px-[9%] lg:px-10 lg:py-20">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-20 lg:px-0">
