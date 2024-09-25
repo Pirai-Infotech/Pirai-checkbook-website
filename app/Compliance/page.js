@@ -10,8 +10,8 @@ import Faq from "../ui/Faq";
 
 function page() {
   return (
-    <div className="container main-con m-auto px-6 sm:px-0 lg:mt-14">
-      <section className="px-2 py-8 sm:px-4 md:px-8 md:py-12">
+    <div className="px-4 sm:px-0 lg:mt-14">
+      <section className="container main-con m-auto sm:py-8 md:px-8 md:py-12">
         <div className="text-center">
           <span className="font-inter text-[50px] lg:text-[88px] font-light leading-[106.5px] lg:leading-[60.51px] tracking-[-2px] text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]">
             Compliance
@@ -23,7 +23,7 @@ function page() {
           </p>
         </div>
       </section>
-      <section className="w-full grid justify-center gap-8 mt-10 lg:mt-14 px-4">
+      <section className="container main-con m-auto w-full grid justify-center gap-8 mt-10 lg:mt-14">
         <div className="flex flex-col md:flex-row justify-between gap-8 w-full lg:max-w-[1000px] xl:max-w-[1240px]">
           <div className="flex flex-col md:flex-row gap-8 w-full lg:w-[460px] h-auto lin-bf-txt">
             <div className="py-7 px-10 grad-border grad-border-compliance rounded-[25px] lg:rounded-[62px] bdr-compliance">
@@ -100,8 +100,8 @@ function page() {
         </div>
       </section>
 
-      <section className="mt-14 md:mt-20 lg:mt-28">
-        <div className="w-full grid justify-center px-1">
+      <section className="container main-con m-auto mt-14 md:mt-20 lg:mt-28">
+        <div className="w-full grid justify-center">
           <p className="font-circular-spotify text-[22px] md:px-[80px] lg:px-[0px] lg:text-[27px] font-light leading-[31.04px] lg:leading-[38.1px] text-center m-auto max-w-full lg:max-w-[986px] text-[#404040]">
             We take compliance seriously and display our compliance efforts
             publicly. We are happy to share more details. Please contact
@@ -127,7 +127,7 @@ function page() {
       <section className="mt-8 md:mt-10 lg:mt-14">
         <ReadytoGetStart />
       </section>
-      <section className="lg:hidden mt-14 mb-14 md:mt-20 md:mb-20 lg:mt-28">
+      <section className="lg:hidden">
         <Faq />
       </section>
     </div>

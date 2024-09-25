@@ -54,7 +54,7 @@ body {
   width: 100%;
 }
 .bg-pp{
-  background: linear-gradient(180deg, rgba(224, 235, 251, 1) 1%, rgba(224, 235, 251, 0) 5%, rgba(255, 255, 255, 0) 80%, rgba(224, 235, 251, 0) 80%, rgba(224, 235, 251, 1) 99%);
+  background: linear-gradient(180deg, rgba(224, 235, 251, 1) 1%, rgba(224, 235, 251, 0) 5%, rgba(224, 235, 251, 1) 99%);
 }
 .tmnl-bg{
   background: linear-gradient(180deg, 
@@ -665,6 +665,15 @@ text-align: left;
 }
 
 /* Media quary */
+
+@media only screen and (max-width: 430px) {
+  h1,h2,h3 {
+  font-size: 35px !important;
+  font-weight: 300;
+  color: var(--primary-color);
+  line-height: 50.51px !important;
+}
+}
 
 @media only screen and (max-width: 480px) {
   .main-con{

@@ -25,8 +25,8 @@ function Page() {
   }, []);
 
   return (
-    <div>
-      <section className="container main-con m-auto sm:px-4 px-2 py-8 md:px-8 md:py-12">
+    <div className="px-4 sm:px-0">
+      <section className="container main-con m-auto sm:px-4 md:px-8 md:py-12">
         <div className="text-center">
           <h1 className="font-inter font-light leading-[49.62px] lg:leading-[106.5px] text-center text-[41px] lg:text-[88px] text-[#404040]">
             Get Paid <br />
@@ -45,8 +45,8 @@ function Page() {
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
               textColor={"text-[#FFF]"}
-              paddingx={"px-7 lg:px-6 xl:px-7 2xl:px-10"}
-              paddingy={"py-3 md:py-4"}
+              paddingx={"px-5 sm:px-7 lg:px-6 xl:px-7 2xl:px-10"}
+              paddingy={"py-2 sm:py-3 md:py-4"}
               textSize={"text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
@@ -59,9 +59,9 @@ function Page() {
               backgroundType={""}
               backgroundColor={"grad-border borderbutton"}
               textColor={"text-[#404040]"}
-              paddingx={"px-7 lg:px-6 xl:px-7 2xl:px-10"}
-              paddingy={"py-3 md:py-4"}
-              textSize={"text-[17px]"}
+              paddingx={"px-5 sm:px-7 lg:px-6 xl:px-7 2xl:px-10"}
+              paddingy={"py-2 sm:py-3 md:py-4"}
+              textSize={"text-[15px] sm:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
               rounderBR={"rounded-br-[60px]"}

@@ -154,7 +154,7 @@ export default function Home() {
         </p>
       </div>
       <Header />
-      <section className="container main-con m-auto sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 py-10   md:px-[0]">
+      <section className="container main-con m-auto sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 sm:py-10 md:px-0">
         <div className="flex flex-col items-center px-[0%] sm:px-[7%] lg:px-[0%]">
           <h1 className="text-center text-[50px] xl:text-[70px] 2xl:text-[80px] 3xl:text-[88px]">
             Enabling Businesses to
@@ -173,7 +173,7 @@ export default function Home() {
               textColor={"text-[#fff]"}
               content={"Get Started"}
               paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 ml-4"}
-              paddingy={"py-3"}
+              paddingy={"py-2 sm:py-3"}
               textSize={"text-[16px] xl:text-[22px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
@@ -184,7 +184,7 @@ export default function Home() {
         </div>
       </section>
       <section className=" relative pt-[10%] sm:px-8 overflow-hidden">
-        <div className="container m-auto md:w-[75%] lg:w-full my-10 grad-border grad-border-rtgs bdr-hm-rds no-bdr gap-20 px-10 md:px-0 lg:px-[12%] py-[5%]">
+        <div className="container m-auto md:w-[75%] lg:w-full my-10 grad-border grad-border-rtgs bdr-hm-rds no-bdr gap-20 px-6 md:px-0 lg:px-[12%] py-[5%]">
           <p className="w-[53%] sm:w-[58%] text-[18px] lg:text-[27px] text-[#404040]">
             Whether you’re sending hundreds or millions of payments,
             <a
@@ -197,10 +197,10 @@ export default function Home() {
             your customers.
           </p>
         </div>
-        <div className="pt-[100px] px-8 lg:px-0 lg:pt-[0px]">
+        <div className="pt-8 md:pt-[100px] px-6 lg:px-0 lg:pt-[0px]">
           <Horizhoverhm heading="" description="" listitems={listitems} />
         </div>
-        <div className="absolute right-[-230px] top-0 md:right-[-50px] lg:right-[2%] 2xl:right-[12%]">
+        <div className="absolute right-[-290px] sm:right-[-230px] top-0 md:right-[-50px] lg:right-[2%] 2xl:right-[12%]">
           <Image
             src={Hmmobilesec}
             className="w-[68%] lg:w-[85%] xl:w-[90%] 2xl:w-[100%]"
@@ -209,7 +209,7 @@ export default function Home() {
         </div>
       </section>
       <section className="container main-con m-auto px-4">
-        <div className=" my-10 flex flex-col lg:flex-row items-center grad-border grad-border-rtgs bdr-hm-rds gap-10 lg:gap-20 p-[60px] 2xl:px-[12%] lg:py-[5%] md:w-[75%] lg:w-full m-auto">
+        <div className="my-10 flex flex-col lg:flex-row items-center grad-border grad-border-rtgs bdr-hm-rds gap-10 lg:gap-20 p-[35px] md:p-[60px] 2xl:px-[12%] lg:py-[5%] md:w-[75%] lg:w-full m-auto">
           <div>
             <h4 className="text-center lg:text-left text-[30px] 2xl:text-[32px] 3xl:text-[41px] text-[#404040] ">
               Searching for the best enterprise SEO solution?
@@ -290,7 +290,7 @@ export default function Home() {
         <Testimonials />
       </section>
       <section className="container m-auto">
-      <h3 className="text-center mt-14 font-[300] text-[30px] xl:text-[92px]">
+      <h3 className="px-4 sm:px-0 text-center mt-14 font-[300] text-[30px] xl:text-[92px]">
                Discover
               <span> Our Sulation </span>
             </h3>
@@ -301,8 +301,9 @@ export default function Home() {
         className="noBorderTabs pt-10 block sm:inline-flex"
       />
       </section>
+      <section className="px-4 sm:px-0">
       <DiscoverInsights insightType="your payments" />
-
+      </section>
       <Footer isForm = {true}/>
     </div>
   );

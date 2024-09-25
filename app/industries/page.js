@@ -48,8 +48,8 @@ const Contentlist = [
 ];
 function Page() {
   return (
-    <div>
-      <section className="container main-con m-auto pb-20">
+    <div className="px-4 sm:px-0">
+      <section className="container main-con m-auto pb-10 md:pb-20">
         <div className="w-[80%] sm:w-[75%] m-auto">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-[120px] lg:px-0">
             Industries <span>Construction</span>
@@ -59,7 +59,7 @@ function Page() {
           </p>
         </div>
       </section>
-      <section className="container main-con m-auto pb-20">
+      <section className="container main-con m-auto pb-10 md:pb-20">
         <div className="w-[100%] lg:w-[90%] 3xl:w-[75%] gap-[30px] lg:gap-[60px] m-auto flex flex-col sm:flex-row items-start lg:items-center">
           <div className="w-full sm:w-[30%] lg:w-[43%]">
             <Image
@@ -69,9 +69,9 @@ function Page() {
             />
           </div>
           <div className="w-full sm:w-[70%] lg:w-[70%] 2xl:w-[50%] px-5 sm:px-0">
-            <h4 className="text-[40px] lg:text-[50px] font-[700] sm:font-[500] text-[#4F535B] ">
+            <h3 className="text-[40px] lg:text-[50px] font-[700] sm:font-[500] text-[#4F535B] ">
               Expense management for construction companies
-            </h4>
+            </h3>
             <p className="text-[30px] lg:text-[35px] font-[450] leading-[44px] pt-7">
               Seamlessly track construction costs and business expenses
             </p>
@@ -88,7 +88,7 @@ function Page() {
       <section className="container m-auto">
         <div className="w-[95%] sm:w-[100%] lg:w-[90%] 3xl:w-[75%] gap-[60px] m-auto">
           {Contentlist?.map((conlist, index) => (
-            <div key={index} className="pb-20">
+            <div key={index} className="pb-10 md:pb-20">
               {conlist?.heading && (
                 <h6 className="text-[30px] lg:text-[35px] text-center lg:text-left text-[#4F535B] font-[450] px-5 sm:px-20 lg:px-0">
                   {conlist.heading}
@@ -99,7 +99,7 @@ function Page() {
                   {conlist.contents.map((content, idx) => (
                     <div
                       key={idx}
-                      className="w-full sm:w-[46%] lg;w-[45%] 2xl:w-[48%] grad-border grad-border-compliance bdr-idstry-rds p-10"
+                      className="w-full sm:w-[46%] lg;w-[45%] 2xl:w-[48%] grad-border grad-border-compliance bdr-idstry-rds p-8 sm:p-10"
                     >
                       {content?.title && (
                         <h4 className="flex items-center text-[30px] font-[700] text-[#9180FF] leading-[38px] border-l-2 border-[#9180FF] pl-4 lg:pl-10 min-h-[145px] lg:min-h-20">
@@ -119,7 +119,6 @@ function Page() {
           ))}
         </div>
       </section>
-
       <ReadytoGetStart />
     </div>
   );

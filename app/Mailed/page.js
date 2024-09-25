@@ -95,7 +95,7 @@ function page() {
       <section className="py-10">
         <ReadytoGetStart />
       </section>
-      <section className="container main-con m-auto py-10">
+      <section>
         <Faq />
       </section>
     </div>

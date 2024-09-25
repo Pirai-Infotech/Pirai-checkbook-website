@@ -9,7 +9,7 @@ import Forms from "../ui/Forms";
 function Page() {
   return (
     <div>
-      <section className="container main-con m-auto pb-5 lg:pb-10 xl:py-20">
+      <section className="container main-con m-auto px-4 sm:px-[10px] pb-5 lg:pb-10 xl:py-20">
         <div className="w-[100%] sm:w-[70%] m-auto">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-[18%] lg:px-20 xl:px-0">
             Checkbook <span>Webinars</span>
@@ -21,7 +21,7 @@ function Page() {
         </div>
       </section>
       <section>
-        <div className="container main-con m-auto md:px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center pb-10">
+        <div className="container main-con m-auto px-4 sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center pb-10">
           <div className="p-7 xl:p-20  lg:w-[95%] 3xl:w-[78%] m-auto bg-gradient-to-r from-[#9281FF]  to-[#3E89BD] grad-border grad-border-webinar bdr-wbnr-rds shadow-bottom">
             <div className="flex flex-row-reverse lg:flex-row justify-between items-start md:items-center gap-5 ">
               <div className="w-[87%] lg:w-[58%] sm:pl-10 lg:pl-0 md:pb-5 lg:pb-0">
@@ -45,7 +45,7 @@ function Page() {
         </div>
       </section>
       <section>
-        <div className="container main-con m-auto px-[30px] sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center pb-10">
+        <div className="container main-con m-auto px-4 sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center pb-10">
           <div className="flex flex-col lg:flex-row justify-around xl:p-20  lg:w-[95%] 3xl:w-[78%] m-auto">
             <div className=" w-[100%] lg:w-[20%] pb-20 lg:pb-0">
               <h4 className="text-[#9281FF] text-[27px] text-center font-[450] pb-7">
@@ -117,8 +117,10 @@ function Page() {
           </div>
         </div>
       </section>
+      <section className="container main-con m-auto px-4 sm:px-[10px]">
       <Forms headerText="Save your spot" headerSpan="Thursday, July 11th | 9:00 am PT"/>
       <ReadytoGetStart />
+      </section>
     </div>
   );
 }

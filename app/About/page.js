@@ -10,8 +10,8 @@ import SpeakerPh from "@/public/Speaker_ph.svg";
 
 function page() {
   return (
-    <>
-      <div className="pt-8 sm:pt-0 px-5 md:px-0">
+    <div className="px-4 sm:px-0">
+      <div className="pt-8 sm:pt-0 px-3 md:px-0">
         <section className="container main-con m-auto sm:px-4 md:px-8 md:py-12">
           <div className="text-center">
             <div className="font-inter text-[50px] leading-[60.51px] lg:text-[88px] lg:leading-[106.5px] font-light tracking-[-2px] text-[#404040]">
@@ -89,7 +89,7 @@ function page() {
                     backgroundColor={"from-[#3D77EB] to-[#D289FF]"}
                     textColor={"text-[#FFF]"}
                     paddingx={"px-6"}
-                    paddingy={"py-3 md:py-4"}
+                    paddingy={"py-2 sm:py-3 md:py-4"}
                     textSize={"text-[17px]"}
                     rounderTL={"rounded-tl-none"}
                     rounderTR={"rounded-tr-[60px]"}
@@ -307,14 +307,14 @@ function page() {
             </div>
           </div>
         </section>
-        <div className="flex justify-center mb-20 sm:hidden lg:flex">
+        <div className="flex justify-center mb-10 md:mb-20 sm:hidden lg:flex">
           <CTAButton
             icon={signupArrow}
             backgroundType={"bg-gradient-to-r"}
             backgroundColor={"from-[#3D77EB] to-[#D289FF]"}
             textColor={"text-[#FFF]"}
             paddingx={"px-6"}
-            paddingy={"py-3 md:py-4"}
+            paddingy={"py-2 sm:py-3 md:py-4"}
             textSize={"text-[17px]"}
             rounderTL={"rounded-tl-none"}
             rounderTR={"rounded-tr-[60px]"}
@@ -325,7 +325,7 @@ function page() {
         </div>
       </div>
       <ReadytoGetStart />
-    </>
+      </div>
   );
 }
 

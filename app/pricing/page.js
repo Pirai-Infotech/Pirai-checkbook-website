@@ -231,7 +231,7 @@ function Page() {
 
   return (
     <div>
-      <section className="container main-con m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center py-10   sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-[0]">
+      <section className="container main-con m-auto flex flex-col lg:flex-row gap-10 lg:gap-3 items-center sm:py-10 sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 md:px-0">
         <div className="flex-1 px-[0%] sm:px-[7%] lg:px-[0%] lg:pr-[5%] 2xl:pr-[2%]">
           <h1 className="text-center text-[43px] xl:text-[70px] 2xl:text-[88px]">
             Scalable Pricing to
@@ -243,7 +243,7 @@ function Page() {
           </p>
         </div>
       </section>
-      <section className="container main-con m-auto sm:w-[99%] lg:w-[80%] 2xl:w-[75%] px-[28px] md:px-[0px] mt-14">
+      <section className="container main-con m-auto sm:w-[99%] lg:w-[80%] 2xl:w-[75%] px-4 md:px-0 mt-8 md:mt-14">
         <div className="flex flex-col md:flex-wrap md:flex-row xl:flex-nowrap gap-[30px]">
           {plans.map((plan, index) => (
             <div
@@ -256,18 +256,18 @@ function Page() {
                 <p className="text-[25px] font-[700] text-[#404040]">
                   {plan.planname}
                 </p>
-                <h4 className="text-[45px] xl:text-[40px] 2xl:text-[60px] font-[200] text-[#8F83FD]">
+                <h1 className="text-[45px] xl:text-[40px] 2xl:text-[60px] font-[200] text-[#8F83FD]">
                   {plan.plan}
-                </h4>
+                </h1>
                 <p className="text-[17px] 2xl:text-[20px] font-[400] text-[#404040] min-h-[60px] 2xl:pr-3">
                   {plan.description}
                 </p>
               </div>
               {plan.items.map((section, sectionIndex) => (
                 <div key={sectionIndex} className="pt-7 ">
-                  <h3 className="text-[20px] font-[700] text-[404040]">
+                  <h5 className="sm:text-[20px] text-[16.6px] font-[700] text-[404040]">
                     {section.section}
-                  </h3>
+                  </h5>
                   <ul className="custom-list pl-8">
                     {section.items.map((item, itemIndex) => (
                       <li
@@ -295,8 +295,12 @@ function Page() {
         items={itemscon}
         imageSrc={isResponsive? pricingTab : PricingEasytosend}
       />
+      <section className="px-4 md:px-0">
       <Faq />
+      </section>
+      <section className="px-4 md:px-0">
       <ReadytoGetStart />
+      </section>
     </div>
   );
 }

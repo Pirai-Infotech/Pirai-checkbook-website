@@ -47,13 +47,13 @@ const contentList = [
 function Page() {
  const btnName = "Read More";
   return (
-    <div>
-      <section className="container main-con m-auto pb-20">
+    <div className="px-4 sm:px-0">
+      <section className="container main-con m-auto pb-10 md:pb-20">
         <div className="w-[80%] sm:w-[70%] m-auto">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-20 lg:px-0">
           Case <span>Studies</span>
           </h1>
-          <div className="flex flex-row pt-10 lg:pt-6 xl:pt-10  gap-4 lg:gap-8 items-center justify-center">
+          <div className="flex flex-row pt-10 lg:pt-6 xl:pt-10 gap-2 sm:gap-4 lg:gap-8 items-center justify-center">
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
@@ -61,7 +61,7 @@ function Page() {
               textColor={"text-white"}
               paddingx={"px-6 lg:px-4 xl:px-6 2xl:px-9"}
               paddingy={"py-2 md:py-3"}
-              textSize={"text-[17px]"}
+              textSize={"text-[14px] sm:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
               rounderBR={"rounded-br-[60px]"}
@@ -76,7 +76,7 @@ function Page() {
               textColor={"text-[#404040]"}
               paddingx={"px-6 lg:px-4 xl:px-6 2xl:px-9"}
               paddingy={"py-2 md:py-3"}
-              textSize={"text-[17px]"}
+              textSize={"text-[14px] sm:text-[17px]"}
               rounderTL={"rounded-tl-none"}
               rounderTR={"rounded-tr-[60px]"}
               rounderBR={"rounded-br-[60px]"}
@@ -90,7 +90,7 @@ function Page() {
           </p> */}
         </div>
       </section>
-      <section className="md:mb-6 lg:mb-10">
+      <section className="md:mb-6 lg:mb-10 blg-pg">
       <Blogcon
         contentList={contentList}
         btnName = {btnName}

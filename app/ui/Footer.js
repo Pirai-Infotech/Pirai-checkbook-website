@@ -40,7 +40,7 @@ function Footer({ contactFormText, isForm }) {
                 textColor={"text-[#608BD5]"}
                 content={"Contact Us"}
                 paddingx={"px-[33px]"}
-                paddingy={"py-[12px]"}
+                paddingy={"py-2 sm:py-[12px]"}
                 textSize={"xl:text-[17px] lg:text-[15px]"}
                 rounderTL={"rounded-tl-none"}
                 rounderTR={"rounded-tr-[60px]"}

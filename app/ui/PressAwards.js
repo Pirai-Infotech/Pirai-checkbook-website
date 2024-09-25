@@ -1,7 +1,7 @@
 import React from "react";
 import { Collapse } from "antd";
-import upArrow from "@/public/cb_up_arrow.svg";
-import downArrow from "@/public/cb_down_arrow.svg";
+import upArrow from "@/public/cb_uparrow_sm.svg";
+import downArrow from "@/public/cb_downarrow_sm.svg";
 
 const { Panel } = Collapse;
 
@@ -17,7 +17,7 @@ const defaultActiveKey = [0];
 const PressAwards = ({ contentList }) => {
   return (
     <section className="container main-con m-auto prss-awrd">
-      <div className="rounded-[20px] sm:rounded-[60px] px-6 sm:px-10 lg:px-[100px] sm:w-[95%] 3xl:w-[85%] m-auto">
+      <div className="rounded-[20px] sm:rounded-[60px] sm:px-10 lg:px-[100px] sm:w-[95%] 3xl:w-[85%] m-auto">
         <Collapse
           expandIcon={expandIcon}
           expandIconPosition="end"
@@ -26,7 +26,7 @@ const PressAwards = ({ contentList }) => {
         >
           {contentList?.map((item, index) => (
             <Panel
-              className="text-[24px] 2xl:text-[38px] font-[450] grad-border grad-border-compliance bdr-prsawd-rds mb-10 p-10 2xl:p-20"
+              className="text-[24px] 2xl:text-[38px] font-[450] grad-border grad-border-compliance bdr-prsawd-rds mb-10 p-6 sm:p-10 2xl:p-20"
               header={<span className="lft-bdr pl-5">{item?.question || "No title available"}</span>}
               key={index}
             >

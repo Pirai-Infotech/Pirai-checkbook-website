@@ -20,11 +20,11 @@ function Verticalhoverhm({
 
   return (
     <>
-    <h3 className="block lg:hidden text-center font-[400] text-[30px] mt-14">
+    {heading && <h3 className="px-6 sm:px-0 block lg:hidden text-center font-[400] text-[30px] mt-14">
               {heading}
               <span> {spancon} </span>
               {headingtwo}
-            </h3>
+            </h3>}
       <div
         className={` flex flex-col ${flexReverse} items-center justify-center gap-2 lg:gap-8 py-10`}
       >
