@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
+    "build": "tinacms build && next build && next export",
     "deploy": "gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
@@ -15,9 +15,11 @@
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-multi-carousel": "^2.8.5"
+    "react-multi-carousel": "^2.8.5",
+    "tinacms": "^2.2.5"
   },
   "devDependencies": {
+    "@tinacms/cli": "^1.6.5",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",
