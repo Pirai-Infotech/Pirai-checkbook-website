@@ -19,7 +19,7 @@ import labelicon from "@/public/Whitelabel.svg";
 import simpleicon from "@/public/Simple.svg";
 import robusticon from "@/public/Robust.svg";
 import Horizhoverhm from "../ui/Horizhoverhm";
-// import Hmmobilesec from "@/public/hm_mobile_sec.svg";
+import Hmmobilesec from "@/public/hm_mobile_sec.svg";
 import Verticalhoverhm from "../ui/Verticalhoverhm";
 import singlepaymentimg from "@/public/singlepayment.png";
 import Easytouse from "@/public/easytouseapi_hm.png";
@@ -106,7 +106,6 @@ const singlepayment = [
     text: "",
   },
 ];
-
 
 
 export default function HomePage(props) {
