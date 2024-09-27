@@ -32,6 +32,8 @@ function Verticalhoverhm({
           { imgMessage && <span className="hidden md:flex pl-24 justify-center font-inter font-normal text-[22px] lg:text-[27px]">{imgMessage}</span>}
           <Image
             src={imageSrc}
+            width={500}
+            height={500}
             alt="Printable Check"
             className="w-[100%] object-left object-cover"
           />

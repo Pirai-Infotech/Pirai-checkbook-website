@@ -5,5 +5,44 @@
   "bannerSubTitle": "Simplify your payments processes, reduce your costs and delight your customers.\n",
   "bannerButtonText": "Get Started",
   "sectionOneText": "Whether you’re sending hundreds or millions of payments,Checkbook’s platform will supercharge your payables experience. Simplify your payments processes, reduce your costs and delight your customers.",
-  "sectionTwoText": "New para"
+  "sectionOneImage": "/hm_mobile_sec.svg",
+  "horizhoverhmHeadText": {
+    "TableHead1": "Simple",
+    "TableHead2": "Payment Options",
+    "TableHead3": "All-In-One",
+    "TableHead4": "Instant Settlement"
+  },
+  "horizhoverhmBodyText": {
+    "TableBody1": "Payments are sent through email or text. Recipients choose how they want to accept payments.",
+    "TableBody2": "From paper to digital, Checkbook provides recipients with all their preferred payment methods.",
+    "TableBody3": "Checkbook’s all-in-one platform streamlines payments and eliminates complexity.",
+    "TableBody4": "Integrate and customize Checkbook’s comprehensive functionality into your platform."
+  },
+  "horizhoverhmImage": {
+    "TableImage1": "/Simple.d6832abb.svg",
+    "TableImage2": "/Whitelabel.075366cc.svg",
+    "TableImage3": "/Easyprocess.53553ae7.svg",
+    "TableImage4": "/Robust.ed5c6a71.svg",
+    "TableImageAlt": "Simple image"
+  },
+  "sectionThreeText": {
+    "Heading": "Searching for the best enterprise SEO solution?",
+    "Content": "So are you competitors! Schedule a personalized demo today.",
+    "Button": "Get Started"
+  },
+  "sectionFourText": {
+    "HeadingI": "Let us ",
+    "HeadingII": "power up ",
+    "HeadingIII": "your payments",
+    "ImageTopText": "Single, easy-to-use API",
+    "Image": "/easytouseapi_hm.b885f150.png",
+    "HoverList": {
+      "Heading1": "Sending digital check",
+      "Content1": "",
+      "Heading2": "Enhance recipient satisfaction",
+      "Content2": "",
+      "Heading3": "Reduce overhead cost",
+      "Content3": ""
+    }
+  }
 }

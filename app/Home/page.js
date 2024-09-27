@@ -19,7 +19,7 @@ import labelicon from "@/public/Whitelabel.svg";
 import simpleicon from "@/public/Simple.svg";
 import robusticon from "@/public/Robust.svg";
 import Horizhoverhm from "../ui/Horizhoverhm";
-import Hmmobilesec from "@/public/hm_mobile_sec.svg";
+// import Hmmobilesec from "@/public/hm_mobile_sec.svg";
 import Verticalhoverhm from "../ui/Verticalhoverhm";
 import singlepaymentimg from "@/public/singlepayment.png";
 import Easytouse from "@/public/easytouseapi_hm.png";
@@ -90,20 +90,6 @@ const items = [
   },
 ];
 
-const poweruppayment = [
-  {
-    heading: "Sending digital check",
-    text: "",
-  },
-  {
-    heading: "Enhance recipient satisfaction",
-    text: "",
-  },
-  {
-    heading: "Reduce overhead cost",
-    text: "",
-  },
-];
 const singlepayment = [
   {
     heading: "Send or Request a single payment",
@@ -119,32 +105,7 @@ const singlepayment = [
   },
 ];
 
-const listitems = [
-  {
-    icon: simpleicon,
-    iconAlt: "Simple",
-    title: "Simple",
-    text: "Payments are sent through email or text. Recipients choose how they want to accept payments.",
-  },
-  {
-    icon: labelicon,
-    iconAlt: "Payment Options",
-    title: "Payment Options",
-    text: "From paper to digital, Checkbook provides recipients with all their preferred payment methods.",
-  },
-  {
-    icon: easyicon,
-    iconAlt: "Broad Acceptance",
-    title: "All-In-One",
-    text: "Checkbook’s all-in-one platform streamlines payments and eliminates complexity.",
-  },
-  {
-    icon: robusticon,
-    iconAlt: "Robust APIs",
-    title: "Instant Settlement",
-    text: "Integrate and customize Checkbook’s comprehensive functionality into your platform.",
-  },
-];
+
 
 export default function HomePage(props) {
   const { data } = useTina({
@@ -152,8 +113,7 @@ export default function HomePage(props) {
     variables: props.variables,
     data: props.data,
   });
-
-  console.log("DATA ::", data);
+  const tinaData = data?.page;
 
   const [isResponsive, setIsResponsive] = useState(false);
 
@@ -168,6 +128,48 @@ export default function HomePage(props) {
     }
   }, []);
 
+  const listitems = [
+    {
+      icon: tinaData?.horizhoverhmImage?.TableImage1,
+      iconAlt: tinaData?.horizhoverhmHeadText.TableImageAlt,
+      title: tinaData?.horizhoverhmHeadText.TableHead1,
+      text: tinaData?.horizhoverhmBodyText.TableBody1,
+    },
+    {
+      icon: tinaData?.horizhoverhmImage?.TableImage2,
+      iconAlt: tinaData?.horizhoverhmHeadText.TableImageAlt,
+      title: tinaData?.horizhoverhmHeadText.TableHead2,
+      text: tinaData?.horizhoverhmBodyText.TableBody2,
+    },
+    {
+      icon: tinaData?.horizhoverhmImage?.TableImage3,
+      iconAlt: tinaData?.horizhoverhmHeadText.TableImageAlt,
+      title: tinaData?.horizhoverhmHeadText.TableHead3,
+      text: tinaData?.horizhoverhmBodyText.TableBody3,
+    },
+    {
+      icon: tinaData?.horizhoverhmImage?.TableImage4,
+      iconAlt: tinaData?.horizhoverhmHeadText.TableImageAlt,
+      title: tinaData?.horizhoverhmHeadText.TableHead4,
+      text: tinaData?.horizhoverhmBodyText.TableBody4,
+    },
+  ];
+
+  const poweruppayment = [
+    {
+      heading: tinaData?.sectionFourText?.HoverList?.Heading1,
+      text: tinaData?.sectionFourText?.HoverList?.Content1,
+    },
+    {
+      heading: tinaData?.sectionFourText?.HoverList?.Heading2,
+      text: tinaData?.sectionFourText?.HoverList?.Content2,
+    },
+    {
+      heading: tinaData?.sectionFourText?.HoverList?.Heading3,
+      text: tinaData?.sectionFourText?.HoverList?.Content3,
+    },
+  ];
+
   return (
     <div className="cb-bg bg-pp">
       <div className="hidden lg:block bg-gradient-to-r from-[#00FFB2] to-[#00E0FF] text-center py-5 ">
@@ -180,11 +182,11 @@ export default function HomePage(props) {
       <section className="container main-con m-auto sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 py-10   md:px-[0]">
         <div className="flex flex-col items-center px-[0%] sm:px-[7%] lg:px-[0%]">
           <h1 className="text-center text-[50px] xl:text-[70px] 2xl:text-[80px] 3xl:text-[88px]">
-            {data?.page?.bannerTitle}
+            {tinaData?.bannerTitle}
             <br />
-            <span>{data.page.bannerSpanTitle}</span>
+            <span>{tinaData?.bannerSpanTitle}</span>
           </h1>
-          {data.page.bannerSubTitle?.children?.map((list) => {
+          {tinaData?.bannerSubTitle?.children?.map((list) => {
             return list?.children?.map((item, index) => {
               return (
                 <p
@@ -197,7 +199,7 @@ export default function HomePage(props) {
             });
           })}
           <p className="py-[30px] text-center text-[#404040] text-[18px] xl:text-[27px] ">
-            {data.page.bannerSubTitle}
+            {tinaData?.bannerSubTitle}
           </p>
           <div>
             <CTAButton
@@ -205,7 +207,7 @@ export default function HomePage(props) {
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#3D77EB]  to-[#D289FF]"}
               textColor={"text-[#fff]"}
-              content={data.page.bannerButtonText}
+              content={tinaData?.bannerButtonText}
               paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 ml-4"}
               paddingy={"py-3"}
               textSize={"text-[16px] xl:text-[22px]"}
@@ -229,7 +231,7 @@ export default function HomePage(props) {
             </a>
             . Simplify your payments processes, reduce your costs and delight
             your customers. */}
-            {data.page.sectionOneText}
+            {tinaData?.sectionOneText}
           </p>
         </div>
         <div className="pt-[100px] px-8 lg:px-0 lg:pt-[0px]">
@@ -237,7 +239,9 @@ export default function HomePage(props) {
         </div>
         <div className="absolute right-[-230px] top-0 md:right-[-50px] lg:right-[2%] 2xl:right-[12%]">
           <Image
-            src={Hmmobilesec}
+            src={tinaData?.sectionOneImage? tinaData?.sectionOneImage : ''}
+            width={500}
+            height={500}
             className="w-[68%] lg:w-[85%] xl:w-[90%] 2xl:w-[100%]"
             alt="Mobile Payment Screen"
           />
@@ -247,10 +251,10 @@ export default function HomePage(props) {
         <div className=" my-10 flex flex-col lg:flex-row items-center grad-border grad-border-rtgs bdr-hm-rds gap-10 lg:gap-20 p-[60px] 2xl:px-[12%] lg:py-[5%] md:w-[75%] lg:w-full m-auto">
           <div>
             <h4 className="text-center lg:text-left text-[30px] 2xl:text-[32px] 3xl:text-[41px] text-[#404040] ">
-              Searching for the best enterprise SEO solution?
+              {tinaData?.sectionThreeText?.Heading}
             </h4>
             <p className="text-center lg:text-left text-[20px] 2xl:text-[22px] 3xl:text-[27px] font-[400] leading-[24px] text-[#404040] pt-5">
-              So are you competitors! Schedule a personalized demo today.
+              {tinaData?.sectionThreeText?.Content}
             </p>
           </div>
           <div>
@@ -259,7 +263,7 @@ export default function HomePage(props) {
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#3D77EB]  to-[#D289FF]"}
               textColor={"text-[#FFF]"}
-              content={"Get Started"}
+              content={tinaData?.sectionThreeText?.Button}
               paddingx={"px-8 lg:px-6 xl:px-7 2xl:px-8"}
               paddingy={"py-2 md:py-3"}
               textSize={"text-[17px] lg:text-[10px] xl:text-[26px]"}
@@ -274,14 +278,14 @@ export default function HomePage(props) {
       </section>
       <section className="container mx-auto lg:px-8">
         <Verticalhoverhm
-          heading={!isResponsive ? "Let us" : "Let us power up your payments"}
-          spancon={!isResponsive ? "power up" : ""}
-          headingtwo={!isResponsive ? "your payments" : ""}
+          heading={!isResponsive ? tinaData?.sectionFourText?.HeadingI : (tinaData?.sectionFourText?.HeadingI + '' + tinaData?.sectionFourText?.HeadingII + '' + tinaData?.sectionFourText?.HeadingIII) }
+          spancon={!isResponsive ? tinaData?.sectionFourText?.HeadingII : ""}
+          headingtwo={!isResponsive ? tinaData?.sectionFourText?.HeadingIII : ""}
           description=""
           flexReverse="md:flex-row"
           vhoveritems={poweruppayment}
-          imageSrc={Easytouse}
-          imgMessage="Single, easy-to-use API"
+          imageSrc={tinaData?.sectionFourText?.Image}
+          imgMessage={tinaData?.sectionFourText?.ImageTopText}
         />
       </section>
       <section className="container m-auto lg:px-8">

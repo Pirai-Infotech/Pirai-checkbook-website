@@ -56,13 +56,190 @@ export default defineConfig({
           },
           {
             name: "sectionOneText",
-            label: "Sectio One Text",
+            label: "Section One Text",
             type: "string",
           },
           {
-            name: "sectionTwoText",
-            label: "Sectio Two Text",
-            type: "string",
+            name: "sectionOneImage",
+            label: "Section One Image",
+            type: "image",
+          },
+          {
+            name: "horizhoverhmHeadText",
+            label: "Table Heading Text",
+            type: "object",
+            fields: [
+              {
+                name: "TableHead1",
+                label: "1.Heading",
+                type: "string",
+              },
+              {
+                name: "TableHead2",
+                label: "2.Heading",
+                type: "string",
+              },
+              {
+                name: "TableHead3",
+                label: "3.Heading",
+                type: "string",
+              },
+              {
+                name: "TableHead4",
+                label: "4.Heading",
+                type: "string",
+              },
+            ],
+          },
+          {
+            name: "horizhoverhmBodyText",
+            label: "Table Body Text",
+            type: "object",
+            fields: [
+              {
+                name: "TableBody1",
+                label: "1.Body",
+                type: "string",
+              },
+              {
+                name: "TableBody2",
+                label: "2.Body",
+                type: "string",
+              },
+              {
+                name: "TableBody3",
+                label: "3.Body",
+                type: "string",
+              },
+              {
+                name: "TableBody4",
+                label: "4.Body",
+                type: "string",
+              },
+            ],
+          },
+          {
+            name: "horizhoverhmImage",
+            label: "Table Image",
+            type: "object",
+            fields: [
+              {
+                name: "TableImage1",
+                label: "1.Image",
+                type: "image",
+              },
+              {
+                name: "TableImage2",
+                label: "2.Image",
+                type: "image",
+              },
+              {
+                name: "TableImage3",
+                label: "3.Image",
+                type: "image",
+              },
+              {
+                name: "TableImage4",
+                label: "4.Image",
+                type: "image",
+              },
+              {
+                name: "TableImageAlt",
+                label: "Alternative Table Image",
+                type: "string",
+              },
+            ],
+          },
+          {
+            name: "sectionThreeText",
+            label: "Section Three Text",
+            type: "object",
+            fields: [
+              {
+                name: "Heading",
+                label: "Heading",
+                type: "string",
+              },
+              {
+                name: "Content",
+                label: "Content",
+                type: "string",
+              },
+              {
+                name: "Button",
+                label: "Button",
+                type: "string",
+              }
+            ],
+          },
+          {
+            name: "sectionFourText",
+            label: "Section four Text",
+            type: "object",
+            fields: [
+              {
+                name: "HeadingI",
+                label: "Heading I",
+                type: "string",
+              },
+              {
+                name: "HeadingII",
+                label: "Heading II",
+                type: "string",
+              },
+              {
+                name: "HeadingIII",
+                label: "Heading III",
+                type: "string",
+              },
+              {
+                name: "ImageTopText",
+                label: "Image Top Text",
+                type: "string",
+              },
+              {
+                name: "Image",
+                label: "Image",
+                type: "image",
+              },
+              {
+                name: "HoverList",
+                label: "Hover List",
+                type: "object",
+                fields: [
+                  {
+                    name: "Heading1",
+                    label: "1.Heading",
+                    type: "string",
+                  },
+                  {
+                    name: "Content1",
+                    label: "1.Content",
+                    type: "string",
+                  },
+                  {
+                    name: "Heading2",
+                    label: "2.Heading",
+                    type: "string",
+                  },
+                  {
+                    name: "Content2",
+                    label: "2.Content",
+                    type: "string",
+                  },
+                  {
+                    name: "Heading3",
+                    label: "3.Heading",
+                    type: "string",
+                  },
+                  {
+                    name: "Content3",
+                    label: "3.Content",
+                    type: "string",
+                  },
+                ],
+              },
+            ],
           },
         ],
       },
