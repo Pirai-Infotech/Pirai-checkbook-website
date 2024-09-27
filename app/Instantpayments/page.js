@@ -60,7 +60,7 @@ function page() {
 
       <Verticalhover
         heading="Recipients Expect"
-        spancon="Instant Paymentss"
+        spancon="Instant Payments"
         description="Checkbook eliminates pain points for frustrated customers waiting on checks in the mail, reluctant to provide sensitive bank information or those without bank accounts. Satisfy your customers by enabling them to receive payments instantly, 365 days a year."
         items={itemscon}
         imageSrc={Instantbnr}

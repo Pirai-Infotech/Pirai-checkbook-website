@@ -9,6 +9,7 @@ import csace from "@/public/cs_ace.svg";
 import CTAButton from "@/app/ui/CTAButton";
 import signupArrow from "@/public/signup-arrow.svg";
 import signupArrowcolor from "../../public/signup-arrow-purple.svg";
+import NavigateButton from "../ui/NavigateButton";
 
 const contentList = [
   {
@@ -90,6 +91,7 @@ function Page() {
           </p> */}
         </div>
       </section>
+      <NavigateButton />
       <section className="md:mb-6 lg:mb-10 blg-pg">
       <Blogcon
         contentList={contentList}

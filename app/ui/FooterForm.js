@@ -5,51 +5,51 @@ import signupArrow from "@/public/sign-up-voilet.svg";
 function ContactForm() {
   return (
     <div className="px-4 sm:px-0">
-      <div class="w-[310px] sm:w-[338px] md:w-[567px] lg:w-auto">
+      <div className="w-[310px] sm:w-[338px] md:w-[567px] lg:w-auto">
         <form className="lg:flex lg:gap-8">
           <div>
-            <div class="mb-4">
-              <div class="text-[18px] leading-[28.89px] lg:text-[25.26px] lg:leading-[40.54px] font-normal">
+            <div className="mb-4">
+              <div className="text-[18px] leading-[28.89px] lg:text-[25.26px] lg:leading-[40.54px] font-normal">
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  class="w-full p-4 bg-transparent border rounded-[26px] rounded-tl-none border-[#ECF2FB] text-[#ECF2FB] placeholder-[#ECF2FB]"
+                  className="w-full p-4 bg-transparent border rounded-[26px] rounded-tl-none border-[#ECF2FB] text-[#ECF2FB] placeholder-[#ECF2FB]"
                   placeholder="Full Name *"
                 />
               </div>
             </div>
-            <div class="mb-4">
-              <div class="text-[18px] leading-[28.89px] lg:text-[25.26px] lg:leading-[40.54px] font-normal">
+            <div className="mb-4">
+              <div className="text-[18px] leading-[28.89px] lg:text-[25.26px] lg:leading-[40.54px] font-normal">
                 <input
                   type="text"
                   id="Company"
                   name="Company"
-                  class="w-full p-4 bg-transparent border rounded-[26px] rounded-tl-none border-[#ECF2FB] text-[#ECF2FB]  placeholder-[#ECF2FB]"
+                  className="w-full p-4 bg-transparent border rounded-[26px] rounded-tl-none border-[#ECF2FB] text-[#ECF2FB]  placeholder-[#ECF2FB]"
                   placeholder="Company *"
                 />
               </div>
             </div>
-            <div class="mb-4">
-              <div class="text-[18px] leading-[28.89px] lg:text-[25.26px] lg:leading-[40.54px] font-normal">
+            <div className="mb-4">
+              <div className="text-[18px] leading-[28.89px] lg:text-[25.26px] lg:leading-[40.54px] font-normal">
                 <input
                   type="text"
                   id="Email"
                   name="Email"
-                  class="w-full p-4 bg-transparent border rounded-[26px] rounded-tl-none border-[#ECF2FB] text-[#ECF2FB]  placeholder-[#ECF2FB]"
+                  className="w-full p-4 bg-transparent border rounded-[26px] rounded-tl-none border-[#ECF2FB] text-[#ECF2FB]  placeholder-[#ECF2FB]"
                   placeholder="E-mail *"
                 />
               </div>
             </div>
           </div>
           <div>
-            <div class="mb-8">
-              <div class="text-[18px] leading-[28.89px] lg:text-[25.26px] lg:leading-[40.54px] font-normal">
+            <div className="mb-8">
+              <div className="text-[18px] leading-[28.89px] lg:text-[25.26px] lg:leading-[40.54px] font-normal">
                 <textarea
                   type="text"
                   id="Message"
                   name="Message"
-                  class="w-full h-16 lg:w-[650px] 2xl:w-[755px] lg:h-[257px] p-4 bg-transparent border rounded-[26px] rounded-tl-none border-[#ECF2FB] text-[#ECF2FB]  placeholder-[#ECF2FB]"
+                  className="w-full h-16 lg:w-[650px] 2xl:w-[755px] lg:h-[257px] p-4 bg-transparent border rounded-[26px] rounded-tl-none border-[#ECF2FB] text-[#ECF2FB]  placeholder-[#ECF2FB]"
                   placeholder="Message *"
                 />
               </div>

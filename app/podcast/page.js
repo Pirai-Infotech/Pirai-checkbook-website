@@ -8,6 +8,7 @@ import ApplePodcasts from "@/public/cb_apple.svg";
 import SpotifyPodcasts from "/public/cb_spotify.svg";
 import Chronicles from "@/public/cb_chronicles.svg";
 import Image from "next/image";
+import NavigateButton from "../ui/NavigateButton";
 
 const contentList = [
   {
@@ -92,6 +93,7 @@ function Page() {
           </p>
         </div>
       </section>
+      <NavigateButton />
        <h3 className="justify-center flex mb-14 font-normal">
         Latest Episodes
       </h3>

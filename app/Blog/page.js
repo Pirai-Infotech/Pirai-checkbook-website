@@ -10,41 +10,8 @@ import Synctera from "@/public/Synctera.svg";
 import Blogcon from "../ui/Blogcon";
 import Image from "next/image";
 import Faq from "../ui/Faq";
+import NavigateButton from "../ui/NavigateButton";
 
-const buttonlists = [
-  {
-    btnname: "Blog",
-    btnlink: "",
-  },
-  {
-    btnname: "Case Studies",
-    btnlink: "",
-  },
-  {
-    btnname: "Webinar",
-    btnlink: "",
-  },
-  {
-    btnname: "Podcast",
-    btnlink: "",
-  },
-  {
-    btnname: "Videos",
-    btnlink: "",
-  },
-  {
-    btnname: "In the Press",
-    btnlink: "",
-  },
-  {
-    btnname: "Product Info/Updates",
-    btnlink: "",
-  },
-  {
-    btnname: "API Docs",
-    btnlink: "",
-  },
-];
 // const contentList = [
 //   {
 //     date: "SEP 01, 2023",
@@ -128,16 +95,7 @@ const Page = async () => {
             Checkbook <span>Resources</span>
           </h1>
         </div>
-        <div className=" m-auto flex gap-3 justify-start xl:justify-center py-10 overflow-scroll scrollbar-hide">
-          {buttonlists.map((contentlist, index) => (
-            <button
-              key={index}
-              className="flex items-center px-9 py-3 grad-border grad-border-blog-tag bdr-sm-rds text-[14px] 2xl:text-[22px] cursor-pointer whitespace-nowrap"
-            >
-              {contentlist.btnname}
-            </button>
-          ))}
-        </div>
+        <NavigateButton />
         <div className="container main-con m-auto sm:px-[10px] flex flex-col sm:flex-row lg:flex-col flex-wrap gap-10 justify-center pb-10">
           <div className="grad-border grad-border-compliance bdr-sm-rds p-10 xl:p-20 lg:w-[95%] 3xl:w-[78%] m-auto bg-[#3D77EB]">
           <h4 className="block lg:hidden lg:pl-4 text-[#ffffff] text-[18px] lg:text-[24px] font-[700] pb-4 lg:pb-[40px]  lg:mb-0">

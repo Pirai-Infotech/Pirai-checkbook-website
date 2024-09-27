@@ -2,6 +2,7 @@
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import PressAwards from "../ui/PressAwards";
+import NavigateButton from "../ui/NavigateButton";
 
 const contentList = [
   {
@@ -68,6 +69,7 @@ function Page() {
           </p>
         </div>
       </section>
+      <NavigateButton />
       <PressAwards contentList={contentList} />
       <ReadytoGetStart />
     </div>
