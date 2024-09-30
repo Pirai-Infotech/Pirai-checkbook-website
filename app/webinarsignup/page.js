@@ -64,7 +64,7 @@ function Page() {
                   <p className="text-[23px] font-[300] text-center">
                     CEO & Founder
                   </p>
-                  <div class="md:hidden lg:block border-0 border-b-4 border-dashed border-[#4F535B] absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[14%] "></div>
+                  <div className="md:hidden lg:block border-0 border-b-4 border-dashed border-[#4F535B] absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[14%] "></div>
                 </div>
                 <div className="pt-20 md:pt-0 lg:pt-20">
                   <Image

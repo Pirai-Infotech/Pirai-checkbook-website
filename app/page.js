@@ -292,7 +292,7 @@ export default function Home() {
       <section className="container m-auto">
       <h3 className="px-4 sm:px-0 text-center mt-14 font-[300] text-[30px] xl:text-[92px]">
                Discover
-              <span> Our Sulation </span>
+              <span> Our Solutions </span>
             </h3>
       <Tabs
         defaultActiveKey="1"

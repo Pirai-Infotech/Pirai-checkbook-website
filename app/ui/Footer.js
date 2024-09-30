@@ -87,7 +87,7 @@ function Footer({ contactFormText, isForm }) {
                 </li>
                 <li>
                   <Link
-                    href="/mailed"
+                    href="/Mailed"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     Mail
@@ -153,7 +153,7 @@ function Footer({ contactFormText, isForm }) {
               <ul>
                 <li>
                   <Link
-                    href="/about"
+                    href="/About"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     About Us
@@ -161,7 +161,7 @@ function Footer({ contactFormText, isForm }) {
                 </li>
                 <li>
                   <Link
-                    href="/howitworks"
+                    href="/Howitworks"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     How it Works
@@ -209,7 +209,7 @@ function Footer({ contactFormText, isForm }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/security"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     FAQ
@@ -275,7 +275,7 @@ function Footer({ contactFormText, isForm }) {
                 </li>
                 <li>
                   <Link
-                    href=""
+                    href="/roicalculator"
                     className="text-[#FFF] text-base font-light mb-1 flex"
                   >
                     ROI Calculator

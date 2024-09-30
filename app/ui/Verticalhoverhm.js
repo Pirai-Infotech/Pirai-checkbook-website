@@ -75,7 +75,7 @@ function Verticalhoverhm({
                     toHandelhover(index)
                       ? `text-[#7F53E7] opacity-100`
                       : `text-[#404040] opacity-0`
-                  }  font-circular-spotify font-light text-[25px] leading-[28.62px] xl:text-[28px] xl:leading-[44.65px] group-hover:text-[#7F53E7] pb-3`}
+                  }  font-circular-spotify text-[25px] leading-[28.62px] xl:text-[28px] xl:leading-[44.65px] group-hover:text-[#7F53E7] pb-3`}
                 >
                   {item.heading}
                 </h4>

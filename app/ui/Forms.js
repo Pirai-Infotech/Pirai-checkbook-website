@@ -4,7 +4,7 @@ function Forms({headerText, headerSpan}) {
   return (
     <div className="2xl:px-[250px] container main-con m-auto my-8 md:my-10 lg:my-14">
       <div className="lg:relative border-2 border-[#404040] rounded-[52px] lg:rounded-[70px]">
-        <h5 class="lg:absolute mt-6 lg:mt-0 lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 lg:bg-white px-8 2xl:px-20 font-inter font-medium text-[24px] 2xl:text-[34px] 3xl:text-[44px] leading-[33.59px] sm:leading-[53px] text-center text-[#404040]">
+        <h5 className="lg:absolute mt-6 lg:mt-0 lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 lg:bg-white px-8 2xl:px-20 font-inter font-medium text-[24px] 2xl:text-[34px] 3xl:text-[44px] leading-[33.59px] sm:leading-[53px] text-center text-[#404040]">
           {headerText}
           <p className="font-inter font-normal text-[18px] 2xl:text-[28px] leading-[23.59px] sm:leading-[43.59px] lg:leading-[52px] text-[#8C82FB]">
             {headerSpan}

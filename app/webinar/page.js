@@ -6,6 +6,7 @@ import Image from "next/image";
 import CTAButton from "../ui/CTAButton";
 import signupArrowcolor from "@/public/sign-up-voilet.svg";
 import Webinarcon from "../ui/Webinarcon";
+import NavigateButton from "../ui/NavigateButton";
 
 const contentList = [
   {
@@ -80,6 +81,7 @@ function Page() {
           </p>
         </div>
       </section>
+      <NavigateButton />
       <section className="pb-20 md:pb-30">
         <h2 className="text-center text-[30px] lg:text-[44px] font-[400] md:px-[18%] py-8 lg:px-20 xl:px-0">
           Upcoming Webinars

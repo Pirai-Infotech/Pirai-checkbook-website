@@ -37,7 +37,7 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
                   toHandelhover(index)
                     ? `text-[#7F53E7] opacity-100`
                     : `text-[#404040] opacity-0`
-                } font-circular-spotify font-light text-[25px] leading-[28.62px] xl:text-[39px] xl:leading-[44.65px] group-hover:text-[#7F53E7] group-hover:border-b-2 lg:group-hover:border-b-0 border-[#7F53E7] lg:border-none w-8 lg:w-auto`}
+                } font-circular-spotify font-medium text-[25px] leading-[28.62px] xl:text-[39px] xl:leading-[44.65px] group-hover:text-[#7F53E7] group-hover:border-b-2 lg:group-hover:border-b-0 border-[#7F53E7] lg:border-none w-8 lg:w-auto`}
               >
                 {`0${index + 1}`}
               </h4>
@@ -53,7 +53,7 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
                     toHandelhover(index)
                       ? `text-[#7F53E7] opacity-100`
                       : `text-[#404040] opacity-0`
-                  } lg:pr-24 font-circular-spotify font-light text-[25px] leading-[28.62px] xl:text-[39px] xl:leading-[44.65px] group-hover:text-[#7F53E7] pb-3`}
+                  } lg:pr-24 font-circular-spotify font-medium text-[25px] leading-[28.62px] xl:text-[39px] xl:leading-[44.65px] group-hover:text-[#7F53E7] pb-3`}
                 >
                   {item.heading}
                 </h4>
