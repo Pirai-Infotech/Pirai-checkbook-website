@@ -90,7 +90,7 @@ function ContactForm({showModal, toggleModal}) {
               </label>
             </div>
           </div>
-          <div classNameName="flex justify-center w-full">
+          <div className="flex justify-center w-full">
             <CTAButton
               onClick={toggleModal}
               icon={signupArrow}
