@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
+import withNextIntl from "next-intl/plugin"; // Use `import` instead of `require`
+
 const nextConfig = {
-  output: 'export',
+  // output: 'export',
   images: {
     domains: ['145404330.fs1.hubspotusercontent-eu1.net'],
-    unoptimized: true, 
+    unoptimized: true,
   },
 };
 
-export default nextConfig;
+// Use `withNextIntl` with the config
+export default withNextIntl("./i18n.js")(nextConfig);
+

@@ -9,10 +9,17 @@ import Nav from "./Nav";
 import CTAButton from "./CTAButton";
 import PaymentSubMenu from "./PaymentSubMenu";
 import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation"; 
 
 function Header() {
   const [mobileMenuFlag, setMobileMenuFlag] = useState(false);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
+  const fullURL = `${pathname}${searchParams.toString() ? '?' + searchParams.toString() : ''}`;
+  const pageName = pathname.split("/").pop();
+  console.log(pageName, "Current Path");
+  console.log(fullURL, "Full URL");
   return (
     <>
       <div className="container main-con main-con m-auto flex justify-between items-center py-[35px] px-[5%] sm:px-0 ">
@@ -20,6 +27,13 @@ function Header() {
           <Link href={"/"}>
             <Image src={logo} alt="Checkbook" />
           </Link>
+          <Link href={`/en/${pageName}`} locale="en">
+          In english
+        </Link>{" "}
+        |{" "}
+        <Link href={`/fi/${pageName}`} locale="fi">
+          In Hindi
+        </Link>
         </div>
         <div className="hidden justify-between items-center w-[75%] lg:flex">
           <Nav />
@@ -68,6 +82,7 @@ function Header() {
                         <p className="text-white text-xl font-extrabold uppercase">
                           Home
                         </p>
+                        
                       </li>
                       <li className="border-b border-white py-4 flex flex-wrap lg:bg-none bg-white bg-opacity-10 p-2 sm:p-5 lg:p-0">
                         <p className="text-white text-xl font-extrabold uppercase">

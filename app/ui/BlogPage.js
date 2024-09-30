@@ -1,4 +1,3 @@
-
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import CTAButton from "../ui/CTAButton";
@@ -117,7 +116,7 @@ const fetchPosts = async () => {
   }
 };
 
-const Page = async () => {
+const Page = async ({t}) => {
   const apidata = await fetchPosts();
   const btnName = "Read More";
   return (
@@ -125,7 +124,7 @@ const Page = async () => {
       <section className="blg-pg">
         <div className="container main-con m-auto flex-1 sm:px-[9%] lg:px-10 lg:py-20">
           <h1 className="text-center text-[45px] lg:text-[70px] 2xl:text-[88px] md:px-20 lg:px-0">
-            Checkbook <span>Resources</span>
+          {t("title")} <span>Resources</span>
           </h1>
         </div>
         <div className=" m-auto flex gap-3 justify-start xl:justify-center py-10 overflow-scroll scrollbar-hide">

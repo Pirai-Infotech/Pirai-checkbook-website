@@ -3,9 +3,9 @@ import React from "react";
 import logo from "@/public/checkbook-logo.svg";
 import cartImage from "@/public/cartBackground.svg";
 import Image from "next/image";
-import CTAButton from "../ui/CTAButton";
+import CTAButton from "../../ui/CTAButton";
 import signupArrow from "@/public/signup-arrow.svg";
-import ReadytoGetStart from "../ui/ReadytoGetStart";
+import ReadytoGetStart from "../../ui/ReadytoGetStart";
 import SpeakerPh from "@/public/Speaker_ph.svg";
 
 function page() {

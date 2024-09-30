@@ -1,11 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Header from "./ui/Header";
-import Footer from "./ui/Footer";
-import DiscoverInsights from "./ui/DiscoverInsights";
-import Testimonials from "./ui/Testimonials";
-import CTAButton from "./ui/CTAButton";
+import Header from "./Header";
+import Footer from "./Footer";
+import DiscoverInsights from "./DiscoverInsights";
+import Testimonials from "./Testimonials";
+import CTAButton from "./CTAButton";
 import signupArrow from "@/public/signup-arrow.svg";
 import Hmenggprodt from "@/public/Hm_engg_prodt.svg";
 import Anydesk from "@/public/Anydesk.svg";
@@ -18,9 +18,9 @@ import easyicon from "@/public/Easyprocess.svg";
 import labelicon from "@/public/Whitelabel.svg";
 import simpleicon from "@/public/Simple.svg";
 import robusticon from "@/public/Robust.svg";
-import Horizhoverhm from "./ui/Horizhoverhm";
+import Horizhoverhm from "./Horizhoverhm";
 import Hmmobilesec from "@/public/hm_mobile_sec.svg";
-import Verticalhoverhm from "./ui/Verticalhoverhm";
+import Verticalhoverhm from "./Verticalhoverhm";
 import singlepaymentimg from "@/public/singlepayment.png";
 import Easytouse from "@/public/easytouseapi_hm.png";
 import React from 'react';
@@ -130,6 +130,8 @@ const listitems = [
     text: "Integrate and customize Checkbook’s comprehensive functionality into your platform.",
   },
 ];
+
+
 export default function Home() {
 
   const [isResponsive, setIsResponsive] = useState(false);
