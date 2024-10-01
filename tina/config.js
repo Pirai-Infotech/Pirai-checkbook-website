@@ -8,23 +8,44 @@ const branch =
   "main";
 
 export default defineConfig({
-  branch,
-
-  // Get this from tina.io
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
-  token: process.env.TINA_TOKEN,
-
-  build: {
-    outputFolder: "admin",
-    publicFolder: "public",
-  },
-  media: {
-    tina: {
-      mediaRoot: "",
-      publicFolder: "public",
+  
+  clientId: "47e84444-a804-46ab-9e39-efe9bdbefd3c",
+  branch: "tina_cms_tes", // Your default branch
+    token: "f6616cb5885efc73c16471d3a9a642c0a2f8ca68",
+    // repo: "krishnan-jaga/Pirai-checkbook-website",
+    media: {
+      // If you wanted cloudinary do this
+      // loadCustomStore: async () => {
+      //   const pack = await import("next-tinacms-cloudinary");
+      //   return pack.TinaCloudCloudinaryMediaStore;
+      // },
+      // this is the config for the tina cloud media store
+      tina: {
+        publicFolder: "public",
+        mediaRoot: "uploads",
+      },
     },
-  },
+    build: {
+      publicFolder: "public",
+      outputFolder: "admin",
+    },
+  // branch,
+  
+  // // Get this from tina.io
+  // clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  // // Get this from tina.io
+  // token: process.env.TINA_TOKEN,
+
+  // build: {
+  //   outputFolder: "admin",
+  //   publicFolder: "public",
+  // },
+  // media: {
+  //   tina: {
+  //     mediaRoot: "",
+  //     publicFolder: "public",
+  //   },
+  // },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
@@ -262,11 +283,20 @@ export default defineConfig({
             isBody: true,
           },
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+        // },
+        // ui: {
+        //   // Eg. If you're deplying to Vercel, and your repo name is 'my-app', Vercel's preview URL would be based on the branch:
+        //   previewUrl: (context) => {
+        //     const repoName = 'my-app'
+        //     // `https://<project-name>-git-<branch-name>.vercel.app`
+        //     return { url: `https://my-app-git-${context.branch}` }
+        //   },
+        // },
       },
     ],
   },
+  
 });
