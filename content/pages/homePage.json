@@ -1,11 +1,11 @@
 {
   "subtitle": "Hello new text here",
-  "bannerTitle": "Enabling Businesses to the cover",
+  "bannerTitle": "Enabling Businesses to the cover that",
   "bannerSpanTitle": "Send Payments at Scale world",
   "bannerSubTitle": "Simplify your payments processes, reduce your costs and delight your customers.\n",
   "bannerButtonText": "Get Started",
   "sectionOneText": "Whether you’re sending hundreds or millions of payments,Checkbook’s platform will supercharge your payables experience. Simplify your payments processes, reduce your costs and delight your customers.",
-  "sectionOneImage": "/hm_mobile_sec.svg",
+  "sectionOneImage": "/uploads/hm_mobile_sec.svg",
   "horizhoverhmHeadText": {
     "TableHead1": "Simple",
     "TableHead2": "Payment Options",
@@ -19,10 +19,10 @@
     "TableBody4": "Integrate and customize Checkbook’s comprehensive functionality into your platform."
   },
   "horizhoverhmImage": {
-    "TableImage1": "/Simple.d6832abb.svg",
-    "TableImage2": "/Whitelabel.075366cc.svg",
-    "TableImage3": "/Easyprocess.53553ae7.svg",
-    "TableImage4": "/Robust.ed5c6a71.svg",
+    "TableImage1": "/uploads/Simple.d6832abb.svg",
+    "TableImage2": "/uploads/Whitelabel.075366cc.svg",
+    "TableImage3": "/uploads/Easyprocess.53553ae7.svg",
+    "TableImage4": "/uploads/Robust.ed5c6a71.svg",
     "TableImageAlt": "Simple image"
   },
   "sectionThreeText": {
@@ -35,7 +35,7 @@
     "HeadingII": "power up ",
     "HeadingIII": "your payments",
     "ImageTopText": "Single, easy-to-use API",
-    "Image": "/easytouseapi_hm.b885f150.png",
+    "Image": "/uploads/easytouseapi_hm.b885f150.png",
     "HoverList": {
       "Heading1": "Sending digital check",
       "Content1": "",
