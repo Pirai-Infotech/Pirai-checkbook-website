@@ -1,0 +1,66 @@
+{
+  "subtitle": "Hello new text here",
+  "bannerTitle": "Enabling Businesses to the cover",
+  "bannerSpanTitle": "Send Payments at Scale world",
+  "bannerSubTitle": "Simplify your payments processes, reduce your costs and delight your customers.\n",
+  "bannerButtonText": "Get Started",
+  "sectionOneText": "Whether you’re sending hundreds or millions of payments,Checkbook’s platform will supercharge your payables experience. Simplify your payments processes, reduce your costs and delight your customers.",
+  "sectionOneImage": "/uploads/Group.jpg",
+  "horizhoverhmHeadText": {
+    "TableHead1": "Simple",
+    "TableHead2": "Payment Options",
+    "TableHead3": "All-In-One",
+    "TableHead4": "Instant Settlement"
+  },
+  "horizhoverhmBodyText": {
+    "TableBody1": "Payments are sent through email or text. Recipients choose how they want to accept payments.",
+    "TableBody2": "From paper to digital, Checkbook provides recipients with all their preferred payment methods.",
+    "TableBody3": "Checkbook’s all-in-one platform streamlines payments and eliminates complexity.",
+    "TableBody4": "Integrate and customize Checkbook’s comprehensive functionality into your platform."
+  },
+  "banner": {
+    "bannerTitle": "Enabling Businesses to the cover",
+    "bannerSpanTitle": "Send Payments at Scale world",
+    "bannerSubTitle": "Simplify your payments processes, reduce your costs and delight your customers.\\n",
+    "bannerButtonText": "Get Started"
+  },
+  "sectionOne": {
+    "sectionOneText": "Whether you’re sending hundreds or millions of payments,Checkbook’s platform will supercharge your payables experience. Simplify your payments processes, reduce your costs and delight your customers.",
+    "sectionOneImage": "/uploads/Group.jpg"
+  },
+  "sectionTwo": {
+    "TableHead1": "Simple",
+    "TableHead2": "Payment Options",
+    "TableHead3": "All-In-One",
+    "TableHead4": "Instant Settlement",
+    "TableBody1": "Payments are sent through email or text. Recipients choose how they want to accept payments.",
+    "TableBody2": "From paper to digital, Checkbook provides recipients with all their preferred payment methods.",
+    "TableBody3": "Checkbook’s all-in-one platform streamlines payments and eliminates complexity.",
+    "TableBody4": "Integrate and customize Checkbook’s comprehensive functionality into your platform.",
+    "TableImage1": "/uploads/Group 242.jpg",
+    "TableImage2": "/uploads/Group 234.jpg",
+    "TableImage3": "/uploads/Group 241.jpg",
+    "TableImage4": "/uploads/Group 240.jpg",
+    "TableImageAlt": "Simple image"
+  },
+  "sectionThreeText": {
+    "Heading": "Searching for the best enterprise SEO solution?",
+    "Content": "So are you competitors! Schedule a personalized demo today.",
+    "Button": "Get Started"
+  },
+  "sectionFourText": {
+    "HeadingI": "Let us ",
+    "HeadingII": "power up ",
+    "HeadingIII": "your payments",
+    "ImageTopText": "Single, easy-to-use API",
+    "Image": "/uploads/Group 370.jpg",
+    "HoverList": {
+      "Heading1": "Sending digital check",
+      "Content1": "",
+      "Heading2": "Enhance recipient satisfaction",
+      "Content2": "",
+      "Heading3": "Reduce overhead cost",
+      "Content3": ""
+    }
+  }
+}
