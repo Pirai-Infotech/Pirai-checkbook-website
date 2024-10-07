@@ -42,12 +42,12 @@ const itemscon = [
     text: "No more storing sensitive banking information. We take care of the compliance so you don't have to.",
   },
 ];
-export default function page(props) {
-  const { data } = useTina({
-    query: props.query,
-    variables: props.variables,
-    data: props.data,
-  });
+export default function Page(props) {
+    const { data } = useTina({
+        query: props.query,
+        variables: props.variables,
+        data: props.data,
+      });
   const tinaData = data?.blog;
   return (
     <div className="px-5 py-10 lg:py-0 sm:px-0">
