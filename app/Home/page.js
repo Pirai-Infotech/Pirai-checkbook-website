@@ -26,6 +26,8 @@ import Easytouse from "@/public/easytouseapi_hm.png";
 import React from "react";
 import { Tabs } from "antd";
 import { useTina } from "tinacms/dist/react";
+import { tinaField } from "tinacms/dist/react";
+// import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 const onChange = (key) => {
   console.log(key);
@@ -127,48 +129,27 @@ export default function HomePage(props) {
       return () => window.removeEventListener("resize", checkResponsive);
     }
   }, []);
+  
+const sectionTwoData = tinaData?.sectionTwo;
 
-  const listitems = [
-    {
-      icon: tinaData?.horizhoverhmImage?.TableImage1,
-      iconAlt: tinaData?.horizhoverhmHeadText.TableImageAlt,
-      title: tinaData?.horizhoverhmHeadText.TableHead1,
-      text: tinaData?.horizhoverhmBodyText.TableBody1,
-    },
-    {
-      icon: tinaData?.horizhoverhmImage?.TableImage2,
-      iconAlt: tinaData?.horizhoverhmHeadText.TableImageAlt,
-      title: tinaData?.horizhoverhmHeadText.TableHead2,
-      text: tinaData?.horizhoverhmBodyText.TableBody2,
-    },
-    {
-      icon: tinaData?.horizhoverhmImage?.TableImage3,
-      iconAlt: tinaData?.horizhoverhmHeadText.TableImageAlt,
-      title: tinaData?.horizhoverhmHeadText.TableHead3,
-      text: tinaData?.horizhoverhmBodyText.TableBody3,
-    },
-    {
-      icon: tinaData?.horizhoverhmImage?.TableImage4,
-      iconAlt: tinaData?.horizhoverhmHeadText.TableImageAlt,
-      title: tinaData?.horizhoverhmHeadText.TableHead4,
-      text: tinaData?.horizhoverhmBodyText.TableBody4,
-    },
-  ];
+const listitems = [1, 2, 3, 4].map((index) => ({
+  iconAlt: sectionTwoData?.TableImageAlt,    
+  icon: sectionTwoData?.[`TableImage${index}`],
+  iconKey: `TableImage${index}`, 
+  title: sectionTwoData?.[`TableHead${index}`],
+  titleKey: `TableHead${index}`,              
+  text: sectionTwoData?.[`TableBody${index}`], 
+  textKey: `TableBody${index}`, 
+}));
 
-  const poweruppayment = [
-    {
-      heading: tinaData?.sectionFourText?.HoverList?.Heading1,
-      text: tinaData?.sectionFourText?.HoverList?.Content1,
-    },
-    {
-      heading: tinaData?.sectionFourText?.HoverList?.Heading2,
-      text: tinaData?.sectionFourText?.HoverList?.Content2,
-    },
-    {
-      heading: tinaData?.sectionFourText?.HoverList?.Heading3,
-      text: tinaData?.sectionFourText?.HoverList?.Content3,
-    },
-  ];
+const hoverList = tinaData?.sectionFourText?.HoverList 
+
+  const poweruppayment = [1, 2, 3].map((index) => ({
+      heading: hoverList?.[`Heading${index}`],
+      headingKey: `Heading${index}`, 
+      text: hoverList?.[`Content${index}`],
+      textKey: `Content${index}`, 
+  }));
 
   return (
     <div className="cb-bg bg-pp">
@@ -179,35 +160,36 @@ export default function HomePage(props) {
         </p>
       </div>
       <Header />
-      <section className="container main-con m-auto sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 py-10   md:px-[0]">
+      <section className="container main-con m-auto sm:w-[95%] lg:w-[80%] 2xl:w-[70%] px-4 py-10 md:px-[0]" data-tina-field={tinaField(tinaData, "banner")}>
         <div className="flex flex-col items-center px-[0%] sm:px-[7%] lg:px-[0%]">
-          <h1 className="text-center text-[50px] xl:text-[70px] 2xl:text-[80px] 3xl:text-[88px]">
-            {tinaData?.bannerTitle}
+          <h1 className="text-center text-[50px] xl:text-[70px] 2xl:text-[80px] 3xl:text-[88px]" data-tina-field={tinaField(tinaData?.banner, "bannerTitle")}>
+            {tinaData?.banner?.bannerTitle}
             <br />
-            <span>{tinaData?.bannerSpanTitle}</span>
+            <span data-tina-field={tinaField(tinaData?.banner, "bannerSpanTitle")}>{tinaData?.banner?.bannerSpanTitle}</span>
           </h1>
-          {tinaData?.bannerSubTitle?.children?.map((list) => {
+          {tinaData?.banner?.bannerSubTitle?.children?.map((list) => {
             return list?.children?.map((item, index) => {
               return (
                 <p
                   className="py-[30px] text-center text-[#404040] text-[18px] xl:text-[27px]"
                   key={index}
+                  data-tina-field={tinaField(tinaData?.banner, "bannerSubTitle")}
                 >
                   {item?.text}
                 </p>
               );
             });
           })}
-          <p className="py-[30px] text-center text-[#404040] text-[18px] xl:text-[27px] ">
-            {tinaData?.bannerSubTitle}
+          <p className="py-[30px] text-center text-[#404040] text-[18px] xl:text-[27px]" data-tina-field={tinaField(tinaData?.banner, "bannerSubTitle")}>
+            {tinaData?.banner?.bannerSubTitle}
           </p>
-          <div>
+          <div data-tina-field={tinaField(tinaData?.banner, "bannerButtonText")}>
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#3D77EB]  to-[#D289FF]"}
               textColor={"text-[#fff]"}
-              content={tinaData?.bannerButtonText}
+              content={tinaData?.banner?.bannerButtonText}
               paddingx={"px-6 lg:px-3 xl:px-5 2xl:px-6 ml-4"}
               paddingy={"py-3"}
               textSize={"text-[16px] xl:text-[22px]"}
@@ -220,26 +202,18 @@ export default function HomePage(props) {
         </div>
       </section>
       <section className=" relative pt-[10%] sm:px-8 overflow-hidden">
-        <div className="container m-auto md:w-[75%] lg:w-full my-10 grad-border grad-border-rtgs bdr-hm-rds no-bdr gap-20 px-10 md:px-0 lg:px-[12%] py-[5%]">
-          <p className="w-[53%] sm:w-[58%] text-[18px] lg:text-[27px] text-[#404040]">
-            {/* Whether you’re sending hundreds or millions of payments,
-            <a
-              href="https://www.checkbook.io"
-              className="text-[#9281FF] underline"
-            >
-              Checkbook’s platform will supercharge your payables experience
-            </a>
-            . Simplify your payments processes, reduce your costs and delight
-            your customers. */}
-            {tinaData?.sectionOneText}
+        <div className="container m-auto md:w-[75%] lg:w-full my-10 grad-border grad-border-rtgs bdr-hm-rds no-bdr gap-20 px-10 md:px-0 lg:px-[12%] py-[5%]" data-tina-field={tinaField(tinaData, "sectionOne")}>
+          <p className="w-[53%] sm:w-[58%] text-[18px] lg:text-[27px] text-[#404040]" data-tina-field={tinaField(tinaData?.sectionOne, "sectionOneText")}>
+            {tinaData?.sectionOne?.sectionOneText}
+          {/* <TinaMarkdown content={tinaData?.sectionOne?.sectionOneText} /> */}
           </p>
         </div>
         <div className="pt-[100px] px-8 lg:px-0 lg:pt-[0px]">
-          <Horizhoverhm heading="" description="" listitems={listitems} />
+          <Horizhoverhm heading="" description={tinaData} listitems={listitems} />
         </div>
-        <div className="absolute right-[-230px] top-0 md:right-[-50px] lg:right-[2%] 2xl:right-[12%]">
+        <div className="absolute right-[-230px] top-0 md:right-[-50px] lg:right-[2%] 2xl:right-[12%]" data-tina-field={tinaField(tinaData?.sectionOne, "sectionOneImage")}>
           <Image
-            src={tinaData?.sectionOneImage? tinaData?.sectionOneImage : ''}
+            src={tinaData?.sectionOne?.sectionOneImage? tinaData?.sectionOne?.sectionOneImage : ''}
             width={500}
             height={500}
             className="w-[68%] lg:w-[85%] xl:w-[90%] 2xl:w-[100%]"
@@ -248,16 +222,16 @@ export default function HomePage(props) {
         </div>
       </section>
       <section className="container main-con m-auto px-4">
-        <div className=" my-10 flex flex-col lg:flex-row items-center grad-border grad-border-rtgs bdr-hm-rds gap-10 lg:gap-20 p-[60px] 2xl:px-[12%] lg:py-[5%] md:w-[75%] lg:w-full m-auto">
+        <div className=" my-10 flex flex-col lg:flex-row items-center grad-border grad-border-rtgs bdr-hm-rds gap-10 lg:gap-20 p-[60px] 2xl:px-[12%] lg:py-[5%] md:w-[75%] lg:w-full m-auto" data-tina-field={tinaField(tinaData, "sectionThreeText")}>
           <div>
-            <h4 className="text-center lg:text-left text-[30px] 2xl:text-[32px] 3xl:text-[41px] text-[#404040] ">
+            <h4 className="text-center lg:text-left text-[30px] 2xl:text-[32px] 3xl:text-[41px] text-[#404040]" data-tina-field={tinaField(tinaData?.sectionThreeText, "Heading")}>
               {tinaData?.sectionThreeText?.Heading}
             </h4>
-            <p className="text-center lg:text-left text-[20px] 2xl:text-[22px] 3xl:text-[27px] font-[400] leading-[24px] text-[#404040] pt-5">
+            <p className="text-center lg:text-left text-[20px] 2xl:text-[22px] 3xl:text-[27px] font-[400] leading-[24px] text-[#404040] pt-5" data-tina-field={tinaField(tinaData?.sectionThreeText, "Content")}>
               {tinaData?.sectionThreeText?.Content}
             </p>
           </div>
-          <div>
+          <div data-tina-field={tinaField(tinaData?.sectionThreeText, "Button")}>
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
@@ -276,7 +250,7 @@ export default function HomePage(props) {
           </div>
         </div>
       </section>
-      <section className="container mx-auto lg:px-8">
+      <section className="container mx-auto lg:px-8" data-tina-field={tinaField(tinaData, "sectionFourText")}>
         <Verticalhoverhm
           heading={!isResponsive ? tinaData?.sectionFourText?.HeadingI : (tinaData?.sectionFourText?.HeadingI + '' + tinaData?.sectionFourText?.HeadingII + '' + tinaData?.sectionFourText?.HeadingIII) }
           spancon={!isResponsive ? tinaData?.sectionFourText?.HeadingII : ""}
@@ -286,6 +260,7 @@ export default function HomePage(props) {
           vhoveritems={poweruppayment}
           imageSrc={tinaData?.sectionFourText?.Image}
           imgMessage={tinaData?.sectionFourText?.ImageTopText}
+          tinaData={tinaData}
         />
       </section>
       <section className="container m-auto lg:px-8">

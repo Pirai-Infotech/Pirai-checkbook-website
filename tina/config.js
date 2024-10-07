@@ -19,11 +19,61 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: "blog",
+        label: "Blog",
+        path: "content/blog",
+        format: "json",
+        fields: [
+          {
+            name: "heroText",
+            label: "Hero Text",
+            type: "object",
+            fields: [
+          {
+            name: "bannerTitle",
+            label: "Banner Title",
+            type: "string",
+          },
+          {
+            name: "bannerSpanTitle",
+            label: "Banner Span Title",
+            type: "string",
+          },
+          {
+            name: "bannerContent",
+            label: "Banner Content",
+            type: "string",
+          },
+          {
+            name: "bannerButtonText1",
+            label: "Button Text I",
+            type: "string",
+          },
+          {
+            name: "bannerButtonText2",
+            label: "Button Text II",
+            type: "string",
+          },
+          {
+            name: "bannerImage",
+            label: "Banner Image",
+            type: "image",
+          }
+        ]
+          }
+        ] 
+      },
+      {
         name: "page",
         label: "Pages",
         path: "content/pages",
         format: "json",
         fields: [
+          {
+            name: "banner",
+            label: "Banner Text",
+            type: "object",
+            fields: [
           {
             name: "bannerTitle",
             label: "Banner Title",
@@ -44,6 +94,13 @@ export default defineConfig({
             label: "Banner Button Text",
             type: "string",
           },
+        ]
+      },
+      {
+        name: "sectionOne",
+        label: "sectionOne Text",
+        type: "object",
+        fields: [
           {
             name: "sectionOneText",
             label: "Section One Text",
@@ -54,11 +111,12 @@ export default defineConfig({
             label: "Section One Image",
             type: "image",
           },
-          {
-            name: "horizhoverhmHeadText",
-            label: "Table Heading Text",
-            type: "object",
-            fields: [
+        ]},
+        {
+          name: "sectionTwo",
+          label: "sectionTwo Text",
+          type: "object",
+          fields: [
               {
                 name: "TableHead1",
                 label: "1.Heading",
@@ -79,13 +137,6 @@ export default defineConfig({
                 label: "4.Heading",
                 type: "string",
               },
-            ],
-          },
-          {
-            name: "horizhoverhmBodyText",
-            label: "Table Body Text",
-            type: "object",
-            fields: [
               {
                 name: "TableBody1",
                 label: "1.Body",
@@ -106,13 +157,6 @@ export default defineConfig({
                 label: "4.Body",
                 type: "string",
               },
-            ],
-          },
-          {
-            name: "horizhoverhmImage",
-            label: "Table Image",
-            type: "object",
-            fields: [
               {
                 name: "TableImage1",
                 label: "1.Image",
@@ -138,8 +182,7 @@ export default defineConfig({
                 label: "Alternative Table Image",
                 type: "string",
               },
-            ],
-          },
+        ]},
           {
             name: "sectionThreeText",
             label: "Section Three Text",

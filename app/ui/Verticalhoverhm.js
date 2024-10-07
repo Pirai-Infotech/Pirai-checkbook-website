@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import Image from "next/image";
+import { tinaField } from "tinacms/dist/react";
 
 function Verticalhoverhm({
   heading,
@@ -11,6 +12,7 @@ function Verticalhoverhm({
   imageSrc,
   flexReverse,
   imgMessage,
+  tinaData
 }) {
   const [hoveredIndex, setHoveredIndex] = useState(0);
 
@@ -20,7 +22,7 @@ function Verticalhoverhm({
 
   return (
     <>
-    {heading && <h3 className="px-6 sm:px-0 block lg:hidden text-center font-[400] text-[30px] mt-14">
+    {heading && <h3 className="block lg:hidden text-center font-[400] text-[30px] mt-14" data-tina-field={tinaField(tinaData?.sectionFourText, "HeadingI")}>
               {heading}
               <span> {spancon} </span>
               {headingtwo}
@@ -29,18 +31,19 @@ function Verticalhoverhm({
         className={` flex flex-col ${flexReverse} items-center justify-center gap-2 lg:gap-8 py-10`}
       >
         <div className="w-[100%] 2xl:w-[50%]">
-          { imgMessage && <span className="hidden md:flex pl-24 justify-center font-inter font-normal text-[22px] lg:text-[27px]">{imgMessage}</span>}
+          { imgMessage && <span className="hidden md:flex pl-24 justify-center font-inter font-normal text-[22px] lg:text-[27px]" data-tina-field={tinaField(tinaData?.sectionFourText, "ImageTopText")}>{imgMessage}</span>}
           <Image
             src={imageSrc}
             width={500}
             height={500}
             alt="Printable Check"
             className="w-[100%] object-left object-cover"
+            data-tina-field={tinaField(tinaData?.sectionFourText, "Image")}
           />
         </div>
         <div className="w-[100%] 2xl:w-[22%] px-8 lg:px-0">
           <div className="">
-            <h3 className="hidden lg:block text-center lg:text-left pb-6 md:10 font-[400] text-[30px] xl:text-[49px]">
+            <h3 className="hidden lg:block text-center lg:text-left pb-6 md:10 font-[400] text-[30px] xl:text-[49px]" data-tina-field={tinaField(tinaData?.sectionFourText, "HeadingI")}>
               {heading}
               <span> {spancon} </span>
               {headingtwo}
@@ -77,7 +80,8 @@ function Verticalhoverhm({
                     toHandelhover(index)
                       ? `text-[#7F53E7] opacity-100`
                       : `text-[#404040] opacity-0`
-                  }  font-circular-spotify text-[25px] leading-[28.62px] xl:text-[28px] xl:leading-[44.65px] group-hover:text-[#7F53E7] pb-3`}
+                  }  font-circular-spotify font-light text-[25px] leading-[28.62px] xl:text-[28px] xl:leading-[44.65px] group-hover:text-[#7F53E7] pb-3`}
+                  data-tina-field={tinaField(tinaData?.sectionFourText?.HoverList, item.headingKey)}
                 >
                   {item.heading}
                 </h4>
@@ -87,6 +91,7 @@ function Verticalhoverhm({
                       ? `block text-[#7F53E7] opacity-100`
                       : `opacity-0 hidden text-[#404040]`
                   } lg:group-hover:block font-circular-spotify font-light text-[18px] leading-[25.4px] xl:text-[25px] xl:leading-[35.28px]`}
+                  data-tina-field={tinaField(tinaData?.sectionFourText?.HoverList, item.textKey)}
                 >
                   {item.text}
                 </p>

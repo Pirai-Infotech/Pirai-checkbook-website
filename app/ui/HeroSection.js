@@ -3,19 +3,21 @@ import Image from "next/image";
 import CTAButton from "./CTAButton";
 import signupArrow from "@/public/signup-arrow.svg";
 import signupArrowcolor from "../../public/signup-arrow-purple.svg";
+import { tinaField } from "tinacms/dist/react";
 
-function HeroSection({ heading, spancon, description, rightimg }) {
+function HeroSection({ tinaData, heading, spancon, description, rightimg }) {
   return (
-    <div className="lg:relative lg:flex lg:items-center 4xl:w-[1920px] m-auto">
+    <div className="lg:relative lg:flex lg:items-center 4xl:w-[1920px] m-auto" data-tina-field={tinaField(tinaData, "heroText")}>
       <div className="mx-auto flex flex-col lg:flex-row gap-3 items-center">
         <div className="flex-1 lg:pl-[3%] xl:pl-[8%] 2xl:w-[12%] 3xl:pl-[3%]">
-          <h1 className="text-center font-light lg:text-left text-[41px] leading-[52.04px] 2xl:text-[55px] 3xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[15%] md:px-[20%] lg:px-0 lg:pr-[10%]">
-            {heading}<b className="block lg:hidden" /> <span className="custom-text font-normal">{spancon}</span>
+          <h1 className="text-center font-light lg:text-left text-[41px] leading-[52.04px] 2xl:text-[55px] 3xl:text-[70px] 2xl:leading-[79.52px] md:m-auto lg:m-0 sm:px-[15%] md:px-[20%] lg:px-0 lg:pr-[10%]" data-tina-field={tinaField(tinaData?.heroText, "bannerTitle")}>
+            {heading}<b className="block lg:hidden" /> <span className="custom-text font-normal" data-tina-field={tinaField(tinaData?.heroText, "bannerSpanTitle")}>{spancon}</span>
           </h1>
-          <p className="pt-5 font-circular-spotify text-[#404040] font-light text-center lg:text-left text-[18px] leading-[25.4px] 2xl:text-[22px] 3xl:text-[27px] 2xl:leading-[30.1px] 3xl:leading-[38.1px] sm:px-[12%] lg:px-0 lg:w-auto">
+          <p className="pt-5 font-circular-spotify text-[#404040] font-light text-center lg:text-left text-[18px] leading-[25.4px] 2xl:text-[22px] 3xl:text-[27px] 2xl:leading-[30.1px] 3xl:leading-[38.1px] md:px-[12%] lg:px-0 lg:w-auto" data-tina-field={tinaField(tinaData?.heroText, "bannerContent")}>
             {description}
           </p>
           <div className="flex flex-row pt-10 lg:pt-6 xl:pt-10  gap-4 lg:gap-8 items-center justify-center lg:justify-start">
+            <span data-tina-field={tinaField(tinaData?.heroText, "bannerButtonText1")}>
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
@@ -28,9 +30,11 @@ function HeroSection({ heading, spancon, description, rightimg }) {
               rounderTR={"rounded-tr-[60px]"}
               rounderBR={"rounded-br-[60px]"}
               rounderBL={"rounded-bl-[40px]"}
-              content={"Sign Up"}
+              content={tinaData?.heroText?.bannerButtonText1}
               classname={""}
             />
+            </span>
+            <span data-tina-field={tinaField(tinaData?.heroText, "bannerButtonText2")}>
             <CTAButton
               icon={signupArrowcolor}
               backgroundType={""}
@@ -44,12 +48,13 @@ function HeroSection({ heading, spancon, description, rightimg }) {
               rounderBR={"rounded-br-[60px]"}
               rounderBL={"rounded-bl-[40px]"}
               classname={""}
-              content={"Try Our Demo"}
+              content={tinaData?.heroText?.bannerButtonText2}
             />
+            </span>
           </div>
         </div>
-        <div className="flex-1">
-          <Image src={rightimg} alt="Printable Check" />
+        <div className="flex-1" data-tina-field={tinaField(tinaData?.heroText, "bannerImage")}>
+          <Image src={rightimg? rightimg : ''} width={500} height={500} alt="Printable Check" />
         </div>
       </div>
       {/* <div className="lg:absolute my-0 lg:w-[50%] top-0 right-0 flex items-center justify-end">
