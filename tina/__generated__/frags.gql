@@ -1,0 +1,73 @@
+fragment BlogParts on Blog {
+  __typename
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+}
+
+fragment PageParts on Page {
+  __typename
+  banner {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerSubTitle
+    bannerButtonText
+  }
+  sectionOne {
+    __typename
+    sectionOneText
+    sectionOneImage
+  }
+  sectionTwo {
+    __typename
+    TableHead1
+    TableHead2
+    TableHead3
+    TableHead4
+    TableBody1
+    TableBody2
+    TableBody3
+    TableBody4
+    TableImage1
+    TableImage2
+    TableImage3
+    TableImage4
+    TableImageAlt
+  }
+  sectionThreeText {
+    __typename
+    Heading
+    Content
+    Button
+  }
+  sectionFourText {
+    __typename
+    HeadingI
+    HeadingII
+    HeadingIII
+    ImageTopText
+    Image
+    HoverList {
+      __typename
+      Heading1
+      Content1
+      Heading2
+      Content2
+      Heading3
+      Content3
+    }
+  }
+}
+
+fragment PostParts on Post {
+  __typename
+  title
+  body
+}

@@ -1,5 +1,5 @@
-import client from "@/tina/__generated__/client";
 import AchPayments from "@/app/ui/AchPayments"
+import client from "@/tina/__generated__/client";
 
 export default async function Pages() {
   const res = await client.queries.blog({ relativePath: "BlogPages.json" });
