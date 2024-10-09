@@ -2,9 +2,9 @@
 import { defineConfig } from "tinacms";
 var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
 var config_default = defineConfig({
-  clientId: "47e84444-a804-46ab-9e39-efe9bdbefd3c",
-  branch: "main",
-  token: "f6616cb5885efc73c16471d3a9a642c0a2f8ca68",
+  clientId: process.env.TINA_CLIENT_ID || "",
+  branch: process.env.GITHUB_BRANCH || "",
+  token: process.env.TINA_TOKEN || "",
   // repo: "krishnan-jaga/Pirai-checkbook-website",
   build: {
     publicFolder: "public",
@@ -17,6 +17,11 @@ var config_default = defineConfig({
         label: "Blog",
         path: "content/blog",
         format: "json",
+        ui: {
+          router: (props) => {
+            return "/";
+          }
+        },
         fields: [
           {
             name: "heroText",
