@@ -326,7 +326,7 @@ a:hover {
     179.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
-    #e0ffff 99.56%
+    #e0ffff 120.56%
   );
   z-index: -5;
 }
@@ -335,7 +335,7 @@ a:hover {
     90.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
-    #e0ffff 99.56%
+    #e0ffff 120.56%
   );
 }
 .grad-border-syi::before {
@@ -343,7 +343,7 @@ a:hover {
     217.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
-    #e0ffff 99.56%
+    #e0ffff 120.56%
   );
 }
 .grad-border-compliance::before {
@@ -351,7 +351,7 @@ a:hover {
     300.49deg,
     #9281FF 0.44%,
     #3EA8BD 59.42%,
-    #E0FFFF 99.56%
+    #e0ffff 120.56%
   );
 }
 .grad-border-webinar::before {
@@ -359,7 +359,7 @@ a:hover {
     300.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
-    #e0ffff 99.56%
+    #e0ffff 120.56%
   );
 }
 .grad-border-price::before {
@@ -374,7 +374,7 @@ a:hover {
     90.49deg,
     #9281ff 0.44%,
     #3ea8bd 59.42%,
-    #e0ffff 99.56%
+    #e0ffff 120.56%
   );
   padding: 2.1px;
 }
