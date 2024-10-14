@@ -63,6 +63,11 @@ export default defineConfig({
             name: "bannerImage",
             label: "Banner Image",
             type: "image",
+          },
+          {
+            name: "Test",
+            label: "Banner ",
+            type: "number",
           }
         ]
           }
