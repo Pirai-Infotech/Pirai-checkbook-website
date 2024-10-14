@@ -8,7 +8,6 @@ fragment BlogParts on Blog {
     bannerButtonText1
     bannerButtonText2
     bannerImage
-    bannerTest
   }
 }
 
