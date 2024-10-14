@@ -208,6 +208,7 @@ export type BlogHeroText = {
   bannerButtonText1?: Maybe<Scalars['String']['output']>;
   bannerButtonText2?: Maybe<Scalars['String']['output']>;
   bannerImage?: Maybe<Scalars['String']['output']>;
+  Test?: Maybe<Scalars['String']['output']>;
 };
 
 export type Blog = Node & Document & {
@@ -239,6 +240,7 @@ export type BlogHeroTextFilter = {
   bannerButtonText1?: InputMaybe<StringFilter>;
   bannerButtonText2?: InputMaybe<StringFilter>;
   bannerImage?: InputMaybe<ImageFilter>;
+  Test?: InputMaybe<ImageFilter>;
 };
 
 export type BlogFilter = {
@@ -538,6 +540,7 @@ export type BlogHeroTextMutation = {
   bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
   bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
   bannerImage?: InputMaybe<Scalars['String']['input']>;
+  Test?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type BlogMutation = {
@@ -609,7 +612,7 @@ export type PostMutation = {
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type BlogPartsFragment = { __typename: 'Blog', heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null };
+export type BlogPartsFragment = { __typename: 'Blog', heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null, Test?: string | null } | null };
 
 export type PagePartsFragment = { __typename: 'Page', banner?: { __typename: 'PageBanner', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerSubTitle?: string | null, bannerButtonText?: string | null } | null, sectionOne?: { __typename: 'PageSectionOne', sectionOneText?: string | null, sectionOneImage?: string | null } | null, sectionTwo?: { __typename: 'PageSectionTwo', TableHead1?: string | null, TableHead2?: string | null, TableHead3?: string | null, TableHead4?: string | null, TableBody1?: string | null, TableBody2?: string | null, TableBody3?: string | null, TableBody4?: string | null, TableImage1?: string | null, TableImage2?: string | null, TableImage3?: string | null, TableImage4?: string | null, TableImageAlt?: string | null } | null, sectionThreeText?: { __typename: 'PageSectionThreeText', Heading?: string | null, Content?: string | null, Button?: string | null } | null, sectionFourText?: { __typename: 'PageSectionFourText', HeadingI?: string | null, HeadingII?: string | null, HeadingIII?: string | null, ImageTopText?: string | null, Image?: string | null, HoverList?: { __typename: 'PageSectionFourTextHoverList', Heading1?: string | null, Content1?: string | null, Heading2?: string | null, Content2?: string | null, Heading3?: string | null, Content3?: string | null } | null } | null };
 
@@ -620,7 +623,7 @@ export type BlogQueryVariables = Exact<{
 }>;
 
 
-export type BlogQuery = { __typename?: 'Query', blog: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null } };
+export type BlogQuery = { __typename?: 'Query', blog: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null, Test?: string | null } | null } };
 
 export type BlogConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -632,7 +635,7 @@ export type BlogConnectionQueryVariables = Exact<{
 }>;
 
 
-export type BlogConnectionQuery = { __typename?: 'Query', blogConnection: { __typename?: 'BlogConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'BlogConnectionEdges', cursor: string, node?: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null } | null } | null> | null } };
+export type BlogConnectionQuery = { __typename?: 'Query', blogConnection: { __typename?: 'BlogConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'BlogConnectionEdges', cursor: string, node?: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null, Test?: string | null } | null } | null } | null> | null } };
 
 export type PageQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -683,6 +686,7 @@ export const BlogPartsFragmentDoc = gql`
     bannerButtonText1
     bannerButtonText2
     bannerImage
+    Test
   }
 }
     `;

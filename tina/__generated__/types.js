@@ -16,6 +16,7 @@ export const BlogPartsFragmentDoc = gql`
     bannerButtonText1
     bannerButtonText2
     bannerImage
+    Test
   }
 }
     `;

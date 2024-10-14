@@ -99,6 +99,7 @@ type BlogHeroText {
   bannerButtonText1: String
   bannerButtonText2: String
   bannerImage: String
+  Test: String
 }
 
 type Blog implements Node & Document {
@@ -129,6 +130,7 @@ input BlogHeroTextFilter {
   bannerButtonText1: StringFilter
   bannerButtonText2: StringFilter
   bannerImage: ImageFilter
+  Test: ImageFilter
 }
 
 input BlogFilter {
@@ -344,6 +346,7 @@ input BlogHeroTextMutation {
   bannerButtonText1: String
   bannerButtonText2: String
   bannerImage: String
+  Test: String
 }
 
 input BlogMutation {
