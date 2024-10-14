@@ -57,6 +57,11 @@ var config_default = defineConfig({
                 name: "bannerImage",
                 label: "Banner Image",
                 type: "image"
+              },
+              {
+                name: "bannerTest",
+                label: "Banner Test",
+                type: "string"
               }
             ]
           }
