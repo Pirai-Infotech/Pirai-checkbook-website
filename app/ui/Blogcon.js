@@ -4,6 +4,7 @@ import Image from "next/image";
 import CTAButton from "../ui/CTAButton";
 import signupArrow from "@/public/signup-arrow.svg";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Blogcon = ({
   contentList,
@@ -56,7 +57,16 @@ const Blogcon = ({
                 <span className={`${classlist}`}>{content.htmlTitle}</span>
               </h4>
               <p className={`${classdescription}`}>{content.metaDescription}</p>
-              <div
+             { btnName === "Read More Press" ? 
+              <Link
+              href={content.url}
+              target="_blank" 
+              className="font-circular-spotify text-[22px] lg:text-[27px] font-light leading-[31.04px] lg:leading-[38.1px] text-[#3D77EA]"
+            >
+              {btnName}
+            </Link>
+            :
+            <div
                 onClick={() => handleClick(content.id)}
                 className="cursor-pointer"
               >
@@ -75,6 +85,7 @@ const Blogcon = ({
                   rounderBL={"rounded-bl-[40px]"}
                 />
               </div>
+              }
             </div>
             <div className={`${classImage}`}>
               <Image

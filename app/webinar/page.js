@@ -1,4 +1,4 @@
-"use client";
+// "use client";  
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Webinarph from "@/public/webinar_ph.svg";
@@ -67,7 +67,33 @@ const contentList = [
   },
 ];
 
-function Page() {
+const fetchPosts = async () => {
+  try {
+    const response = await fetch(process.env.NEXT_PUBLIC_HUBSPOT_API_URL, {
+      headers: {
+        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    
+    if (!response.ok) {
+      throw new Error('Failed to fetch');
+    }
+    const data = await response.json();
+    const newData = data.results?.filter((res=>{
+      if(res.slug.split("/")[0] == "webinar"){
+        return res;
+      }
+    }))
+    return newData
+  } catch (error) {
+    console.error('Error fetching data:', error.message);
+    return [];
+  }
+};  
+
+const Page = async () => {
+  const apidata = await fetchPosts();
   return (
     <div className="container main-con m-auto px-4 sm:px-0">
       <section className="pb-5 lg:pb-10 xl:py-20">
@@ -128,7 +154,7 @@ function Page() {
         </div>
       </section>
       <Webinarcon
-        contentList={contentList}
+        contentList={apidata}
         classlist="text-[#9180FF] font-[500] xl:font-[400] text-[27px] 3xl:text-[30px] block pt-2"
       />
 

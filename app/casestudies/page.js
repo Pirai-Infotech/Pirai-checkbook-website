@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Blogcon from "../ui/Blogcon";
@@ -11,41 +11,68 @@ import signupArrow from "@/public/signup-arrow.svg";
 import signupArrowcolor from "../../public/signup-arrow-purple.svg";
 import NavigateButton from "../ui/NavigateButton";
 
-const contentList = [
-  {
-    created: "MAY 07, 2020",
-    htmlTitle: "Checkbook Partners with ath Power Consulting",
-    metaDescription:
-      "Checkbook's cost savings and robust support has been a game changer for ath Power Consulting",
-    featuredImage: cspower,
-    featuredImageAltText:""
-  },
-  {
-    created: "FEB 13, 2020",
-    htmlTitle: "Checkbook Partners with MealHi5",
-    metaDescription:
-      "Switching to Checkbook.io for vendor payments has significantly made payouts smoother and cheaper for MealHi5",
-    featuredImage: csmeal,
-    featuredImageAltText:""
-  },
-  {
-    created: "AUG 22, 2019",
-    htmlTitle: "Checkbook Partners with Vault.insurance",
-    metaDescription:
-      "Vault offers insurance coverage and services for high-value homes, art, jewelry, cyber and personal excess liability coverage",
-    featuredImage: csvault,
-    featuredImageAltText:""
-  },
-  {
-    created: "JUN 13, 2019",
-    htmlTitle: "Checkbook Partners with Ace+",
-    metaDescription:
-      "Checkbook Partners with Ace+, a major mystery shopping company with over 300,000 professional evaluators throughout the United States and Canada",
-    featuredImage: csace,
-    featuredImageAltText:""
+// const contentList = [
+//   {
+//     created: "MAY 07, 2020",
+//     htmlTitle: "Checkbook Partners with ath Power Consulting",
+//     metaDescription:
+//       "Checkbook's cost savings and robust support has been a game changer for ath Power Consulting",
+//     featuredImage: cspower,
+//     featuredImageAltText:""
+//   },
+//   {
+//     created: "FEB 13, 2020",
+//     htmlTitle: "Checkbook Partners with MealHi5",
+//     metaDescription:
+//       "Switching to Checkbook.io for vendor payments has significantly made payouts smoother and cheaper for MealHi5",
+//     featuredImage: csmeal,
+//     featuredImageAltText:""
+//   },
+//   {
+//     created: "AUG 22, 2019",
+//     htmlTitle: "Checkbook Partners with Vault.insurance",
+//     metaDescription:
+//       "Vault offers insurance coverage and services for high-value homes, art, jewelry, cyber and personal excess liability coverage",
+//     featuredImage: csvault,
+//     featuredImageAltText:""
+//   },
+//   {
+//     created: "JUN 13, 2019",
+//     htmlTitle: "Checkbook Partners with Ace+",
+//     metaDescription:
+//       "Checkbook Partners with Ace+, a major mystery shopping company with over 300,000 professional evaluators throughout the United States and Canada",
+//     featuredImage: csace,
+//     featuredImageAltText:""
+//   }
+// ];
+
+const fetchPosts = async () => {
+  try {
+    const response = await fetch(process.env.NEXT_PUBLIC_HUBSPOT_API_URL, {
+      headers: {
+        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    
+    if (!response.ok) {
+      throw new Error('Failed to fetch');
+    }
+    const data = await response.json();
+    const newData = data.results?.filter((res=>{
+      if(res.slug.split("/")[0] == "case-studies"){
+        return res;
+      }
+    }))
+    return newData
+  } catch (error) {
+    console.error('Error fetching data:', error.message);
+    return [];
   }
-];
-function Page() {
+};  
+
+const Page = async () => {
+  const apidata = await fetchPosts();
  const btnName = "Read More";
   return (
     <div className="px-4 sm:px-0">
@@ -94,7 +121,7 @@ function Page() {
       <NavigateButton />
       <section className="md:mb-6 lg:mb-10 blg-pg">
       <Blogcon
-        contentList={contentList}
+        contentList={apidata}
         btnName = {btnName}
         borderclasslist="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-webinar-rds gap-5 p-10 xl:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] m-auto  lg:bg-[#fff0]"
         classlist="text-[#9180FF] font-[400] lg:text-[28px] 3xl:text-[40px] block pt-2 3xl:pr-20"

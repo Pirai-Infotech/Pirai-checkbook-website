@@ -1,10 +1,11 @@
 "use client";
 import React from 'react'
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 function NavigateButton() {
-
-    const router = useRouter();
+  const router = useRouter();
+  const pathname = usePathname();
 
     const buttonlists = [
         {
@@ -47,7 +48,7 @@ function NavigateButton() {
             <button
               key={index}
               onClick={() => router.push(contentlist.btnlink)} 
-              className="flex items-center px-9 py-3 grad-border grad-border-blog-tag bdr-sm-rds text-[14px] 2xl:text-[22px] cursor-pointer whitespace-nowrap"
+              className={pathname == contentlist.btnlink ? 'flex items-center px-9 py-3 grad-border-Active grad-border-blog-tag bdr-sm-rds text-[14px] 2xl:text-[22px] cursor-pointer whitespace-nowrap' : "flex items-center px-9 py-3 grad-border grad-border-blog-tag bdr-sm-rds text-[14px] 2xl:text-[22px] cursor-pointer whitespace-nowrap"}
             >
               {contentlist.btnname}
             </button>
