@@ -311,6 +311,9 @@ a:hover {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
+.grad-border-Active {
+  background: linear-gradient(90deg, #3D77EB, #D289FF);
+}
 .no-border-bottom {
   border-bottom: none;
 }

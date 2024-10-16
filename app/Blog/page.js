@@ -77,7 +77,12 @@ const fetchPosts = async () => {
       throw new Error('Failed to fetch');
     }
     const data = await response.json();
-    return data;
+    const newData = data.results?.filter((res=>{
+      if(res.slug.split("/")[0] == "blog"){
+        return res;
+      }
+    }))
+    return newData
   } catch (error) {
     console.error('Error fetching data:', error.message);
     return [];
@@ -141,7 +146,7 @@ const Page = async () => {
           </div>
         </div>
         <Blogcon
-          contentList={apidata?.results}
+          contentList={apidata}
           btnName = {btnName}
           borderclasslist="flex flex-col-reverse lg:flex-row items-center justify-between grad-border grad-border-compliance bdr-sm-blg gap-5 lg:p-20 sm:w-[45%] lg:w-[95%] 3xl:w-[78%] lg:bg-[#fff0]"
           classlist="text-[#404040] lg:text-[#9180FF] font-[400] text-[20px] 3xl:text-[24px] block pt-2 pr-10"
