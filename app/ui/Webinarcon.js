@@ -19,7 +19,7 @@ const Webinarcon = ({ contentList, classlist }) => {
     <section>
       <div className="flex flex-wrap content-center gap-10 justify-center">
         {/* {contentList.slice(0, visibleItems).map((content, index) => ( */}
-        {contentList  .map((content, index) => (
+        {contentList.map((content, index) => (
           <div
             key={index}
             className="flex flex-col items-center justify-between grad-border grad-border-compliance bdr-webinar-rds gap-5 p-7 xl:p-10 w-[100%] md:w-[47%] 2xl:w-[30%] m-auto  lg:bg-[#fff0]"
