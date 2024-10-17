@@ -63,8 +63,101 @@ export default defineConfig({
             name: "bannerImage",
             label: "Banner Image",
             type: "image",
-          }
+          },
+       
         ]
+          },
+          {
+            name: "sectionTwo",
+            label: "Section Two",
+            type: "object",
+            fields: [
+              {
+                name: "title",
+                label: "Heading 1",
+                type: "string",
+              },
+              {
+                name: "titlecontent",
+                label: "Content 1",
+                type: "string",
+              },
+              {
+                name: "titlecontentimage",
+                label: "Image 2",
+                type: "image",
+              },
+              {
+                name: "title2",
+                label: "Heading 2",
+                type: "string",
+              },
+              {
+                name: "titlecontent2",
+                label: "Content 2",
+                type: "string",
+              },
+              {
+                name: "titlecontentimage3",
+                label: "Image 3",
+                type: "image",
+              },
+              {
+                name: "title3",
+                label: "Heading 3",
+                type: "string",
+              },
+              {
+                name: "titlecontent3",
+                label: "Content 3",
+                type: "string",
+              },
+            ]
+          },
+          {
+            name: "sectionThree",
+            label: "Section Three",
+            type: "object",
+            fields: [
+              {
+                name: "digital",
+                label: "Heading ",
+                type: "string",
+              },
+              {
+                name: "digitalspan",
+                label: "Heading Span",
+                type: "string",
+              },
+              {
+                name: "digitalcontent",
+                label: "Content Info",
+                type: "string",
+              },
+             
+            ]
+          },
+          {
+            name: "displayinsights",
+            label: "Display Insights",
+            type: "object",
+            fields: [
+              {
+                name: "Headingone",
+                label: "Heading 1",
+                type: "string",
+              },
+              {
+                name: "Headingtwo",
+                label: "Heading 2 ",
+                type: "string",
+              },
+              {
+                name: "insight",
+                label: "Heading 3",
+                type: "string",
+              }     
+            ]
           }
         ] 
       },
