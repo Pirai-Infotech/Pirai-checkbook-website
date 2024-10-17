@@ -18,20 +18,20 @@ import Image from "next/image";
 import { useTina } from "tinacms/dist/react";
 import { tinaField } from "tinacms/dist/react";
 
-const items = [
-  {
-    icon: easyicon,
-    iconAlt: "Complete Control",
-    title: "Complete Control",
-    text: "Disburse payments to your users using our ACH API or full featured, user-friendly dashboard.",
-  },
-  {
-    icon: labelicon,
-    iconAlt: "Built in Scalability",
-    title: "Built in Scalability",
-    text: "Checkbook offers a secure, scalable and reliable way for your business to move money via ACH.",
-  },
-];
+// const items = [
+//   {
+//     icon: easyicon,
+//     iconAlt: "Complete Control",
+//     title: "Complete Control",
+//     text: "Disburse payments to your users using our ACH API or full featured, user-friendly dashboard.",
+//   },
+//   {
+//     icon: labelicon,
+//     iconAlt: "Built in Scalability",
+//     title: "Built in Scalability",
+//     text: "Checkbook offers a secure, scalable and reliable way for your business to move money via ACH.",
+//   },
+// ];
 const itemscon = [
   {
     heading: "Automatic Reconciliation",
@@ -43,37 +43,63 @@ const itemscon = [
   },
 ];
 export default function Page(props) {
-    const { data } = useTina({
-        query: props.query,
-        variables: props.variables,
-        data: props.data,
-      });
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data,
+  });
   const tinaData = data?.blog;
+  const sectionTwoData = tinaData?.sectionTwo;
+
+  const items = [2, 3].map((index) => ({
+    icon: sectionTwoData?.[`titlecontentimage${index}`],
+    iconAlt: sectionTwoData?.[`title${index}`],
+    title: sectionTwoData?.[`title${index}`],
+    text: sectionTwoData?.[`titlecontent${index}`],
+  }));
   return (
     <div className="px-5 py-10 lg:py-0 sm:px-0">
       <HeroSection
-        tinaData={tinaData}
+        heroText={tinaData?.heroText}
         heading={tinaData?.heroText?.bannerTitle}
         spancon={tinaData?.heroText?.bannerSpanTitle}
         description={tinaData?.heroText?.bannerContent}
         rightimg={tinaData?.heroText?.bannerImage}
+        heroString="heroText"
+        bannerString="bannerTitle"
+        bannerspanString="bannerSpanTitle"
+        contentString="bannerContent"
+        TitleString="bannerTitle"
+        SignupString="bannerButtonText1"
+        ButtonString="bannerButtonText2"
+        BannerImage="bannerImage"
+        Button1={tinaData?.heroText?.bannerButtonText1}
+        Button2={tinaData?.heroText?.bannerButtonText2}
       />
 
       <section>
         <Horizhover
-          heading="Programmable ACH Payments"
-          description="With Checkbook’s ACH direct deposit option, you can send funds directly to your recipient’s bank account - zero friction for your recipients. Simply provide the routing and account number of the destination account, and we'll take care of the rest."
+          sectionTwo={tinaData?.sectionTwo}
+          heading={tinaData?.sectionTwo?.title}
+          description={tinaData?.sectionTwo?.titlecontent}
           items={items}
+          TitleString="title"
+          ContentString="titlecontent"
         />
       </section>
-
       <Verticalhover
-        heading="Receive"
-        spancon="ACH Payments"
-        description="Our Digital Check solution makes payments quick and easy. All you need is
-      the recipient's name, email, and the amount - that's it! Recipients
-      receive their Digital Check via email, where they can verify their bank
-      account instantly for deposit."
+        sectionThree={tinaData?.sectionThree}
+        digital="digital"
+        digitalspan="digitalspan"
+        digitalcontent="digitalcontent"
+        heading={tinaData?.sectionThree?.digital}
+        spancon={tinaData?.sectionThree?.digitalspan}
+        description={tinaData?.sectionThree?.digitalcontent}
+        //   spancon="ACH Payments"
+        //   description="Our Digital Check solution makes payments quick and easy. All you need is
+        // the recipient's name, email, and the amount - that's it! Recipients
+        // receive their Digital Check via email, where they can verify their bank
+        // account instantly for deposit."
         items={itemscon}
         imageSrc={ACHCompliance}
       />

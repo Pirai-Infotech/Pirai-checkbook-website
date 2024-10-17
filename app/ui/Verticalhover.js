@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { tinaField } from "tinacms/dist/react";
 
-function Verticalhover({ heading, spancon, description, items, imageSrc }) {
+function Verticalhover({ sectionThree,heading, spancon, description, items, imageSrc ,digitalcontent ,digital , digitalspan}) {
   const [hoveredIndex, setHoveredIndex] = useState(0);
 
   function toHandelhover(params) {
@@ -11,13 +12,13 @@ function Verticalhover({ heading, spancon, description, items, imageSrc }) {
   return (
     <>
       <div className="pt-8 md:pt-14 lg:pt-20">
-        <div className="container main-con m-auto">
-          <h3 className="text-center pb-6 md:10 font-inter text-[45px] leading-[54.46px] xl:text-[70px] xl:leading-[84.72px]">
+        <div className="container main-con m-auto" data-tina-field={tinaField(sectionThree,  digitalspan)}>
+          <h3 className="text-center pb-6 md:10 font-inter text-[45px] leading-[54.46px] xl:text-[70px] xl:leading-[84.72px]" data-tina-field={tinaField(sectionThree, digital)}>
             {heading}
             <br />
-            <span>{spancon}</span>
+            <span data-tina-field={tinaField(sectionThree, digitalspan)}>{spancon}</span>
           </h3>
-          <p className="text-center font-circular-spotify font-light text-[#666666] text-[18px] leading-[25.4px] lg:text-[20px] lg:leading-[28.22px] px-4 sm:px-24 md:px-28 lg:px-[20%] 2xl:px-[28%]">
+          <p className="text-center font-circular-spotify font-light text-[#666666] text-[18px] leading-[25.4px] lg:text-[20px] lg:leading-[28.22px] px-4 sm:px-24 md:px-28 lg:px-[20%] 2xl:px-[28%]" data-tina-field={tinaField(sectionThree, digitalcontent)} >
             {description}
           </p>
         </div>

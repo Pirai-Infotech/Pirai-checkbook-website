@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { tinaField } from "tinacms/dist/react";
 
-function Horizhover({ heading, description, items }) {
+function Horizhover({ heading, description, items,sectionTwo ,TitleString , ContentString }) {
   const [hoveredIndex, setHoveredIndex] = useState(0);
 
   function toHandelhover(params) {
@@ -9,12 +10,12 @@ function Horizhover({ heading, description, items }) {
   }
 
   return (
-    <div className="container main-con m-auto flex p-4 sm:p-6 pb-10 md:p-10 md:w-[75%] lg:w-[95%] 3xl:w-[84%] flex-col lg:flex-row grad-border grad-border-rtgs bdr-md-rds items-center justify-center md:py-10 lg:py-5 lg:gap-3 3xl:gap-8 lg:px-30 2xl:px-52">
+    <div className="container main-con m-auto flex p-4 sm:p-6 pb-10 md:p-10 md:w-[75%] lg:w-[95%] 3xl:w-[84%] flex-col lg:flex-row grad-border grad-border-rtgs bdr-md-rds items-center justify-center md:py-10 lg:py-5 lg:gap-3 3xl:gap-8 lg:px-30 2xl:px-52" data-tina-field={tinaField(sectionTwo, "TitleString")}>
       <div className="p-5 sm:p-5 md:pt-6 md:pb-6 md:pr-12 md:pl-0  lg:p-7 flex-grow">
-        <h4 className="font-inter font-medium text-[24px] leading-[29.05px] xl:text-[28px] xl:leading-[33.89px] text-[#9180FF]">
+        <h4 className="font-inter font-medium text-[24px] leading-[29.05px] xl:text-[28px] xl:leading-[33.89px] text-[#9180FF]" data-tina-field={tinaField(sectionTwo , TitleString)}>
           {heading}
         </h4>
-        <p className="font-circular-spotify font-light text-[16px] leading-[22.58px] xl:text-[20px] xl:leading-[28.22px] text-left pt-3 sm:pt-4 md:pt-5 lg:pt-5 w-full xl:px-0">
+        <p className="font-circular-spotify font-light text-[16px] leading-[22.58px] xl:text-[20px] xl:leading-[28.22px] text-left pt-3 sm:pt-4 md:pt-5 lg:pt-5 w-full xl:px-0"  data-tina-field={tinaField(sectionTwo ,  ContentString)}>
           {description}
         </p>
       </div>
@@ -29,7 +30,7 @@ function Horizhover({ heading, description, items }) {
             onMouseLeave={() => setHoveredIndex(index)}
           >
             <div className="flex flex-row lg:flex-col items-center lg:items-start gap-5">
-              <Image src={item.icon} alt={item.iconAlt} />
+              <Image src={item.icon} alt={item.iconAlt} width={60} height={60} />
               <h4 className="lg:pl-4 font-inter font-normal text-[22px] leading-[26.63px] xl:text-[24px] xl:leading-[29.05px] text-[#9180FF]">
                 {item.title}
               </h4>
