@@ -4,7 +4,7 @@ import parse from "html-react-parser";
 const fetchPosts = async (id) => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_HUBSPOT_API_URL}?id=${id}`,
+      `https://api.hubapi.com/cms/v3/blogs/posts/?id=${id}`,
       {
         headers: {
           Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_API_KEY}`,
