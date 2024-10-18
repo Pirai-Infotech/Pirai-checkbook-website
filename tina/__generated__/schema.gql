@@ -99,11 +99,74 @@ type BlogHeroText {
   bannerButtonText1: String
   bannerButtonText2: String
   bannerImage: String
-  Test: Float
+}
+
+type BlogSectionTwo {
+  title: String
+  titlecontent: String
+  titlecontentimage: String
+  title2: String
+  titlecontent2: String
+  titlecontentimage3: String
+  title3: String
+  titlecontent3: String
+}
+
+type BlogSectionThree {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+}
+
+type BlogDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type BlogRgs {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+type BlogRgstwo {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+type BlogRgsthree {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+type BlogFaqQuestions {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+type BlogFaq {
+  faqheading: String
+  questions: [BlogFaqQuestions]
 }
 
 type Blog implements Node & Document {
   heroText: BlogHeroText
+  sectionTwo: BlogSectionTwo
+  sectionThree: BlogSectionThree
+  displayinsights: BlogDisplayinsights
+  rgs: BlogRgs
+  rgstwo: BlogRgstwo
+  rgsthree: BlogRgsthree
+  faq: BlogFaq
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -123,16 +186,6 @@ input ImageFilter {
   in: [String]
 }
 
-input NumberFilter {
-  lt: Float
-  lte: Float
-  gte: Float
-  gt: Float
-  eq: Float
-  exists: Boolean
-  in: [Float]
-}
-
 input BlogHeroTextFilter {
   bannerTitle: StringFilter
   bannerSpanTitle: StringFilter
@@ -140,11 +193,74 @@ input BlogHeroTextFilter {
   bannerButtonText1: StringFilter
   bannerButtonText2: StringFilter
   bannerImage: ImageFilter
-  Test: NumberFilter
+}
+
+input BlogSectionTwoFilter {
+  title: StringFilter
+  titlecontent: StringFilter
+  titlecontentimage: ImageFilter
+  title2: StringFilter
+  titlecontent2: StringFilter
+  titlecontentimage3: ImageFilter
+  title3: StringFilter
+  titlecontent3: StringFilter
+}
+
+input BlogSectionThreeFilter {
+  digital: StringFilter
+  digitalspan: StringFilter
+  digitalcontent: StringFilter
+}
+
+input BlogDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input BlogRgsFilter {
+  readyheading: StringFilter
+  spanheading: StringFilter
+  readycontent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+}
+
+input BlogRgstwoFilter {
+  readyheadingtwo: StringFilter
+  readycontenttwo: StringFilter
+  bannerButtonText3: StringFilter
+  readytwoimage: ImageFilter
+}
+
+input BlogRgsthreeFilter {
+  readyheadingthree: StringFilter
+  readycontentthree: StringFilter
+  apibuttons: StringFilter
+  readythreeimage: ImageFilter
+}
+
+input BlogFaqQuestionsFilter {
+  question: StringFilter
+  answer: StringFilter
+  ctatext: StringFilter
+  ctalink: StringFilter
+}
+
+input BlogFaqFilter {
+  faqheading: StringFilter
+  questions: BlogFaqQuestionsFilter
 }
 
 input BlogFilter {
   heroText: BlogHeroTextFilter
+  sectionTwo: BlogSectionTwoFilter
+  sectionThree: BlogSectionThreeFilter
+  displayinsights: BlogDisplayinsightsFilter
+  rgs: BlogRgsFilter
+  rgstwo: BlogRgstwoFilter
+  rgsthree: BlogRgsthreeFilter
+  faq: BlogFaqFilter
 }
 
 type BlogConnectionEdges {
@@ -356,11 +472,74 @@ input BlogHeroTextMutation {
   bannerButtonText1: String
   bannerButtonText2: String
   bannerImage: String
-  Test: Float
+}
+
+input BlogSectionTwoMutation {
+  title: String
+  titlecontent: String
+  titlecontentimage: String
+  title2: String
+  titlecontent2: String
+  titlecontentimage3: String
+  title3: String
+  titlecontent3: String
+}
+
+input BlogSectionThreeMutation {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+}
+
+input BlogDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input BlogRgsMutation {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+input BlogRgstwoMutation {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+input BlogRgsthreeMutation {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+input BlogFaqQuestionsMutation {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+input BlogFaqMutation {
+  faqheading: String
+  questions: [BlogFaqQuestionsMutation]
 }
 
 input BlogMutation {
   heroText: BlogHeroTextMutation
+  sectionTwo: BlogSectionTwoMutation
+  sectionThree: BlogSectionThreeMutation
+  displayinsights: BlogDisplayinsightsMutation
+  rgs: BlogRgsMutation
+  rgstwo: BlogRgstwoMutation
+  rgsthree: BlogRgsthreeMutation
+  faq: BlogFaqMutation
 }
 
 input PageBannerMutation {

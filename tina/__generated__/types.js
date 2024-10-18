@@ -16,7 +16,62 @@ export const BlogPartsFragmentDoc = gql`
     bannerButtonText1
     bannerButtonText2
     bannerImage
-    Test
+  }
+  sectionTwo {
+    __typename
+    title
+    titlecontent
+    titlecontentimage
+    title2
+    titlecontent2
+    titlecontentimage3
+    title3
+    titlecontent3
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
   }
 }
     `;
@@ -290,7 +345,7 @@ const generateRequester = (client) => {
 export const ExperimentalGetTinaClient = () => getSdk(
   generateRequester(
     createClient({
-      url: "https://content.tinajs.io/1.5/content/47e84444-a804-46ab-9e39-efe9bdbefd3c/github/main",
+      url: "http://localhost:4001/graphql",
       queries
     })
   )

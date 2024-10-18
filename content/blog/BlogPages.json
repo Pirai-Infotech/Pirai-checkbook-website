@@ -23,8 +23,35 @@
     "digitalcontent": "Our Digital Check solution makes payments quick and easy. All you need is the recipient's name, email, and the amount - that's it! Recipients receive their Digital Check via email, where they can verify their bank account instantly for deposit."
   },
   "displayinsights": {
-    "Headingone": "Discover",
-    "Headingtwo": "insights",
-    "insight": "and learn how to manage"
+    "Headingone": "Discover ",
+    "Headingtwo": "insights ",
+    "insight": " and learn how to manage "
+  },
+  "rgs": {
+    "readyheading": "Ready to get ",
+    "spanheading": "started?",
+    "readycontent": "Explore Checkbook, or create an account instantly and start sending payments. You can also contact us to design a custom package for your business.",
+    "bannerButtonText1": "Create Account",
+    "bannerButtonText2": "Contact Sales"
+  },
+  "rgstwo": {
+    "readyheadingtwo": "Always know what you pay",
+    "readycontenttwo": "Integrated per-transaction pricing with no hidden fees.",
+    "bannerButtonText3": "Pricing Details"
+  },
+  "rgsthree": {
+    "readyheadingthree": "Start your integration ",
+    "readycontentthree": "Get up and running with Checkbook in as little as 10 minutes.",
+    "apibuttons": "API Reference",
+    "readythreeimage": "/uploads/codeico-gray.9da356d5.svg"
+  },
+  "faq": {
+    "faqheading": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How do I verify my bank?",
+        "answer": "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification..."
+      }
+    ]
   }
 }

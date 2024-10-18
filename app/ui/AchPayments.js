@@ -119,16 +119,30 @@ export default function Page(props) {
         </div>
       </section>
       <section>
-        <DiscoverInsights insightType="ACH payments" />
+        <DiscoverInsights
+        insightType="ACH payments" 
+        displayinsights={tinaData?.displayinsights}
+        heading={tinaData?.displayinsights?.Headingone}
+        description={tinaData?.displayinsights?.Headingtwo}
+        descriptions={tinaData?.displayinsights?.insight}
+        headstring="Headingtwo"
+        />
       </section>
       <section className=" py-10 relative">
         <Testimonials />
       </section>
       <section className="py-10">
-        <ReadytoGetStart />
-      </section>
+        <ReadytoGetStart  
+        rgs={tinaData?.rgs}
+        rgstwo={tinaData?.rgstwo}    
+        rgsthree={tinaData?.rgsthree}
+      />
+      </section>      
       <section className="container main-con m-auto py-10">
-        <Faq />
+        <Faq 
+         faq={tinaData?.faq}
+         faqheadings={tinaData?.faq?.faqheading} 
+        />
       </section>
     </div>
   );
