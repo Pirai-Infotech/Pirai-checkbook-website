@@ -158,7 +158,139 @@ export default defineConfig({
                 type: "string",
               }     
             ]
+          },
+          {
+            name: "rgs",
+            label: "Ready to GetStart",
+            type: "object",
+            fields: [
+              {
+                name: "readyheading",
+                label: "Heading 1",
+                type: "string",
+              },
+              {
+                name: "spanheading",
+                label: "Span",
+                type: "string",
+              },
+              {
+                name: "readycontent",
+                label: "Heading 2 ",
+                type: "string",
+              },
+              {
+                name: "bannerButtonText1",
+                label: "Button Text I",
+                type: "string",
+              },
+              {
+                name: "bannerButtonText2",
+                label: "Button Text II",
+                type: "string",
+              },  
+              
+            ],
+            
+          },
+          {
+            name: "rgstwo",
+            label: "Ready to GetStart2",
+            type: "object",
+            fields: [
+              {
+                name: "readyheadingtwo",
+                label: "Heading 1",
+                type: "string",
+              },
+              {
+                name: "readycontenttwo",
+                label: "Heading 2 ",
+                type: "string",
+              },
+              {
+                name: "bannerButtonText3",
+                label: "Button Text I",
+                type: "string",
+              },
+              {
+                name: "readytwoimage",
+                label: "Image",
+                type: "image",
+              }
+            ],
+            
+          },
+          {
+            name: "rgsthree",
+            label: "Ready to GetStart3",
+            type: "object",
+            fields: [
+              {
+                name: "readyheadingthree",
+                label: "Heading 1",
+                type: "string",
+              },
+              {
+                name: "readycontentthree",
+                label: "Heading 2 ",
+                type: "string",
+              },
+              {
+                name: "apibuttons",
+                label: "Button Text I",
+                type: "string",
+              },
+              {
+                name: "readythreeimage",
+                label: "Image",
+                type: "image",
+              },
+            ],
+            
+          },
+          {
+            name: "faq",
+            label: "FAQ",
+            type: "object",
+            fields: [
+              {
+                name: "faqheading",
+                label: "Heading",
+                type: "string",
+              },
+              {
+                name: "questions",
+                label: "Questions",
+                type: "object",
+                list: true, 
+                fields: [
+                  {
+                    name: "question",
+                    label: "Question",
+                    type: "string",
+                  },
+                  {
+                    name: "answer",
+                    label: "Answer",
+                    type: "string",
+                  },
+                  {
+                    name: "ctatext",
+                    label: "Cta Text",
+                    type: "string",
+                  },
+                  {
+                    name: "ctalink",
+                    label: "Cta Link",
+                    type: "string",
+                  }
+                ]
+              }
+            ],
           }
+          
+          
         ] 
       },
       {
@@ -419,3 +551,4 @@ export default defineConfig({
   },
   
 });
+

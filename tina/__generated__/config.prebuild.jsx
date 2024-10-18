@@ -57,11 +57,223 @@ var config_default = defineConfig({
                 name: "bannerImage",
                 label: "Banner Image",
                 type: "image"
+              }
+            ]
+          },
+          {
+            name: "sectionTwo",
+            label: "Section Two",
+            type: "object",
+            fields: [
+              {
+                name: "title",
+                label: "Heading 1",
+                type: "string"
               },
               {
-                name: "Test",
-                label: "Banner ",
-                type: "number"
+                name: "titlecontent",
+                label: "Content 1",
+                type: "string"
+              },
+              {
+                name: "titlecontentimage",
+                label: "Image 2",
+                type: "image"
+              },
+              {
+                name: "title2",
+                label: "Heading 2",
+                type: "string"
+              },
+              {
+                name: "titlecontent2",
+                label: "Content 2",
+                type: "string"
+              },
+              {
+                name: "titlecontentimage3",
+                label: "Image 3",
+                type: "image"
+              },
+              {
+                name: "title3",
+                label: "Heading 3",
+                type: "string"
+              },
+              {
+                name: "titlecontent3",
+                label: "Content 3",
+                type: "string"
+              }
+            ]
+          },
+          {
+            name: "sectionThree",
+            label: "Section Three",
+            type: "object",
+            fields: [
+              {
+                name: "digital",
+                label: "Heading ",
+                type: "string"
+              },
+              {
+                name: "digitalspan",
+                label: "Heading Span",
+                type: "string"
+              },
+              {
+                name: "digitalcontent",
+                label: "Content Info",
+                type: "string"
+              }
+            ]
+          },
+          {
+            name: "displayinsights",
+            label: "Display Insights",
+            type: "object",
+            fields: [
+              {
+                name: "Headingone",
+                label: "Heading 1",
+                type: "string"
+              },
+              {
+                name: "Headingtwo",
+                label: "Heading 2 ",
+                type: "string"
+              },
+              {
+                name: "insight",
+                label: "Heading 3",
+                type: "string"
+              }
+            ]
+          },
+          {
+            name: "rgs",
+            label: "Ready to GetStart",
+            type: "object",
+            fields: [
+              {
+                name: "readyheading",
+                label: "Heading 1",
+                type: "string"
+              },
+              {
+                name: "spanheading",
+                label: "Span",
+                type: "string"
+              },
+              {
+                name: "readycontent",
+                label: "Heading 2 ",
+                type: "string"
+              },
+              {
+                name: "bannerButtonText1",
+                label: "Button Text I",
+                type: "string"
+              },
+              {
+                name: "bannerButtonText2",
+                label: "Button Text II",
+                type: "string"
+              }
+            ]
+          },
+          {
+            name: "rgstwo",
+            label: "Ready to GetStart2",
+            type: "object",
+            fields: [
+              {
+                name: "readyheadingtwo",
+                label: "Heading 1",
+                type: "string"
+              },
+              {
+                name: "readycontenttwo",
+                label: "Heading 2 ",
+                type: "string"
+              },
+              {
+                name: "bannerButtonText3",
+                label: "Button Text I",
+                type: "string"
+              },
+              {
+                name: "readytwoimage",
+                label: "Image",
+                type: "image"
+              }
+            ]
+          },
+          {
+            name: "rgsthree",
+            label: "Ready to GetStart3",
+            type: "object",
+            fields: [
+              {
+                name: "readyheadingthree",
+                label: "Heading 1",
+                type: "string"
+              },
+              {
+                name: "readycontentthree",
+                label: "Heading 2 ",
+                type: "string"
+              },
+              {
+                name: "apibuttons",
+                label: "Button Text I",
+                type: "string"
+              },
+              {
+                name: "readythreeimage",
+                label: "Image",
+                type: "image"
+              }
+            ]
+          },
+          {
+            name: "faq",
+            label: "FAQ",
+            type: "object",
+            fields: [
+              {
+                name: "faqheading",
+                label: "Heading",
+                type: "string"
+              },
+              {
+                name: "questions",
+                label: "Questions",
+                type: "object",
+                list: true,
+                fields: [
+                  {
+                    name: "question",
+                    label: "Question",
+                    type: "string"
+                  },
+                  {
+                    name: "answer",
+                    label: "Answer",
+                    type: "string"
+                  },
+                  {
+                    name: "ctatext",
+                    label: "Cta Text",
+                    type: "string"
+                  },
+                  {
+                    name: "ctalink",
+                    label: "Cta Link",
+                    type: "string"
+                  }
+                ]
               }
             ]
           }

@@ -208,12 +208,83 @@ export type BlogHeroText = {
   bannerButtonText1?: Maybe<Scalars['String']['output']>;
   bannerButtonText2?: Maybe<Scalars['String']['output']>;
   bannerImage?: Maybe<Scalars['String']['output']>;
-  Test?: Maybe<Scalars['Float']['output']>;
+};
+
+export type BlogSectionTwo = {
+  __typename?: 'BlogSectionTwo';
+  title?: Maybe<Scalars['String']['output']>;
+  titlecontent?: Maybe<Scalars['String']['output']>;
+  titlecontentimage?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  titlecontent2?: Maybe<Scalars['String']['output']>;
+  titlecontentimage3?: Maybe<Scalars['String']['output']>;
+  title3?: Maybe<Scalars['String']['output']>;
+  titlecontent3?: Maybe<Scalars['String']['output']>;
+};
+
+export type BlogSectionThree = {
+  __typename?: 'BlogSectionThree';
+  digital?: Maybe<Scalars['String']['output']>;
+  digitalspan?: Maybe<Scalars['String']['output']>;
+  digitalcontent?: Maybe<Scalars['String']['output']>;
+};
+
+export type BlogDisplayinsights = {
+  __typename?: 'BlogDisplayinsights';
+  Headingone?: Maybe<Scalars['String']['output']>;
+  Headingtwo?: Maybe<Scalars['String']['output']>;
+  insight?: Maybe<Scalars['String']['output']>;
+};
+
+export type BlogRgs = {
+  __typename?: 'BlogRgs';
+  readyheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  readycontent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+};
+
+export type BlogRgstwo = {
+  __typename?: 'BlogRgstwo';
+  readyheadingtwo?: Maybe<Scalars['String']['output']>;
+  readycontenttwo?: Maybe<Scalars['String']['output']>;
+  bannerButtonText3?: Maybe<Scalars['String']['output']>;
+  readytwoimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type BlogRgsthree = {
+  __typename?: 'BlogRgsthree';
+  readyheadingthree?: Maybe<Scalars['String']['output']>;
+  readycontentthree?: Maybe<Scalars['String']['output']>;
+  apibuttons?: Maybe<Scalars['String']['output']>;
+  readythreeimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type BlogFaqQuestions = {
+  __typename?: 'BlogFaqQuestions';
+  question?: Maybe<Scalars['String']['output']>;
+  answer?: Maybe<Scalars['String']['output']>;
+  ctatext?: Maybe<Scalars['String']['output']>;
+  ctalink?: Maybe<Scalars['String']['output']>;
+};
+
+export type BlogFaq = {
+  __typename?: 'BlogFaq';
+  faqheading?: Maybe<Scalars['String']['output']>;
+  questions?: Maybe<Array<Maybe<BlogFaqQuestions>>>;
 };
 
 export type Blog = Node & Document & {
   __typename?: 'Blog';
   heroText?: Maybe<BlogHeroText>;
+  sectionTwo?: Maybe<BlogSectionTwo>;
+  sectionThree?: Maybe<BlogSectionThree>;
+  displayinsights?: Maybe<BlogDisplayinsights>;
+  rgs?: Maybe<BlogRgs>;
+  rgstwo?: Maybe<BlogRgstwo>;
+  rgsthree?: Maybe<BlogRgsthree>;
+  faq?: Maybe<BlogFaq>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -233,16 +304,6 @@ export type ImageFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type NumberFilter = {
-  lt?: InputMaybe<Scalars['Float']['input']>;
-  lte?: InputMaybe<Scalars['Float']['input']>;
-  gte?: InputMaybe<Scalars['Float']['input']>;
-  gt?: InputMaybe<Scalars['Float']['input']>;
-  eq?: InputMaybe<Scalars['Float']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
-};
-
 export type BlogHeroTextFilter = {
   bannerTitle?: InputMaybe<StringFilter>;
   bannerSpanTitle?: InputMaybe<StringFilter>;
@@ -250,11 +311,74 @@ export type BlogHeroTextFilter = {
   bannerButtonText1?: InputMaybe<StringFilter>;
   bannerButtonText2?: InputMaybe<StringFilter>;
   bannerImage?: InputMaybe<ImageFilter>;
-  Test?: InputMaybe<NumberFilter>;
+};
+
+export type BlogSectionTwoFilter = {
+  title?: InputMaybe<StringFilter>;
+  titlecontent?: InputMaybe<StringFilter>;
+  titlecontentimage?: InputMaybe<ImageFilter>;
+  title2?: InputMaybe<StringFilter>;
+  titlecontent2?: InputMaybe<StringFilter>;
+  titlecontentimage3?: InputMaybe<ImageFilter>;
+  title3?: InputMaybe<StringFilter>;
+  titlecontent3?: InputMaybe<StringFilter>;
+};
+
+export type BlogSectionThreeFilter = {
+  digital?: InputMaybe<StringFilter>;
+  digitalspan?: InputMaybe<StringFilter>;
+  digitalcontent?: InputMaybe<StringFilter>;
+};
+
+export type BlogDisplayinsightsFilter = {
+  Headingone?: InputMaybe<StringFilter>;
+  Headingtwo?: InputMaybe<StringFilter>;
+  insight?: InputMaybe<StringFilter>;
+};
+
+export type BlogRgsFilter = {
+  readyheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  readycontent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+};
+
+export type BlogRgstwoFilter = {
+  readyheadingtwo?: InputMaybe<StringFilter>;
+  readycontenttwo?: InputMaybe<StringFilter>;
+  bannerButtonText3?: InputMaybe<StringFilter>;
+  readytwoimage?: InputMaybe<ImageFilter>;
+};
+
+export type BlogRgsthreeFilter = {
+  readyheadingthree?: InputMaybe<StringFilter>;
+  readycontentthree?: InputMaybe<StringFilter>;
+  apibuttons?: InputMaybe<StringFilter>;
+  readythreeimage?: InputMaybe<ImageFilter>;
+};
+
+export type BlogFaqQuestionsFilter = {
+  question?: InputMaybe<StringFilter>;
+  answer?: InputMaybe<StringFilter>;
+  ctatext?: InputMaybe<StringFilter>;
+  ctalink?: InputMaybe<StringFilter>;
+};
+
+export type BlogFaqFilter = {
+  faqheading?: InputMaybe<StringFilter>;
+  questions?: InputMaybe<BlogFaqQuestionsFilter>;
 };
 
 export type BlogFilter = {
   heroText?: InputMaybe<BlogHeroTextFilter>;
+  sectionTwo?: InputMaybe<BlogSectionTwoFilter>;
+  sectionThree?: InputMaybe<BlogSectionThreeFilter>;
+  displayinsights?: InputMaybe<BlogDisplayinsightsFilter>;
+  rgs?: InputMaybe<BlogRgsFilter>;
+  rgstwo?: InputMaybe<BlogRgstwoFilter>;
+  rgsthree?: InputMaybe<BlogRgsthreeFilter>;
+  faq?: InputMaybe<BlogFaqFilter>;
 };
 
 export type BlogConnectionEdges = {
@@ -550,11 +674,74 @@ export type BlogHeroTextMutation = {
   bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
   bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
   bannerImage?: InputMaybe<Scalars['String']['input']>;
-  Test?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type BlogSectionTwoMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  titlecontent?: InputMaybe<Scalars['String']['input']>;
+  titlecontentimage?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  titlecontent2?: InputMaybe<Scalars['String']['input']>;
+  titlecontentimage3?: InputMaybe<Scalars['String']['input']>;
+  title3?: InputMaybe<Scalars['String']['input']>;
+  titlecontent3?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type BlogSectionThreeMutation = {
+  digital?: InputMaybe<Scalars['String']['input']>;
+  digitalspan?: InputMaybe<Scalars['String']['input']>;
+  digitalcontent?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type BlogDisplayinsightsMutation = {
+  Headingone?: InputMaybe<Scalars['String']['input']>;
+  Headingtwo?: InputMaybe<Scalars['String']['input']>;
+  insight?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type BlogRgsMutation = {
+  readyheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  readycontent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type BlogRgstwoMutation = {
+  readyheadingtwo?: InputMaybe<Scalars['String']['input']>;
+  readycontenttwo?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText3?: InputMaybe<Scalars['String']['input']>;
+  readytwoimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type BlogRgsthreeMutation = {
+  readyheadingthree?: InputMaybe<Scalars['String']['input']>;
+  readycontentthree?: InputMaybe<Scalars['String']['input']>;
+  apibuttons?: InputMaybe<Scalars['String']['input']>;
+  readythreeimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type BlogFaqQuestionsMutation = {
+  question?: InputMaybe<Scalars['String']['input']>;
+  answer?: InputMaybe<Scalars['String']['input']>;
+  ctatext?: InputMaybe<Scalars['String']['input']>;
+  ctalink?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type BlogFaqMutation = {
+  faqheading?: InputMaybe<Scalars['String']['input']>;
+  questions?: InputMaybe<Array<InputMaybe<BlogFaqQuestionsMutation>>>;
 };
 
 export type BlogMutation = {
   heroText?: InputMaybe<BlogHeroTextMutation>;
+  sectionTwo?: InputMaybe<BlogSectionTwoMutation>;
+  sectionThree?: InputMaybe<BlogSectionThreeMutation>;
+  displayinsights?: InputMaybe<BlogDisplayinsightsMutation>;
+  rgs?: InputMaybe<BlogRgsMutation>;
+  rgstwo?: InputMaybe<BlogRgstwoMutation>;
+  rgsthree?: InputMaybe<BlogRgsthreeMutation>;
+  faq?: InputMaybe<BlogFaqMutation>;
 };
 
 export type PageBannerMutation = {
@@ -622,7 +809,7 @@ export type PostMutation = {
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type BlogPartsFragment = { __typename: 'Blog', heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null, Test?: number | null } | null };
+export type BlogPartsFragment = { __typename: 'Blog', heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, sectionTwo?: { __typename: 'BlogSectionTwo', title?: string | null, titlecontent?: string | null, titlecontentimage?: string | null, title2?: string | null, titlecontent2?: string | null, titlecontentimage3?: string | null, title3?: string | null, titlecontent3?: string | null } | null, sectionThree?: { __typename: 'BlogSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null } | null, displayinsights?: { __typename: 'BlogDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, rgs?: { __typename: 'BlogRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'BlogRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'BlogRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'BlogFaq', faqheading?: string | null, questions?: Array<{ __typename: 'BlogFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null };
 
 export type PagePartsFragment = { __typename: 'Page', banner?: { __typename: 'PageBanner', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerSubTitle?: string | null, bannerButtonText?: string | null } | null, sectionOne?: { __typename: 'PageSectionOne', sectionOneText?: string | null, sectionOneImage?: string | null } | null, sectionTwo?: { __typename: 'PageSectionTwo', TableHead1?: string | null, TableHead2?: string | null, TableHead3?: string | null, TableHead4?: string | null, TableBody1?: string | null, TableBody2?: string | null, TableBody3?: string | null, TableBody4?: string | null, TableImage1?: string | null, TableImage2?: string | null, TableImage3?: string | null, TableImage4?: string | null, TableImageAlt?: string | null } | null, sectionThreeText?: { __typename: 'PageSectionThreeText', Heading?: string | null, Content?: string | null, Button?: string | null } | null, sectionFourText?: { __typename: 'PageSectionFourText', HeadingI?: string | null, HeadingII?: string | null, HeadingIII?: string | null, ImageTopText?: string | null, Image?: string | null, HoverList?: { __typename: 'PageSectionFourTextHoverList', Heading1?: string | null, Content1?: string | null, Heading2?: string | null, Content2?: string | null, Heading3?: string | null, Content3?: string | null } | null } | null };
 
@@ -633,7 +820,7 @@ export type BlogQueryVariables = Exact<{
 }>;
 
 
-export type BlogQuery = { __typename?: 'Query', blog: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null, Test?: number | null } | null } };
+export type BlogQuery = { __typename?: 'Query', blog: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, sectionTwo?: { __typename: 'BlogSectionTwo', title?: string | null, titlecontent?: string | null, titlecontentimage?: string | null, title2?: string | null, titlecontent2?: string | null, titlecontentimage3?: string | null, title3?: string | null, titlecontent3?: string | null } | null, sectionThree?: { __typename: 'BlogSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null } | null, displayinsights?: { __typename: 'BlogDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, rgs?: { __typename: 'BlogRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'BlogRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'BlogRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'BlogFaq', faqheading?: string | null, questions?: Array<{ __typename: 'BlogFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } };
 
 export type BlogConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -645,7 +832,7 @@ export type BlogConnectionQueryVariables = Exact<{
 }>;
 
 
-export type BlogConnectionQuery = { __typename?: 'Query', blogConnection: { __typename?: 'BlogConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'BlogConnectionEdges', cursor: string, node?: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null, Test?: number | null } | null } | null } | null> | null } };
+export type BlogConnectionQuery = { __typename?: 'Query', blogConnection: { __typename?: 'BlogConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'BlogConnectionEdges', cursor: string, node?: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, sectionTwo?: { __typename: 'BlogSectionTwo', title?: string | null, titlecontent?: string | null, titlecontentimage?: string | null, title2?: string | null, titlecontent2?: string | null, titlecontentimage3?: string | null, title3?: string | null, titlecontent3?: string | null } | null, sectionThree?: { __typename: 'BlogSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null } | null, displayinsights?: { __typename: 'BlogDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, rgs?: { __typename: 'BlogRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'BlogRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'BlogRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'BlogFaq', faqheading?: string | null, questions?: Array<{ __typename: 'BlogFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } | null } | null> | null } };
 
 export type PageQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -696,7 +883,62 @@ export const BlogPartsFragmentDoc = gql`
     bannerButtonText1
     bannerButtonText2
     bannerImage
-    Test
+  }
+  sectionTwo {
+    __typename
+    title
+    titlecontent
+    titlecontentimage
+    title2
+    titlecontent2
+    titlecontentimage3
+    title3
+    titlecontent3
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
   }
 }
     `;
@@ -996,7 +1238,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/1.5/content/47e84444-a804-46ab-9e39-efe9bdbefd3c/github/main",
+        url: "http://localhost:4001/graphql",
         queries,
       })
     )

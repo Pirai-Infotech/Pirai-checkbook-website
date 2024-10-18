@@ -72,7 +72,6 @@ const fetchPosts = async () => {
         return res;
       }
     }))
-    console.log(newData,"new")
     return newData
   } catch (error) {
     console.error('Error fetching data:', error.message);
