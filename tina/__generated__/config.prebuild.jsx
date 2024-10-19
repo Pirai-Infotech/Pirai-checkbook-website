@@ -1,6 +1,80 @@
 // tina/config.js
 import { defineConfig } from "tinacms";
 var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
+var headData = {
+  name: "header",
+  label: "Header Text",
+  type: "object",
+  fields: [
+    {
+      name: "image",
+      label: "CheckBook Image",
+      type: "image"
+    },
+    {
+      name: "label1",
+      label: "1.Label",
+      type: "string"
+    },
+    {
+      name: "label2",
+      label: "2.Label",
+      type: "string"
+    },
+    {
+      name: "label3",
+      label: "3.Label",
+      type: "string"
+    },
+    {
+      name: "label4",
+      label: "4.Label",
+      type: "string"
+    },
+    {
+      name: "label5",
+      label: "5.Label",
+      type: "string"
+    },
+    {
+      name: "label6",
+      label: "6.Label",
+      type: "string"
+    },
+    {
+      name: "label7",
+      label: "7.Label",
+      type: "string"
+    },
+    {
+      name: "button",
+      label: "Button",
+      type: "string"
+    }
+  ]
+};
+var heroText = {
+  name: "heroText",
+  label: "Hero Text",
+  type: "object",
+  fields: [
+    {
+      name: "bannerTitle",
+      label: "Banner Title",
+      type: "string"
+    },
+    {
+      name: "bannerSpanTitle",
+      label: "Banner Span Title",
+      type: "string"
+    },
+    {
+      name: "bannerContent",
+      label: "Banner Content",
+      type: "string"
+    }
+  ]
+};
 var config_default = defineConfig({
   clientId: process.env.TINA_CLIENT_ID || "",
   branch: process.env.GITHUB_BRANCH || "",
@@ -13,6 +87,38 @@ var config_default = defineConfig({
   schema: {
     collections: [
       {
+        name: "about",
+        label: "About Us",
+        path: "content/about",
+        format: "json",
+        fields: [
+          headData,
+          heroText,
+          {
+            name: "displayinsights",
+            label: "Display Insights",
+            type: "object",
+            fields: [
+              {
+                name: "Headingone",
+                label: "Heading 1",
+                type: "string"
+              },
+              {
+                name: "Headingtwo",
+                label: "Heading 2 ",
+                type: "string"
+              },
+              {
+                name: "insight",
+                label: "Heading 3",
+                type: "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
         name: "blog",
         label: "Blog",
         path: "content/blog",
@@ -23,6 +129,7 @@ var config_default = defineConfig({
           }
         },
         fields: [
+          headData,
           {
             name: "heroText",
             label: "Hero Text",
@@ -61,48 +168,48 @@ var config_default = defineConfig({
             ]
           },
           {
-            name: "sectionTwo",
+            name: "horizhover",
             label: "Section Two",
             type: "object",
             fields: [
               {
                 name: "title",
-                label: "Heading 1",
+                label: "1.Heading",
                 type: "string"
               },
               {
-                name: "titlecontent",
-                label: "Content 1",
+                name: "content",
+                label: "1.Content",
                 type: "string"
               },
               {
-                name: "titlecontentimage",
-                label: "Image 2",
+                name: "image1",
+                label: "2.Image",
+                type: "image"
+              },
+              {
+                name: "title1",
+                label: "2.Heading",
+                type: "string"
+              },
+              {
+                name: "content1",
+                label: "2.Content",
+                type: "string"
+              },
+              {
+                name: "image2",
+                label: "3.Image",
                 type: "image"
               },
               {
                 name: "title2",
-                label: "Heading 2",
+                label: "3.Heading",
                 type: "string"
               },
               {
-                name: "titlecontent2",
-                label: "Content 2",
-                type: "string"
-              },
-              {
-                name: "titlecontentimage3",
-                label: "Image 3",
-                type: "image"
-              },
-              {
-                name: "title3",
-                label: "Heading 3",
-                type: "string"
-              },
-              {
-                name: "titlecontent3",
-                label: "Content 3",
+                name: "content2",
+                label: "3.Content",
                 type: "string"
               }
             ]
@@ -126,6 +233,193 @@ var config_default = defineConfig({
                 name: "digitalcontent",
                 label: "Content Info",
                 type: "string"
+              },
+              {
+                name: "title1",
+                label: "1.Heading",
+                type: "string"
+              },
+              {
+                name: "content1",
+                label: "1.Content",
+                type: "string"
+              },
+              {
+                name: "title2",
+                label: "2.Heading",
+                type: "string"
+              },
+              {
+                name: "content2",
+                label: "2.Content",
+                type: "string"
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "image"
+              }
+            ]
+          },
+          {
+            name: "displayinsights",
+            label: "Display Insights",
+            type: "object",
+            fields: [
+              {
+                name: "Headingone",
+                label: "Heading 1",
+                type: "string"
+              },
+              {
+                name: "Headingtwo",
+                label: "Heading 2 ",
+                type: "string"
+              },
+              {
+                name: "insight",
+                label: "Heading 3",
+                type: "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: "realtime",
+        label: "RealTime Payments",
+        path: "content/realtime",
+        format: "json",
+        fields: [
+          headData,
+          {
+            name: "heroText",
+            label: "Hero Text",
+            type: "object",
+            fields: [
+              {
+                name: "bannerTitle",
+                label: "Banner Title",
+                type: "string"
+              },
+              {
+                name: "bannerSpanTitle",
+                label: "Banner Span Title",
+                type: "string"
+              },
+              {
+                name: "bannerContent",
+                label: "Banner Content",
+                type: "string"
+              },
+              {
+                name: "bannerButtonText1",
+                label: "Button Text I",
+                type: "string"
+              },
+              {
+                name: "bannerButtonText2",
+                label: "Button Text II",
+                type: "string"
+              },
+              {
+                name: "bannerImage",
+                label: "Banner Image",
+                type: "image"
+              }
+            ]
+          },
+          {
+            name: "horizhover",
+            label: "Section Two",
+            type: "object",
+            fields: [
+              {
+                name: "title",
+                label: "1.Heading",
+                type: "string"
+              },
+              {
+                name: "content",
+                label: "1.Content",
+                type: "string"
+              },
+              {
+                name: "image1",
+                label: "2.Image",
+                type: "image"
+              },
+              {
+                name: "title1",
+                label: "2.Heading",
+                type: "string"
+              },
+              {
+                name: "content1",
+                label: "2.Content",
+                type: "string"
+              },
+              {
+                name: "image2",
+                label: "3.Image",
+                type: "image"
+              },
+              {
+                name: "title2",
+                label: "3.Heading",
+                type: "string"
+              },
+              {
+                name: "content2",
+                label: "3.Content",
+                type: "string"
+              }
+            ]
+          },
+          {
+            name: "sectionThree",
+            label: "Section Three",
+            type: "object",
+            fields: [
+              {
+                name: "digital",
+                label: "Heading ",
+                type: "string"
+              },
+              {
+                name: "digitalspan",
+                label: "Heading Span",
+                type: "string"
+              },
+              {
+                name: "digitalcontent",
+                label: "Content Info",
+                type: "string"
+              },
+              {
+                name: "title1",
+                label: "1.Heading",
+                type: "string"
+              },
+              {
+                name: "content1",
+                label: "1.Content",
+                type: "string"
+              },
+              {
+                name: "title2",
+                label: "2.Heading",
+                type: "string"
+              },
+              {
+                name: "content2",
+                label: "2.Content",
+                type: "string"
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "image"
               }
             ]
           },

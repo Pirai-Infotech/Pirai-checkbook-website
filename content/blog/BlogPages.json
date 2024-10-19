@@ -1,6 +1,6 @@
 {
   "sectionFour": {
-    "four": "Tetimonj"
+    "four": "Tetimon"
   },
   "testcard": {
     "cardheading": "Testimonials",
@@ -9,11 +9,21 @@
         "image": "/uploads/Testimonials_img1.57874119.png",
         "name": "Laurent Charpentier",
         "position": "COO, Yooz North America",
-        "quote": "“Checkbook seamlessly enables our clients to send Digital Cheques with           the",
+        "quote": "“Checkbook seamlessly enables our clients to send Digital Cheques with the",
         "link": "https://your-link-here.com",
-        "altquote": ". Their APIs are easy to work with, and the Digital Cheque product is           a great alternative to paper cheques.”"
+        "altquote": ". Their APIs are easy to work with, and the Digital Cheque product is a great alternative to paper cheques.”"
       }
     ]
+  },
+  "header": {
+    "label1": "Home",
+    "label2": "Products",
+    "label3": "Solutions",
+    "label4": "Resources",
+    "label5": "Industries",
+    "label6": "ROI Calculator",
+    "label7": "Pricing",
+    "button": "Sign Up"
   },
   "heroText": {
     "bannerTitle": "Send",
@@ -23,20 +33,25 @@
     "bannerButtonText2": "Try Our Demo",
     "bannerImage": "/uploads/Clip path group.jpg"
   },
-  "sectionTwo": {
+  "horizhover": {
     "title": "Programmable ACH Payments",
-    "titlecontent": "With Checkbook’s ACH direct deposit option, you can send funds directly to your recipient’s bank account - zero friction for your recipients. Simply provide the routing and account number of the destination account, and we'll take care of the rest.",
-    "titlecontentimage": "/uploads/Easyprocess.53553ae7.svg",
-    "title2": "Complete Controls",
-    "titlecontent2": "Disburse payments to your users using our ACH API or full featured, user-friendly dashboard",
-    "titlecontentimage3": "/uploads/Whitelabel.075366cc.svg",
-    "title3": "Built in Scalability",
-    "titlecontent3": "Checkbook offers a secure, scalable and reliable way for your business to move money via ACH."
+    "content": "With Checkbook’s ACH direct deposit option, you can send funds directly to your recipient’s bank account - zero friction for your recipients. Simply provide the routing and account number of the destination account, and we'll take care of the rest.",
+    "image1": "/uploads/Easyprocess.53553ae7.svg",
+    "title1": "Complete Controls",
+    "content1": "Disburse payments to your users using our ACH API or full featured, user-friendly dashboard",
+    "image2": "/uploads/Whitelabel.075366cc.svg",
+    "title2": "Built in Scalability",
+    "content2": "Checkbook offers a secure, scalable and reliable way for your business to move money via ACH."
   },
   "sectionThree": {
     "digital": "Receive ",
     "digitalspan": "ACH Payments ",
-    "digitalcontent": "Our Digital Check solution makes payments quick and easy. All you need is the recipient's name, email, and the amount - that's it! Recipients receive their Digital Check via email, where they can verify their bank account instantly for deposit."
+    "digitalcontent": "Our Digital Check solution makes payments quick and easy. All you need is the recipient's name, email, and the amount - that's it! Recipients receive their Digital Check via email, where they can verify their bank account instantly for deposit.",
+    "title1": "Automatic Reconciliation",
+    "content1": "No more storing sensitive banking information. We take care of the compliance so you don't have to.",
+    "title2": "Compliance Covered",
+    "content2": "No more storing sensitive banking information. We take care of the compliance so you don't have to.",
+    "image": "/uploads/Group 399.jpg"
   },
   "displayinsights": {
     "Headingone": "Discover ",

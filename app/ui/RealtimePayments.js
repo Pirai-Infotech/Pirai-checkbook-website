@@ -8,7 +8,7 @@ import easyicon from "@/public/Easyprocess.svg";
 import labelicon from "@/public/Whitelabel.svg";
 import DiscoverInsights from "../ui/DiscoverInsights";
 import Verticalhover from "../ui/Verticalhover";
-import ACHCompliance from "../../public/ACH_complaince.png";
+import ACME from "@/public/ACME.svg";
 import Testimonials from "../ui/Testimonials";
 import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 import HeroSection from "../ui/HeroSection";
@@ -16,69 +16,68 @@ import ACHthumbnail from "@/public/workflow-ACH_thumbnail.png";
 import cartImage from "@/public/cartBackground.svg";
 import Image from "next/image";
 import { useTina } from "tinacms/dist/react";
-import { tinaField } from "tinacms/dist/react";
 
 // const items = [
 //   {
 //     icon: easyicon,
-//     iconAlt: "Complete Control",
-//     title: "Complete Control",
-//     text: "Disburse payments to your users using our ACH API or full featured, user-friendly dashboard.",
+//     iconAlt: "Board Acceptance",
+//     title: "Board Acceptance",
+//     text: "Today, the RTP network’s real-time payment capabilities are accessible to over 70% of US bank accounts.",
 //   },
 //   {
 //     icon: labelicon,
-//     iconAlt: "Built in Scalability",
-//     title: "Built in Scalability",
-//     text: "Checkbook offers a secure, scalable and reliable way for your business to move money via ACH.",
+//     iconAlt: "Instant Settlement",
+//     title: "Instant Settlement",
+//     text: "Checkbook’s real-time payments post instantly to your recipient's bank account, 24 hours a day, 7 days a week.",
 //   },
 // ];
 // const itemscon = [
 //   {
-//     heading: "Automatic Reconciliation",
-//     text: "No more storing sensitive banking information. We take care of the compliance so you don't have to.",
+//     heading: "User Friendly",
+//     text: "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
 //   },
 //   {
-//     heading: "Compliance Covered",
-//     text: "No more storing sensitive banking information. We take care of the compliance so you don't have to.",
+//     heading: "Finality Settlement",
+//     text: "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
 //   },
 // ];
 export default function Page(props) {
 
-  const { data } = useTina({
-    query: props.query,
-    variables: props.variables,
-    data: props.data,
-  });
+    const { data } = useTina({
+      query: props.query,
+      variables: props.variables,
+      data: props.data,
+    });
 
-  const tinaData = data?.blog;
+    const tinaData = data?.realtime;
 
-  const sectionTwoData = tinaData?.horizhover;
-  const items = [1, 2].map((index) => ({
-    icon: sectionTwoData?.[`image${index}`],
-    iconKey: `image${index}`, 
-    iconAlt: sectionTwoData?.[`title${index}`],
-    title: sectionTwoData?.[`title${index}`],
-    titleKey: `title${index}`, 
-    text: sectionTwoData?.[`content${index}`],
-    textKey: `content${index}`, 
-  }));
+    const sectionTwoData = tinaData?.horizhover;
+    const items = [1, 2].map((index) => ({
+      icon: sectionTwoData?.[`image${index}`],
+      iconKey: `image${index}`, 
+      iconAlt: sectionTwoData?.[`title${index}`],
+      title: sectionTwoData?.[`title${index}`],
+      titleKey: `title${index}`, 
+      text: sectionTwoData?.[`content${index}`],
+      textKey: `content${index}`, 
+    }));
 
-  const sectionThree = tinaData?.sectionThree;
-  const itemscon = [1, 2].map((index) => ({
-    heading: sectionThree?.[`title${index}`],
-    headingKey: `title${index}`, 
-    text: sectionThree?.[`content${index}`],
-    textKey: `content${index}`, 
-  }));
-
+    const sectionThree = tinaData?.sectionThree;
+    const itemscon = [1, 2].map((index) => ({
+      heading: sectionThree?.[`title${index}`],
+      headingKey: `title${index}`, 
+      text: sectionThree?.[`content${index}`],
+      textKey: `content${index}`, 
+    }));
+    
   return (
-    <div className="px-5 py-10 lg:py-0 sm:px-0">
-      <HeroSection
+    <div className="px-4 sm:px-0">
+        <HeroSection
         heroText={tinaData?.heroText}
         heading={tinaData?.heroText?.bannerTitle}
         spancon={tinaData?.heroText?.bannerSpanTitle}
         description={tinaData?.heroText?.bannerContent}
-        rightimg={tinaData?.heroText?.bannerImage}
+        rightimg={TopBanner}
         heroString="heroText"
         bannerString="bannerTitle"
         bannerspanString="bannerSpanTitle"
@@ -101,7 +100,8 @@ export default function Page(props) {
           ContentString="content"
         />
       </section>
-      <Verticalhover
+      
+       <Verticalhover
         sectionThree={tinaData?.sectionThree}
         digital="digital"
         digitalspan="digitalspan"
@@ -110,7 +110,7 @@ export default function Page(props) {
         spancon={tinaData?.sectionThree?.digitalspan}
         description={tinaData?.sectionThree?.digitalcontent}
         items={itemscon}
-        imageSrc={tinaData?.sectionThree?.image}
+        imageSrc={ACME}
       />
 
       <section className="container main-con xl:w-[1238px] m-auto relative">
@@ -128,39 +128,17 @@ export default function Page(props) {
         </div>
       </section>
       <section>
-        <DiscoverInsights
-        insightType="ACH payments" 
-        displayinsights={tinaData?.displayinsights}
-        heading={tinaData?.displayinsights?.Headingone}
-        description={tinaData?.displayinsights?.Headingtwo}
-        descriptions={tinaData?.displayinsights?.insight}
-        headstring="Headingtwo"
-        />
+        <DiscoverInsights insightType="Realtime Payments" />
       </section>
       <section className=" py-10 relative">
-        <Testimonials  
-        testimon={tinaData?.testimon} 
-        cards={tinaData?.cards} 
-
-        carouselHeading={tinaData?.testimonials?.carouselHeading} 
-        />
-        
+        <Testimonials />
       </section>
       <section className="py-10">
-        <ReadytoGetStart  
-        rgs={tinaData?.rgs}
-        rgstwo={tinaData?.rgstwo}    
-        rgsthree={tinaData?.rgsthree}
-      />
-      </section>      
-      <section className="container main-con m-auto py-10">
-        <Faq 
-         faq={tinaData?.faq} 
-         faqheadings={tinaData?.faq?.faqheading} 
-        />
+        <ReadytoGetStart />
+      </section>
+      <section>
+        <Faq />
       </section>
     </div>
   );
 }
-
-// export default page;

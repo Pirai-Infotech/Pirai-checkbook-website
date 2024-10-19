@@ -1,0 +1,17 @@
+{
+  "header": {
+    "label1": "Home",
+    "label2": "Products",
+    "label3": "Solutions",
+    "label4": "Resources",
+    "label5": "Industries",
+    "label6": "ROI Calculator",
+    "label7": "Pricing",
+    "button": "Sign Up"
+  },
+  "heroText": {
+    "bannerTitle": "Meet",
+    "bannerSpanTitle": "Checkboo",
+    "bannerContent": "We are a dedicated bunch of trailblazers who are passionate about innovation in the payments space. We understand payments inside-out - from a technical as well as a business perspective. Each one of us is closely involved in building products we believe in."
+  }
+}

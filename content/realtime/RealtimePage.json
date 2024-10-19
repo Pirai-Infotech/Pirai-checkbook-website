@@ -1,0 +1,38 @@
+{
+  "header": {
+    "label1": "Home",
+    "label2": "Products",
+    "label3": "Solutions",
+    "label4": "Resources",
+    "label5": "Industries",
+    "label6": "ROI Calculator",
+    "label7": "Pricing",
+    "button": "Sign Up"
+  },
+  "heroText": {
+    "bannerTitle": "Send",
+    "bannerSpanTitle": "Real-Time Payments",
+    "bannerContent": "Checkbook’s real-time payment solution utilizes the RTP network provided by The Clearing House. Unlike ACH, RTP is a real-time payments platform that allows recipients to receive funds directly into their bank account in less than 60 seconds.",
+    "bannerButtonText1": "Sign Up",
+    "bannerButtonText2": "Try Our Demo"
+  },
+  "horizhover": {
+    "title": "Instant Payments for All",
+    "content": "Current bank to bank payment solutions are prohibitively expensive (e.g. wire transfers) or take days to settle (e.g. ACH). Checkbook's real-time payments solution is helping to bring US-based bank payments to the 21st century with instant, round the clock settlement 365 days a year.",
+    "image1": "/uploads/Group 234.jpg",
+    "title1": "Board Acceptance",
+    "content1": "Today, the RTP network’s real-time payment capabilities are accessible to over 70% of US bank accounts.",
+    "image2": "/uploads/Group 241.jpg",
+    "title2": "Instant Settlement",
+    "content2": "Checkbook’s real-time payments post instantly to your recipient's bank account, 24 hours a day, 7 days a week."
+  },
+  "sectionThree": {
+    "digital": "RTP",
+    "digitalspan": "Growing",
+    "digitalcontent": "First launched in 2017, the RTP network brings a much needed upgrade to the domestic payments infrastructure. While bringing innovations in payments speed and convenience, the RTP® network is supported at the financial institutions you already use.",
+    "title1": "User Friendly",
+    "content1": "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
+    "title2": "Finality Settlement",
+    "content2": "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement."
+  }
+}

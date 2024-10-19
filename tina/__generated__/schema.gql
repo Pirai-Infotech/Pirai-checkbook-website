@@ -53,8 +53,12 @@ type Query {
   collections: [Collection!]!
   node(id: String): Node!
   document(collection: String, relativePath: String): DocumentNode!
+  about(relativePath: String): About!
+  aboutConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: AboutFilter): AboutConnection!
   blog(relativePath: String): Blog!
   blogConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: BlogFilter): BlogConnection!
+  realtime(relativePath: String): Realtime!
+  realtimeConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: RealtimeFilter): RealtimeConnection!
   page(relativePath: String): Page!
   pageConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PageFilter): PageConnection!
   post(relativePath: String): Post!
@@ -62,7 +66,9 @@ type Query {
 }
 
 input DocumentFilter {
+  about: AboutFilter
   blog: BlogFilter
+  realtime: RealtimeFilter
   page: PageFilter
   post: PostFilter
 }
@@ -90,7 +96,107 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Blog | Page | Post | Folder
+union DocumentNode = About | Blog | Realtime | Page | Post | Folder
+
+type AboutHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+type AboutHeroText {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+}
+
+type AboutDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type About implements Node & Document {
+  header: AboutHeader
+  heroText: AboutHeroText
+  displayinsights: AboutDisplayinsights
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input ImageFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input StringFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input AboutHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
+}
+
+input AboutHeroTextFilter {
+  bannerTitle: StringFilter
+  bannerSpanTitle: StringFilter
+  bannerContent: StringFilter
+}
+
+input AboutDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input AboutFilter {
+  header: AboutHeaderFilter
+  heroText: AboutHeroTextFilter
+  displayinsights: AboutDisplayinsightsFilter
+}
+
+type AboutConnectionEdges {
+  cursor: String!
+  node: About
+}
+
+type AboutConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [AboutConnectionEdges]
+}
+
+type BlogHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
 
 type BlogHeroText {
   bannerTitle: String
@@ -101,21 +207,26 @@ type BlogHeroText {
   bannerImage: String
 }
 
-type BlogSectionTwo {
+type BlogHorizhover {
   title: String
-  titlecontent: String
-  titlecontentimage: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
   title2: String
-  titlecontent2: String
-  titlecontentimage3: String
-  title3: String
-  titlecontent3: String
+  content2: String
 }
 
 type BlogSectionThree {
   digital: String
   digitalspan: String
   digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
 }
 
 type BlogDisplayinsights {
@@ -124,66 +235,27 @@ type BlogDisplayinsights {
   insight: String
 }
 
-type BlogRgs {
-  readyheading: String
-  spanheading: String
-  readycontent: String
-  bannerButtonText1: String
-  bannerButtonText2: String
-}
-
-type BlogRgstwo {
-  readyheadingtwo: String
-  readycontenttwo: String
-  bannerButtonText3: String
-  readytwoimage: String
-}
-
-type BlogRgsthree {
-  readyheadingthree: String
-  readycontentthree: String
-  apibuttons: String
-  readythreeimage: String
-}
-
-type BlogFaqQuestions {
-  question: String
-  answer: String
-  ctatext: String
-  ctalink: String
-}
-
-type BlogFaq {
-  faqheading: String
-  questions: [BlogFaqQuestions]
-}
-
 type Blog implements Node & Document {
+  header: BlogHeader
   heroText: BlogHeroText
-  sectionTwo: BlogSectionTwo
+  horizhover: BlogHorizhover
   sectionThree: BlogSectionThree
   displayinsights: BlogDisplayinsights
-  rgs: BlogRgs
-  rgstwo: BlogRgstwo
-  rgsthree: BlogRgsthree
-  faq: BlogFaq
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
 }
 
-input StringFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-  in: [String]
-}
-
-input ImageFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-  in: [String]
+input BlogHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
 }
 
 input BlogHeroTextFilter {
@@ -195,21 +267,26 @@ input BlogHeroTextFilter {
   bannerImage: ImageFilter
 }
 
-input BlogSectionTwoFilter {
+input BlogHorizhoverFilter {
   title: StringFilter
-  titlecontent: StringFilter
-  titlecontentimage: ImageFilter
+  content: StringFilter
+  image1: ImageFilter
+  title1: StringFilter
+  content1: StringFilter
+  image2: ImageFilter
   title2: StringFilter
-  titlecontent2: StringFilter
-  titlecontentimage3: ImageFilter
-  title3: StringFilter
-  titlecontent3: StringFilter
+  content2: StringFilter
 }
 
 input BlogSectionThreeFilter {
   digital: StringFilter
   digitalspan: StringFilter
   digitalcontent: StringFilter
+  title1: StringFilter
+  content1: StringFilter
+  title2: StringFilter
+  content2: StringFilter
+  image: ImageFilter
 }
 
 input BlogDisplayinsightsFilter {
@@ -218,49 +295,12 @@ input BlogDisplayinsightsFilter {
   insight: StringFilter
 }
 
-input BlogRgsFilter {
-  readyheading: StringFilter
-  spanheading: StringFilter
-  readycontent: StringFilter
-  bannerButtonText1: StringFilter
-  bannerButtonText2: StringFilter
-}
-
-input BlogRgstwoFilter {
-  readyheadingtwo: StringFilter
-  readycontenttwo: StringFilter
-  bannerButtonText3: StringFilter
-  readytwoimage: ImageFilter
-}
-
-input BlogRgsthreeFilter {
-  readyheadingthree: StringFilter
-  readycontentthree: StringFilter
-  apibuttons: StringFilter
-  readythreeimage: ImageFilter
-}
-
-input BlogFaqQuestionsFilter {
-  question: StringFilter
-  answer: StringFilter
-  ctatext: StringFilter
-  ctalink: StringFilter
-}
-
-input BlogFaqFilter {
-  faqheading: StringFilter
-  questions: BlogFaqQuestionsFilter
-}
-
 input BlogFilter {
+  header: BlogHeaderFilter
   heroText: BlogHeroTextFilter
-  sectionTwo: BlogSectionTwoFilter
+  horizhover: BlogHorizhoverFilter
   sectionThree: BlogSectionThreeFilter
   displayinsights: BlogDisplayinsightsFilter
-  rgs: BlogRgsFilter
-  rgstwo: BlogRgstwoFilter
-  rgsthree: BlogRgsthreeFilter
-  faq: BlogFaqFilter
 }
 
 type BlogConnectionEdges {
@@ -272,6 +312,134 @@ type BlogConnection implements Connection {
   pageInfo: PageInfo!
   totalCount: Float!
   edges: [BlogConnectionEdges]
+}
+
+type RealtimeHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+type RealtimeHeroText {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+type RealtimeHorizhover {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+type RealtimeSectionThree {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+type RealtimeDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type Realtime implements Node & Document {
+  header: RealtimeHeader
+  heroText: RealtimeHeroText
+  horizhover: RealtimeHorizhover
+  sectionThree: RealtimeSectionThree
+  displayinsights: RealtimeDisplayinsights
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input RealtimeHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
+}
+
+input RealtimeHeroTextFilter {
+  bannerTitle: StringFilter
+  bannerSpanTitle: StringFilter
+  bannerContent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+  bannerImage: ImageFilter
+}
+
+input RealtimeHorizhoverFilter {
+  title: StringFilter
+  content: StringFilter
+  image1: ImageFilter
+  title1: StringFilter
+  content1: StringFilter
+  image2: ImageFilter
+  title2: StringFilter
+  content2: StringFilter
+}
+
+input RealtimeSectionThreeFilter {
+  digital: StringFilter
+  digitalspan: StringFilter
+  digitalcontent: StringFilter
+  title1: StringFilter
+  content1: StringFilter
+  title2: StringFilter
+  content2: StringFilter
+  image: ImageFilter
+}
+
+input RealtimeDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input RealtimeFilter {
+  header: RealtimeHeaderFilter
+  heroText: RealtimeHeroTextFilter
+  horizhover: RealtimeHorizhoverFilter
+  sectionThree: RealtimeSectionThreeFilter
+  displayinsights: RealtimeDisplayinsightsFilter
+}
+
+type RealtimeConnectionEdges {
+  cursor: String!
+  node: Realtime
+}
+
+type RealtimeConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [RealtimeConnectionEdges]
 }
 
 type PageBanner {
@@ -444,8 +612,12 @@ type Mutation {
   deleteDocument(collection: String, relativePath: String!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createFolder(collection: String, relativePath: String!): DocumentNode!
+  updateAbout(relativePath: String!, params: AboutMutation!): About!
+  createAbout(relativePath: String!, params: AboutMutation!): About!
   updateBlog(relativePath: String!, params: BlogMutation!): Blog!
   createBlog(relativePath: String!, params: BlogMutation!): Blog!
+  updateRealtime(relativePath: String!, params: RealtimeMutation!): Realtime!
+  createRealtime(relativePath: String!, params: RealtimeMutation!): Realtime!
   updatePage(relativePath: String!, params: PageMutation!): Page!
   createPage(relativePath: String!, params: PageMutation!): Page!
   updatePost(relativePath: String!, params: PostMutation!): Post!
@@ -453,16 +625,62 @@ type Mutation {
 }
 
 input DocumentUpdateMutation {
+  about: AboutMutation
   blog: BlogMutation
+  realtime: RealtimeMutation
   page: PageMutation
   post: PostMutation
   relativePath: String
 }
 
 input DocumentMutation {
+  about: AboutMutation
   blog: BlogMutation
+  realtime: RealtimeMutation
   page: PageMutation
   post: PostMutation
+}
+
+input AboutHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+input AboutHeroTextMutation {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+}
+
+input AboutDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input AboutMutation {
+  header: AboutHeaderMutation
+  heroText: AboutHeroTextMutation
+  displayinsights: AboutDisplayinsightsMutation
+}
+
+input BlogHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
 }
 
 input BlogHeroTextMutation {
@@ -474,21 +692,26 @@ input BlogHeroTextMutation {
   bannerImage: String
 }
 
-input BlogSectionTwoMutation {
+input BlogHorizhoverMutation {
   title: String
-  titlecontent: String
-  titlecontentimage: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
   title2: String
-  titlecontent2: String
-  titlecontentimage3: String
-  title3: String
-  titlecontent3: String
+  content2: String
 }
 
 input BlogSectionThreeMutation {
   digital: String
   digitalspan: String
   digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
 }
 
 input BlogDisplayinsightsMutation {
@@ -497,49 +720,69 @@ input BlogDisplayinsightsMutation {
   insight: String
 }
 
-input BlogRgsMutation {
-  readyheading: String
-  spanheading: String
-  readycontent: String
-  bannerButtonText1: String
-  bannerButtonText2: String
-}
-
-input BlogRgstwoMutation {
-  readyheadingtwo: String
-  readycontenttwo: String
-  bannerButtonText3: String
-  readytwoimage: String
-}
-
-input BlogRgsthreeMutation {
-  readyheadingthree: String
-  readycontentthree: String
-  apibuttons: String
-  readythreeimage: String
-}
-
-input BlogFaqQuestionsMutation {
-  question: String
-  answer: String
-  ctatext: String
-  ctalink: String
-}
-
-input BlogFaqMutation {
-  faqheading: String
-  questions: [BlogFaqQuestionsMutation]
-}
-
 input BlogMutation {
+  header: BlogHeaderMutation
   heroText: BlogHeroTextMutation
-  sectionTwo: BlogSectionTwoMutation
+  horizhover: BlogHorizhoverMutation
   sectionThree: BlogSectionThreeMutation
   displayinsights: BlogDisplayinsightsMutation
-  rgs: BlogRgsMutation
-  rgstwo: BlogRgstwoMutation
-  rgsthree: BlogRgsthreeMutation
-  faq: BlogFaqMutation
+}
+
+input RealtimeHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+input RealtimeHeroTextMutation {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+input RealtimeHorizhoverMutation {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+input RealtimeSectionThreeMutation {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+input RealtimeDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input RealtimeMutation {
+  header: RealtimeHeaderMutation
+  heroText: RealtimeHeroTextMutation
+  horizhover: RealtimeHorizhoverMutation
+  sectionThree: RealtimeSectionThreeMutation
+  displayinsights: RealtimeDisplayinsightsMutation
 }
 
 input PageBannerMutation {

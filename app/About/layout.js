@@ -1,8 +1,11 @@
 import React from "react";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";
+import client from "@/tina/__generated__/client";
 
-const layout = ({ children }) => {
+const Layout = async ({ children }) => {
+  const res = await client.queries.about({ relativePath: "AboutPage.json" });
+
   return (
     <div className="cb-bg bg-thr">
       <div className="block bg-gradient-to-r from-[#00FFB2] to-[#00E0FF] text-center py-5 px-5">
@@ -11,11 +14,12 @@ const layout = ({ children }) => {
           VOLUTPAT, ERAS PEDE SEMPER EST.
         </p>
       </div>
-      <Header />
+      <Header data={res.data} query={res.query} variables={res.variables} pageType="about" />
       {children}
-      <Footer />
+      <Footer data={res.data} query={res.query} variables={res.variables} contactFormText="Enroll in Realtime Payments" />
     </div>
   );
 };
 
-export default layout;
+export default Layout;
+

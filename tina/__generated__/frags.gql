@@ -1,5 +1,45 @@
+fragment AboutParts on About {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+}
+
 fragment BlogParts on Blog {
   __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
   heroText {
     __typename
     bannerTitle
@@ -9,22 +49,80 @@ fragment BlogParts on Blog {
     bannerButtonText2
     bannerImage
   }
-  sectionTwo {
+  horizhover {
     __typename
     title
-    titlecontent
-    titlecontentimage
+    content
+    image1
+    title1
+    content1
+    image2
     title2
-    titlecontent2
-    titlecontentimage3
-    title3
-    titlecontent3
+    content2
   }
   sectionThree {
     __typename
     digital
     digitalspan
     digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+}
+
+fragment RealtimeParts on Realtime {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
   }
   displayinsights {
     __typename
