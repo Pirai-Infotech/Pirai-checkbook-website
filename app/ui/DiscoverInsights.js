@@ -7,14 +7,14 @@ import Payments from "@/public/Payments.svg";
 import Image from "next/image";
 import { tinaField } from "tinacms/dist/react";
 
- function DiscoverInsights( {insightType ,displayinsights, heading, description,headstring,descriptions} ) 
+ function DiscoverInsights( {insightType ,displayinsights, heading, description,headstring,descriptions, discover} ) 
 {
   return (
     <div className="container main-con m-auto md-[0%] py-8 md:py-14">
       <h3 className="text-center sm:px-8 md:px-10 lg:px-[20%] 2xl:px-10 text-[35px] lg:text-[40px] xl:text-[50px] 2xl:text-[70px] 3xl:text-[92px] 3xl:leading-[111.34px] m-auto" data-tina-field={tinaField(displayinsights ,"Headingone")}>
         { heading} <span data-tina-field={tinaField(displayinsights , headstring)}>{description}</span> {descriptions} {insightType}
       </h3>
-      <div className="flex flex-col md:flex-row gap-10 pt-14">
+      <div className="flex flex-col md:flex-row gap-10 pt-14" data-tina-field={tinaField(discover, "image1")}>
         <div className="w-[100%] md:w-[48%] lg:w-[38%]">
           <div className="flex flex-col flex-1 gap-7">
             <div>
@@ -27,11 +27,11 @@ import { tinaField } from "tinacms/dist/react";
                 />
               </div>
               <div className="bg-grad-sec py-[25px] px-7 pxl:pl-[70px] 2xl:pl-[87px]">
-                <p className="pl-3 xl:pl-7 pb-3">SEP 01, 2023</p>
-                <p className="border-l-2 border-[#9180FF] pl-3 xl:pl-7 font-[450] sm:font-[400] text-[#404040] text-[18px] xl:text-[20px] 2xl:text-[28px]">
-                  FinTech Funding and Valuation versus Demand and Supply
+                <p className="pl-3 xl:pl-7 pb-3" data-tina-field={tinaField(discover, "date1")}>{discover?.date1}</p>
+                <p className="border-l-2 border-[#9180FF] pl-3 xl:pl-7 font-[450] sm:font-[400] text-[#404040] text-[18px] xl:text-[20px] 2xl:text-[28px]" data-tina-field={tinaField(discover, "content1")}>
+                  {discover?.content1}
                 </p>
-                <div className="pl-3 xl:pl-7 pt-4">
+                <div className="pl-3 xl:pl-7 pt-4" data-tina-field={tinaField(discover, "btn1")}>
                   <CTAButton
                     icon={signupArrow}
                     backgroundType={"bg-gradient-to-r"}
@@ -39,7 +39,7 @@ import { tinaField } from "tinacms/dist/react";
                       "from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"
                     }
                     textColor={"text-[#FFF]"}
-                    content={"Read More"}
+                    content={discover?.btn1}
                     paddingx={"px-7 lg:px-6 2xl:px-7"}
                     paddingy={"py-2 md:py-3"}
                     textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
@@ -57,13 +57,13 @@ import { tinaField } from "tinacms/dist/react";
                 <Image src={Businessintelligence} alt="Payments" />
               </div>
               <div className="bg-grad-sec py-[25px] px-7 xl:px-[40px] lg:pt-[70px] 2xl:pt-[120px]">
-                <p className="text-[14px] text-[#404040] font-[300] pl-3 xl:pl-7 pb-3">
-                  MAY 26, 2023
+                <p className="text-[14px] text-[#404040] font-[300] pl-3 xl:pl-7 pb-3" data-tina-field={tinaField(discover, "date3")}>
+                {discover?.date3}
                 </p>
-                <p className="border-l-2 border-[#9180FF] pl-3 xl:pl-7 pr-[12%] text-[#404040] text-[18px] xl:text-[20px] 2xl:text-[28px] font-[400]">
-                  How The Money Flows: Payments for Cash Advance
+                <p className="border-l-2 border-[#9180FF] pl-3 xl:pl-7 pr-[12%] text-[#404040] text-[18px] xl:text-[20px] 2xl:text-[28px] font-[400]" data-tina-field={tinaField(discover, "content3")}>
+                {discover?.content3}
                 </p>
-                <div className="pl-3 xl:pl-7 pt-4">
+                <div className="pl-3 xl:pl-7 pt-4" data-tina-field={tinaField(discover, "btn3")}>
                   <CTAButton
                     icon={signupArrow}
                     backgroundType={"bg-gradient-to-r"}
@@ -71,7 +71,7 @@ import { tinaField } from "tinacms/dist/react";
                       "from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"
                     }
                     textColor={"text-[#FFF]"}
-                    content={"Read More"}
+                    content={discover?.btn3}
                     paddingx={"px-7 lg:px-6 2xl:px-7"}
                     paddingy={"py-2 md:py-3"}
                     textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
@@ -92,19 +92,19 @@ import { tinaField } from "tinacms/dist/react";
               <Image src={Payments} alt="Payments" />
             </div>
             <div className="bg-grad-sec py-[25px] px-7 xl:px-[40px]  lg:pt-[70px] 2xl:pt-[120px]">
-              <p className="text-[14px] text-[#404040] font-[300] pl-3 xl:pl-7 pb-3">
-                MAR 29, 2023
+              <p className="text-[14px] text-[#404040] font-[300] pl-3 xl:pl-7 pb-3" data-tina-field={tinaField(discover, "date2")}>
+              {discover?.date2}
               </p>
-              <p className="border-l-2 border-[#9180FF] pl-3 xl:pl-7 pr-[12%] text-[#404040] text-[18px] xl:text-[20px] 2xl:text-[28px] font-[400]">
-                Building Creativity-Hackathons with Checkbook
+              <p className="border-l-2 border-[#9180FF] pl-3 xl:pl-7 pr-[12%] text-[#404040] text-[18px] xl:text-[20px] 2xl:text-[28px] font-[400]" data-tina-field={tinaField(discover, "content2")}>
+              {discover?.content2}
               </p>
-              <div className="pl-3 xl:pl-7 pt-4">
+              <div className="pl-3 xl:pl-7 pt-4" data-tina-field={tinaField(discover, "btn2")}>
                 <CTAButton
                   icon={signupArrow}
                   backgroundType={"bg-gradient-to-r"}
                   backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
                   textColor={"text-[#FFF]"}
-                  content={"Read More"}
+                  content={discover?.btn2}
                   paddingx={"px-7 lg:px-6 2xl:px-7"}
                   paddingy={"py-2 md:py-3"}
                   textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}
@@ -122,19 +122,19 @@ import { tinaField } from "tinacms/dist/react";
               <Image src={Businessintelligence} alt="Payments" />
             </div>
             <div className="bg-grad-sec py-[25px] px-7 xl:px-[40px] lg:pt-[70px] 2xl:pt-[120px]">
-              <p className="text-[14px] text-[#404040] font-[300] pl-3 xl:pl-7 pb-3">
-                MAY 26, 2023
+              <p className="text-[14px] text-[#404040] font-[300] pl-3 xl:pl-7 pb-3" data-tina-field={tinaField(discover, "date3")}>
+              {discover?.date3}
               </p>
-              <p className="border-l-2 border-[#9180FF] pl-3 xl:pl-7 pr-[12%] text-[#404040] text-[18px] xl:text-[20px] 2xl:text-[28px] font-[400]">
-                How The Money Flows: Payments for Cash Advance
+              <p className="border-l-2 border-[#9180FF] pl-3 xl:pl-7 pr-[12%] text-[#404040] text-[18px] xl:text-[20px] 2xl:text-[28px] font-[400]" data-tina-field={tinaField(discover, "content3")}>
+              {discover?.content3}
               </p>
-              <div className="pl-3 xl:pl-7 pt-4">
+              <div className="pl-3 xl:pl-7 pt-4" data-tina-field={tinaField(discover, "btn3")}>
                 <CTAButton
                   icon={signupArrow}
                   backgroundType={"bg-gradient-to-r"}
                   backgroundColor={"from-[#9281FF] via-[#3EA8BD] to-[#89D6FF]"}
                   textColor={"text-[#FFF]"}
-                  content={"Read More"}
+                  content={discover?.btn3}
                   paddingx={"px-7 lg:px-6 2xl:px-7"}
                   paddingy={"py-2 md:py-3"}
                   textSize={"text-[17px] lg:text-[10px] xl:text-[17px]"}

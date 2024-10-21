@@ -157,6 +157,324 @@ query realtimeConnection($before: String, $after: String, $first: Float, $last: 
   }
 }
 
+query fednow($relativePath: String!) {
+  fednow(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...FednowParts
+  }
+}
+
+query fednowConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: FednowFilter) {
+  fednowConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...FednowParts
+      }
+    }
+  }
+}
+
+query instant($relativePath: String!) {
+  instant(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...InstantParts
+  }
+}
+
+query instantConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: InstantFilter) {
+  instantConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...InstantParts
+      }
+    }
+  }
+}
+
+query mailed($relativePath: String!) {
+  mailed(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...MailedParts
+  }
+}
+
+query mailedConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: MailedFilter) {
+  mailedConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...MailedParts
+      }
+    }
+  }
+}
+
+query printable($relativePath: String!) {
+  printable(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...PrintableParts
+  }
+}
+
+query printableConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: PrintableFilter) {
+  printableConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...PrintableParts
+      }
+    }
+  }
+}
+
+query virtual($relativePath: String!) {
+  virtual(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...VirtualParts
+  }
+}
+
+query virtualConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: VirtualFilter) {
+  virtualConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...VirtualParts
+      }
+    }
+  }
+}
+
+query zelle($relativePath: String!) {
+  zelle(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...ZelleParts
+  }
+}
+
+query zelleConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ZelleFilter) {
+  zelleConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...ZelleParts
+      }
+    }
+  }
+}
+
 query page($relativePath: String!) {
   page(relativePath: $relativePath) {
     ... on Document {
@@ -205,6 +523,112 @@ query pageConnection($before: String, $after: String, $first: Float, $last: Floa
           id
         }
         ...PageParts
+      }
+    }
+  }
+}
+
+query terms($relativePath: String!) {
+  terms(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...TermsParts
+  }
+}
+
+query termsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: TermsFilter) {
+  termsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...TermsParts
+      }
+    }
+  }
+}
+
+query policy($relativePath: String!) {
+  policy(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...PolicyParts
+  }
+}
+
+query policyConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: PolicyFilter) {
+  policyConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...PolicyParts
       }
     }
   }

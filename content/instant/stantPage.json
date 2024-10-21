@@ -11,29 +11,29 @@
   },
   "heroText": {
     "bannerTitle": "Send",
-    "bannerSpanTitle": "Real-Time Payments",
-    "bannerContent": "Checkbook’s real-time payment solution utilizes the RTP network provided by The Clearing House. Unlike ACH, RTP is a real-time payments platform that allows recipients to receive funds directly into their bank account in less than 60 seconds.",
+    "bannerSpanTitle": "Instant Payments Today",
+    "bannerContent": "With Instant Pay your business can push payouts to any VISA or MasterCard branded debit or ATM card in seconds. Checkbook leverages original credit transactions (OCT) to expand our network to billions of eligible cards.",
     "bannerButtonText1": "Sign Up",
     "bannerButtonText2": "Try Our Demo"
   },
   "horizhover": {
-    "title": "Instant Payments for All",
-    "content": "Current bank to bank payment solutions are prohibitively expensive (e.g. wire transfers) or take days to settle (e.g. ACH). Checkbook's real-time payments solution is helping to bring US-based bank payments to the 21st century with instant, round the clock settlement 365 days a year.",
+    "title": "Funds Delivered Immediately with Instant Pay",
+    "content": "Instant Pay allows our users to receive funds in seconds, directly to their debit card, any day of the week. All card data is tokenized and protected in our PCI DSS service provider level 1 systems.",
     "image1": "/uploads/Group 234.jpg",
-    "title1": "Board Acceptance",
-    "content1": "Today, the RTP network’s real-time payment capabilities are accessible to over 70% of US bank accounts.",
+    "title1": "Increased Security",
+    "content1": "Instant Pay is supported through our API, our dashboard and our integrations - customize the experience to fit your needs.",
     "image2": "/uploads/Group 241.jpg",
-    "title2": "Instant Settlement",
-    "content2": "Checkbook’s real-time payments post instantly to your recipient's bank account, 24 hours a day, 7 days a week."
+    "title2": "Full Control",
+    "content2": "Instant Pay is supported through our API, our dashboard and our integrations - customize the experience to fit your needs."
   },
   "sectionThree": {
-    "digital": "RTP",
-    "digitalspan": "Growing",
-    "digitalcontent": "First launched in 2017, the RTP network brings a much needed upgrade to the domestic payments infrastructure. While bringing innovations in payments speed and convenience, the RTP® network is supported at the financial institutions you already use.",
-    "title1": "User Friendly",
-    "content1": "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
-    "title2": "Finality Settlement",
-    "content2": "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement."
+    "digital": "Recipients Expect",
+    "digitalspan": "Instant Payments",
+    "digitalcontent": "Checkbook eliminates pain points for frustrated customers waiting on checks in the mail, reluctant to provide sensitive bank information or those without bank accounts. Satisfy your customers by enabling them to receive payments instantly, 365 days a year.",
+    "title1": "Improved customer experience",
+    "content1": "No more checks lost in the mail or long settlement wait times - funds arrive in seconds.",
+    "title2": "Instant availability of funds",
+    "content2": "No more checks lost in the mail or long settlement wait times - funds arrive in seconds."
   },
   "displayinsights": {
     "Headingone": "Discover",

@@ -2,13 +2,13 @@
 import React from "react";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Faq from "../ui/Faq";
-import TopBanner from "@/public/digitalcheck.svg";
+import TopBanner from "@/public/zellecheck.svg";
 import Horizhover from "../ui/Horizhover";
 import easyicon from "@/public/Easyprocess.svg";
 import labelicon from "@/public/Whitelabel.svg";
 import DiscoverInsights from "../ui/DiscoverInsights";
 import Verticalhover from "../ui/Verticalhover";
-import ACME from "@/public/ACME.svg";
+import zellepayments from "@/public/zellepayment.svg";
 import Testimonials from "../ui/Testimonials";
 import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 import HeroSection from "../ui/HeroSection";
@@ -20,25 +20,15 @@ import { useTina } from "tinacms/dist/react";
 // const items = [
 //   {
 //     icon: easyicon,
-//     iconAlt: "Board Acceptance",
-//     title: "Board Acceptance",
-//     text: "Today, the RTP network’s real-time payment capabilities are accessible to over 70% of US bank accounts.",
+//     iconAlt: "Broad Acceptance",
+//     title: "Broad Acceptance",
+//     text: "By leveraging Zelle's ubiquity, Checkbook can empower more businesses and individuals with a reliable and credible payment solution.",
 //   },
 //   {
 //     icon: labelicon,
 //     iconAlt: "Instant Settlement",
 //     title: "Instant Settlement",
-//     text: "Checkbook’s real-time payments post instantly to your recipient's bank account, 24 hours a day, 7 days a week.",
-//   },
-// ];
-// const itemscon = [
-//   {
-//     heading: "User Friendly",
-//     text: "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
-//   },
-//   {
-//     heading: "Finality Settlement",
-//     text: "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
+//     text: "With Zelle, Checkbook customers can transfer funds instantly.",
 //   },
 // ];
 export default function Page(props) {
@@ -49,8 +39,7 @@ export default function Page(props) {
       data: props.data,
     });
 
-    const tinaData = data?.realtime;
-
+    const tinaData = data?.zelle;
     const sectionTwoData = tinaData?.horizhover;
     const items = [1, 2].map((index) => ({
       icon: sectionTwoData?.[`image${index}`],
@@ -62,17 +51,9 @@ export default function Page(props) {
       textKey: `content${index}`, 
     }));
 
-    const sectionThree = tinaData?.sectionThree;
-    const itemscon = [1, 2].map((index) => ({
-      heading: sectionThree?.[`title${index}`],
-      headingKey: `title${index}`, 
-      text: sectionThree?.[`content${index}`],
-      textKey: `content${index}`, 
-    }));
-    
   return (
-    <div className="px-4 sm:px-0">
-        <HeroSection
+    <div className="px-4 md:py-10 lg:py-0 sm:px-0">
+    <HeroSection
         heroText={tinaData?.heroText}
         heading={tinaData?.heroText?.bannerTitle}
         spancon={tinaData?.heroText?.bannerSpanTitle}
@@ -91,7 +72,7 @@ export default function Page(props) {
       />
 
       <section>
-        <Horizhover
+      <Horizhover
           sectionTwo={tinaData?.horizhover}
           heading={tinaData?.horizhover?.title}
           description={tinaData?.horizhover?.content}
@@ -100,8 +81,8 @@ export default function Page(props) {
           ContentString="content"
         />
       </section>
-      
-       <Verticalhover
+
+        <Verticalhover
         sectionThree={tinaData?.sectionThree}
         digital="digital"
         digitalspan="digitalspan"
@@ -109,8 +90,8 @@ export default function Page(props) {
         heading={tinaData?.sectionThree?.digital}
         spancon={tinaData?.sectionThree?.digitalspan}
         description={tinaData?.sectionThree?.digitalcontent}
-        items={itemscon}
-        imageSrc={ACME}
+        // items={itemscon}
+        imageSrc={zellepayments}
       />
 
       <section className="container main-con xl:w-[1238px] m-auto relative">
@@ -129,7 +110,7 @@ export default function Page(props) {
       </section>
       <section>
         <DiscoverInsights
-        insightType="Realtime Payments" 
+        insightType="Zelle Payments" 
         displayinsights={tinaData?.displayinsights}
         heading={tinaData?.displayinsights?.Headingone}
         description={tinaData?.displayinsights?.Headingtwo}
@@ -146,7 +127,7 @@ export default function Page(props) {
         rgs={tinaData?.rgs}
         rgstwo={tinaData?.rgstwo}    
         rgsthree={tinaData?.rgsthree}
-      />  
+      />
       </section>
       <section>
         <Faq />

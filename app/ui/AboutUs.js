@@ -19,7 +19,6 @@ export default function Page(props) {
     });
   
     const tinaData = data?.about;
-    console.log(tinaData,"tinadata11")
   return (
     <div className="px-4 sm:px-0">
       <div className="pt-8 sm:pt-0 px-3 md:px-0">

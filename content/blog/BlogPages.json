@@ -1,7 +1,4 @@
 {
-  "sectionFour": {
-    "four": "Tetimon"
-  },
   "testcard": {
     "cardheading": "Testimonials",
     "carouselItems": [
@@ -54,9 +51,20 @@
     "image": "/uploads/Group 399.jpg"
   },
   "displayinsights": {
-    "Headingone": "Discover ",
+    "Headingone": "Discover",
     "Headingtwo": "insights ",
     "insight": " and learn how to manage "
+  },
+  "discover": {
+    "date1": "2023-08-31T18:30:00.000Z",
+    "content1": "FinTech Funding and Valuation versus Demand and Supply",
+    "btn1": "Read More",
+    "date2": "2023-03-28T18:30:00.000Z",
+    "content2": "Building Creativity-Hackathons with Checkbook",
+    "btn2": "Read More",
+    "date3": "2023-05-25T18:30:00.000Z",
+    "content3": "How The Money Flows: Payments for Cash Advance",
+    "btn3": "Read More"
   },
   "rgs": {
     "readyheading": "Ready to get ",

@@ -10,30 +10,30 @@
     "button": "Sign Up"
   },
   "heroText": {
-    "bannerTitle": "Send",
-    "bannerSpanTitle": "Real-Time Payments",
-    "bannerContent": "Checkbook’s real-time payment solution utilizes the RTP network provided by The Clearing House. Unlike ACH, RTP is a real-time payments platform that allows recipients to receive funds directly into their bank account in less than 60 seconds.",
+    "bannerTitle": "Create & Send",
+    "bannerSpanTitle": "Virtual Cards*",
+    "bannerContent": "A virtual card is a unique 16-digit payment card number that is digitally generated and tied to your account. Virtual cards can be processed anywhere traditional card payments are accepted.",
     "bannerButtonText1": "Sign Up",
     "bannerButtonText2": "Try Our Demo"
   },
   "horizhover": {
-    "title": "Instant Payments for All",
-    "content": "Current bank to bank payment solutions are prohibitively expensive (e.g. wire transfers) or take days to settle (e.g. ACH). Checkbook's real-time payments solution is helping to bring US-based bank payments to the 21st century with instant, round the clock settlement 365 days a year.",
-    "image1": "/uploads/Group 234.jpg",
-    "title1": "Board Acceptance",
-    "content1": "Today, the RTP network’s real-time payment capabilities are accessible to over 70% of US bank accounts.",
+    "title": "Funds Delivered in Near Real-time with Virtual Card",
+    "content": "Did you know that you can earn money with virtual cards? Checkbook shares a portion of the interchange fee with our senders, allowing you to earn money with every payment. Pay merchants or vendors in a few simple clicks!",
+    "image1": "/uploads/Easyprocess.53553ae7.svg",
+    "title1": "Reduced Risk",
+    "content1": "Virtual cards act as a layer of protection between your funding source and the merchant - reducing risk and enhancing privacy.",
     "image2": "/uploads/Group 241.jpg",
-    "title2": "Instant Settlement",
-    "content2": "Checkbook’s real-time payments post instantly to your recipient's bank account, 24 hours a day, 7 days a week."
+    "title2": "Increase Control",
+    "content2": "Virtual cards are created with a specified recipient, time limit, and amount for every payment."
   },
   "sectionThree": {
-    "digital": "RTP",
-    "digitalspan": "Growing",
-    "digitalcontent": "First launched in 2017, the RTP network brings a much needed upgrade to the domestic payments infrastructure. While bringing innovations in payments speed and convenience, the RTP® network is supported at the financial institutions you already use.",
+    "digital": "Recipients Expect",
+    "digitalspan": "Fast Payments",
+    "digitalcontent": "There are 55 million adults in the US who are unbanked or underbanked. Checkbook’s virtual cards are a great choice for serving recipients who do not have sufficient access to a bank account or are reluctant to provide sensitive bank information.",
     "title1": "User Friendly",
-    "content1": "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
-    "title2": "Finality Settlement",
-    "content2": "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement."
+    "content1": "Use virtual cards so you never have to worry about canceling a free trial or monthly subscription again.",
+    "title2": "Reduce Risk",
+    "content2": "Use virtual cards so you never have to worry about canceling a free trial or monthly subscription again."
   },
   "displayinsights": {
     "Headingone": "Discover",

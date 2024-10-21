@@ -51,7 +51,6 @@ export default function Page(props) {
   });
 
   const tinaData = data?.blog;
-
   const sectionTwoData = tinaData?.horizhover;
   const items = [1, 2].map((index) => ({
     icon: sectionTwoData?.[`image${index}`],
@@ -135,6 +134,7 @@ export default function Page(props) {
         description={tinaData?.displayinsights?.Headingtwo}
         descriptions={tinaData?.displayinsights?.insight}
         headstring="Headingtwo"
+        discover={tinaData?.discover}
         />
       </section>
       <section className=" py-10 relative">

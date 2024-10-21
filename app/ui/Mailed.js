@@ -1,44 +1,44 @@
 "use client";
 import React from "react";
+import ACHthumbnail from "@/public/workflow-ACH_thumbnail.png";
+import cartImage from "@/public/cartBackground.svg";
+import Image from "next/image";
 import ReadytoGetStart from "../ui/ReadytoGetStart";
 import Faq from "../ui/Faq";
-import TopBanner from "@/public/digitalcheck.svg";
+import TopBanner from "../../public/mailCheckbook.svg";
 import Horizhover from "../ui/Horizhover";
 import easyicon from "@/public/Easyprocess.svg";
 import labelicon from "@/public/Whitelabel.svg";
 import DiscoverInsights from "../ui/DiscoverInsights";
 import Verticalhover from "../ui/Verticalhover";
-import ACME from "@/public/ACME.svg";
+import Papercheck from "../../public/MailBox.svg";
 import Testimonials from "../ui/Testimonials";
-import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 import HeroSection from "../ui/HeroSection";
-import ACHthumbnail from "@/public/workflow-ACH_thumbnail.png";
-import cartImage from "@/public/cartBackground.svg";
-import Image from "next/image";
+import VideoWithThumbnail from "../ui/VideoWithThumbnail";
 import { useTina } from "tinacms/dist/react";
 
 // const items = [
 //   {
 //     icon: easyicon,
-//     iconAlt: "Board Acceptance",
-//     title: "Board Acceptance",
-//     text: "Today, the RTP network’s real-time payment capabilities are accessible to over 70% of US bank accounts.",
+//     iconAlt: "Easy to send",
+//     title: "Easy to send",
+//     text: "Our mailed checks only require a name, address and amount - we do the rest!",
 //   },
 //   {
 //     icon: labelicon,
-//     iconAlt: "Instant Settlement",
-//     title: "Instant Settlement",
-//     text: "Checkbook’s real-time payments post instantly to your recipient's bank account, 24 hours a day, 7 days a week.",
+//     iconAlt: "White-label experience",
+//     title: "White-label experience",
+//     text: "Customize mailed checks with your business name and branding.",
 //   },
 // ];
 // const itemscon = [
 //   {
-//     heading: "User Friendly",
-//     text: "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
+//     heading: "Keep everything in one place",
+//     text: "Not using an ERP? No problem. Our RESTful API and dashboard CSV upload provide an effortless way for sending large volumes of checks.",
 //   },
 //   {
-//     heading: "Finality Settlement",
-//     text: "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
+//     heading: "Batch Files",
+//     text: "Not using an ERP? No problem. Our RESTful API and dashboard CSV upload provide an effortless way for sending large volumes of checks.",
 //   },
 // ];
 export default function Page(props) {
@@ -49,8 +49,7 @@ export default function Page(props) {
       data: props.data,
     });
 
-    const tinaData = data?.realtime;
-
+    const tinaData = data?.mailed;
     const sectionTwoData = tinaData?.horizhover;
     const items = [1, 2].map((index) => ({
       icon: sectionTwoData?.[`image${index}`],
@@ -71,8 +70,8 @@ export default function Page(props) {
     }));
     
   return (
-    <div className="px-4 sm:px-0">
-        <HeroSection
+    <div className="px-5 sm:px-0">
+      <HeroSection
         heroText={tinaData?.heroText}
         heading={tinaData?.heroText?.bannerTitle}
         spancon={tinaData?.heroText?.bannerSpanTitle}
@@ -91,7 +90,7 @@ export default function Page(props) {
       />
 
       <section>
-        <Horizhover
+      <Horizhover
           sectionTwo={tinaData?.horizhover}
           heading={tinaData?.horizhover?.title}
           description={tinaData?.horizhover?.content}
@@ -100,8 +99,8 @@ export default function Page(props) {
           ContentString="content"
         />
       </section>
-      
-       <Verticalhover
+
+     <Verticalhover
         sectionThree={tinaData?.sectionThree}
         digital="digital"
         digitalspan="digitalspan"
@@ -110,7 +109,7 @@ export default function Page(props) {
         spancon={tinaData?.sectionThree?.digitalspan}
         description={tinaData?.sectionThree?.digitalcontent}
         items={itemscon}
-        imageSrc={ACME}
+        imageSrc={Papercheck}
       />
 
       <section className="container main-con xl:w-[1238px] m-auto relative">
@@ -129,7 +128,7 @@ export default function Page(props) {
       </section>
       <section>
         <DiscoverInsights
-        insightType="Realtime Payments" 
+        insightType="Mail Paper Checks" 
         displayinsights={tinaData?.displayinsights}
         heading={tinaData?.displayinsights?.Headingone}
         description={tinaData?.displayinsights?.Headingtwo}
@@ -138,7 +137,7 @@ export default function Page(props) {
         discover={tinaData?.discover}
         />
       </section>
-      <section className=" py-10 relative">
+      <section className="py-14 lg:py-20 relative">
         <Testimonials />
       </section>
       <section className="py-10">
@@ -146,7 +145,7 @@ export default function Page(props) {
         rgs={tinaData?.rgs}
         rgstwo={tinaData?.rgstwo}    
         rgsthree={tinaData?.rgsthree}
-      />  
+      />
       </section>
       <section>
         <Faq />
@@ -154,3 +153,4 @@ export default function Page(props) {
     </div>
   );
 }
+

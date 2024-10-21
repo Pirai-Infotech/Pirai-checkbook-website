@@ -11,29 +11,25 @@
   },
   "heroText": {
     "bannerTitle": "Send",
-    "bannerSpanTitle": "Real-Time Payments",
-    "bannerContent": "Checkbook’s real-time payment solution utilizes the RTP network provided by The Clearing House. Unlike ACH, RTP is a real-time payments platform that allows recipients to receive funds directly into their bank account in less than 60 seconds.",
+    "bannerSpanTitle": "Zelle Payments ios",
+    "bannerContent": "Checkbook's modern payments platform now offers Zelle as a payout option to instantly pay their recipients. This provides a seamless and trustworthy experience for our users, emphasizing faster, secure and easily accessible financial transactions.",
     "bannerButtonText1": "Sign Up",
     "bannerButtonText2": "Try Our Demo"
   },
   "horizhover": {
-    "title": "Instant Payments for All",
-    "content": "Current bank to bank payment solutions are prohibitively expensive (e.g. wire transfers) or take days to settle (e.g. ACH). Checkbook's real-time payments solution is helping to bring US-based bank payments to the 21st century with instant, round the clock settlement 365 days a year.",
-    "image1": "/uploads/Group 234.jpg",
-    "title1": "Board Acceptance",
-    "content1": "Today, the RTP network’s real-time payment capabilities are accessible to over 70% of US bank accounts.",
+    "title": "Faster Payments for All",
+    "content": "Beyond a new payment option, the integration of Zelle with Checkbook's innovative technology ensures secure money transfers and peace of mind throughout the payment journey. With Zelle, Checkbook reinforces its position as the most ubiquitous single portal for payments.",
+    "image1": "/uploads/Easyprocess.53553ae7.svg",
+    "title1": "Broad Acceptance",
+    "content1": "By leveraging Zelle's ubiquity, Checkbook can empower more businesses and individuals with a reliable and credible payment solution.",
     "image2": "/uploads/Group 241.jpg",
     "title2": "Instant Settlement",
-    "content2": "Checkbook’s real-time payments post instantly to your recipient's bank account, 24 hours a day, 7 days a week."
+    "content2": "With Zelle, Checkbook customers can transfer funds instantly."
   },
   "sectionThree": {
-    "digital": "RTP",
-    "digitalspan": "Growing",
-    "digitalcontent": "First launched in 2017, the RTP network brings a much needed upgrade to the domestic payments infrastructure. While bringing innovations in payments speed and convenience, the RTP® network is supported at the financial institutions you already use.",
-    "title1": "User Friendly",
-    "content1": "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
-    "title2": "Finality Settlement",
-    "content2": "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement."
+    "digital": "Instant Payments",
+    "digitalspan": "Are Here!",
+    "digitalcontent": "The collaboration between Checkbook and Zelle reflects a shared goal to solve the challenges of push payments by helping people get paid faster, safer and with fewer errors."
   },
   "displayinsights": {
     "Headingone": "Discover",

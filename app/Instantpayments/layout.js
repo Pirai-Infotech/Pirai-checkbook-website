@@ -1,15 +1,19 @@
 import React from "react";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";
+import client from "@/tina/__generated__/client";
 
-const layout = ({ children }) => {
+const Layout = async ({ children }) => {
+  const res = await client.queries.instant({ relativePath: "stantPage.json" });
+
   return (
     <div className="cb-bg bg-ach">
-      <Header />
+      <Header data={res.data} query={res.query} variables={res.variables} pageType="instant" />
       {children}
-      <Footer contactFormText = "Enroll in Instant Payments" />
+      <Footer data={res.data} query={res.query} variables={res.variables} contactFormText= "Enroll in FedNow Payments" />
     </div>
   );
 };
 
-export default layout;
+export default Layout;
+

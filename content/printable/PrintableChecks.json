@@ -11,29 +11,29 @@
   },
   "heroText": {
     "bannerTitle": "Send",
-    "bannerSpanTitle": "Real-Time Payments",
-    "bannerContent": "Checkbook’s real-time payment solution utilizes the RTP network provided by The Clearing House. Unlike ACH, RTP is a real-time payments platform that allows recipients to receive funds directly into their bank account in less than 60 seconds.",
+    "bannerSpanTitle": "Printable Checks",
+    "bannerContent": "Checkbook’s printable checks eliminate print and postage costs, while cutting delivery time from days to seconds. Delivered via email, printable checks combine the efficiency of digital communication, with the familiarity of a paper check.",
     "bannerButtonText1": "Sign Up",
     "bannerButtonText2": "Try Our Demo"
   },
   "horizhover": {
-    "title": "Instant Payments for All",
-    "content": "Current bank to bank payment solutions are prohibitively expensive (e.g. wire transfers) or take days to settle (e.g. ACH). Checkbook's real-time payments solution is helping to bring US-based bank payments to the 21st century with instant, round the clock settlement 365 days a year.",
-    "image1": "/uploads/Group 234.jpg",
-    "title1": "Board Acceptance",
-    "content1": "Today, the RTP network’s real-time payment capabilities are accessible to over 70% of US bank accounts.",
+    "title": "Sending Payments is Simple",
+    "content": "Send a check directly to your recipient’s email. Our checks can be printed on standard printer paper and deposited just like a regular check - with a banking mobile app or in person at a local branch or ATM.",
+    "image1": "/uploads/Easyprocess.53553ae7.svg",
+    "title1": "Easy to process",
+    "content1": "Our printable checks display the check and endorsement on the same page - no need to fumble with multiple pages.",
     "image2": "/uploads/Group 241.jpg",
-    "title2": "Instant Settlement",
-    "content2": "Checkbook’s real-time payments post instantly to your recipient's bank account, 24 hours a day, 7 days a week."
+    "title2": "White-label experience",
+    "content2": "Completely customize the color and branding information displayed on each check."
   },
   "sectionThree": {
-    "digital": "RTP",
-    "digitalspan": "Growing",
-    "digitalcontent": "First launched in 2017, the RTP network brings a much needed upgrade to the domestic payments infrastructure. While bringing innovations in payments speed and convenience, the RTP® network is supported at the financial institutions you already use.",
-    "title1": "User Friendly",
-    "content1": "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement.",
-    "title2": "Finality Settlement",
-    "content2": "No need to worry about reconciling or chargebacks. Real-time payments allow for immediate and final settlement."
+    "digital": "Printable Checks Replace",
+    "digitalspan": "Paper Checks",
+    "digitalcontent": "Printable checks provide a great way to transition from mailed checks to digital payments. Recipients can leverage the same deposit processes they use for mailed checks, yet they don’t have to wait 3-5 days for the mail to arrive!",
+    "title1": "Privacy Conscious",
+    "content1": "Printable checks provide a cost effective way for businesses to make payments.",
+    "title2": "Cost Effective",
+    "content2": "Printable checks provide a cost effective way for businesses to make payments."
   },
   "displayinsights": {
     "Headingone": "Discover",

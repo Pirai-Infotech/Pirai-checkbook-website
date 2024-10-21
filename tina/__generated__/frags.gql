@@ -77,6 +77,54 @@ fragment BlogParts on Blog {
     Headingtwo
     insight
   }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
 }
 
 fragment RealtimeParts on Realtime {
@@ -129,6 +177,627 @@ fragment RealtimeParts on Realtime {
     Headingone
     Headingtwo
     insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+
+fragment FednowParts on Fednow {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+
+fragment InstantParts on Instant {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+
+fragment MailedParts on Mailed {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+
+fragment PrintableParts on Printable {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+
+fragment VirtualParts on Virtual {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+
+fragment ZelleParts on Zelle {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
   }
   rgs {
     __typename
@@ -217,6 +886,231 @@ fragment PageParts on Page {
       Heading3
       Content3
     }
+  }
+}
+
+fragment TermsParts on Terms {
+  __typename
+  conditions {
+    __typename
+    tacheading
+    spanheading
+    quote
+    spanquote
+    quote2
+    spanquote2
+    quote3
+    spanquote3
+    tacOne
+    termOne
+    tacTwo
+    termTwo
+    tacThree
+    termThree
+    tacFour
+    termFour
+    tacFive
+    termFive
+    tacSix
+    termSix
+    termSix2
+    termSix3
+    termSix4
+    tacSeven
+    termSeven
+    tacEight
+    termEight
+    tacNine
+    termNine
+    tacTen
+    termTen
+    tacEleven
+    termEleven
+    termElevenbold
+    termEleven2
+    termElevenbold3
+    termEleven3
+    termEleven4
+    termEleven5
+    termEleven6
+    termEleven7
+    termEleven8
+    termEleven9
+    termEleven10
+    termEleven11
+    termEleven12
+    tacTwelve
+    termTwelve
+    tacThirteen
+    termThirteen
+    termThirteen2
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+}
+
+fragment PolicyParts on Policy {
+  __typename
+  Privacypolicy {
+    __typename
+    heading
+    date
+    content
+    contentOne
+    contentTwo
+    contentThree
+    headingTwo
+    info
+    headingThree
+    personalinfo
+    list
+    listTwo
+    listThree
+    allinfo
+    headingFour
+    infocollect
+    headingFive
+    spanFive
+  }
+  PrivacyList {
+    __typename
+    thirdPartyName
+    thirdPartyEmail
+    thirdPartyAddress
+    thirdPartyPhone
+    billingHeading
+    creditCard
+    billingAddress
+    financialHeading
+    bankAccount
+    taxID
+    uniqueIdentifiersHeading
+    userName
+    accountNumbers
+    password
+    businessHeading
+    companyName
+    companySize
+    businessType
+    transactionVolume
+    otherInfoHeading
+    transactionData
+    generatedInfo
+    problemReport
+    correspondence
+    thirdPartyInfo
+    autoCollectHeading
+    autoCollectIntro
+    ipAddress
+    browserType
+    referringExitPages
+    operatingSystemInfo
+    otherBrowserInfo
+    trackingPolicy
+    howWeUseHeading
+    usageDetails
+    cookiesUsage
+    enforceTermsUsage
+    sharingInfo
+    noRentSell
+    limitedShare
+    legalReq
+    businessChanges
+    otherUses
+    nonIdentifiable
+    ccpaHeading
+    ccpaIntro
+    right
+    rightToKnow
+    rightToKnowDetails
+    collectedInfoCategories
+    sourcesInfoCategories
+    businessPurpose
+    thirdPartyCategories
+  }
+  rights {
+    __typename
+    right
+    right1
+    head1
+    right2
+    head2
+    right3
+    right4
+    euRightsHeading
+    euRightsIntro
+    seeInfoAboutYou
+    seeProvidedInfo
+    changeCorrectInfo
+    deleteInfo
+    stopProcessing
+    objectToProcessing
+    withdrawConsent
+    optOutFutureComms
+    declineInfo
+    cookieRefusal
+    cookieSettingsFirefox
+    cookieSettingsIE
+    cookieSettingsChrome
+    cookieSettingsSafariOSX
+    cookieSettingsSafariIOS
+    cookieSettingsAndroid
+    disableCookiesNote
+    optOutGoogleAnalytics
+    compromiseHeading
+    notificationProcedures
+    noLiability
+    linksHeading
+    noResponsibility
+    notificationHeading
+    notificationIntro
+    contactIntro
+    supportTeam
+    support
+    supportPhone
+    supportEmail
+  }
+  ready {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
   }
 }
 
