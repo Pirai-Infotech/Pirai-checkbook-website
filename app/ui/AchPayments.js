@@ -95,11 +95,6 @@ export default function Page(props) {
         heading={tinaData?.sectionThree?.digital}
         spancon={tinaData?.sectionThree?.digitalspan}
         description={tinaData?.sectionThree?.digitalcontent}
-        //   spancon="ACH Payments"
-        //   description="Our Digital Check solution makes payments quick and easy. All you need is
-        // the recipient's name, email, and the amount - that's it! Recipients
-        // receive their Digital Check via email, where they can verify their bank
-        // account instantly for deposit."
         items={itemscon}
         imageSrc={ACHCompliance}
       />
@@ -129,7 +124,13 @@ export default function Page(props) {
         />
       </section>
       <section className=" py-10 relative">
-        <Testimonials />
+        <Testimonials  
+        testimon={tinaData?.testimon} 
+        cards={tinaData?.cards} 
+
+        carouselHeading={tinaData?.testimonials?.carouselHeading} 
+        />
+        
       </section>
       <section className="py-10">
         <ReadytoGetStart  
@@ -140,7 +141,7 @@ export default function Page(props) {
       </section>      
       <section className="container main-con m-auto py-10">
         <Faq 
-         faq={tinaData?.faq}
+         faq={tinaData?.faq} 
          faqheadings={tinaData?.faq?.faqheading} 
         />
       </section>

@@ -107,7 +107,7 @@ function ReadytoGetStart({rgs,rgstwo,rgsthree}) {
               width={60}
               height={60}
               className="hidden lg:block"
-             
+              alt="what you pay"
               
             />
             <Image
