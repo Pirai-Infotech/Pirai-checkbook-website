@@ -1,4 +1,20 @@
 {
+  "sectionFour": {
+    "four": "Tetimonj"
+  },
+  "testcard": {
+    "cardheading": "Testimonials",
+    "carouselItems": [
+      {
+        "image": "/uploads/Testimonials_img1.57874119.png",
+        "name": "Laurent Charpentier",
+        "position": "COO, Yooz North America",
+        "quote": "“Checkbook seamlessly enables our clients to send Digital Cheques with           the",
+        "link": "https://your-link-here.com",
+        "altquote": ". Their APIs are easy to work with, and the Digital Cheque product is           a great alternative to paper cheques.”"
+      }
+    ]
+  },
   "heroText": {
     "bannerTitle": "Send",
     "bannerSpanTitle": "ACH Payments",
@@ -29,7 +45,7 @@
   },
   "rgs": {
     "readyheading": "Ready to get ",
-    "spanheading": "started?",
+    "spanheading": "started Yet?",
     "readycontent": "Explore Checkbook, or create an account instantly and start sending payments. You can also contact us to design a custom package for your business.",
     "bannerButtonText1": "Create Account",
     "bannerButtonText2": "Contact Sales"
@@ -47,10 +63,63 @@
   },
   "faq": {
     "faqheading": "Frequently Asked Questions",
-    "questions": [
+    "answers": [
       {
         "question": "How do I verify my bank?",
-        "answer": "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification..."
+        "answer": "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
+        "button": "Read More",
+        "link": "/"
+      },
+      {
+        "question": "How long does it take to receive funds?",
+        "answer": "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
+        "button": "Read More",
+        "link": "/"
+      },
+      {
+        "question": "How does Checkbook.io keep customer data secure?",
+        "answer": "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
+        "button": "Read More",
+        "link": "/"
+      },
+      {
+        "question": "How do I increase my limits?",
+        "answer": "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
+        "button": "Read More",
+        "link": "/"
+      },
+      {
+        "question": "How do I add a different bank account?",
+        "answer": "Banks can either be verified instantly (using online banking username and password) or manually (using account and routing number) on Checkbook. If you are adding a bank for the first time on Checkbook, you will be prompted to complete your profile thorough a banner notification...",
+        "button": "Read More",
+        "link": "/"
+      }
+    ]
+  },
+  "testimon": {
+    "testimonheading": "Testimonials",
+    "follow": [
+      {
+        "testimonquestion": "Jane Smith",
+        "testimonanswer": "CEO, FinTech Solutions",
+        "testimonbutton": " “Checkbook seamlessly enables our clients to send Digital Cheques with           the",
+        "testimonanchor": " click of a button",
+        "testimonbutton1": ". Their APIs are easy to work with, and the Digital Cheque product is           a great alternative to paper cheques.”"
+      },
+      {
+        "testimonquestion": "John Doe",
+        "testimonanswer": "TechCorp",
+        "testimonbutton": " “Checkbook seamlessly enables our clients to send Digital Cheques with  the",
+        "testimonanchor": " click of a button",
+        "testimonbutton1": ". Their APIs are easy to work with, and the Digital Cheque product is           a great alternative to paper cheques.”"
+      },
+      {
+        "testimonimage": "/uploads/Testimonials_img1.57874119.png",
+        "testimonquestion": "Laurent Charpentier",
+        "testimonanswer": "COO, Yooz North America",
+        "testimonbutton": "“Checkbook seamlessly enables our clients to send Digital Cheques with           the",
+        "testimonanchor": "click of a button",
+        "testimonbutton1": ". Their APIs are easy to work with, and the Digital Cheque product is           a great alternative to paper cheques.”"
       }
     ]
   }
