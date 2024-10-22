@@ -9,8 +9,17 @@ import Nav from "./Nav";
 import CTAButton from "./CTAButton";
 import PaymentSubMenu from "./PaymentSubMenu";
 import Link from "next/link";
+import { useTina } from "tinacms/dist/react";
+import { tinaField } from "tinacms/dist/react";
 
-function Header() {
+function Header({ data, query, variables, pageType }) {
+
+  const { data: tinaResponse } = useTina({
+    query,
+    variables,
+    data,
+  });
+  const tinaData = tinaResponse?.[pageType];
   const [mobileMenuFlag, setMobileMenuFlag] = useState(false);
 
   return (
@@ -22,14 +31,14 @@ function Header() {
           </Link>
         </div>
         <div className="hidden justify-between items-center w-[75%] lg:flex">
-          <Nav />
-          <div className="">
+          <Nav tinaData={tinaData}/>
+          <div className="" data-tina-field={tinaField(tinaData?.header, "button")}>
             <CTAButton
               icon={signupArrow}
               backgroundType={"bg-gradient-to-r"}
               backgroundColor={"from-[#3D77EB] to-[#D289FF]"}
               textColor={"text-[#FFF]"}
-              content={"Sign Up"}
+              content={tinaData?.header?.button}
               paddingx={"px-[26px]"}
               paddingy={"py-[12px]"}
               textSize={"xl:text-[17px] lg:text-[15px]"}
@@ -65,53 +74,53 @@ function Header() {
                   <div className="md:w-[50%] sm:w-full w-full">
                     <ul>
                       <li className=" border-b border-white py-4">
-                        <p className="text-white text-xl font-extrabold uppercase">
-                          Home
+                        <p className="text-white text-xl font-extrabold uppercase" data-tina-field={tinaField(tinaData?.header, "label1")}>
+                          {tinaData?.header?.label1}
                         </p>
                       </li>
                       <li className="border-b border-white py-4 flex flex-wrap lg:bg-none bg-white bg-opacity-10 p-2 sm:p-5 lg:p-0">
                         <p className="text-white text-xl font-extrabold uppercase">
-                          Products
+                        {tinaData?.header?.label2}
                         </p>
                         <PaymentSubMenu />
                       </li>
-                      <li className="border-b border-white py-4">
+                      <li className="border-b border-white py-4" data-tina-field={tinaField(tinaData?.header, "label3")}>
                         <p className="text-white text-xl font-extrabold uppercase">
-                          Solutions
+                        {tinaData?.header?.label3}
                         </p>
                       </li>
-                      <li className="border-b border-white py-4">
+                      <li className="border-b border-white py-4" data-tina-field={tinaField(tinaData?.header, "label4")}>
                         <p className="text-white text-xl font-extrabold uppercase">
-                          Resources
+                        {tinaData?.header?.label4}
                         </p>
                       </li>
                     </ul>
                   </div>
                   <div className="md:w-[44%] sm:w-full w-full">
                     <ul>
-                      <li className="border-b border-white py-4">
+                      <li className="border-b border-white py-4" data-tina-field={tinaField(tinaData?.header, "label5")}>
                         <p className="text-white text-xl font-extrabold uppercase">
-                          Industries
+                        {tinaData?.header?.label5}
                         </p>
                       </li>
-                      <li className="border-b border-white py-4 flex flex-wrap">
+                      <li className="border-b border-white py-4 flex flex-wrap" data-tina-field={tinaField(tinaData?.header, "label6")}>
                         <p className="text-white text-xl font-extrabold uppercase">
-                          ROI Calculator
+                        {tinaData?.header?.label6}
                         </p>
                       </li>
-                      <li className="border-b border-white py-4">
+                      <li className="border-b border-white py-4" data-tina-field={tinaField(tinaData?.header, "label7")}>
                         <p className="text-white text-xl font-extrabold uppercase">
-                          Pricing
+                        {tinaData?.header?.label7}
                         </p>
                       </li>
                     </ul>
-                    <div className="mt-6">
+                    <div className="mt-6" data-tina-field={tinaField(tinaData?.header, "button")}>
                       <CTAButton
                         icon={""}
                         backgroundType={"bg-gradient-to-r"}
                         backgroundColor={"from-[#FFFFFF] to-[#09DEF8]"}
                         textColor={"text-[#3D77EB]"}
-                        content={"Sign Up"}
+                        content={tinaData?.header?.button}
                         paddingx={"px-[26px]"}
                         paddingy={"py-[12px]"}
                         textSize={"xl:text-[17px] lg:text-[15px]"}

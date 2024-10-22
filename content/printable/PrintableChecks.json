@@ -1,0 +1,72 @@
+{
+  "header": {
+    "label1": "Home",
+    "label2": "Products",
+    "label3": "Solutions",
+    "label4": "Resources",
+    "label5": "Industries",
+    "label6": "ROI Calculator",
+    "label7": "Pricing",
+    "button": "Sign Up"
+  },
+  "heroText": {
+    "bannerTitle": "Send",
+    "bannerSpanTitle": "Printable Checks",
+    "bannerContent": "Checkbook’s printable checks eliminate print and postage costs, while cutting delivery time from days to seconds. Delivered via email, printable checks combine the efficiency of digital communication, with the familiarity of a paper check.",
+    "bannerButtonText1": "Sign Up",
+    "bannerButtonText2": "Try Our Demo"
+  },
+  "horizhover": {
+    "title": "Sending Payments is Simple",
+    "content": "Send a check directly to your recipient’s email. Our checks can be printed on standard printer paper and deposited just like a regular check - with a banking mobile app or in person at a local branch or ATM.",
+    "image1": "/uploads/Easyprocess.53553ae7.svg",
+    "title1": "Easy to process",
+    "content1": "Our printable checks display the check and endorsement on the same page - no need to fumble with multiple pages.",
+    "image2": "/uploads/Group 241.jpg",
+    "title2": "White-label experience",
+    "content2": "Completely customize the color and branding information displayed on each check."
+  },
+  "sectionThree": {
+    "digital": "Printable Checks Replace",
+    "digitalspan": "Paper Checks",
+    "digitalcontent": "Printable checks provide a great way to transition from mailed checks to digital payments. Recipients can leverage the same deposit processes they use for mailed checks, yet they don’t have to wait 3-5 days for the mail to arrive!",
+    "title1": "Privacy Conscious",
+    "content1": "Printable checks provide a cost effective way for businesses to make payments.",
+    "title2": "Cost Effective",
+    "content2": "Printable checks provide a cost effective way for businesses to make payments."
+  },
+  "displayinsights": {
+    "Headingone": "Discover",
+    "Headingtwo": "insights ",
+    "insight": " and learn how to manage "
+  },
+  "discover": {
+    "date1": "2023-08-31T18:30:00.000Z",
+    "content1": "FinTech Funding and Valuation versus Demand and Supply",
+    "btn1": "Read More",
+    "date2": "2023-03-28T18:30:00.000Z",
+    "content2": "Building Creativity-Hackathons with Checkbook",
+    "btn2": "Read More",
+    "date3": "2023-05-25T18:30:00.000Z",
+    "content3": "How The Money Flows: Payments for Cash Advance",
+    "btn3": "Read More"
+  },
+  "rgs": {
+    "readyheading": "Ready to get ",
+    "spanheading": "started?",
+    "readycontent": "Explore Checkbook, or create an account instantly and start sending payments. You can also contact us to design a custom package for your business.",
+    "bannerButtonText1": "Create Account",
+    "bannerButtonText2": "Contact Sales"
+  },
+  "rgstwo": {
+    "readyheadingtwo": "Always know what you pay",
+    "readycontenttwo": "Integrated per-transaction pricing with no hidden fees.",
+    "bannerButtonText3": "Pricing Details"
+  },
+  "rgsthree": {
+    "readyheadingthree": "Start your integration ",
+    "readycontentthree": "Get up and running with Checkbook in as little as 10 minutes.",
+    "apibuttons": "API Reference",
+    "readythreeimage": "/uploads/codeico-gray.9da356d5.svg"
+  }
+}

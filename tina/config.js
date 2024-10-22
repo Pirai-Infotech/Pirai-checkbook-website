@@ -7,6 +7,436 @@ const branch =
   process.env.HEAD ||
   "main";
 
+  const headData = {
+    name: "header",
+    label: "Header Text",
+    type: "object",
+    fields: [
+  {
+    name: "image",
+    label: "CheckBook Image",
+    type: "image",
+  },
+  {
+    name: "label1",
+    label: "1.Label",
+    type: "string",
+  },
+  {
+    name: "label2",
+    label: "2.Label",
+    type: "string",
+  },
+  {
+    name: "label3",
+    label: "3.Label",
+    type: "string",
+  },
+  {
+    name: "label4",
+    label: "4.Label",
+    type: "string",
+  },
+  {
+    name: "label5",
+    label: "5.Label",
+    type: "string",
+  },
+  {
+    name: "label6",
+    label: "6.Label",
+    type: "string",
+  },
+  {
+    name: "label7",
+    label: "7.Label",
+    type: "string",
+  },
+  {
+    name: "button",
+    label: "Button",
+    type: "string",
+  },
+]
+  }
+
+  const heroText = {
+      name: "heroText",
+      label: "Hero Text",
+      type: "object",
+      fields: [
+          {
+            name: "bannerTitle",
+            label: "Banner Title",
+            type: "string",
+          },
+          {
+            name: "bannerSpanTitle",
+            label: "Banner Span Title",
+            type: "string",
+          },
+          {
+            name: "bannerContent",
+            label: "Banner Content",
+            type: "string",
+          }
+        ]
+  }
+
+  const AchRelated = [
+    headData,
+      {
+        name: "heroText",
+        label: "Hero Text",
+        type: "object",
+        fields: [
+      {
+        name: "bannerTitle",
+        label: "Banner Title",
+        type: "string",
+      },
+      {
+        name: "bannerSpanTitle",
+        label: "Banner Span Title",
+        type: "string",
+      },
+      {
+        name: "bannerContent",
+        label: "Banner Content",
+        type: "string",
+      },
+      {
+        name: "bannerButtonText1",
+        label: "Button Text I",
+        type: "string",
+      },
+      {
+        name: "bannerButtonText2",
+        label: "Button Text II",
+        type: "string",
+      },
+      {
+        name: "bannerImage",
+        label: "Banner Image",
+        type: "image",
+      },
+   
+    ]
+      },
+      {
+        name: "horizhover",
+        label: "Section Two",
+        type: "object",
+        fields: [
+          {
+            name: "title",
+            label: "1.Heading",
+            type: "string",
+          },
+          {
+            name: "content",
+            label: "1.Content",
+            type: "string",
+          },
+          {
+            name: "image1",
+            label: "2.Image",
+            type: "image",
+          },
+          {
+            name: "title1",
+            label: "2.Heading",
+            type: "string",
+          },
+          {
+            name: "content1",
+            label: "2.Content",
+            type: "string",
+          },
+          {
+            name: "image2",
+            label: "3.Image",
+            type: "image",
+          },
+          {
+            name: "title2",
+            label: "3.Heading",
+            type: "string",
+          },
+          {
+            name: "content2",
+            label: "3.Content",
+            type: "string",
+          },
+        ]
+      },
+      {
+        name: "sectionThree",
+        label: "Section Three",
+        type: "object",
+        fields: [
+          {
+            name: "digital",
+            label: "Heading ",
+            type: "string",
+          },
+          {
+            name: "digitalspan",
+            label: "Heading Span",
+            type: "string",
+          },
+          {
+            name: "digitalcontent",
+            label: "Content Info",
+            type: "string",
+          },
+          {
+            name: "title1",
+            label: "1.Heading",
+            type: "string",
+          },
+          {
+            name: "content1",
+            label: "1.Content",
+            type: "string",
+          },
+          {
+            name: "title2",
+            label: "2.Heading",
+            type: "string",
+          },
+          {
+            name: "content2",
+            label: "2.Content",
+            type: "string",
+          },
+          {
+            name: "image",
+            label: "Image",
+            type: "image",
+          },
+        ]
+      },
+      {
+        name: "displayinsights",
+        label: "Display Insights",
+        type: "object",
+        fields: [
+          {
+            name: "Headingone",
+            label: "Heading 1",
+            type: "string",
+          },
+          {
+            name: "Headingtwo",
+            label: "Heading 2 ",
+            type: "string",
+          },
+          {
+            name: "insight",
+            label: "Heading 3",
+            type: "string",
+          }     
+        ]
+      }, 
+      {
+        name: "discover",
+        label: "Discover Insights",
+        type: "object",
+        fields: [
+          {
+            name: "image1",
+            label: "1.Image",
+            type: "image",
+          },
+          {
+            name: "date1",
+            label: "1.Date",
+            type: "datetime",
+          },
+          {
+            name: "content1",
+            label: "1.Content",
+            type: "string",
+          },
+          {
+            name: "btn1",
+            label: "1.Batton",
+            type: "string",
+          },
+          {
+            name: "image2",
+            label: "2.Image",
+            type: "image",
+          },
+          {
+            name: "date2",
+            label: "2.Date",
+            type: "datetime",
+          },
+          {
+            name: "content2",
+            label: "2.Content",
+            type: "string",
+          },
+          {
+            name: "btn2",
+            label: "2.Batton",
+            type: "string",
+          },
+          {
+            name: "image3",
+            label: "3.Image",
+            type: "image",
+          },
+          {
+            name: "date3",
+            label: "3.Date",
+            type: "datetime",
+          },
+          {
+            name: "content3",
+            label: "3.Content",
+            type: "string",
+          },
+          {
+            name: "btn3",
+            label: "3.Batton",
+            type: "string",
+          }       
+        ]
+      },
+      {
+        name: "rgs",
+        label: "Ready to GetStart",
+        type: "object",
+        fields: [
+          {
+            name: "readyheading",
+            label: "Heading 1",
+            type: "string",
+          },
+          {
+            name: "spanheading",
+            label: "Span",
+            type: "string",
+          },
+          {
+            name: "readycontent",
+            label: "Heading 2 ",
+            type: "string",
+          },
+          {
+            name: "bannerButtonText1",
+            label: "Button Text I",
+            type: "string",
+          },
+          {
+            name: "bannerButtonText2",
+            label: "Button Text II",
+            type: "string",
+          },  
+          
+        ],
+        
+      },
+      {
+        name: "rgstwo",
+        label: "Ready to GetStart2",
+        type: "object",
+        fields: [
+          {
+            name: "readyheadingtwo",
+            label: "Heading 1",
+            type: "string",
+          },
+          {
+            name: "readycontenttwo",
+            label: "Heading 2 ",
+            type: "string",
+          },
+          {
+            name: "bannerButtonText3",
+            label: "Button Text I",
+            type: "string",
+          },
+          {
+            name: "readytwoimage",
+            label: "Image",
+            type: "image",
+          }
+        ],
+        
+      },
+      {
+        name: "rgsthree",
+        label: "Ready to GetStart3",
+        type: "object",
+        fields: [
+          {
+            name: "readyheadingthree",
+            label: "Heading 1",
+            type: "string",
+          },
+          {
+            name: "readycontentthree",
+            label: "Heading 2 ",
+            type: "string",
+          },
+          {
+            name: "apibuttons",
+            label: "Button Text I",
+            type: "string",
+          },
+          {
+            name: "readythreeimage",
+            label: "Image",
+            type: "image",
+          },
+        ],
+        
+      },
+      {
+        name: "faq",
+        label: "FAQ",
+        type: "object",
+        fields: [
+          {
+            name: "faqheading",
+            label: "Heading",
+            type: "string",
+          },
+          {
+            name: "questions",
+            label: "Questions",
+            type: "object",
+            list: true, 
+            fields: [
+              {
+                name: "question",
+                label: "Question",
+                type: "string",
+              },
+              {
+                name: "answer",
+                label: "Answer",
+                type: "string",
+              },
+              {
+                name: "ctatext",
+                label: "Cta Text",
+                type: "string",
+              },
+              {
+                name: "ctalink",
+                label: "Cta Link",
+                type: "string",
+              }
+            ]
+          }
+        ],
+      }
+    ]
 export default defineConfig({
   clientId: process.env.TINA_CLIENT_ID || "",
   branch: process.env.GITHUB_BRANCH || "",
@@ -19,123 +449,13 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "blog",
-        label: "Blog",
-        path: "content/blog",
+        name: "about",
+        label: "About Us",
+        path: "content/about",
         format: "json",
-        ui: {
-          router: (props) => {
-            return "/";
-          },
-        },
         fields: [
-          {
-            name: "heroText",
-            label: "Hero Text",
-            type: "object",
-            fields: [
-              {
-                name: "bannerTitle",
-                label: "Banner Title",
-                type: "string",
-              },
-              {
-                name: "bannerSpanTitle",
-                label: "Banner Span Title",
-                type: "string",
-              },
-              {
-                name: "bannerContent",
-                label: "Banner Content",
-                type: "string",
-              },
-              {
-                name: "bannerButtonText1",
-                label: "Button Text I",
-                type: "string",
-              },
-              {
-                name: "bannerButtonText2",
-                label: "Button Text II",
-                type: "string",
-              },
-              {
-                name: "bannerImage",
-                label: "Banner Image",
-                type: "image",
-              },
-            ],
-          },
-          {
-            name: "sectionTwo",
-            label: "Section Two",
-            type: "object",
-            fields: [
-              {
-                name: "title",
-                label: "Heading 1",
-                type: "string",
-              },
-              {
-                name: "titlecontent",
-                label: "Content 1",
-                type: "string",
-              },
-              {
-                name: "titlecontentimage",
-                label: "Image 2",
-                type: "image",
-              },
-              {
-                name: "title2",
-                label: "Heading 2",
-                type: "string",
-              },
-              {
-                name: "titlecontent2",
-                label: "Content 2",
-                type: "string",
-              },
-              {
-                name: "titlecontentimage3",
-                label: "Image 3",
-                type: "image",
-              },
-              {
-                name: "title3",
-                label: "Heading 3",
-                type: "string",
-              },
-              {
-                name: "titlecontent3",
-                label: "Content 3",
-                type: "string",
-              },
-            ],
-          },
-          {
-            name: "sectionThree",
-            label: "Section Three",
-            type: "object",
-            fields: [
-              {
-                name: "digital",
-                label: "Heading ",
-                type: "string",
-              },
-              {
-                name: "digitalspan",
-                label: "Heading Span",
-                type: "string",
-              },
-              {
-                name: "digitalcontent",
-                label: "Content Info",
-                type: "string",
-              },
-            ],
-          },
-
+        headData,
+        heroText,
           {
             name: "displayinsights",
             label: "Display Insights",
@@ -155,186 +475,71 @@ export default defineConfig({
                 name: "insight",
                 label: "Heading 3",
                 type: "string",
-              },
-            ],
+              }     
+            ]
+          }
+        ]
+      },
+      {
+        name: "blog",
+        label: "Blog",
+        path: "content/blog",
+        format: "json",
+        ui: {
+          router: (props) => {
+            return "/";
           },
-          {
-            name: "rgs",
-            label: "Ready to GetStart",
-            type: "object",
-            fields: [
-              {
-                name: "readyheading",
-                label: "Heading 1",
-                type: "string",
-              },
-              {
-                name: "spanheading",
-                label: "Span",
-                type: "string",
-              },
-              {
-                name: "readycontent",
-                label: "Heading 2 ",
-                type: "string",
-              },
-              {
-                name: "bannerButtonText1",
-                label: "Button Text I",
-                type: "string",
-              },
-              {
-                name: "bannerButtonText2",
-                label: "Button Text II",
-                type: "string",
-              },
-            ],
-          },
-          {
-            name: "rgstwo",
-            label: "Ready to GetStart2",
-            type: "object",
-            fields: [
-              {
-                name: "readyheadingtwo",
-                label: "Heading 1",
-                type: "string",
-              },
-              {
-                name: "readycontenttwo",
-                label: "Heading 2 ",
-                type: "string",
-              },
-              {
-                name: "bannerButtonText3",
-                label: "Button Text I",
-                type: "string",
-              },
-              {
-                name: "readytwoimage",
-                label: "Image",
-                type: "image",
-              },
-            ],
-          },
-          {
-            name: "rgsthree",
-            label: "Ready to GetStart3",
-            type: "object",
-            fields: [
-              {
-                name: "readyheadingthree",
-                label: "Heading 1",
-                type: "string",
-              },
-              {
-                name: "readycontentthree",
-                label: "Heading 2 ",
-                type: "string",
-              },
-              {
-                name: "apibuttons",
-                label: "Button Text I",
-                type: "string",
-              },
-              {
-                name: "readythreeimage",
-                label: "Image",
-                type: "image",
-              },
-            ],
-          },
-          {
-            name: "faq",
-            label: "FAQ",
-            type: "object",
-            fields: [
-              {
-                name: "faqheading",
-                label: "Heading",
-                type: "string",
-              },
-              {
-                name: "answers",
-                label: "Questions",
-                type: "object",
-                list: true,
-                fields: [
-                  {
-                    name: "question",
-                    label: "Question",
-                    type: "string",
-                  },
-                  {
-                    name: "answer",
-                    label: "Answer",
-                    type: "string",
-                  },
-                  {
-                    name: "button",
-                    label: "Button",
-                    type: "string",
-                  },
-                  {
-                    name: "link",
-                    label: "Link",
-                    type: "string",
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            name: "testimon",
-            label: "testimon",
-            type: "object",
-            fields: [
-              {
-                name: "testimonheading",
-                label: "Heading",
-                type: "string",
-              },
-              {
-                name: "follow",
-                label: "Questions",
-                type: "object",
-                list: true,
-                fields: [
-                  {
-                    name: "testimonimage",
-                    label: "Image",
-                    type: "image",
-                  },
-                  {
-                    name: "testimonquestion",
-                    label: "Name",
-                    type: "string",
-                  },
-                  {
-                    name: "testimonanswer",
-                    label: "Position",
-                    type: "string",
-                  },
-                  {
-                    name: "testimonbutton",
-                    label: "Quote",
-                    type: "string",
-                  },
-                  {
-                    name: "testimonanchor",
-                    label: "Buttton Text",
-                    type: "string",
-                  },
-                  {
-                    name: "testimonbutton1",
-                    label: "Quote2",
-                    type: "string",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+        },
+        fields: AchRelated
+      },
+      {
+        name: "realtime",
+        label: "RealTime Payments",
+        path: "content/realtime",
+        format: "json",
+        fields: AchRelated
+      },
+      {
+        name: "fednow",
+        label: "FedNow Payments",
+        path: "content/fednow",
+        format: "json",
+        fields: AchRelated
+      },
+      {
+        name: "instant",
+        label: "Instant Payments",
+        path: "content/instant",
+        format: "json",
+        fields: AchRelated
+      },
+      {
+        name: "mailed",
+        label: "Mailed Checks",
+        path: "content/mailed",
+        format: "json",
+        fields: AchRelated
+      },
+      {
+        name: "printable",
+        label: "Printable Checks",
+        path: "content/printable",
+        format: "json",
+        fields: AchRelated
+      },
+      {
+        name: "virtual",
+        label: "Virtual Cards",
+        path: "content/virtual",
+        format: "json",
+        fields: AchRelated
+      },
+      {
+        name: "zelle",
+        label: "Zelle Payments",
+        path: "content/zelle",
+        format: "json",
+        fields: AchRelated
       },
       {
         name: "page",

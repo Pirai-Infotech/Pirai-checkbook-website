@@ -53,17 +53,47 @@ type Query {
   collections: [Collection!]!
   node(id: String): Node!
   document(collection: String, relativePath: String): DocumentNode!
+  about(relativePath: String): About!
+  aboutConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: AboutFilter): AboutConnection!
   blog(relativePath: String): Blog!
   blogConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: BlogFilter): BlogConnection!
+  realtime(relativePath: String): Realtime!
+  realtimeConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: RealtimeFilter): RealtimeConnection!
+  fednow(relativePath: String): Fednow!
+  fednowConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: FednowFilter): FednowConnection!
+  instant(relativePath: String): Instant!
+  instantConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: InstantFilter): InstantConnection!
+  mailed(relativePath: String): Mailed!
+  mailedConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: MailedFilter): MailedConnection!
+  printable(relativePath: String): Printable!
+  printableConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PrintableFilter): PrintableConnection!
+  virtual(relativePath: String): Virtual!
+  virtualConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: VirtualFilter): VirtualConnection!
+  zelle(relativePath: String): Zelle!
+  zelleConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ZelleFilter): ZelleConnection!
   page(relativePath: String): Page!
   pageConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PageFilter): PageConnection!
+  terms(relativePath: String): Terms!
+  termsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: TermsFilter): TermsConnection!
+  policy(relativePath: String): Policy!
+  policyConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PolicyFilter): PolicyConnection!
   post(relativePath: String): Post!
   postConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PostFilter): PostConnection!
 }
 
 input DocumentFilter {
+  about: AboutFilter
   blog: BlogFilter
+  realtime: RealtimeFilter
+  fednow: FednowFilter
+  instant: InstantFilter
+  mailed: MailedFilter
+  printable: PrintableFilter
+  virtual: VirtualFilter
+  zelle: ZelleFilter
   page: PageFilter
+  terms: TermsFilter
+  policy: PolicyFilter
   post: PostFilter
 }
 
@@ -90,7 +120,107 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Blog | Page | Post | Folder
+union DocumentNode = About | Blog | Realtime | Fednow | Instant | Mailed | Printable | Virtual | Zelle | Page | Terms | Policy | Post | Folder
+
+type AboutHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+type AboutHeroText {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+}
+
+type AboutDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type About implements Node & Document {
+  header: AboutHeader
+  heroText: AboutHeroText
+  displayinsights: AboutDisplayinsights
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input ImageFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input StringFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input AboutHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
+}
+
+input AboutHeroTextFilter {
+  bannerTitle: StringFilter
+  bannerSpanTitle: StringFilter
+  bannerContent: StringFilter
+}
+
+input AboutDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input AboutFilter {
+  header: AboutHeaderFilter
+  heroText: AboutHeroTextFilter
+  displayinsights: AboutDisplayinsightsFilter
+}
+
+type AboutConnectionEdges {
+  cursor: String!
+  node: About
+}
+
+type AboutConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [AboutConnectionEdges]
+}
+
+type BlogHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
 
 type BlogHeroText {
   bannerTitle: String
@@ -101,27 +231,47 @@ type BlogHeroText {
   bannerImage: String
 }
 
-type BlogSectionTwo {
+type BlogHorizhover {
   title: String
-  titlecontent: String
-  titlecontentimage: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
   title2: String
-  titlecontent2: String
-  titlecontentimage3: String
-  title3: String
-  titlecontent3: String
+  content2: String
 }
 
 type BlogSectionThree {
   digital: String
   digitalspan: String
   digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
 }
 
 type BlogDisplayinsights {
   Headingone: String
   Headingtwo: String
   insight: String
+}
+
+type BlogDiscover {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
 }
 
 type BlogRgs {
@@ -159,10 +309,12 @@ type BlogFaq {
 }
 
 type Blog implements Node & Document {
+  header: BlogHeader
   heroText: BlogHeroText
-  sectionTwo: BlogSectionTwo
+  horizhover: BlogHorizhover
   sectionThree: BlogSectionThree
   displayinsights: BlogDisplayinsights
+  discover: BlogDiscover
   rgs: BlogRgs
   rgstwo: BlogRgstwo
   rgsthree: BlogRgsthree
@@ -172,18 +324,16 @@ type Blog implements Node & Document {
   _values: JSON!
 }
 
-input StringFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-  in: [String]
-}
-
-input ImageFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-  in: [String]
+input BlogHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
 }
 
 input BlogHeroTextFilter {
@@ -195,27 +345,55 @@ input BlogHeroTextFilter {
   bannerImage: ImageFilter
 }
 
-input BlogSectionTwoFilter {
+input BlogHorizhoverFilter {
   title: StringFilter
-  titlecontent: StringFilter
-  titlecontentimage: ImageFilter
+  content: StringFilter
+  image1: ImageFilter
+  title1: StringFilter
+  content1: StringFilter
+  image2: ImageFilter
   title2: StringFilter
-  titlecontent2: StringFilter
-  titlecontentimage3: ImageFilter
-  title3: StringFilter
-  titlecontent3: StringFilter
+  content2: StringFilter
 }
 
 input BlogSectionThreeFilter {
   digital: StringFilter
   digitalspan: StringFilter
   digitalcontent: StringFilter
+  title1: StringFilter
+  content1: StringFilter
+  title2: StringFilter
+  content2: StringFilter
+  image: ImageFilter
 }
 
 input BlogDisplayinsightsFilter {
   Headingone: StringFilter
   Headingtwo: StringFilter
   insight: StringFilter
+}
+
+input DatetimeFilter {
+  after: String
+  before: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input BlogDiscoverFilter {
+  image1: ImageFilter
+  date1: DatetimeFilter
+  content1: StringFilter
+  btn1: StringFilter
+  image2: ImageFilter
+  date2: DatetimeFilter
+  content2: StringFilter
+  btn2: StringFilter
+  image3: ImageFilter
+  date3: DatetimeFilter
+  content3: StringFilter
+  btn3: StringFilter
 }
 
 input BlogRgsFilter {
@@ -253,10 +431,12 @@ input BlogFaqFilter {
 }
 
 input BlogFilter {
+  header: BlogHeaderFilter
   heroText: BlogHeroTextFilter
-  sectionTwo: BlogSectionTwoFilter
+  horizhover: BlogHorizhoverFilter
   sectionThree: BlogSectionThreeFilter
   displayinsights: BlogDisplayinsightsFilter
+  discover: BlogDiscoverFilter
   rgs: BlogRgsFilter
   rgstwo: BlogRgstwoFilter
   rgsthree: BlogRgsthreeFilter
@@ -272,6 +452,1658 @@ type BlogConnection implements Connection {
   pageInfo: PageInfo!
   totalCount: Float!
   edges: [BlogConnectionEdges]
+}
+
+type RealtimeHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+type RealtimeHeroText {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+type RealtimeHorizhover {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+type RealtimeSectionThree {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+type RealtimeDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type RealtimeDiscover {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+type RealtimeRgs {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+type RealtimeRgstwo {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+type RealtimeRgsthree {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+type RealtimeFaqQuestions {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+type RealtimeFaq {
+  faqheading: String
+  questions: [RealtimeFaqQuestions]
+}
+
+type Realtime implements Node & Document {
+  header: RealtimeHeader
+  heroText: RealtimeHeroText
+  horizhover: RealtimeHorizhover
+  sectionThree: RealtimeSectionThree
+  displayinsights: RealtimeDisplayinsights
+  discover: RealtimeDiscover
+  rgs: RealtimeRgs
+  rgstwo: RealtimeRgstwo
+  rgsthree: RealtimeRgsthree
+  faq: RealtimeFaq
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input RealtimeHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
+}
+
+input RealtimeHeroTextFilter {
+  bannerTitle: StringFilter
+  bannerSpanTitle: StringFilter
+  bannerContent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+  bannerImage: ImageFilter
+}
+
+input RealtimeHorizhoverFilter {
+  title: StringFilter
+  content: StringFilter
+  image1: ImageFilter
+  title1: StringFilter
+  content1: StringFilter
+  image2: ImageFilter
+  title2: StringFilter
+  content2: StringFilter
+}
+
+input RealtimeSectionThreeFilter {
+  digital: StringFilter
+  digitalspan: StringFilter
+  digitalcontent: StringFilter
+  title1: StringFilter
+  content1: StringFilter
+  title2: StringFilter
+  content2: StringFilter
+  image: ImageFilter
+}
+
+input RealtimeDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input RealtimeDiscoverFilter {
+  image1: ImageFilter
+  date1: DatetimeFilter
+  content1: StringFilter
+  btn1: StringFilter
+  image2: ImageFilter
+  date2: DatetimeFilter
+  content2: StringFilter
+  btn2: StringFilter
+  image3: ImageFilter
+  date3: DatetimeFilter
+  content3: StringFilter
+  btn3: StringFilter
+}
+
+input RealtimeRgsFilter {
+  readyheading: StringFilter
+  spanheading: StringFilter
+  readycontent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+}
+
+input RealtimeRgstwoFilter {
+  readyheadingtwo: StringFilter
+  readycontenttwo: StringFilter
+  bannerButtonText3: StringFilter
+  readytwoimage: ImageFilter
+}
+
+input RealtimeRgsthreeFilter {
+  readyheadingthree: StringFilter
+  readycontentthree: StringFilter
+  apibuttons: StringFilter
+  readythreeimage: ImageFilter
+}
+
+input RealtimeFaqQuestionsFilter {
+  question: StringFilter
+  answer: StringFilter
+  ctatext: StringFilter
+  ctalink: StringFilter
+}
+
+input RealtimeFaqFilter {
+  faqheading: StringFilter
+  questions: RealtimeFaqQuestionsFilter
+}
+
+input RealtimeFilter {
+  header: RealtimeHeaderFilter
+  heroText: RealtimeHeroTextFilter
+  horizhover: RealtimeHorizhoverFilter
+  sectionThree: RealtimeSectionThreeFilter
+  displayinsights: RealtimeDisplayinsightsFilter
+  discover: RealtimeDiscoverFilter
+  rgs: RealtimeRgsFilter
+  rgstwo: RealtimeRgstwoFilter
+  rgsthree: RealtimeRgsthreeFilter
+  faq: RealtimeFaqFilter
+}
+
+type RealtimeConnectionEdges {
+  cursor: String!
+  node: Realtime
+}
+
+type RealtimeConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [RealtimeConnectionEdges]
+}
+
+type FednowHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+type FednowHeroText {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+type FednowHorizhover {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+type FednowSectionThree {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+type FednowDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type FednowDiscover {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+type FednowRgs {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+type FednowRgstwo {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+type FednowRgsthree {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+type FednowFaqQuestions {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+type FednowFaq {
+  faqheading: String
+  questions: [FednowFaqQuestions]
+}
+
+type Fednow implements Node & Document {
+  header: FednowHeader
+  heroText: FednowHeroText
+  horizhover: FednowHorizhover
+  sectionThree: FednowSectionThree
+  displayinsights: FednowDisplayinsights
+  discover: FednowDiscover
+  rgs: FednowRgs
+  rgstwo: FednowRgstwo
+  rgsthree: FednowRgsthree
+  faq: FednowFaq
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input FednowHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
+}
+
+input FednowHeroTextFilter {
+  bannerTitle: StringFilter
+  bannerSpanTitle: StringFilter
+  bannerContent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+  bannerImage: ImageFilter
+}
+
+input FednowHorizhoverFilter {
+  title: StringFilter
+  content: StringFilter
+  image1: ImageFilter
+  title1: StringFilter
+  content1: StringFilter
+  image2: ImageFilter
+  title2: StringFilter
+  content2: StringFilter
+}
+
+input FednowSectionThreeFilter {
+  digital: StringFilter
+  digitalspan: StringFilter
+  digitalcontent: StringFilter
+  title1: StringFilter
+  content1: StringFilter
+  title2: StringFilter
+  content2: StringFilter
+  image: ImageFilter
+}
+
+input FednowDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input FednowDiscoverFilter {
+  image1: ImageFilter
+  date1: DatetimeFilter
+  content1: StringFilter
+  btn1: StringFilter
+  image2: ImageFilter
+  date2: DatetimeFilter
+  content2: StringFilter
+  btn2: StringFilter
+  image3: ImageFilter
+  date3: DatetimeFilter
+  content3: StringFilter
+  btn3: StringFilter
+}
+
+input FednowRgsFilter {
+  readyheading: StringFilter
+  spanheading: StringFilter
+  readycontent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+}
+
+input FednowRgstwoFilter {
+  readyheadingtwo: StringFilter
+  readycontenttwo: StringFilter
+  bannerButtonText3: StringFilter
+  readytwoimage: ImageFilter
+}
+
+input FednowRgsthreeFilter {
+  readyheadingthree: StringFilter
+  readycontentthree: StringFilter
+  apibuttons: StringFilter
+  readythreeimage: ImageFilter
+}
+
+input FednowFaqQuestionsFilter {
+  question: StringFilter
+  answer: StringFilter
+  ctatext: StringFilter
+  ctalink: StringFilter
+}
+
+input FednowFaqFilter {
+  faqheading: StringFilter
+  questions: FednowFaqQuestionsFilter
+}
+
+input FednowFilter {
+  header: FednowHeaderFilter
+  heroText: FednowHeroTextFilter
+  horizhover: FednowHorizhoverFilter
+  sectionThree: FednowSectionThreeFilter
+  displayinsights: FednowDisplayinsightsFilter
+  discover: FednowDiscoverFilter
+  rgs: FednowRgsFilter
+  rgstwo: FednowRgstwoFilter
+  rgsthree: FednowRgsthreeFilter
+  faq: FednowFaqFilter
+}
+
+type FednowConnectionEdges {
+  cursor: String!
+  node: Fednow
+}
+
+type FednowConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [FednowConnectionEdges]
+}
+
+type InstantHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+type InstantHeroText {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+type InstantHorizhover {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+type InstantSectionThree {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+type InstantDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type InstantDiscover {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+type InstantRgs {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+type InstantRgstwo {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+type InstantRgsthree {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+type InstantFaqQuestions {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+type InstantFaq {
+  faqheading: String
+  questions: [InstantFaqQuestions]
+}
+
+type Instant implements Node & Document {
+  header: InstantHeader
+  heroText: InstantHeroText
+  horizhover: InstantHorizhover
+  sectionThree: InstantSectionThree
+  displayinsights: InstantDisplayinsights
+  discover: InstantDiscover
+  rgs: InstantRgs
+  rgstwo: InstantRgstwo
+  rgsthree: InstantRgsthree
+  faq: InstantFaq
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input InstantHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
+}
+
+input InstantHeroTextFilter {
+  bannerTitle: StringFilter
+  bannerSpanTitle: StringFilter
+  bannerContent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+  bannerImage: ImageFilter
+}
+
+input InstantHorizhoverFilter {
+  title: StringFilter
+  content: StringFilter
+  image1: ImageFilter
+  title1: StringFilter
+  content1: StringFilter
+  image2: ImageFilter
+  title2: StringFilter
+  content2: StringFilter
+}
+
+input InstantSectionThreeFilter {
+  digital: StringFilter
+  digitalspan: StringFilter
+  digitalcontent: StringFilter
+  title1: StringFilter
+  content1: StringFilter
+  title2: StringFilter
+  content2: StringFilter
+  image: ImageFilter
+}
+
+input InstantDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input InstantDiscoverFilter {
+  image1: ImageFilter
+  date1: DatetimeFilter
+  content1: StringFilter
+  btn1: StringFilter
+  image2: ImageFilter
+  date2: DatetimeFilter
+  content2: StringFilter
+  btn2: StringFilter
+  image3: ImageFilter
+  date3: DatetimeFilter
+  content3: StringFilter
+  btn3: StringFilter
+}
+
+input InstantRgsFilter {
+  readyheading: StringFilter
+  spanheading: StringFilter
+  readycontent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+}
+
+input InstantRgstwoFilter {
+  readyheadingtwo: StringFilter
+  readycontenttwo: StringFilter
+  bannerButtonText3: StringFilter
+  readytwoimage: ImageFilter
+}
+
+input InstantRgsthreeFilter {
+  readyheadingthree: StringFilter
+  readycontentthree: StringFilter
+  apibuttons: StringFilter
+  readythreeimage: ImageFilter
+}
+
+input InstantFaqQuestionsFilter {
+  question: StringFilter
+  answer: StringFilter
+  ctatext: StringFilter
+  ctalink: StringFilter
+}
+
+input InstantFaqFilter {
+  faqheading: StringFilter
+  questions: InstantFaqQuestionsFilter
+}
+
+input InstantFilter {
+  header: InstantHeaderFilter
+  heroText: InstantHeroTextFilter
+  horizhover: InstantHorizhoverFilter
+  sectionThree: InstantSectionThreeFilter
+  displayinsights: InstantDisplayinsightsFilter
+  discover: InstantDiscoverFilter
+  rgs: InstantRgsFilter
+  rgstwo: InstantRgstwoFilter
+  rgsthree: InstantRgsthreeFilter
+  faq: InstantFaqFilter
+}
+
+type InstantConnectionEdges {
+  cursor: String!
+  node: Instant
+}
+
+type InstantConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [InstantConnectionEdges]
+}
+
+type MailedHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+type MailedHeroText {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+type MailedHorizhover {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+type MailedSectionThree {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+type MailedDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type MailedDiscover {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+type MailedRgs {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+type MailedRgstwo {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+type MailedRgsthree {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+type MailedFaqQuestions {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+type MailedFaq {
+  faqheading: String
+  questions: [MailedFaqQuestions]
+}
+
+type Mailed implements Node & Document {
+  header: MailedHeader
+  heroText: MailedHeroText
+  horizhover: MailedHorizhover
+  sectionThree: MailedSectionThree
+  displayinsights: MailedDisplayinsights
+  discover: MailedDiscover
+  rgs: MailedRgs
+  rgstwo: MailedRgstwo
+  rgsthree: MailedRgsthree
+  faq: MailedFaq
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input MailedHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
+}
+
+input MailedHeroTextFilter {
+  bannerTitle: StringFilter
+  bannerSpanTitle: StringFilter
+  bannerContent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+  bannerImage: ImageFilter
+}
+
+input MailedHorizhoverFilter {
+  title: StringFilter
+  content: StringFilter
+  image1: ImageFilter
+  title1: StringFilter
+  content1: StringFilter
+  image2: ImageFilter
+  title2: StringFilter
+  content2: StringFilter
+}
+
+input MailedSectionThreeFilter {
+  digital: StringFilter
+  digitalspan: StringFilter
+  digitalcontent: StringFilter
+  title1: StringFilter
+  content1: StringFilter
+  title2: StringFilter
+  content2: StringFilter
+  image: ImageFilter
+}
+
+input MailedDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input MailedDiscoverFilter {
+  image1: ImageFilter
+  date1: DatetimeFilter
+  content1: StringFilter
+  btn1: StringFilter
+  image2: ImageFilter
+  date2: DatetimeFilter
+  content2: StringFilter
+  btn2: StringFilter
+  image3: ImageFilter
+  date3: DatetimeFilter
+  content3: StringFilter
+  btn3: StringFilter
+}
+
+input MailedRgsFilter {
+  readyheading: StringFilter
+  spanheading: StringFilter
+  readycontent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+}
+
+input MailedRgstwoFilter {
+  readyheadingtwo: StringFilter
+  readycontenttwo: StringFilter
+  bannerButtonText3: StringFilter
+  readytwoimage: ImageFilter
+}
+
+input MailedRgsthreeFilter {
+  readyheadingthree: StringFilter
+  readycontentthree: StringFilter
+  apibuttons: StringFilter
+  readythreeimage: ImageFilter
+}
+
+input MailedFaqQuestionsFilter {
+  question: StringFilter
+  answer: StringFilter
+  ctatext: StringFilter
+  ctalink: StringFilter
+}
+
+input MailedFaqFilter {
+  faqheading: StringFilter
+  questions: MailedFaqQuestionsFilter
+}
+
+input MailedFilter {
+  header: MailedHeaderFilter
+  heroText: MailedHeroTextFilter
+  horizhover: MailedHorizhoverFilter
+  sectionThree: MailedSectionThreeFilter
+  displayinsights: MailedDisplayinsightsFilter
+  discover: MailedDiscoverFilter
+  rgs: MailedRgsFilter
+  rgstwo: MailedRgstwoFilter
+  rgsthree: MailedRgsthreeFilter
+  faq: MailedFaqFilter
+}
+
+type MailedConnectionEdges {
+  cursor: String!
+  node: Mailed
+}
+
+type MailedConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [MailedConnectionEdges]
+}
+
+type PrintableHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+type PrintableHeroText {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+type PrintableHorizhover {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+type PrintableSectionThree {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+type PrintableDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type PrintableDiscover {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+type PrintableRgs {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+type PrintableRgstwo {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+type PrintableRgsthree {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+type PrintableFaqQuestions {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+type PrintableFaq {
+  faqheading: String
+  questions: [PrintableFaqQuestions]
+}
+
+type Printable implements Node & Document {
+  header: PrintableHeader
+  heroText: PrintableHeroText
+  horizhover: PrintableHorizhover
+  sectionThree: PrintableSectionThree
+  displayinsights: PrintableDisplayinsights
+  discover: PrintableDiscover
+  rgs: PrintableRgs
+  rgstwo: PrintableRgstwo
+  rgsthree: PrintableRgsthree
+  faq: PrintableFaq
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input PrintableHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
+}
+
+input PrintableHeroTextFilter {
+  bannerTitle: StringFilter
+  bannerSpanTitle: StringFilter
+  bannerContent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+  bannerImage: ImageFilter
+}
+
+input PrintableHorizhoverFilter {
+  title: StringFilter
+  content: StringFilter
+  image1: ImageFilter
+  title1: StringFilter
+  content1: StringFilter
+  image2: ImageFilter
+  title2: StringFilter
+  content2: StringFilter
+}
+
+input PrintableSectionThreeFilter {
+  digital: StringFilter
+  digitalspan: StringFilter
+  digitalcontent: StringFilter
+  title1: StringFilter
+  content1: StringFilter
+  title2: StringFilter
+  content2: StringFilter
+  image: ImageFilter
+}
+
+input PrintableDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input PrintableDiscoverFilter {
+  image1: ImageFilter
+  date1: DatetimeFilter
+  content1: StringFilter
+  btn1: StringFilter
+  image2: ImageFilter
+  date2: DatetimeFilter
+  content2: StringFilter
+  btn2: StringFilter
+  image3: ImageFilter
+  date3: DatetimeFilter
+  content3: StringFilter
+  btn3: StringFilter
+}
+
+input PrintableRgsFilter {
+  readyheading: StringFilter
+  spanheading: StringFilter
+  readycontent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+}
+
+input PrintableRgstwoFilter {
+  readyheadingtwo: StringFilter
+  readycontenttwo: StringFilter
+  bannerButtonText3: StringFilter
+  readytwoimage: ImageFilter
+}
+
+input PrintableRgsthreeFilter {
+  readyheadingthree: StringFilter
+  readycontentthree: StringFilter
+  apibuttons: StringFilter
+  readythreeimage: ImageFilter
+}
+
+input PrintableFaqQuestionsFilter {
+  question: StringFilter
+  answer: StringFilter
+  ctatext: StringFilter
+  ctalink: StringFilter
+}
+
+input PrintableFaqFilter {
+  faqheading: StringFilter
+  questions: PrintableFaqQuestionsFilter
+}
+
+input PrintableFilter {
+  header: PrintableHeaderFilter
+  heroText: PrintableHeroTextFilter
+  horizhover: PrintableHorizhoverFilter
+  sectionThree: PrintableSectionThreeFilter
+  displayinsights: PrintableDisplayinsightsFilter
+  discover: PrintableDiscoverFilter
+  rgs: PrintableRgsFilter
+  rgstwo: PrintableRgstwoFilter
+  rgsthree: PrintableRgsthreeFilter
+  faq: PrintableFaqFilter
+}
+
+type PrintableConnectionEdges {
+  cursor: String!
+  node: Printable
+}
+
+type PrintableConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [PrintableConnectionEdges]
+}
+
+type VirtualHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+type VirtualHeroText {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+type VirtualHorizhover {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+type VirtualSectionThree {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+type VirtualDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type VirtualDiscover {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+type VirtualRgs {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+type VirtualRgstwo {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+type VirtualRgsthree {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+type VirtualFaqQuestions {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+type VirtualFaq {
+  faqheading: String
+  questions: [VirtualFaqQuestions]
+}
+
+type Virtual implements Node & Document {
+  header: VirtualHeader
+  heroText: VirtualHeroText
+  horizhover: VirtualHorizhover
+  sectionThree: VirtualSectionThree
+  displayinsights: VirtualDisplayinsights
+  discover: VirtualDiscover
+  rgs: VirtualRgs
+  rgstwo: VirtualRgstwo
+  rgsthree: VirtualRgsthree
+  faq: VirtualFaq
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input VirtualHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
+}
+
+input VirtualHeroTextFilter {
+  bannerTitle: StringFilter
+  bannerSpanTitle: StringFilter
+  bannerContent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+  bannerImage: ImageFilter
+}
+
+input VirtualHorizhoverFilter {
+  title: StringFilter
+  content: StringFilter
+  image1: ImageFilter
+  title1: StringFilter
+  content1: StringFilter
+  image2: ImageFilter
+  title2: StringFilter
+  content2: StringFilter
+}
+
+input VirtualSectionThreeFilter {
+  digital: StringFilter
+  digitalspan: StringFilter
+  digitalcontent: StringFilter
+  title1: StringFilter
+  content1: StringFilter
+  title2: StringFilter
+  content2: StringFilter
+  image: ImageFilter
+}
+
+input VirtualDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input VirtualDiscoverFilter {
+  image1: ImageFilter
+  date1: DatetimeFilter
+  content1: StringFilter
+  btn1: StringFilter
+  image2: ImageFilter
+  date2: DatetimeFilter
+  content2: StringFilter
+  btn2: StringFilter
+  image3: ImageFilter
+  date3: DatetimeFilter
+  content3: StringFilter
+  btn3: StringFilter
+}
+
+input VirtualRgsFilter {
+  readyheading: StringFilter
+  spanheading: StringFilter
+  readycontent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+}
+
+input VirtualRgstwoFilter {
+  readyheadingtwo: StringFilter
+  readycontenttwo: StringFilter
+  bannerButtonText3: StringFilter
+  readytwoimage: ImageFilter
+}
+
+input VirtualRgsthreeFilter {
+  readyheadingthree: StringFilter
+  readycontentthree: StringFilter
+  apibuttons: StringFilter
+  readythreeimage: ImageFilter
+}
+
+input VirtualFaqQuestionsFilter {
+  question: StringFilter
+  answer: StringFilter
+  ctatext: StringFilter
+  ctalink: StringFilter
+}
+
+input VirtualFaqFilter {
+  faqheading: StringFilter
+  questions: VirtualFaqQuestionsFilter
+}
+
+input VirtualFilter {
+  header: VirtualHeaderFilter
+  heroText: VirtualHeroTextFilter
+  horizhover: VirtualHorizhoverFilter
+  sectionThree: VirtualSectionThreeFilter
+  displayinsights: VirtualDisplayinsightsFilter
+  discover: VirtualDiscoverFilter
+  rgs: VirtualRgsFilter
+  rgstwo: VirtualRgstwoFilter
+  rgsthree: VirtualRgsthreeFilter
+  faq: VirtualFaqFilter
+}
+
+type VirtualConnectionEdges {
+  cursor: String!
+  node: Virtual
+}
+
+type VirtualConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [VirtualConnectionEdges]
+}
+
+type ZelleHeader {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+type ZelleHeroText {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+type ZelleHorizhover {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+type ZelleSectionThree {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+type ZelleDisplayinsights {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+type ZelleDiscover {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+type ZelleRgs {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+type ZelleRgstwo {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+type ZelleRgsthree {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+type ZelleFaqQuestions {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+type ZelleFaq {
+  faqheading: String
+  questions: [ZelleFaqQuestions]
+}
+
+type Zelle implements Node & Document {
+  header: ZelleHeader
+  heroText: ZelleHeroText
+  horizhover: ZelleHorizhover
+  sectionThree: ZelleSectionThree
+  displayinsights: ZelleDisplayinsights
+  discover: ZelleDiscover
+  rgs: ZelleRgs
+  rgstwo: ZelleRgstwo
+  rgsthree: ZelleRgsthree
+  faq: ZelleFaq
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input ZelleHeaderFilter {
+  image: ImageFilter
+  label1: StringFilter
+  label2: StringFilter
+  label3: StringFilter
+  label4: StringFilter
+  label5: StringFilter
+  label6: StringFilter
+  label7: StringFilter
+  button: StringFilter
+}
+
+input ZelleHeroTextFilter {
+  bannerTitle: StringFilter
+  bannerSpanTitle: StringFilter
+  bannerContent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+  bannerImage: ImageFilter
+}
+
+input ZelleHorizhoverFilter {
+  title: StringFilter
+  content: StringFilter
+  image1: ImageFilter
+  title1: StringFilter
+  content1: StringFilter
+  image2: ImageFilter
+  title2: StringFilter
+  content2: StringFilter
+}
+
+input ZelleSectionThreeFilter {
+  digital: StringFilter
+  digitalspan: StringFilter
+  digitalcontent: StringFilter
+  title1: StringFilter
+  content1: StringFilter
+  title2: StringFilter
+  content2: StringFilter
+  image: ImageFilter
+}
+
+input ZelleDisplayinsightsFilter {
+  Headingone: StringFilter
+  Headingtwo: StringFilter
+  insight: StringFilter
+}
+
+input ZelleDiscoverFilter {
+  image1: ImageFilter
+  date1: DatetimeFilter
+  content1: StringFilter
+  btn1: StringFilter
+  image2: ImageFilter
+  date2: DatetimeFilter
+  content2: StringFilter
+  btn2: StringFilter
+  image3: ImageFilter
+  date3: DatetimeFilter
+  content3: StringFilter
+  btn3: StringFilter
+}
+
+input ZelleRgsFilter {
+  readyheading: StringFilter
+  spanheading: StringFilter
+  readycontent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+}
+
+input ZelleRgstwoFilter {
+  readyheadingtwo: StringFilter
+  readycontenttwo: StringFilter
+  bannerButtonText3: StringFilter
+  readytwoimage: ImageFilter
+}
+
+input ZelleRgsthreeFilter {
+  readyheadingthree: StringFilter
+  readycontentthree: StringFilter
+  apibuttons: StringFilter
+  readythreeimage: ImageFilter
+}
+
+input ZelleFaqQuestionsFilter {
+  question: StringFilter
+  answer: StringFilter
+  ctatext: StringFilter
+  ctalink: StringFilter
+}
+
+input ZelleFaqFilter {
+  faqheading: StringFilter
+  questions: ZelleFaqQuestionsFilter
+}
+
+input ZelleFilter {
+  header: ZelleHeaderFilter
+  heroText: ZelleHeroTextFilter
+  horizhover: ZelleHorizhoverFilter
+  sectionThree: ZelleSectionThreeFilter
+  displayinsights: ZelleDisplayinsightsFilter
+  discover: ZelleDiscoverFilter
+  rgs: ZelleRgsFilter
+  rgstwo: ZelleRgstwoFilter
+  rgsthree: ZelleRgsthreeFilter
+  faq: ZelleFaqFilter
+}
+
+type ZelleConnectionEdges {
+  cursor: String!
+  node: Zelle
+}
+
+type ZelleConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [ZelleConnectionEdges]
 }
 
 type PageBanner {
@@ -408,6 +2240,500 @@ type PageConnection implements Connection {
   edges: [PageConnectionEdges]
 }
 
+type TermsConditions {
+  tacheading: String
+  spanheading: String
+  quote: String
+  spanquote: String
+  quote2: String
+  spanquote2: String
+  quote3: String
+  spanquote3: String
+  tacOne: String
+  termOne: String
+  tacTwo: String
+  termTwo: String
+  tacThree: String
+  termThree: String
+  tacFour: String
+  termFour: String
+  tacFive: String
+  termFive: String
+  tacSix: String
+  termSix: String
+  termSix2: String
+  termSix3: String
+  termSix4: String
+  tacSeven: String
+  termSeven: String
+  tacEight: String
+  termEight: String
+  tacNine: String
+  termNine: String
+  tacTen: String
+  termTen: String
+  tacEleven: String
+  termEleven: String
+  termElevenbold: String
+  termEleven2: String
+  termElevenbold3: String
+  termEleven3: String
+  termEleven4: String
+  termEleven5: String
+  termEleven6: String
+  termEleven7: String
+  termEleven8: String
+  termEleven9: String
+  termEleven10: String
+  termEleven11: String
+  termEleven12: String
+  tacTwelve: String
+  termTwelve: String
+  tacThirteen: String
+  termThirteen: String
+  termThirteen2: String
+}
+
+type TermsRgs {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+type TermsRgstwo {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+type TermsRgsthree {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+type Terms implements Node & Document {
+  conditions: TermsConditions
+  rgs: TermsRgs
+  rgstwo: TermsRgstwo
+  rgsthree: TermsRgsthree
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input TermsConditionsFilter {
+  tacheading: StringFilter
+  spanheading: StringFilter
+  quote: StringFilter
+  spanquote: StringFilter
+  quote2: StringFilter
+  spanquote2: StringFilter
+  quote3: StringFilter
+  spanquote3: StringFilter
+  tacOne: StringFilter
+  termOne: StringFilter
+  tacTwo: StringFilter
+  termTwo: StringFilter
+  tacThree: StringFilter
+  termThree: StringFilter
+  tacFour: StringFilter
+  termFour: StringFilter
+  tacFive: StringFilter
+  termFive: StringFilter
+  tacSix: StringFilter
+  termSix: StringFilter
+  termSix2: StringFilter
+  termSix3: StringFilter
+  termSix4: StringFilter
+  tacSeven: StringFilter
+  termSeven: StringFilter
+  tacEight: StringFilter
+  termEight: StringFilter
+  tacNine: StringFilter
+  termNine: StringFilter
+  tacTen: StringFilter
+  termTen: StringFilter
+  tacEleven: StringFilter
+  termEleven: StringFilter
+  termElevenbold: StringFilter
+  termEleven2: StringFilter
+  termElevenbold3: StringFilter
+  termEleven3: StringFilter
+  termEleven4: StringFilter
+  termEleven5: StringFilter
+  termEleven6: StringFilter
+  termEleven7: StringFilter
+  termEleven8: StringFilter
+  termEleven9: StringFilter
+  termEleven10: StringFilter
+  termEleven11: StringFilter
+  termEleven12: StringFilter
+  tacTwelve: StringFilter
+  termTwelve: StringFilter
+  tacThirteen: StringFilter
+  termThirteen: StringFilter
+  termThirteen2: StringFilter
+}
+
+input TermsRgsFilter {
+  readyheading: StringFilter
+  spanheading: StringFilter
+  readycontent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+}
+
+input TermsRgstwoFilter {
+  readyheadingtwo: StringFilter
+  readycontenttwo: StringFilter
+  bannerButtonText3: StringFilter
+  readytwoimage: ImageFilter
+}
+
+input TermsRgsthreeFilter {
+  readyheadingthree: StringFilter
+  readycontentthree: StringFilter
+  apibuttons: StringFilter
+  readythreeimage: ImageFilter
+}
+
+input TermsFilter {
+  conditions: TermsConditionsFilter
+  rgs: TermsRgsFilter
+  rgstwo: TermsRgstwoFilter
+  rgsthree: TermsRgsthreeFilter
+}
+
+type TermsConnectionEdges {
+  cursor: String!
+  node: Terms
+}
+
+type TermsConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [TermsConnectionEdges]
+}
+
+type PolicyPrivacypolicy {
+  heading: String
+  date: String
+  content: String
+  contentOne: String
+  contentTwo: String
+  contentThree: String
+  headingTwo: String
+  info: String
+  headingThree: String
+  personalinfo: String
+  list: String
+  listTwo: String
+  listThree: String
+  allinfo: String
+  headingFour: String
+  infocollect: String
+  headingFive: String
+  spanFive: String
+}
+
+type PolicyPrivacyList {
+  thirdPartyName: String
+  thirdPartyEmail: String
+  thirdPartyAddress: String
+  thirdPartyPhone: String
+  billingHeading: String
+  creditCard: String
+  billingAddress: String
+  financialHeading: String
+  bankAccount: String
+  taxID: String
+  uniqueIdentifiersHeading: String
+  userName: String
+  accountNumbers: String
+  password: String
+  businessHeading: String
+  companyName: String
+  companySize: String
+  businessType: String
+  transactionVolume: String
+  otherInfoHeading: String
+  transactionData: String
+  generatedInfo: String
+  problemReport: String
+  correspondence: String
+  thirdPartyInfo: String
+  autoCollectHeading: String
+  autoCollectIntro: String
+  ipAddress: String
+  browserType: String
+  referringExitPages: String
+  operatingSystemInfo: String
+  otherBrowserInfo: String
+  trackingPolicy: String
+  howWeUseHeading: String
+  usageDetails: String
+  cookiesUsage: String
+  enforceTermsUsage: String
+  sharingInfo: String
+  noRentSell: String
+  limitedShare: String
+  legalReq: String
+  businessChanges: String
+  otherUses: String
+  nonIdentifiable: String
+  ccpaHeading: String
+  ccpaIntro: String
+  right: String
+  rightToKnow: String
+  rightToKnowDetails: String
+  collectedInfoCategories: String
+  sourcesInfoCategories: String
+  businessPurpose: String
+  thirdPartyCategories: String
+}
+
+type PolicyRights {
+  right: String
+  right1: String
+  head1: String
+  right2: String
+  head2: String
+  right3: String
+  right4: String
+  euRightsHeading: String
+  euRightsIntro: String
+  seeInfoAboutYou: String
+  seeProvidedInfo: String
+  changeCorrectInfo: String
+  deleteInfo: String
+  stopProcessing: String
+  objectToProcessing: String
+  withdrawConsent: String
+  optOutFutureComms: String
+  declineInfo: String
+  cookieRefusal: String
+  cookieSettingsFirefox: String
+  cookieSettingsIE: String
+  cookieSettingsChrome: String
+  cookieSettingsSafariOSX: String
+  cookieSettingsSafariIOS: String
+  cookieSettingsAndroid: String
+  disableCookiesNote: String
+  optOutGoogleAnalytics: String
+  compromiseHeading: String
+  notificationProcedures: String
+  noLiability: String
+  linksHeading: String
+  noResponsibility: String
+  notificationHeading: String
+  notificationIntro: String
+  contactIntro: String
+  supportTeam: String
+  support: String
+  supportPhone: String
+  supportEmail: String
+}
+
+type PolicyReady {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+type PolicyRgstwo {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+type PolicyRgsthree {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+type Policy implements Node & Document {
+  Privacypolicy: PolicyPrivacypolicy
+  PrivacyList: PolicyPrivacyList
+  rights: PolicyRights
+  ready: PolicyReady
+  rgstwo: PolicyRgstwo
+  rgsthree: PolicyRgsthree
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input PolicyPrivacypolicyFilter {
+  heading: StringFilter
+  date: StringFilter
+  content: StringFilter
+  contentOne: StringFilter
+  contentTwo: StringFilter
+  contentThree: StringFilter
+  headingTwo: StringFilter
+  info: StringFilter
+  headingThree: StringFilter
+  personalinfo: StringFilter
+  list: StringFilter
+  listTwo: StringFilter
+  listThree: StringFilter
+  allinfo: StringFilter
+  headingFour: StringFilter
+  infocollect: StringFilter
+  headingFive: StringFilter
+  spanFive: StringFilter
+}
+
+input PolicyPrivacyListFilter {
+  thirdPartyName: StringFilter
+  thirdPartyEmail: StringFilter
+  thirdPartyAddress: StringFilter
+  thirdPartyPhone: StringFilter
+  billingHeading: StringFilter
+  creditCard: StringFilter
+  billingAddress: StringFilter
+  financialHeading: StringFilter
+  bankAccount: StringFilter
+  taxID: StringFilter
+  uniqueIdentifiersHeading: StringFilter
+  userName: StringFilter
+  accountNumbers: StringFilter
+  password: StringFilter
+  businessHeading: StringFilter
+  companyName: StringFilter
+  companySize: StringFilter
+  businessType: StringFilter
+  transactionVolume: StringFilter
+  otherInfoHeading: StringFilter
+  transactionData: StringFilter
+  generatedInfo: StringFilter
+  problemReport: StringFilter
+  correspondence: StringFilter
+  thirdPartyInfo: StringFilter
+  autoCollectHeading: StringFilter
+  autoCollectIntro: StringFilter
+  ipAddress: StringFilter
+  browserType: StringFilter
+  referringExitPages: StringFilter
+  operatingSystemInfo: StringFilter
+  otherBrowserInfo: StringFilter
+  trackingPolicy: StringFilter
+  howWeUseHeading: StringFilter
+  usageDetails: StringFilter
+  cookiesUsage: StringFilter
+  enforceTermsUsage: StringFilter
+  sharingInfo: StringFilter
+  noRentSell: StringFilter
+  limitedShare: StringFilter
+  legalReq: StringFilter
+  businessChanges: StringFilter
+  otherUses: StringFilter
+  nonIdentifiable: StringFilter
+  ccpaHeading: StringFilter
+  ccpaIntro: StringFilter
+  right: StringFilter
+  rightToKnow: StringFilter
+  rightToKnowDetails: StringFilter
+  collectedInfoCategories: StringFilter
+  sourcesInfoCategories: StringFilter
+  businessPurpose: StringFilter
+  thirdPartyCategories: StringFilter
+}
+
+input PolicyRightsFilter {
+  right: StringFilter
+  right1: StringFilter
+  head1: StringFilter
+  right2: StringFilter
+  head2: StringFilter
+  right3: StringFilter
+  right4: StringFilter
+  euRightsHeading: StringFilter
+  euRightsIntro: StringFilter
+  seeInfoAboutYou: StringFilter
+  seeProvidedInfo: StringFilter
+  changeCorrectInfo: StringFilter
+  deleteInfo: StringFilter
+  stopProcessing: StringFilter
+  objectToProcessing: StringFilter
+  withdrawConsent: StringFilter
+  optOutFutureComms: StringFilter
+  declineInfo: StringFilter
+  cookieRefusal: StringFilter
+  cookieSettingsFirefox: StringFilter
+  cookieSettingsIE: StringFilter
+  cookieSettingsChrome: StringFilter
+  cookieSettingsSafariOSX: StringFilter
+  cookieSettingsSafariIOS: StringFilter
+  cookieSettingsAndroid: StringFilter
+  disableCookiesNote: StringFilter
+  optOutGoogleAnalytics: StringFilter
+  compromiseHeading: StringFilter
+  notificationProcedures: StringFilter
+  noLiability: StringFilter
+  linksHeading: StringFilter
+  noResponsibility: StringFilter
+  notificationHeading: StringFilter
+  notificationIntro: StringFilter
+  contactIntro: StringFilter
+  supportTeam: StringFilter
+  support: StringFilter
+  supportPhone: StringFilter
+  supportEmail: StringFilter
+}
+
+input PolicyReadyFilter {
+  readyheading: StringFilter
+  spanheading: StringFilter
+  readycontent: StringFilter
+  bannerButtonText1: StringFilter
+  bannerButtonText2: StringFilter
+}
+
+input PolicyRgstwoFilter {
+  readyheadingtwo: StringFilter
+  readycontenttwo: StringFilter
+  bannerButtonText3: StringFilter
+  readytwoimage: ImageFilter
+}
+
+input PolicyRgsthreeFilter {
+  readyheadingthree: StringFilter
+  readycontentthree: StringFilter
+  apibuttons: StringFilter
+  readythreeimage: ImageFilter
+}
+
+input PolicyFilter {
+  Privacypolicy: PolicyPrivacypolicyFilter
+  PrivacyList: PolicyPrivacyListFilter
+  rights: PolicyRightsFilter
+  ready: PolicyReadyFilter
+  rgstwo: PolicyRgstwoFilter
+  rgsthree: PolicyRgsthreeFilter
+}
+
+type PolicyConnectionEdges {
+  cursor: String!
+  node: Policy
+}
+
+type PolicyConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [PolicyConnectionEdges]
+}
+
 type Post implements Node & Document {
   title: String!
   body: JSON
@@ -444,25 +2770,107 @@ type Mutation {
   deleteDocument(collection: String, relativePath: String!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createFolder(collection: String, relativePath: String!): DocumentNode!
+  updateAbout(relativePath: String!, params: AboutMutation!): About!
+  createAbout(relativePath: String!, params: AboutMutation!): About!
   updateBlog(relativePath: String!, params: BlogMutation!): Blog!
   createBlog(relativePath: String!, params: BlogMutation!): Blog!
+  updateRealtime(relativePath: String!, params: RealtimeMutation!): Realtime!
+  createRealtime(relativePath: String!, params: RealtimeMutation!): Realtime!
+  updateFednow(relativePath: String!, params: FednowMutation!): Fednow!
+  createFednow(relativePath: String!, params: FednowMutation!): Fednow!
+  updateInstant(relativePath: String!, params: InstantMutation!): Instant!
+  createInstant(relativePath: String!, params: InstantMutation!): Instant!
+  updateMailed(relativePath: String!, params: MailedMutation!): Mailed!
+  createMailed(relativePath: String!, params: MailedMutation!): Mailed!
+  updatePrintable(relativePath: String!, params: PrintableMutation!): Printable!
+  createPrintable(relativePath: String!, params: PrintableMutation!): Printable!
+  updateVirtual(relativePath: String!, params: VirtualMutation!): Virtual!
+  createVirtual(relativePath: String!, params: VirtualMutation!): Virtual!
+  updateZelle(relativePath: String!, params: ZelleMutation!): Zelle!
+  createZelle(relativePath: String!, params: ZelleMutation!): Zelle!
   updatePage(relativePath: String!, params: PageMutation!): Page!
   createPage(relativePath: String!, params: PageMutation!): Page!
+  updateTerms(relativePath: String!, params: TermsMutation!): Terms!
+  createTerms(relativePath: String!, params: TermsMutation!): Terms!
+  updatePolicy(relativePath: String!, params: PolicyMutation!): Policy!
+  createPolicy(relativePath: String!, params: PolicyMutation!): Policy!
   updatePost(relativePath: String!, params: PostMutation!): Post!
   createPost(relativePath: String!, params: PostMutation!): Post!
 }
 
 input DocumentUpdateMutation {
+  about: AboutMutation
   blog: BlogMutation
+  realtime: RealtimeMutation
+  fednow: FednowMutation
+  instant: InstantMutation
+  mailed: MailedMutation
+  printable: PrintableMutation
+  virtual: VirtualMutation
+  zelle: ZelleMutation
   page: PageMutation
+  terms: TermsMutation
+  policy: PolicyMutation
   post: PostMutation
   relativePath: String
 }
 
 input DocumentMutation {
+  about: AboutMutation
   blog: BlogMutation
+  realtime: RealtimeMutation
+  fednow: FednowMutation
+  instant: InstantMutation
+  mailed: MailedMutation
+  printable: PrintableMutation
+  virtual: VirtualMutation
+  zelle: ZelleMutation
   page: PageMutation
+  terms: TermsMutation
+  policy: PolicyMutation
   post: PostMutation
+}
+
+input AboutHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+input AboutHeroTextMutation {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+}
+
+input AboutDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input AboutMutation {
+  header: AboutHeaderMutation
+  heroText: AboutHeroTextMutation
+  displayinsights: AboutDisplayinsightsMutation
+}
+
+input BlogHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
 }
 
 input BlogHeroTextMutation {
@@ -474,27 +2882,47 @@ input BlogHeroTextMutation {
   bannerImage: String
 }
 
-input BlogSectionTwoMutation {
+input BlogHorizhoverMutation {
   title: String
-  titlecontent: String
-  titlecontentimage: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
   title2: String
-  titlecontent2: String
-  titlecontentimage3: String
-  title3: String
-  titlecontent3: String
+  content2: String
 }
 
 input BlogSectionThreeMutation {
   digital: String
   digitalspan: String
   digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
 }
 
 input BlogDisplayinsightsMutation {
   Headingone: String
   Headingtwo: String
   insight: String
+}
+
+input BlogDiscoverMutation {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
 }
 
 input BlogRgsMutation {
@@ -532,14 +2960,793 @@ input BlogFaqMutation {
 }
 
 input BlogMutation {
+  header: BlogHeaderMutation
   heroText: BlogHeroTextMutation
-  sectionTwo: BlogSectionTwoMutation
+  horizhover: BlogHorizhoverMutation
   sectionThree: BlogSectionThreeMutation
   displayinsights: BlogDisplayinsightsMutation
+  discover: BlogDiscoverMutation
   rgs: BlogRgsMutation
   rgstwo: BlogRgstwoMutation
   rgsthree: BlogRgsthreeMutation
   faq: BlogFaqMutation
+}
+
+input RealtimeHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+input RealtimeHeroTextMutation {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+input RealtimeHorizhoverMutation {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+input RealtimeSectionThreeMutation {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+input RealtimeDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input RealtimeDiscoverMutation {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+input RealtimeRgsMutation {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+input RealtimeRgstwoMutation {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+input RealtimeRgsthreeMutation {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+input RealtimeFaqQuestionsMutation {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+input RealtimeFaqMutation {
+  faqheading: String
+  questions: [RealtimeFaqQuestionsMutation]
+}
+
+input RealtimeMutation {
+  header: RealtimeHeaderMutation
+  heroText: RealtimeHeroTextMutation
+  horizhover: RealtimeHorizhoverMutation
+  sectionThree: RealtimeSectionThreeMutation
+  displayinsights: RealtimeDisplayinsightsMutation
+  discover: RealtimeDiscoverMutation
+  rgs: RealtimeRgsMutation
+  rgstwo: RealtimeRgstwoMutation
+  rgsthree: RealtimeRgsthreeMutation
+  faq: RealtimeFaqMutation
+}
+
+input FednowHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+input FednowHeroTextMutation {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+input FednowHorizhoverMutation {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+input FednowSectionThreeMutation {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+input FednowDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input FednowDiscoverMutation {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+input FednowRgsMutation {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+input FednowRgstwoMutation {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+input FednowRgsthreeMutation {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+input FednowFaqQuestionsMutation {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+input FednowFaqMutation {
+  faqheading: String
+  questions: [FednowFaqQuestionsMutation]
+}
+
+input FednowMutation {
+  header: FednowHeaderMutation
+  heroText: FednowHeroTextMutation
+  horizhover: FednowHorizhoverMutation
+  sectionThree: FednowSectionThreeMutation
+  displayinsights: FednowDisplayinsightsMutation
+  discover: FednowDiscoverMutation
+  rgs: FednowRgsMutation
+  rgstwo: FednowRgstwoMutation
+  rgsthree: FednowRgsthreeMutation
+  faq: FednowFaqMutation
+}
+
+input InstantHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+input InstantHeroTextMutation {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+input InstantHorizhoverMutation {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+input InstantSectionThreeMutation {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+input InstantDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input InstantDiscoverMutation {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+input InstantRgsMutation {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+input InstantRgstwoMutation {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+input InstantRgsthreeMutation {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+input InstantFaqQuestionsMutation {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+input InstantFaqMutation {
+  faqheading: String
+  questions: [InstantFaqQuestionsMutation]
+}
+
+input InstantMutation {
+  header: InstantHeaderMutation
+  heroText: InstantHeroTextMutation
+  horizhover: InstantHorizhoverMutation
+  sectionThree: InstantSectionThreeMutation
+  displayinsights: InstantDisplayinsightsMutation
+  discover: InstantDiscoverMutation
+  rgs: InstantRgsMutation
+  rgstwo: InstantRgstwoMutation
+  rgsthree: InstantRgsthreeMutation
+  faq: InstantFaqMutation
+}
+
+input MailedHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+input MailedHeroTextMutation {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+input MailedHorizhoverMutation {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+input MailedSectionThreeMutation {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+input MailedDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input MailedDiscoverMutation {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+input MailedRgsMutation {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+input MailedRgstwoMutation {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+input MailedRgsthreeMutation {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+input MailedFaqQuestionsMutation {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+input MailedFaqMutation {
+  faqheading: String
+  questions: [MailedFaqQuestionsMutation]
+}
+
+input MailedMutation {
+  header: MailedHeaderMutation
+  heroText: MailedHeroTextMutation
+  horizhover: MailedHorizhoverMutation
+  sectionThree: MailedSectionThreeMutation
+  displayinsights: MailedDisplayinsightsMutation
+  discover: MailedDiscoverMutation
+  rgs: MailedRgsMutation
+  rgstwo: MailedRgstwoMutation
+  rgsthree: MailedRgsthreeMutation
+  faq: MailedFaqMutation
+}
+
+input PrintableHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+input PrintableHeroTextMutation {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+input PrintableHorizhoverMutation {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+input PrintableSectionThreeMutation {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+input PrintableDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input PrintableDiscoverMutation {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+input PrintableRgsMutation {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+input PrintableRgstwoMutation {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+input PrintableRgsthreeMutation {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+input PrintableFaqQuestionsMutation {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+input PrintableFaqMutation {
+  faqheading: String
+  questions: [PrintableFaqQuestionsMutation]
+}
+
+input PrintableMutation {
+  header: PrintableHeaderMutation
+  heroText: PrintableHeroTextMutation
+  horizhover: PrintableHorizhoverMutation
+  sectionThree: PrintableSectionThreeMutation
+  displayinsights: PrintableDisplayinsightsMutation
+  discover: PrintableDiscoverMutation
+  rgs: PrintableRgsMutation
+  rgstwo: PrintableRgstwoMutation
+  rgsthree: PrintableRgsthreeMutation
+  faq: PrintableFaqMutation
+}
+
+input VirtualHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+input VirtualHeroTextMutation {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+input VirtualHorizhoverMutation {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+input VirtualSectionThreeMutation {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+input VirtualDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input VirtualDiscoverMutation {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+input VirtualRgsMutation {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+input VirtualRgstwoMutation {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+input VirtualRgsthreeMutation {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+input VirtualFaqQuestionsMutation {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+input VirtualFaqMutation {
+  faqheading: String
+  questions: [VirtualFaqQuestionsMutation]
+}
+
+input VirtualMutation {
+  header: VirtualHeaderMutation
+  heroText: VirtualHeroTextMutation
+  horizhover: VirtualHorizhoverMutation
+  sectionThree: VirtualSectionThreeMutation
+  displayinsights: VirtualDisplayinsightsMutation
+  discover: VirtualDiscoverMutation
+  rgs: VirtualRgsMutation
+  rgstwo: VirtualRgstwoMutation
+  rgsthree: VirtualRgsthreeMutation
+  faq: VirtualFaqMutation
+}
+
+input ZelleHeaderMutation {
+  image: String
+  label1: String
+  label2: String
+  label3: String
+  label4: String
+  label5: String
+  label6: String
+  label7: String
+  button: String
+}
+
+input ZelleHeroTextMutation {
+  bannerTitle: String
+  bannerSpanTitle: String
+  bannerContent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+  bannerImage: String
+}
+
+input ZelleHorizhoverMutation {
+  title: String
+  content: String
+  image1: String
+  title1: String
+  content1: String
+  image2: String
+  title2: String
+  content2: String
+}
+
+input ZelleSectionThreeMutation {
+  digital: String
+  digitalspan: String
+  digitalcontent: String
+  title1: String
+  content1: String
+  title2: String
+  content2: String
+  image: String
+}
+
+input ZelleDisplayinsightsMutation {
+  Headingone: String
+  Headingtwo: String
+  insight: String
+}
+
+input ZelleDiscoverMutation {
+  image1: String
+  date1: String
+  content1: String
+  btn1: String
+  image2: String
+  date2: String
+  content2: String
+  btn2: String
+  image3: String
+  date3: String
+  content3: String
+  btn3: String
+}
+
+input ZelleRgsMutation {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+input ZelleRgstwoMutation {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+input ZelleRgsthreeMutation {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+input ZelleFaqQuestionsMutation {
+  question: String
+  answer: String
+  ctatext: String
+  ctalink: String
+}
+
+input ZelleFaqMutation {
+  faqheading: String
+  questions: [ZelleFaqQuestionsMutation]
+}
+
+input ZelleMutation {
+  header: ZelleHeaderMutation
+  heroText: ZelleHeroTextMutation
+  horizhover: ZelleHorizhoverMutation
+  sectionThree: ZelleSectionThreeMutation
+  displayinsights: ZelleDisplayinsightsMutation
+  discover: ZelleDiscoverMutation
+  rgs: ZelleRgsMutation
+  rgstwo: ZelleRgstwoMutation
+  rgsthree: ZelleRgsthreeMutation
+  faq: ZelleFaqMutation
 }
 
 input PageBannerMutation {
@@ -600,6 +3807,239 @@ input PageMutation {
   sectionTwo: PageSectionTwoMutation
   sectionThreeText: PageSectionThreeTextMutation
   sectionFourText: PageSectionFourTextMutation
+}
+
+input TermsConditionsMutation {
+  tacheading: String
+  spanheading: String
+  quote: String
+  spanquote: String
+  quote2: String
+  spanquote2: String
+  quote3: String
+  spanquote3: String
+  tacOne: String
+  termOne: String
+  tacTwo: String
+  termTwo: String
+  tacThree: String
+  termThree: String
+  tacFour: String
+  termFour: String
+  tacFive: String
+  termFive: String
+  tacSix: String
+  termSix: String
+  termSix2: String
+  termSix3: String
+  termSix4: String
+  tacSeven: String
+  termSeven: String
+  tacEight: String
+  termEight: String
+  tacNine: String
+  termNine: String
+  tacTen: String
+  termTen: String
+  tacEleven: String
+  termEleven: String
+  termElevenbold: String
+  termEleven2: String
+  termElevenbold3: String
+  termEleven3: String
+  termEleven4: String
+  termEleven5: String
+  termEleven6: String
+  termEleven7: String
+  termEleven8: String
+  termEleven9: String
+  termEleven10: String
+  termEleven11: String
+  termEleven12: String
+  tacTwelve: String
+  termTwelve: String
+  tacThirteen: String
+  termThirteen: String
+  termThirteen2: String
+}
+
+input TermsRgsMutation {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+input TermsRgstwoMutation {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+input TermsRgsthreeMutation {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+input TermsMutation {
+  conditions: TermsConditionsMutation
+  rgs: TermsRgsMutation
+  rgstwo: TermsRgstwoMutation
+  rgsthree: TermsRgsthreeMutation
+}
+
+input PolicyPrivacypolicyMutation {
+  heading: String
+  date: String
+  content: String
+  contentOne: String
+  contentTwo: String
+  contentThree: String
+  headingTwo: String
+  info: String
+  headingThree: String
+  personalinfo: String
+  list: String
+  listTwo: String
+  listThree: String
+  allinfo: String
+  headingFour: String
+  infocollect: String
+  headingFive: String
+  spanFive: String
+}
+
+input PolicyPrivacyListMutation {
+  thirdPartyName: String
+  thirdPartyEmail: String
+  thirdPartyAddress: String
+  thirdPartyPhone: String
+  billingHeading: String
+  creditCard: String
+  billingAddress: String
+  financialHeading: String
+  bankAccount: String
+  taxID: String
+  uniqueIdentifiersHeading: String
+  userName: String
+  accountNumbers: String
+  password: String
+  businessHeading: String
+  companyName: String
+  companySize: String
+  businessType: String
+  transactionVolume: String
+  otherInfoHeading: String
+  transactionData: String
+  generatedInfo: String
+  problemReport: String
+  correspondence: String
+  thirdPartyInfo: String
+  autoCollectHeading: String
+  autoCollectIntro: String
+  ipAddress: String
+  browserType: String
+  referringExitPages: String
+  operatingSystemInfo: String
+  otherBrowserInfo: String
+  trackingPolicy: String
+  howWeUseHeading: String
+  usageDetails: String
+  cookiesUsage: String
+  enforceTermsUsage: String
+  sharingInfo: String
+  noRentSell: String
+  limitedShare: String
+  legalReq: String
+  businessChanges: String
+  otherUses: String
+  nonIdentifiable: String
+  ccpaHeading: String
+  ccpaIntro: String
+  right: String
+  rightToKnow: String
+  rightToKnowDetails: String
+  collectedInfoCategories: String
+  sourcesInfoCategories: String
+  businessPurpose: String
+  thirdPartyCategories: String
+}
+
+input PolicyRightsMutation {
+  right: String
+  right1: String
+  head1: String
+  right2: String
+  head2: String
+  right3: String
+  right4: String
+  euRightsHeading: String
+  euRightsIntro: String
+  seeInfoAboutYou: String
+  seeProvidedInfo: String
+  changeCorrectInfo: String
+  deleteInfo: String
+  stopProcessing: String
+  objectToProcessing: String
+  withdrawConsent: String
+  optOutFutureComms: String
+  declineInfo: String
+  cookieRefusal: String
+  cookieSettingsFirefox: String
+  cookieSettingsIE: String
+  cookieSettingsChrome: String
+  cookieSettingsSafariOSX: String
+  cookieSettingsSafariIOS: String
+  cookieSettingsAndroid: String
+  disableCookiesNote: String
+  optOutGoogleAnalytics: String
+  compromiseHeading: String
+  notificationProcedures: String
+  noLiability: String
+  linksHeading: String
+  noResponsibility: String
+  notificationHeading: String
+  notificationIntro: String
+  contactIntro: String
+  supportTeam: String
+  support: String
+  supportPhone: String
+  supportEmail: String
+}
+
+input PolicyReadyMutation {
+  readyheading: String
+  spanheading: String
+  readycontent: String
+  bannerButtonText1: String
+  bannerButtonText2: String
+}
+
+input PolicyRgstwoMutation {
+  readyheadingtwo: String
+  readycontenttwo: String
+  bannerButtonText3: String
+  readytwoimage: String
+}
+
+input PolicyRgsthreeMutation {
+  readyheadingthree: String
+  readycontentthree: String
+  apibuttons: String
+  readythreeimage: String
+}
+
+input PolicyMutation {
+  Privacypolicy: PolicyPrivacypolicyMutation
+  PrivacyList: PolicyPrivacyListMutation
+  rights: PolicyRightsMutation
+  ready: PolicyReadyMutation
+  rgstwo: PolicyRgstwoMutation
+  rgsthree: PolicyRgsthreeMutation
 }
 
 input PostMutation {

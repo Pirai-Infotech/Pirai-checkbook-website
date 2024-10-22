@@ -1,0 +1,72 @@
+{
+  "header": {
+    "label1": "Home",
+    "label2": "Products",
+    "label3": "Solutions",
+    "label4": "Resources",
+    "label5": "Industries",
+    "label6": "ROI Calculator",
+    "label7": "Pricing",
+    "button": "Sign Up"
+  },
+  "heroText": {
+    "bannerTitle": "Send",
+    "bannerSpanTitle": "Instant Payments Today",
+    "bannerContent": "With Instant Pay your business can push payouts to any VISA or MasterCard branded debit or ATM card in seconds. Checkbook leverages original credit transactions (OCT) to expand our network to billions of eligible cards.",
+    "bannerButtonText1": "Sign Up",
+    "bannerButtonText2": "Try Our Demo"
+  },
+  "horizhover": {
+    "title": "Funds Delivered Immediately with Instant Pay",
+    "content": "Instant Pay allows our users to receive funds in seconds, directly to their debit card, any day of the week. All card data is tokenized and protected in our PCI DSS service provider level 1 systems.",
+    "image1": "/uploads/Group 234.jpg",
+    "title1": "Increased Security",
+    "content1": "Instant Pay is supported through our API, our dashboard and our integrations - customize the experience to fit your needs.",
+    "image2": "/uploads/Group 241.jpg",
+    "title2": "Full Control",
+    "content2": "Instant Pay is supported through our API, our dashboard and our integrations - customize the experience to fit your needs."
+  },
+  "sectionThree": {
+    "digital": "Recipients Expect",
+    "digitalspan": "Instant Payments",
+    "digitalcontent": "Checkbook eliminates pain points for frustrated customers waiting on checks in the mail, reluctant to provide sensitive bank information or those without bank accounts. Satisfy your customers by enabling them to receive payments instantly, 365 days a year.",
+    "title1": "Improved customer experience",
+    "content1": "No more checks lost in the mail or long settlement wait times - funds arrive in seconds.",
+    "title2": "Instant availability of funds",
+    "content2": "No more checks lost in the mail or long settlement wait times - funds arrive in seconds."
+  },
+  "displayinsights": {
+    "Headingone": "Discover",
+    "Headingtwo": "insights ",
+    "insight": " and learn how to manage "
+  },
+  "discover": {
+    "date1": "2023-08-31T18:30:00.000Z",
+    "content1": "FinTech Funding and Valuation versus Demand and Supply",
+    "btn1": "Read More",
+    "date2": "2023-03-28T18:30:00.000Z",
+    "content2": "Building Creativity-Hackathons with Checkbook",
+    "btn2": "Read More",
+    "date3": "2023-05-25T18:30:00.000Z",
+    "content3": "How The Money Flows: Payments for Cash Advance",
+    "btn3": "Read More"
+  },
+  "rgs": {
+    "readyheading": "Ready to get ",
+    "spanheading": "started?",
+    "readycontent": "Explore Checkbook, or create an account instantly and start sending payments. You can also contact us to design a custom package for your business.",
+    "bannerButtonText1": "Create Account",
+    "bannerButtonText2": "Contact Sales"
+  },
+  "rgstwo": {
+    "readyheadingtwo": "Always know what you pay",
+    "readycontenttwo": "Integrated per-transaction pricing with no hidden fees.",
+    "bannerButtonText3": "Pricing Details"
+  },
+  "rgsthree": {
+    "readyheadingthree": "Start your integration ",
+    "readycontentthree": "Get up and running with Checkbook in as little as 10 minutes.",
+    "apibuttons": "API Reference",
+    "readythreeimage": "/uploads/codeico-gray.9da356d5.svg"
+  }
+}

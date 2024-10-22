@@ -1,0 +1,68 @@
+{
+  "header": {
+    "label1": "Home",
+    "label2": "Products",
+    "label3": "Solutions",
+    "label4": "Resources",
+    "label5": "Industries",
+    "label6": "ROI Calculator",
+    "label7": "Pricing",
+    "button": "Sign Up"
+  },
+  "heroText": {
+    "bannerTitle": "Send",
+    "bannerSpanTitle": "Zelle Payments ios",
+    "bannerContent": "Checkbook's modern payments platform now offers Zelle as a payout option to instantly pay their recipients. This provides a seamless and trustworthy experience for our users, emphasizing faster, secure and easily accessible financial transactions.",
+    "bannerButtonText1": "Sign Up",
+    "bannerButtonText2": "Try Our Demo"
+  },
+  "horizhover": {
+    "title": "Faster Payments for All",
+    "content": "Beyond a new payment option, the integration of Zelle with Checkbook's innovative technology ensures secure money transfers and peace of mind throughout the payment journey. With Zelle, Checkbook reinforces its position as the most ubiquitous single portal for payments.",
+    "image1": "/uploads/Easyprocess.53553ae7.svg",
+    "title1": "Broad Acceptance",
+    "content1": "By leveraging Zelle's ubiquity, Checkbook can empower more businesses and individuals with a reliable and credible payment solution.",
+    "image2": "/uploads/Group 241.jpg",
+    "title2": "Instant Settlement",
+    "content2": "With Zelle, Checkbook customers can transfer funds instantly."
+  },
+  "sectionThree": {
+    "digital": "Instant Payments",
+    "digitalspan": "Are Here!",
+    "digitalcontent": "The collaboration between Checkbook and Zelle reflects a shared goal to solve the challenges of push payments by helping people get paid faster, safer and with fewer errors."
+  },
+  "displayinsights": {
+    "Headingone": "Discover",
+    "Headingtwo": "insights ",
+    "insight": " and learn how to manage "
+  },
+  "discover": {
+    "date1": "2023-08-31T18:30:00.000Z",
+    "content1": "FinTech Funding and Valuation versus Demand and Supply",
+    "btn1": "Read More",
+    "date2": "2023-03-28T18:30:00.000Z",
+    "content2": "Building Creativity-Hackathons with Checkbook",
+    "btn2": "Read More",
+    "date3": "2023-05-25T18:30:00.000Z",
+    "content3": "How The Money Flows: Payments for Cash Advance",
+    "btn3": "Read More"
+  },
+  "rgs": {
+    "readyheading": "Ready to get ",
+    "spanheading": "started?",
+    "readycontent": "Explore Checkbook, or create an account instantly and start sending payments. You can also contact us to design a custom package for your business.",
+    "bannerButtonText1": "Create Account",
+    "bannerButtonText2": "Contact Sales"
+  },
+  "rgstwo": {
+    "readyheadingtwo": "Always know what you pay",
+    "readycontenttwo": "Integrated per-transaction pricing with no hidden fees.",
+    "bannerButtonText3": "Pricing Details"
+  },
+  "rgsthree": {
+    "readyheadingthree": "Start your integration ",
+    "readycontentthree": "Get up and running with Checkbook in as little as 10 minutes.",
+    "apibuttons": "API Reference",
+    "readythreeimage": "/uploads/codeico-gray.9da356d5.svg"
+  }
+}

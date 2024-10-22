@@ -1,0 +1,72 @@
+{
+  "header": {
+    "label1": "Home",
+    "label2": "Products",
+    "label3": "Solutions",
+    "label4": "Resources",
+    "label5": "Industries",
+    "label6": "ROI Calculator",
+    "label7": "Pricing",
+    "button": "Sign Up"
+  },
+  "heroText": {
+    "bannerTitle": "Create & Send",
+    "bannerSpanTitle": "Virtual Cards*",
+    "bannerContent": "A virtual card is a unique 16-digit payment card number that is digitally generated and tied to your account. Virtual cards can be processed anywhere traditional card payments are accepted.",
+    "bannerButtonText1": "Sign Up",
+    "bannerButtonText2": "Try Our Demo"
+  },
+  "horizhover": {
+    "title": "Funds Delivered in Near Real-time with Virtual Card",
+    "content": "Did you know that you can earn money with virtual cards? Checkbook shares a portion of the interchange fee with our senders, allowing you to earn money with every payment. Pay merchants or vendors in a few simple clicks!",
+    "image1": "/uploads/Easyprocess.53553ae7.svg",
+    "title1": "Reduced Risk",
+    "content1": "Virtual cards act as a layer of protection between your funding source and the merchant - reducing risk and enhancing privacy.",
+    "image2": "/uploads/Group 241.jpg",
+    "title2": "Increase Control",
+    "content2": "Virtual cards are created with a specified recipient, time limit, and amount for every payment."
+  },
+  "sectionThree": {
+    "digital": "Recipients Expect",
+    "digitalspan": "Fast Payments",
+    "digitalcontent": "There are 55 million adults in the US who are unbanked or underbanked. Checkbook’s virtual cards are a great choice for serving recipients who do not have sufficient access to a bank account or are reluctant to provide sensitive bank information.",
+    "title1": "User Friendly",
+    "content1": "Use virtual cards so you never have to worry about canceling a free trial or monthly subscription again.",
+    "title2": "Reduce Risk",
+    "content2": "Use virtual cards so you never have to worry about canceling a free trial or monthly subscription again."
+  },
+  "displayinsights": {
+    "Headingone": "Discover",
+    "Headingtwo": "insights ",
+    "insight": " and learn how to manage "
+  },
+  "discover": {
+    "date1": "2023-08-31T18:30:00.000Z",
+    "content1": "FinTech Funding and Valuation versus Demand and Supply",
+    "btn1": "Read More",
+    "date2": "2023-03-28T18:30:00.000Z",
+    "content2": "Building Creativity-Hackathons with Checkbook",
+    "btn2": "Read More",
+    "date3": "2023-05-25T18:30:00.000Z",
+    "content3": "How The Money Flows: Payments for Cash Advance",
+    "btn3": "Read More"
+  },
+  "rgs": {
+    "readyheading": "Ready to get ",
+    "spanheading": "started?",
+    "readycontent": "Explore Checkbook, or create an account instantly and start sending payments. You can also contact us to design a custom package for your business.",
+    "bannerButtonText1": "Create Account",
+    "bannerButtonText2": "Contact Sales"
+  },
+  "rgstwo": {
+    "readyheadingtwo": "Always know what you pay",
+    "readycontenttwo": "Integrated per-transaction pricing with no hidden fees.",
+    "bannerButtonText3": "Pricing Details"
+  },
+  "rgsthree": {
+    "readyheadingthree": "Start your integration ",
+    "readycontentthree": "Get up and running with Checkbook in as little as 10 minutes.",
+    "apibuttons": "API Reference",
+    "readythreeimage": "/uploads/codeico-gray.9da356d5.svg"
+  }
+}

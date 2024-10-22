@@ -1,0 +1,72 @@
+{
+  "header": {
+    "label1": "Home",
+    "label2": "Products",
+    "label3": "Solutions",
+    "label4": "Resources",
+    "label5": "Industries",
+    "label6": "ROI Calculator",
+    "label7": "Pricing",
+    "button": "Sign Up"
+  },
+  "heroText": {
+    "bannerTitle": "Send",
+    "bannerSpanTitle": "FedNow Payments",
+    "bannerContent": "Checkbook’s payments solution utilizes the FedNow network that is being launched by the federal reserve. Unlike ACH, FedNow is a real-time payments platform that allows recipients to receive funds directly into their bank account in less than 60 seconds.",
+    "bannerButtonText1": "Sign Up",
+    "bannerButtonText2": "Try Our Demo"
+  },
+  "horizhover": {
+    "title": "Faster Payments for All",
+    "content": "Current bank to bank payment solutions are prohibitively expensive (e.g. wire transfers) or take days to settle (e.g. ACH). Checkbook's FedNow payments solution is helping to bring US-based bank payments to the 21st century with instant, round-the-clock settlement 365 days a year.",
+    "image1": "/uploads/Group 234.jpg",
+    "title1": "Broad Acceptance",
+    "content1": "FedNow will bring real-time payment capabilities to banks and payment processors across the US.",
+    "image2": "/uploads/Group 241.jpg",
+    "title2": "Instant Settlement",
+    "content2": "Checkbook’s FedNow payments post instantly to your recipient's bank account, 24 hours a day, 7 days a week."
+  },
+  "sectionThree": {
+    "digital": "Instant Payments",
+    "digitalspan": "Are Here!",
+    "digitalcontent": "Launching in July, the FedNow payments network brings a much needed upgrade to the domestic payments infrastructure. While bringing innovations in payment speed and convenience, the FedNow network will be supported at the financial institutions that you already use.",
+    "title1": "User Friendly",
+    "content1": "No need to worry about reconciling or chargebacks. FedNow will require request for payments before debits are made. Initially, only push payments will be rolled out as well.",
+    "title2": "Finality Settlement",
+    "content2": "No need to worry about reconciling or chargebacks. FedNow will require request for payments before debits are made. Initially, only push payments will be rolled out as well."
+  },
+  "displayinsights": {
+    "Headingone": "Discover",
+    "Headingtwo": "insights ",
+    "insight": " and learn how to manage "
+  },
+  "discover": {
+    "date1": "2023-08-31T18:30:00.000Z",
+    "content1": "FinTech Funding and Valuation versus Demand and Supply",
+    "btn1": "Read More",
+    "date2": "2023-03-28T18:30:00.000Z",
+    "content2": "Building Creativity-Hackathons with Checkbook",
+    "btn2": "Read More",
+    "date3": "2023-05-25T18:30:00.000Z",
+    "content3": "How The Money Flows: Payments for Cash Advance",
+    "btn3": "Read More"
+  },
+  "rgs": {
+    "readyheading": "Ready to get ",
+    "spanheading": "started?",
+    "readycontent": "Explore Checkbook, or create an account instantly and start sending payments. You can also contact us to design a custom package for your business.",
+    "bannerButtonText1": "Create Account",
+    "bannerButtonText2": "Contact Sales"
+  },
+  "rgstwo": {
+    "readyheadingtwo": "Always know what you pay",
+    "readycontenttwo": "Integrated per-transaction pricing with no hidden fees.",
+    "bannerButtonText3": "Pricing Details"
+  },
+  "rgsthree": {
+    "readyheadingthree": "Start your integration ",
+    "readycontentthree": "Get up and running with Checkbook in as little as 10 minutes.",
+    "apibuttons": "API Reference",
+    "readythreeimage": "/uploads/codeico-gray.9da356d5.svg"
+  }
+}

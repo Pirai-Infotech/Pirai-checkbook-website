@@ -81,10 +81,30 @@ export type Query = {
   collections: Array<Collection>;
   node: Node;
   document: DocumentNode;
+  about: About;
+  aboutConnection: AboutConnection;
   blog: Blog;
   blogConnection: BlogConnection;
+  realtime: Realtime;
+  realtimeConnection: RealtimeConnection;
+  fednow: Fednow;
+  fednowConnection: FednowConnection;
+  instant: Instant;
+  instantConnection: InstantConnection;
+  mailed: Mailed;
+  mailedConnection: MailedConnection;
+  printable: Printable;
+  printableConnection: PrintableConnection;
+  virtual: Virtual;
+  virtualConnection: VirtualConnection;
+  zelle: Zelle;
+  zelleConnection: ZelleConnection;
   page: Page;
   pageConnection: PageConnection;
+  terms: Terms;
+  termsConnection: TermsConnection;
+  policy: Policy;
+  policyConnection: PolicyConnection;
   post: Post;
   postConnection: PostConnection;
 };
@@ -111,6 +131,21 @@ export type QueryDocumentArgs = {
 };
 
 
+export type QueryAboutArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryAboutConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AboutFilter>;
+};
+
+
 export type QueryBlogArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
@@ -123,6 +158,111 @@ export type QueryBlogConnectionArgs = {
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
   filter?: InputMaybe<BlogFilter>;
+};
+
+
+export type QueryRealtimeArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryRealtimeConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<RealtimeFilter>;
+};
+
+
+export type QueryFednowArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryFednowConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<FednowFilter>;
+};
+
+
+export type QueryInstantArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryInstantConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<InstantFilter>;
+};
+
+
+export type QueryMailedArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryMailedConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<MailedFilter>;
+};
+
+
+export type QueryPrintableArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryPrintableConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<PrintableFilter>;
+};
+
+
+export type QueryVirtualArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryVirtualConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<VirtualFilter>;
+};
+
+
+export type QueryZelleArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryZelleConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<ZelleFilter>;
 };
 
 
@@ -141,6 +281,36 @@ export type QueryPageConnectionArgs = {
 };
 
 
+export type QueryTermsArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryTermsConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<TermsFilter>;
+};
+
+
+export type QueryPolicyArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryPolicyConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<PolicyFilter>;
+};
+
+
 export type QueryPostArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
@@ -156,8 +326,18 @@ export type QueryPostConnectionArgs = {
 };
 
 export type DocumentFilter = {
+  about?: InputMaybe<AboutFilter>;
   blog?: InputMaybe<BlogFilter>;
+  realtime?: InputMaybe<RealtimeFilter>;
+  fednow?: InputMaybe<FednowFilter>;
+  instant?: InputMaybe<InstantFilter>;
+  mailed?: InputMaybe<MailedFilter>;
+  printable?: InputMaybe<PrintableFilter>;
+  virtual?: InputMaybe<VirtualFilter>;
+  zelle?: InputMaybe<ZelleFilter>;
   page?: InputMaybe<PageFilter>;
+  terms?: InputMaybe<TermsFilter>;
+  policy?: InputMaybe<PolicyFilter>;
   post?: InputMaybe<PostFilter>;
 };
 
@@ -198,7 +378,114 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Blog | Page | Post | Folder;
+export type DocumentNode = About | Blog | Realtime | Fednow | Instant | Mailed | Printable | Virtual | Zelle | Page | Terms | Policy | Post | Folder;
+
+export type AboutHeader = {
+  __typename?: 'AboutHeader';
+  image?: Maybe<Scalars['String']['output']>;
+  label1?: Maybe<Scalars['String']['output']>;
+  label2?: Maybe<Scalars['String']['output']>;
+  label3?: Maybe<Scalars['String']['output']>;
+  label4?: Maybe<Scalars['String']['output']>;
+  label5?: Maybe<Scalars['String']['output']>;
+  label6?: Maybe<Scalars['String']['output']>;
+  label7?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+};
+
+export type AboutHeroText = {
+  __typename?: 'AboutHeroText';
+  bannerTitle?: Maybe<Scalars['String']['output']>;
+  bannerSpanTitle?: Maybe<Scalars['String']['output']>;
+  bannerContent?: Maybe<Scalars['String']['output']>;
+};
+
+export type AboutDisplayinsights = {
+  __typename?: 'AboutDisplayinsights';
+  Headingone?: Maybe<Scalars['String']['output']>;
+  Headingtwo?: Maybe<Scalars['String']['output']>;
+  insight?: Maybe<Scalars['String']['output']>;
+};
+
+export type About = Node & Document & {
+  __typename?: 'About';
+  header?: Maybe<AboutHeader>;
+  heroText?: Maybe<AboutHeroText>;
+  displayinsights?: Maybe<AboutDisplayinsights>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type ImageFilter = {
+  startsWith?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type StringFilter = {
+  startsWith?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type AboutHeaderFilter = {
+  image?: InputMaybe<ImageFilter>;
+  label1?: InputMaybe<StringFilter>;
+  label2?: InputMaybe<StringFilter>;
+  label3?: InputMaybe<StringFilter>;
+  label4?: InputMaybe<StringFilter>;
+  label5?: InputMaybe<StringFilter>;
+  label6?: InputMaybe<StringFilter>;
+  label7?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+};
+
+export type AboutHeroTextFilter = {
+  bannerTitle?: InputMaybe<StringFilter>;
+  bannerSpanTitle?: InputMaybe<StringFilter>;
+  bannerContent?: InputMaybe<StringFilter>;
+};
+
+export type AboutDisplayinsightsFilter = {
+  Headingone?: InputMaybe<StringFilter>;
+  Headingtwo?: InputMaybe<StringFilter>;
+  insight?: InputMaybe<StringFilter>;
+};
+
+export type AboutFilter = {
+  header?: InputMaybe<AboutHeaderFilter>;
+  heroText?: InputMaybe<AboutHeroTextFilter>;
+  displayinsights?: InputMaybe<AboutDisplayinsightsFilter>;
+};
+
+export type AboutConnectionEdges = {
+  __typename?: 'AboutConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<About>;
+};
+
+export type AboutConnection = Connection & {
+  __typename?: 'AboutConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<AboutConnectionEdges>>>;
+};
+
+export type BlogHeader = {
+  __typename?: 'BlogHeader';
+  image?: Maybe<Scalars['String']['output']>;
+  label1?: Maybe<Scalars['String']['output']>;
+  label2?: Maybe<Scalars['String']['output']>;
+  label3?: Maybe<Scalars['String']['output']>;
+  label4?: Maybe<Scalars['String']['output']>;
+  label5?: Maybe<Scalars['String']['output']>;
+  label6?: Maybe<Scalars['String']['output']>;
+  label7?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+};
 
 export type BlogHeroText = {
   __typename?: 'BlogHeroText';
@@ -210,16 +497,16 @@ export type BlogHeroText = {
   bannerImage?: Maybe<Scalars['String']['output']>;
 };
 
-export type BlogSectionTwo = {
-  __typename?: 'BlogSectionTwo';
+export type BlogHorizhover = {
+  __typename?: 'BlogHorizhover';
   title?: Maybe<Scalars['String']['output']>;
-  titlecontent?: Maybe<Scalars['String']['output']>;
-  titlecontentimage?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Scalars['String']['output']>;
+  image1?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
   title2?: Maybe<Scalars['String']['output']>;
-  titlecontent2?: Maybe<Scalars['String']['output']>;
-  titlecontentimage3?: Maybe<Scalars['String']['output']>;
-  title3?: Maybe<Scalars['String']['output']>;
-  titlecontent3?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
 };
 
 export type BlogSectionThree = {
@@ -227,6 +514,11 @@ export type BlogSectionThree = {
   digital?: Maybe<Scalars['String']['output']>;
   digitalspan?: Maybe<Scalars['String']['output']>;
   digitalcontent?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
 };
 
 export type BlogDisplayinsights = {
@@ -234,6 +526,22 @@ export type BlogDisplayinsights = {
   Headingone?: Maybe<Scalars['String']['output']>;
   Headingtwo?: Maybe<Scalars['String']['output']>;
   insight?: Maybe<Scalars['String']['output']>;
+};
+
+export type BlogDiscover = {
+  __typename?: 'BlogDiscover';
+  image1?: Maybe<Scalars['String']['output']>;
+  date1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  btn1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  date2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  btn2?: Maybe<Scalars['String']['output']>;
+  image3?: Maybe<Scalars['String']['output']>;
+  date3?: Maybe<Scalars['String']['output']>;
+  content3?: Maybe<Scalars['String']['output']>;
+  btn3?: Maybe<Scalars['String']['output']>;
 };
 
 export type BlogRgs = {
@@ -277,10 +585,12 @@ export type BlogFaq = {
 
 export type Blog = Node & Document & {
   __typename?: 'Blog';
+  header?: Maybe<BlogHeader>;
   heroText?: Maybe<BlogHeroText>;
-  sectionTwo?: Maybe<BlogSectionTwo>;
+  horizhover?: Maybe<BlogHorizhover>;
   sectionThree?: Maybe<BlogSectionThree>;
   displayinsights?: Maybe<BlogDisplayinsights>;
+  discover?: Maybe<BlogDiscover>;
   rgs?: Maybe<BlogRgs>;
   rgstwo?: Maybe<BlogRgstwo>;
   rgsthree?: Maybe<BlogRgsthree>;
@@ -290,18 +600,16 @@ export type Blog = Node & Document & {
   _values: Scalars['JSON']['output'];
 };
 
-export type StringFilter = {
-  startsWith?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type ImageFilter = {
-  startsWith?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+export type BlogHeaderFilter = {
+  image?: InputMaybe<ImageFilter>;
+  label1?: InputMaybe<StringFilter>;
+  label2?: InputMaybe<StringFilter>;
+  label3?: InputMaybe<StringFilter>;
+  label4?: InputMaybe<StringFilter>;
+  label5?: InputMaybe<StringFilter>;
+  label6?: InputMaybe<StringFilter>;
+  label7?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
 };
 
 export type BlogHeroTextFilter = {
@@ -313,27 +621,55 @@ export type BlogHeroTextFilter = {
   bannerImage?: InputMaybe<ImageFilter>;
 };
 
-export type BlogSectionTwoFilter = {
+export type BlogHorizhoverFilter = {
   title?: InputMaybe<StringFilter>;
-  titlecontent?: InputMaybe<StringFilter>;
-  titlecontentimage?: InputMaybe<ImageFilter>;
+  content?: InputMaybe<StringFilter>;
+  image1?: InputMaybe<ImageFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
   title2?: InputMaybe<StringFilter>;
-  titlecontent2?: InputMaybe<StringFilter>;
-  titlecontentimage3?: InputMaybe<ImageFilter>;
-  title3?: InputMaybe<StringFilter>;
-  titlecontent3?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
 };
 
 export type BlogSectionThreeFilter = {
   digital?: InputMaybe<StringFilter>;
   digitalspan?: InputMaybe<StringFilter>;
   digitalcontent?: InputMaybe<StringFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
 };
 
 export type BlogDisplayinsightsFilter = {
   Headingone?: InputMaybe<StringFilter>;
   Headingtwo?: InputMaybe<StringFilter>;
   insight?: InputMaybe<StringFilter>;
+};
+
+export type DatetimeFilter = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type BlogDiscoverFilter = {
+  image1?: InputMaybe<ImageFilter>;
+  date1?: InputMaybe<DatetimeFilter>;
+  content1?: InputMaybe<StringFilter>;
+  btn1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  date2?: InputMaybe<DatetimeFilter>;
+  content2?: InputMaybe<StringFilter>;
+  btn2?: InputMaybe<StringFilter>;
+  image3?: InputMaybe<ImageFilter>;
+  date3?: InputMaybe<DatetimeFilter>;
+  content3?: InputMaybe<StringFilter>;
+  btn3?: InputMaybe<StringFilter>;
 };
 
 export type BlogRgsFilter = {
@@ -371,10 +707,12 @@ export type BlogFaqFilter = {
 };
 
 export type BlogFilter = {
+  header?: InputMaybe<BlogHeaderFilter>;
   heroText?: InputMaybe<BlogHeroTextFilter>;
-  sectionTwo?: InputMaybe<BlogSectionTwoFilter>;
+  horizhover?: InputMaybe<BlogHorizhoverFilter>;
   sectionThree?: InputMaybe<BlogSectionThreeFilter>;
   displayinsights?: InputMaybe<BlogDisplayinsightsFilter>;
+  discover?: InputMaybe<BlogDiscoverFilter>;
   rgs?: InputMaybe<BlogRgsFilter>;
   rgstwo?: InputMaybe<BlogRgstwoFilter>;
   rgsthree?: InputMaybe<BlogRgsthreeFilter>;
@@ -392,6 +730,1756 @@ export type BlogConnection = Connection & {
   pageInfo: PageInfo;
   totalCount: Scalars['Float']['output'];
   edges?: Maybe<Array<Maybe<BlogConnectionEdges>>>;
+};
+
+export type RealtimeHeader = {
+  __typename?: 'RealtimeHeader';
+  image?: Maybe<Scalars['String']['output']>;
+  label1?: Maybe<Scalars['String']['output']>;
+  label2?: Maybe<Scalars['String']['output']>;
+  label3?: Maybe<Scalars['String']['output']>;
+  label4?: Maybe<Scalars['String']['output']>;
+  label5?: Maybe<Scalars['String']['output']>;
+  label6?: Maybe<Scalars['String']['output']>;
+  label7?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+};
+
+export type RealtimeHeroText = {
+  __typename?: 'RealtimeHeroText';
+  bannerTitle?: Maybe<Scalars['String']['output']>;
+  bannerSpanTitle?: Maybe<Scalars['String']['output']>;
+  bannerContent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+  bannerImage?: Maybe<Scalars['String']['output']>;
+};
+
+export type RealtimeHorizhover = {
+  __typename?: 'RealtimeHorizhover';
+  title?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Scalars['String']['output']>;
+  image1?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+};
+
+export type RealtimeSectionThree = {
+  __typename?: 'RealtimeSectionThree';
+  digital?: Maybe<Scalars['String']['output']>;
+  digitalspan?: Maybe<Scalars['String']['output']>;
+  digitalcontent?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+};
+
+export type RealtimeDisplayinsights = {
+  __typename?: 'RealtimeDisplayinsights';
+  Headingone?: Maybe<Scalars['String']['output']>;
+  Headingtwo?: Maybe<Scalars['String']['output']>;
+  insight?: Maybe<Scalars['String']['output']>;
+};
+
+export type RealtimeDiscover = {
+  __typename?: 'RealtimeDiscover';
+  image1?: Maybe<Scalars['String']['output']>;
+  date1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  btn1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  date2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  btn2?: Maybe<Scalars['String']['output']>;
+  image3?: Maybe<Scalars['String']['output']>;
+  date3?: Maybe<Scalars['String']['output']>;
+  content3?: Maybe<Scalars['String']['output']>;
+  btn3?: Maybe<Scalars['String']['output']>;
+};
+
+export type RealtimeRgs = {
+  __typename?: 'RealtimeRgs';
+  readyheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  readycontent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+};
+
+export type RealtimeRgstwo = {
+  __typename?: 'RealtimeRgstwo';
+  readyheadingtwo?: Maybe<Scalars['String']['output']>;
+  readycontenttwo?: Maybe<Scalars['String']['output']>;
+  bannerButtonText3?: Maybe<Scalars['String']['output']>;
+  readytwoimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type RealtimeRgsthree = {
+  __typename?: 'RealtimeRgsthree';
+  readyheadingthree?: Maybe<Scalars['String']['output']>;
+  readycontentthree?: Maybe<Scalars['String']['output']>;
+  apibuttons?: Maybe<Scalars['String']['output']>;
+  readythreeimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type RealtimeFaqQuestions = {
+  __typename?: 'RealtimeFaqQuestions';
+  question?: Maybe<Scalars['String']['output']>;
+  answer?: Maybe<Scalars['String']['output']>;
+  ctatext?: Maybe<Scalars['String']['output']>;
+  ctalink?: Maybe<Scalars['String']['output']>;
+};
+
+export type RealtimeFaq = {
+  __typename?: 'RealtimeFaq';
+  faqheading?: Maybe<Scalars['String']['output']>;
+  questions?: Maybe<Array<Maybe<RealtimeFaqQuestions>>>;
+};
+
+export type Realtime = Node & Document & {
+  __typename?: 'Realtime';
+  header?: Maybe<RealtimeHeader>;
+  heroText?: Maybe<RealtimeHeroText>;
+  horizhover?: Maybe<RealtimeHorizhover>;
+  sectionThree?: Maybe<RealtimeSectionThree>;
+  displayinsights?: Maybe<RealtimeDisplayinsights>;
+  discover?: Maybe<RealtimeDiscover>;
+  rgs?: Maybe<RealtimeRgs>;
+  rgstwo?: Maybe<RealtimeRgstwo>;
+  rgsthree?: Maybe<RealtimeRgsthree>;
+  faq?: Maybe<RealtimeFaq>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type RealtimeHeaderFilter = {
+  image?: InputMaybe<ImageFilter>;
+  label1?: InputMaybe<StringFilter>;
+  label2?: InputMaybe<StringFilter>;
+  label3?: InputMaybe<StringFilter>;
+  label4?: InputMaybe<StringFilter>;
+  label5?: InputMaybe<StringFilter>;
+  label6?: InputMaybe<StringFilter>;
+  label7?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+};
+
+export type RealtimeHeroTextFilter = {
+  bannerTitle?: InputMaybe<StringFilter>;
+  bannerSpanTitle?: InputMaybe<StringFilter>;
+  bannerContent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+  bannerImage?: InputMaybe<ImageFilter>;
+};
+
+export type RealtimeHorizhoverFilter = {
+  title?: InputMaybe<StringFilter>;
+  content?: InputMaybe<StringFilter>;
+  image1?: InputMaybe<ImageFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+};
+
+export type RealtimeSectionThreeFilter = {
+  digital?: InputMaybe<StringFilter>;
+  digitalspan?: InputMaybe<StringFilter>;
+  digitalcontent?: InputMaybe<StringFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+};
+
+export type RealtimeDisplayinsightsFilter = {
+  Headingone?: InputMaybe<StringFilter>;
+  Headingtwo?: InputMaybe<StringFilter>;
+  insight?: InputMaybe<StringFilter>;
+};
+
+export type RealtimeDiscoverFilter = {
+  image1?: InputMaybe<ImageFilter>;
+  date1?: InputMaybe<DatetimeFilter>;
+  content1?: InputMaybe<StringFilter>;
+  btn1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  date2?: InputMaybe<DatetimeFilter>;
+  content2?: InputMaybe<StringFilter>;
+  btn2?: InputMaybe<StringFilter>;
+  image3?: InputMaybe<ImageFilter>;
+  date3?: InputMaybe<DatetimeFilter>;
+  content3?: InputMaybe<StringFilter>;
+  btn3?: InputMaybe<StringFilter>;
+};
+
+export type RealtimeRgsFilter = {
+  readyheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  readycontent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+};
+
+export type RealtimeRgstwoFilter = {
+  readyheadingtwo?: InputMaybe<StringFilter>;
+  readycontenttwo?: InputMaybe<StringFilter>;
+  bannerButtonText3?: InputMaybe<StringFilter>;
+  readytwoimage?: InputMaybe<ImageFilter>;
+};
+
+export type RealtimeRgsthreeFilter = {
+  readyheadingthree?: InputMaybe<StringFilter>;
+  readycontentthree?: InputMaybe<StringFilter>;
+  apibuttons?: InputMaybe<StringFilter>;
+  readythreeimage?: InputMaybe<ImageFilter>;
+};
+
+export type RealtimeFaqQuestionsFilter = {
+  question?: InputMaybe<StringFilter>;
+  answer?: InputMaybe<StringFilter>;
+  ctatext?: InputMaybe<StringFilter>;
+  ctalink?: InputMaybe<StringFilter>;
+};
+
+export type RealtimeFaqFilter = {
+  faqheading?: InputMaybe<StringFilter>;
+  questions?: InputMaybe<RealtimeFaqQuestionsFilter>;
+};
+
+export type RealtimeFilter = {
+  header?: InputMaybe<RealtimeHeaderFilter>;
+  heroText?: InputMaybe<RealtimeHeroTextFilter>;
+  horizhover?: InputMaybe<RealtimeHorizhoverFilter>;
+  sectionThree?: InputMaybe<RealtimeSectionThreeFilter>;
+  displayinsights?: InputMaybe<RealtimeDisplayinsightsFilter>;
+  discover?: InputMaybe<RealtimeDiscoverFilter>;
+  rgs?: InputMaybe<RealtimeRgsFilter>;
+  rgstwo?: InputMaybe<RealtimeRgstwoFilter>;
+  rgsthree?: InputMaybe<RealtimeRgsthreeFilter>;
+  faq?: InputMaybe<RealtimeFaqFilter>;
+};
+
+export type RealtimeConnectionEdges = {
+  __typename?: 'RealtimeConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Realtime>;
+};
+
+export type RealtimeConnection = Connection & {
+  __typename?: 'RealtimeConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<RealtimeConnectionEdges>>>;
+};
+
+export type FednowHeader = {
+  __typename?: 'FednowHeader';
+  image?: Maybe<Scalars['String']['output']>;
+  label1?: Maybe<Scalars['String']['output']>;
+  label2?: Maybe<Scalars['String']['output']>;
+  label3?: Maybe<Scalars['String']['output']>;
+  label4?: Maybe<Scalars['String']['output']>;
+  label5?: Maybe<Scalars['String']['output']>;
+  label6?: Maybe<Scalars['String']['output']>;
+  label7?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+};
+
+export type FednowHeroText = {
+  __typename?: 'FednowHeroText';
+  bannerTitle?: Maybe<Scalars['String']['output']>;
+  bannerSpanTitle?: Maybe<Scalars['String']['output']>;
+  bannerContent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+  bannerImage?: Maybe<Scalars['String']['output']>;
+};
+
+export type FednowHorizhover = {
+  __typename?: 'FednowHorizhover';
+  title?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Scalars['String']['output']>;
+  image1?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+};
+
+export type FednowSectionThree = {
+  __typename?: 'FednowSectionThree';
+  digital?: Maybe<Scalars['String']['output']>;
+  digitalspan?: Maybe<Scalars['String']['output']>;
+  digitalcontent?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+};
+
+export type FednowDisplayinsights = {
+  __typename?: 'FednowDisplayinsights';
+  Headingone?: Maybe<Scalars['String']['output']>;
+  Headingtwo?: Maybe<Scalars['String']['output']>;
+  insight?: Maybe<Scalars['String']['output']>;
+};
+
+export type FednowDiscover = {
+  __typename?: 'FednowDiscover';
+  image1?: Maybe<Scalars['String']['output']>;
+  date1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  btn1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  date2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  btn2?: Maybe<Scalars['String']['output']>;
+  image3?: Maybe<Scalars['String']['output']>;
+  date3?: Maybe<Scalars['String']['output']>;
+  content3?: Maybe<Scalars['String']['output']>;
+  btn3?: Maybe<Scalars['String']['output']>;
+};
+
+export type FednowRgs = {
+  __typename?: 'FednowRgs';
+  readyheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  readycontent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+};
+
+export type FednowRgstwo = {
+  __typename?: 'FednowRgstwo';
+  readyheadingtwo?: Maybe<Scalars['String']['output']>;
+  readycontenttwo?: Maybe<Scalars['String']['output']>;
+  bannerButtonText3?: Maybe<Scalars['String']['output']>;
+  readytwoimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type FednowRgsthree = {
+  __typename?: 'FednowRgsthree';
+  readyheadingthree?: Maybe<Scalars['String']['output']>;
+  readycontentthree?: Maybe<Scalars['String']['output']>;
+  apibuttons?: Maybe<Scalars['String']['output']>;
+  readythreeimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type FednowFaqQuestions = {
+  __typename?: 'FednowFaqQuestions';
+  question?: Maybe<Scalars['String']['output']>;
+  answer?: Maybe<Scalars['String']['output']>;
+  ctatext?: Maybe<Scalars['String']['output']>;
+  ctalink?: Maybe<Scalars['String']['output']>;
+};
+
+export type FednowFaq = {
+  __typename?: 'FednowFaq';
+  faqheading?: Maybe<Scalars['String']['output']>;
+  questions?: Maybe<Array<Maybe<FednowFaqQuestions>>>;
+};
+
+export type Fednow = Node & Document & {
+  __typename?: 'Fednow';
+  header?: Maybe<FednowHeader>;
+  heroText?: Maybe<FednowHeroText>;
+  horizhover?: Maybe<FednowHorizhover>;
+  sectionThree?: Maybe<FednowSectionThree>;
+  displayinsights?: Maybe<FednowDisplayinsights>;
+  discover?: Maybe<FednowDiscover>;
+  rgs?: Maybe<FednowRgs>;
+  rgstwo?: Maybe<FednowRgstwo>;
+  rgsthree?: Maybe<FednowRgsthree>;
+  faq?: Maybe<FednowFaq>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type FednowHeaderFilter = {
+  image?: InputMaybe<ImageFilter>;
+  label1?: InputMaybe<StringFilter>;
+  label2?: InputMaybe<StringFilter>;
+  label3?: InputMaybe<StringFilter>;
+  label4?: InputMaybe<StringFilter>;
+  label5?: InputMaybe<StringFilter>;
+  label6?: InputMaybe<StringFilter>;
+  label7?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+};
+
+export type FednowHeroTextFilter = {
+  bannerTitle?: InputMaybe<StringFilter>;
+  bannerSpanTitle?: InputMaybe<StringFilter>;
+  bannerContent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+  bannerImage?: InputMaybe<ImageFilter>;
+};
+
+export type FednowHorizhoverFilter = {
+  title?: InputMaybe<StringFilter>;
+  content?: InputMaybe<StringFilter>;
+  image1?: InputMaybe<ImageFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+};
+
+export type FednowSectionThreeFilter = {
+  digital?: InputMaybe<StringFilter>;
+  digitalspan?: InputMaybe<StringFilter>;
+  digitalcontent?: InputMaybe<StringFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+};
+
+export type FednowDisplayinsightsFilter = {
+  Headingone?: InputMaybe<StringFilter>;
+  Headingtwo?: InputMaybe<StringFilter>;
+  insight?: InputMaybe<StringFilter>;
+};
+
+export type FednowDiscoverFilter = {
+  image1?: InputMaybe<ImageFilter>;
+  date1?: InputMaybe<DatetimeFilter>;
+  content1?: InputMaybe<StringFilter>;
+  btn1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  date2?: InputMaybe<DatetimeFilter>;
+  content2?: InputMaybe<StringFilter>;
+  btn2?: InputMaybe<StringFilter>;
+  image3?: InputMaybe<ImageFilter>;
+  date3?: InputMaybe<DatetimeFilter>;
+  content3?: InputMaybe<StringFilter>;
+  btn3?: InputMaybe<StringFilter>;
+};
+
+export type FednowRgsFilter = {
+  readyheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  readycontent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+};
+
+export type FednowRgstwoFilter = {
+  readyheadingtwo?: InputMaybe<StringFilter>;
+  readycontenttwo?: InputMaybe<StringFilter>;
+  bannerButtonText3?: InputMaybe<StringFilter>;
+  readytwoimage?: InputMaybe<ImageFilter>;
+};
+
+export type FednowRgsthreeFilter = {
+  readyheadingthree?: InputMaybe<StringFilter>;
+  readycontentthree?: InputMaybe<StringFilter>;
+  apibuttons?: InputMaybe<StringFilter>;
+  readythreeimage?: InputMaybe<ImageFilter>;
+};
+
+export type FednowFaqQuestionsFilter = {
+  question?: InputMaybe<StringFilter>;
+  answer?: InputMaybe<StringFilter>;
+  ctatext?: InputMaybe<StringFilter>;
+  ctalink?: InputMaybe<StringFilter>;
+};
+
+export type FednowFaqFilter = {
+  faqheading?: InputMaybe<StringFilter>;
+  questions?: InputMaybe<FednowFaqQuestionsFilter>;
+};
+
+export type FednowFilter = {
+  header?: InputMaybe<FednowHeaderFilter>;
+  heroText?: InputMaybe<FednowHeroTextFilter>;
+  horizhover?: InputMaybe<FednowHorizhoverFilter>;
+  sectionThree?: InputMaybe<FednowSectionThreeFilter>;
+  displayinsights?: InputMaybe<FednowDisplayinsightsFilter>;
+  discover?: InputMaybe<FednowDiscoverFilter>;
+  rgs?: InputMaybe<FednowRgsFilter>;
+  rgstwo?: InputMaybe<FednowRgstwoFilter>;
+  rgsthree?: InputMaybe<FednowRgsthreeFilter>;
+  faq?: InputMaybe<FednowFaqFilter>;
+};
+
+export type FednowConnectionEdges = {
+  __typename?: 'FednowConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Fednow>;
+};
+
+export type FednowConnection = Connection & {
+  __typename?: 'FednowConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<FednowConnectionEdges>>>;
+};
+
+export type InstantHeader = {
+  __typename?: 'InstantHeader';
+  image?: Maybe<Scalars['String']['output']>;
+  label1?: Maybe<Scalars['String']['output']>;
+  label2?: Maybe<Scalars['String']['output']>;
+  label3?: Maybe<Scalars['String']['output']>;
+  label4?: Maybe<Scalars['String']['output']>;
+  label5?: Maybe<Scalars['String']['output']>;
+  label6?: Maybe<Scalars['String']['output']>;
+  label7?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+};
+
+export type InstantHeroText = {
+  __typename?: 'InstantHeroText';
+  bannerTitle?: Maybe<Scalars['String']['output']>;
+  bannerSpanTitle?: Maybe<Scalars['String']['output']>;
+  bannerContent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+  bannerImage?: Maybe<Scalars['String']['output']>;
+};
+
+export type InstantHorizhover = {
+  __typename?: 'InstantHorizhover';
+  title?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Scalars['String']['output']>;
+  image1?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+};
+
+export type InstantSectionThree = {
+  __typename?: 'InstantSectionThree';
+  digital?: Maybe<Scalars['String']['output']>;
+  digitalspan?: Maybe<Scalars['String']['output']>;
+  digitalcontent?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+};
+
+export type InstantDisplayinsights = {
+  __typename?: 'InstantDisplayinsights';
+  Headingone?: Maybe<Scalars['String']['output']>;
+  Headingtwo?: Maybe<Scalars['String']['output']>;
+  insight?: Maybe<Scalars['String']['output']>;
+};
+
+export type InstantDiscover = {
+  __typename?: 'InstantDiscover';
+  image1?: Maybe<Scalars['String']['output']>;
+  date1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  btn1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  date2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  btn2?: Maybe<Scalars['String']['output']>;
+  image3?: Maybe<Scalars['String']['output']>;
+  date3?: Maybe<Scalars['String']['output']>;
+  content3?: Maybe<Scalars['String']['output']>;
+  btn3?: Maybe<Scalars['String']['output']>;
+};
+
+export type InstantRgs = {
+  __typename?: 'InstantRgs';
+  readyheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  readycontent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+};
+
+export type InstantRgstwo = {
+  __typename?: 'InstantRgstwo';
+  readyheadingtwo?: Maybe<Scalars['String']['output']>;
+  readycontenttwo?: Maybe<Scalars['String']['output']>;
+  bannerButtonText3?: Maybe<Scalars['String']['output']>;
+  readytwoimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type InstantRgsthree = {
+  __typename?: 'InstantRgsthree';
+  readyheadingthree?: Maybe<Scalars['String']['output']>;
+  readycontentthree?: Maybe<Scalars['String']['output']>;
+  apibuttons?: Maybe<Scalars['String']['output']>;
+  readythreeimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type InstantFaqQuestions = {
+  __typename?: 'InstantFaqQuestions';
+  question?: Maybe<Scalars['String']['output']>;
+  answer?: Maybe<Scalars['String']['output']>;
+  ctatext?: Maybe<Scalars['String']['output']>;
+  ctalink?: Maybe<Scalars['String']['output']>;
+};
+
+export type InstantFaq = {
+  __typename?: 'InstantFaq';
+  faqheading?: Maybe<Scalars['String']['output']>;
+  questions?: Maybe<Array<Maybe<InstantFaqQuestions>>>;
+};
+
+export type Instant = Node & Document & {
+  __typename?: 'Instant';
+  header?: Maybe<InstantHeader>;
+  heroText?: Maybe<InstantHeroText>;
+  horizhover?: Maybe<InstantHorizhover>;
+  sectionThree?: Maybe<InstantSectionThree>;
+  displayinsights?: Maybe<InstantDisplayinsights>;
+  discover?: Maybe<InstantDiscover>;
+  rgs?: Maybe<InstantRgs>;
+  rgstwo?: Maybe<InstantRgstwo>;
+  rgsthree?: Maybe<InstantRgsthree>;
+  faq?: Maybe<InstantFaq>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type InstantHeaderFilter = {
+  image?: InputMaybe<ImageFilter>;
+  label1?: InputMaybe<StringFilter>;
+  label2?: InputMaybe<StringFilter>;
+  label3?: InputMaybe<StringFilter>;
+  label4?: InputMaybe<StringFilter>;
+  label5?: InputMaybe<StringFilter>;
+  label6?: InputMaybe<StringFilter>;
+  label7?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+};
+
+export type InstantHeroTextFilter = {
+  bannerTitle?: InputMaybe<StringFilter>;
+  bannerSpanTitle?: InputMaybe<StringFilter>;
+  bannerContent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+  bannerImage?: InputMaybe<ImageFilter>;
+};
+
+export type InstantHorizhoverFilter = {
+  title?: InputMaybe<StringFilter>;
+  content?: InputMaybe<StringFilter>;
+  image1?: InputMaybe<ImageFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+};
+
+export type InstantSectionThreeFilter = {
+  digital?: InputMaybe<StringFilter>;
+  digitalspan?: InputMaybe<StringFilter>;
+  digitalcontent?: InputMaybe<StringFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+};
+
+export type InstantDisplayinsightsFilter = {
+  Headingone?: InputMaybe<StringFilter>;
+  Headingtwo?: InputMaybe<StringFilter>;
+  insight?: InputMaybe<StringFilter>;
+};
+
+export type InstantDiscoverFilter = {
+  image1?: InputMaybe<ImageFilter>;
+  date1?: InputMaybe<DatetimeFilter>;
+  content1?: InputMaybe<StringFilter>;
+  btn1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  date2?: InputMaybe<DatetimeFilter>;
+  content2?: InputMaybe<StringFilter>;
+  btn2?: InputMaybe<StringFilter>;
+  image3?: InputMaybe<ImageFilter>;
+  date3?: InputMaybe<DatetimeFilter>;
+  content3?: InputMaybe<StringFilter>;
+  btn3?: InputMaybe<StringFilter>;
+};
+
+export type InstantRgsFilter = {
+  readyheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  readycontent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+};
+
+export type InstantRgstwoFilter = {
+  readyheadingtwo?: InputMaybe<StringFilter>;
+  readycontenttwo?: InputMaybe<StringFilter>;
+  bannerButtonText3?: InputMaybe<StringFilter>;
+  readytwoimage?: InputMaybe<ImageFilter>;
+};
+
+export type InstantRgsthreeFilter = {
+  readyheadingthree?: InputMaybe<StringFilter>;
+  readycontentthree?: InputMaybe<StringFilter>;
+  apibuttons?: InputMaybe<StringFilter>;
+  readythreeimage?: InputMaybe<ImageFilter>;
+};
+
+export type InstantFaqQuestionsFilter = {
+  question?: InputMaybe<StringFilter>;
+  answer?: InputMaybe<StringFilter>;
+  ctatext?: InputMaybe<StringFilter>;
+  ctalink?: InputMaybe<StringFilter>;
+};
+
+export type InstantFaqFilter = {
+  faqheading?: InputMaybe<StringFilter>;
+  questions?: InputMaybe<InstantFaqQuestionsFilter>;
+};
+
+export type InstantFilter = {
+  header?: InputMaybe<InstantHeaderFilter>;
+  heroText?: InputMaybe<InstantHeroTextFilter>;
+  horizhover?: InputMaybe<InstantHorizhoverFilter>;
+  sectionThree?: InputMaybe<InstantSectionThreeFilter>;
+  displayinsights?: InputMaybe<InstantDisplayinsightsFilter>;
+  discover?: InputMaybe<InstantDiscoverFilter>;
+  rgs?: InputMaybe<InstantRgsFilter>;
+  rgstwo?: InputMaybe<InstantRgstwoFilter>;
+  rgsthree?: InputMaybe<InstantRgsthreeFilter>;
+  faq?: InputMaybe<InstantFaqFilter>;
+};
+
+export type InstantConnectionEdges = {
+  __typename?: 'InstantConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Instant>;
+};
+
+export type InstantConnection = Connection & {
+  __typename?: 'InstantConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<InstantConnectionEdges>>>;
+};
+
+export type MailedHeader = {
+  __typename?: 'MailedHeader';
+  image?: Maybe<Scalars['String']['output']>;
+  label1?: Maybe<Scalars['String']['output']>;
+  label2?: Maybe<Scalars['String']['output']>;
+  label3?: Maybe<Scalars['String']['output']>;
+  label4?: Maybe<Scalars['String']['output']>;
+  label5?: Maybe<Scalars['String']['output']>;
+  label6?: Maybe<Scalars['String']['output']>;
+  label7?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+};
+
+export type MailedHeroText = {
+  __typename?: 'MailedHeroText';
+  bannerTitle?: Maybe<Scalars['String']['output']>;
+  bannerSpanTitle?: Maybe<Scalars['String']['output']>;
+  bannerContent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+  bannerImage?: Maybe<Scalars['String']['output']>;
+};
+
+export type MailedHorizhover = {
+  __typename?: 'MailedHorizhover';
+  title?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Scalars['String']['output']>;
+  image1?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+};
+
+export type MailedSectionThree = {
+  __typename?: 'MailedSectionThree';
+  digital?: Maybe<Scalars['String']['output']>;
+  digitalspan?: Maybe<Scalars['String']['output']>;
+  digitalcontent?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+};
+
+export type MailedDisplayinsights = {
+  __typename?: 'MailedDisplayinsights';
+  Headingone?: Maybe<Scalars['String']['output']>;
+  Headingtwo?: Maybe<Scalars['String']['output']>;
+  insight?: Maybe<Scalars['String']['output']>;
+};
+
+export type MailedDiscover = {
+  __typename?: 'MailedDiscover';
+  image1?: Maybe<Scalars['String']['output']>;
+  date1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  btn1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  date2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  btn2?: Maybe<Scalars['String']['output']>;
+  image3?: Maybe<Scalars['String']['output']>;
+  date3?: Maybe<Scalars['String']['output']>;
+  content3?: Maybe<Scalars['String']['output']>;
+  btn3?: Maybe<Scalars['String']['output']>;
+};
+
+export type MailedRgs = {
+  __typename?: 'MailedRgs';
+  readyheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  readycontent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+};
+
+export type MailedRgstwo = {
+  __typename?: 'MailedRgstwo';
+  readyheadingtwo?: Maybe<Scalars['String']['output']>;
+  readycontenttwo?: Maybe<Scalars['String']['output']>;
+  bannerButtonText3?: Maybe<Scalars['String']['output']>;
+  readytwoimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type MailedRgsthree = {
+  __typename?: 'MailedRgsthree';
+  readyheadingthree?: Maybe<Scalars['String']['output']>;
+  readycontentthree?: Maybe<Scalars['String']['output']>;
+  apibuttons?: Maybe<Scalars['String']['output']>;
+  readythreeimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type MailedFaqQuestions = {
+  __typename?: 'MailedFaqQuestions';
+  question?: Maybe<Scalars['String']['output']>;
+  answer?: Maybe<Scalars['String']['output']>;
+  ctatext?: Maybe<Scalars['String']['output']>;
+  ctalink?: Maybe<Scalars['String']['output']>;
+};
+
+export type MailedFaq = {
+  __typename?: 'MailedFaq';
+  faqheading?: Maybe<Scalars['String']['output']>;
+  questions?: Maybe<Array<Maybe<MailedFaqQuestions>>>;
+};
+
+export type Mailed = Node & Document & {
+  __typename?: 'Mailed';
+  header?: Maybe<MailedHeader>;
+  heroText?: Maybe<MailedHeroText>;
+  horizhover?: Maybe<MailedHorizhover>;
+  sectionThree?: Maybe<MailedSectionThree>;
+  displayinsights?: Maybe<MailedDisplayinsights>;
+  discover?: Maybe<MailedDiscover>;
+  rgs?: Maybe<MailedRgs>;
+  rgstwo?: Maybe<MailedRgstwo>;
+  rgsthree?: Maybe<MailedRgsthree>;
+  faq?: Maybe<MailedFaq>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type MailedHeaderFilter = {
+  image?: InputMaybe<ImageFilter>;
+  label1?: InputMaybe<StringFilter>;
+  label2?: InputMaybe<StringFilter>;
+  label3?: InputMaybe<StringFilter>;
+  label4?: InputMaybe<StringFilter>;
+  label5?: InputMaybe<StringFilter>;
+  label6?: InputMaybe<StringFilter>;
+  label7?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+};
+
+export type MailedHeroTextFilter = {
+  bannerTitle?: InputMaybe<StringFilter>;
+  bannerSpanTitle?: InputMaybe<StringFilter>;
+  bannerContent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+  bannerImage?: InputMaybe<ImageFilter>;
+};
+
+export type MailedHorizhoverFilter = {
+  title?: InputMaybe<StringFilter>;
+  content?: InputMaybe<StringFilter>;
+  image1?: InputMaybe<ImageFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+};
+
+export type MailedSectionThreeFilter = {
+  digital?: InputMaybe<StringFilter>;
+  digitalspan?: InputMaybe<StringFilter>;
+  digitalcontent?: InputMaybe<StringFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+};
+
+export type MailedDisplayinsightsFilter = {
+  Headingone?: InputMaybe<StringFilter>;
+  Headingtwo?: InputMaybe<StringFilter>;
+  insight?: InputMaybe<StringFilter>;
+};
+
+export type MailedDiscoverFilter = {
+  image1?: InputMaybe<ImageFilter>;
+  date1?: InputMaybe<DatetimeFilter>;
+  content1?: InputMaybe<StringFilter>;
+  btn1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  date2?: InputMaybe<DatetimeFilter>;
+  content2?: InputMaybe<StringFilter>;
+  btn2?: InputMaybe<StringFilter>;
+  image3?: InputMaybe<ImageFilter>;
+  date3?: InputMaybe<DatetimeFilter>;
+  content3?: InputMaybe<StringFilter>;
+  btn3?: InputMaybe<StringFilter>;
+};
+
+export type MailedRgsFilter = {
+  readyheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  readycontent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+};
+
+export type MailedRgstwoFilter = {
+  readyheadingtwo?: InputMaybe<StringFilter>;
+  readycontenttwo?: InputMaybe<StringFilter>;
+  bannerButtonText3?: InputMaybe<StringFilter>;
+  readytwoimage?: InputMaybe<ImageFilter>;
+};
+
+export type MailedRgsthreeFilter = {
+  readyheadingthree?: InputMaybe<StringFilter>;
+  readycontentthree?: InputMaybe<StringFilter>;
+  apibuttons?: InputMaybe<StringFilter>;
+  readythreeimage?: InputMaybe<ImageFilter>;
+};
+
+export type MailedFaqQuestionsFilter = {
+  question?: InputMaybe<StringFilter>;
+  answer?: InputMaybe<StringFilter>;
+  ctatext?: InputMaybe<StringFilter>;
+  ctalink?: InputMaybe<StringFilter>;
+};
+
+export type MailedFaqFilter = {
+  faqheading?: InputMaybe<StringFilter>;
+  questions?: InputMaybe<MailedFaqQuestionsFilter>;
+};
+
+export type MailedFilter = {
+  header?: InputMaybe<MailedHeaderFilter>;
+  heroText?: InputMaybe<MailedHeroTextFilter>;
+  horizhover?: InputMaybe<MailedHorizhoverFilter>;
+  sectionThree?: InputMaybe<MailedSectionThreeFilter>;
+  displayinsights?: InputMaybe<MailedDisplayinsightsFilter>;
+  discover?: InputMaybe<MailedDiscoverFilter>;
+  rgs?: InputMaybe<MailedRgsFilter>;
+  rgstwo?: InputMaybe<MailedRgstwoFilter>;
+  rgsthree?: InputMaybe<MailedRgsthreeFilter>;
+  faq?: InputMaybe<MailedFaqFilter>;
+};
+
+export type MailedConnectionEdges = {
+  __typename?: 'MailedConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Mailed>;
+};
+
+export type MailedConnection = Connection & {
+  __typename?: 'MailedConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<MailedConnectionEdges>>>;
+};
+
+export type PrintableHeader = {
+  __typename?: 'PrintableHeader';
+  image?: Maybe<Scalars['String']['output']>;
+  label1?: Maybe<Scalars['String']['output']>;
+  label2?: Maybe<Scalars['String']['output']>;
+  label3?: Maybe<Scalars['String']['output']>;
+  label4?: Maybe<Scalars['String']['output']>;
+  label5?: Maybe<Scalars['String']['output']>;
+  label6?: Maybe<Scalars['String']['output']>;
+  label7?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+};
+
+export type PrintableHeroText = {
+  __typename?: 'PrintableHeroText';
+  bannerTitle?: Maybe<Scalars['String']['output']>;
+  bannerSpanTitle?: Maybe<Scalars['String']['output']>;
+  bannerContent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+  bannerImage?: Maybe<Scalars['String']['output']>;
+};
+
+export type PrintableHorizhover = {
+  __typename?: 'PrintableHorizhover';
+  title?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Scalars['String']['output']>;
+  image1?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+};
+
+export type PrintableSectionThree = {
+  __typename?: 'PrintableSectionThree';
+  digital?: Maybe<Scalars['String']['output']>;
+  digitalspan?: Maybe<Scalars['String']['output']>;
+  digitalcontent?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+};
+
+export type PrintableDisplayinsights = {
+  __typename?: 'PrintableDisplayinsights';
+  Headingone?: Maybe<Scalars['String']['output']>;
+  Headingtwo?: Maybe<Scalars['String']['output']>;
+  insight?: Maybe<Scalars['String']['output']>;
+};
+
+export type PrintableDiscover = {
+  __typename?: 'PrintableDiscover';
+  image1?: Maybe<Scalars['String']['output']>;
+  date1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  btn1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  date2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  btn2?: Maybe<Scalars['String']['output']>;
+  image3?: Maybe<Scalars['String']['output']>;
+  date3?: Maybe<Scalars['String']['output']>;
+  content3?: Maybe<Scalars['String']['output']>;
+  btn3?: Maybe<Scalars['String']['output']>;
+};
+
+export type PrintableRgs = {
+  __typename?: 'PrintableRgs';
+  readyheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  readycontent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+};
+
+export type PrintableRgstwo = {
+  __typename?: 'PrintableRgstwo';
+  readyheadingtwo?: Maybe<Scalars['String']['output']>;
+  readycontenttwo?: Maybe<Scalars['String']['output']>;
+  bannerButtonText3?: Maybe<Scalars['String']['output']>;
+  readytwoimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type PrintableRgsthree = {
+  __typename?: 'PrintableRgsthree';
+  readyheadingthree?: Maybe<Scalars['String']['output']>;
+  readycontentthree?: Maybe<Scalars['String']['output']>;
+  apibuttons?: Maybe<Scalars['String']['output']>;
+  readythreeimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type PrintableFaqQuestions = {
+  __typename?: 'PrintableFaqQuestions';
+  question?: Maybe<Scalars['String']['output']>;
+  answer?: Maybe<Scalars['String']['output']>;
+  ctatext?: Maybe<Scalars['String']['output']>;
+  ctalink?: Maybe<Scalars['String']['output']>;
+};
+
+export type PrintableFaq = {
+  __typename?: 'PrintableFaq';
+  faqheading?: Maybe<Scalars['String']['output']>;
+  questions?: Maybe<Array<Maybe<PrintableFaqQuestions>>>;
+};
+
+export type Printable = Node & Document & {
+  __typename?: 'Printable';
+  header?: Maybe<PrintableHeader>;
+  heroText?: Maybe<PrintableHeroText>;
+  horizhover?: Maybe<PrintableHorizhover>;
+  sectionThree?: Maybe<PrintableSectionThree>;
+  displayinsights?: Maybe<PrintableDisplayinsights>;
+  discover?: Maybe<PrintableDiscover>;
+  rgs?: Maybe<PrintableRgs>;
+  rgstwo?: Maybe<PrintableRgstwo>;
+  rgsthree?: Maybe<PrintableRgsthree>;
+  faq?: Maybe<PrintableFaq>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type PrintableHeaderFilter = {
+  image?: InputMaybe<ImageFilter>;
+  label1?: InputMaybe<StringFilter>;
+  label2?: InputMaybe<StringFilter>;
+  label3?: InputMaybe<StringFilter>;
+  label4?: InputMaybe<StringFilter>;
+  label5?: InputMaybe<StringFilter>;
+  label6?: InputMaybe<StringFilter>;
+  label7?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+};
+
+export type PrintableHeroTextFilter = {
+  bannerTitle?: InputMaybe<StringFilter>;
+  bannerSpanTitle?: InputMaybe<StringFilter>;
+  bannerContent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+  bannerImage?: InputMaybe<ImageFilter>;
+};
+
+export type PrintableHorizhoverFilter = {
+  title?: InputMaybe<StringFilter>;
+  content?: InputMaybe<StringFilter>;
+  image1?: InputMaybe<ImageFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+};
+
+export type PrintableSectionThreeFilter = {
+  digital?: InputMaybe<StringFilter>;
+  digitalspan?: InputMaybe<StringFilter>;
+  digitalcontent?: InputMaybe<StringFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+};
+
+export type PrintableDisplayinsightsFilter = {
+  Headingone?: InputMaybe<StringFilter>;
+  Headingtwo?: InputMaybe<StringFilter>;
+  insight?: InputMaybe<StringFilter>;
+};
+
+export type PrintableDiscoverFilter = {
+  image1?: InputMaybe<ImageFilter>;
+  date1?: InputMaybe<DatetimeFilter>;
+  content1?: InputMaybe<StringFilter>;
+  btn1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  date2?: InputMaybe<DatetimeFilter>;
+  content2?: InputMaybe<StringFilter>;
+  btn2?: InputMaybe<StringFilter>;
+  image3?: InputMaybe<ImageFilter>;
+  date3?: InputMaybe<DatetimeFilter>;
+  content3?: InputMaybe<StringFilter>;
+  btn3?: InputMaybe<StringFilter>;
+};
+
+export type PrintableRgsFilter = {
+  readyheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  readycontent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+};
+
+export type PrintableRgstwoFilter = {
+  readyheadingtwo?: InputMaybe<StringFilter>;
+  readycontenttwo?: InputMaybe<StringFilter>;
+  bannerButtonText3?: InputMaybe<StringFilter>;
+  readytwoimage?: InputMaybe<ImageFilter>;
+};
+
+export type PrintableRgsthreeFilter = {
+  readyheadingthree?: InputMaybe<StringFilter>;
+  readycontentthree?: InputMaybe<StringFilter>;
+  apibuttons?: InputMaybe<StringFilter>;
+  readythreeimage?: InputMaybe<ImageFilter>;
+};
+
+export type PrintableFaqQuestionsFilter = {
+  question?: InputMaybe<StringFilter>;
+  answer?: InputMaybe<StringFilter>;
+  ctatext?: InputMaybe<StringFilter>;
+  ctalink?: InputMaybe<StringFilter>;
+};
+
+export type PrintableFaqFilter = {
+  faqheading?: InputMaybe<StringFilter>;
+  questions?: InputMaybe<PrintableFaqQuestionsFilter>;
+};
+
+export type PrintableFilter = {
+  header?: InputMaybe<PrintableHeaderFilter>;
+  heroText?: InputMaybe<PrintableHeroTextFilter>;
+  horizhover?: InputMaybe<PrintableHorizhoverFilter>;
+  sectionThree?: InputMaybe<PrintableSectionThreeFilter>;
+  displayinsights?: InputMaybe<PrintableDisplayinsightsFilter>;
+  discover?: InputMaybe<PrintableDiscoverFilter>;
+  rgs?: InputMaybe<PrintableRgsFilter>;
+  rgstwo?: InputMaybe<PrintableRgstwoFilter>;
+  rgsthree?: InputMaybe<PrintableRgsthreeFilter>;
+  faq?: InputMaybe<PrintableFaqFilter>;
+};
+
+export type PrintableConnectionEdges = {
+  __typename?: 'PrintableConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Printable>;
+};
+
+export type PrintableConnection = Connection & {
+  __typename?: 'PrintableConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<PrintableConnectionEdges>>>;
+};
+
+export type VirtualHeader = {
+  __typename?: 'VirtualHeader';
+  image?: Maybe<Scalars['String']['output']>;
+  label1?: Maybe<Scalars['String']['output']>;
+  label2?: Maybe<Scalars['String']['output']>;
+  label3?: Maybe<Scalars['String']['output']>;
+  label4?: Maybe<Scalars['String']['output']>;
+  label5?: Maybe<Scalars['String']['output']>;
+  label6?: Maybe<Scalars['String']['output']>;
+  label7?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+};
+
+export type VirtualHeroText = {
+  __typename?: 'VirtualHeroText';
+  bannerTitle?: Maybe<Scalars['String']['output']>;
+  bannerSpanTitle?: Maybe<Scalars['String']['output']>;
+  bannerContent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+  bannerImage?: Maybe<Scalars['String']['output']>;
+};
+
+export type VirtualHorizhover = {
+  __typename?: 'VirtualHorizhover';
+  title?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Scalars['String']['output']>;
+  image1?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+};
+
+export type VirtualSectionThree = {
+  __typename?: 'VirtualSectionThree';
+  digital?: Maybe<Scalars['String']['output']>;
+  digitalspan?: Maybe<Scalars['String']['output']>;
+  digitalcontent?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+};
+
+export type VirtualDisplayinsights = {
+  __typename?: 'VirtualDisplayinsights';
+  Headingone?: Maybe<Scalars['String']['output']>;
+  Headingtwo?: Maybe<Scalars['String']['output']>;
+  insight?: Maybe<Scalars['String']['output']>;
+};
+
+export type VirtualDiscover = {
+  __typename?: 'VirtualDiscover';
+  image1?: Maybe<Scalars['String']['output']>;
+  date1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  btn1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  date2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  btn2?: Maybe<Scalars['String']['output']>;
+  image3?: Maybe<Scalars['String']['output']>;
+  date3?: Maybe<Scalars['String']['output']>;
+  content3?: Maybe<Scalars['String']['output']>;
+  btn3?: Maybe<Scalars['String']['output']>;
+};
+
+export type VirtualRgs = {
+  __typename?: 'VirtualRgs';
+  readyheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  readycontent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+};
+
+export type VirtualRgstwo = {
+  __typename?: 'VirtualRgstwo';
+  readyheadingtwo?: Maybe<Scalars['String']['output']>;
+  readycontenttwo?: Maybe<Scalars['String']['output']>;
+  bannerButtonText3?: Maybe<Scalars['String']['output']>;
+  readytwoimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type VirtualRgsthree = {
+  __typename?: 'VirtualRgsthree';
+  readyheadingthree?: Maybe<Scalars['String']['output']>;
+  readycontentthree?: Maybe<Scalars['String']['output']>;
+  apibuttons?: Maybe<Scalars['String']['output']>;
+  readythreeimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type VirtualFaqQuestions = {
+  __typename?: 'VirtualFaqQuestions';
+  question?: Maybe<Scalars['String']['output']>;
+  answer?: Maybe<Scalars['String']['output']>;
+  ctatext?: Maybe<Scalars['String']['output']>;
+  ctalink?: Maybe<Scalars['String']['output']>;
+};
+
+export type VirtualFaq = {
+  __typename?: 'VirtualFaq';
+  faqheading?: Maybe<Scalars['String']['output']>;
+  questions?: Maybe<Array<Maybe<VirtualFaqQuestions>>>;
+};
+
+export type Virtual = Node & Document & {
+  __typename?: 'Virtual';
+  header?: Maybe<VirtualHeader>;
+  heroText?: Maybe<VirtualHeroText>;
+  horizhover?: Maybe<VirtualHorizhover>;
+  sectionThree?: Maybe<VirtualSectionThree>;
+  displayinsights?: Maybe<VirtualDisplayinsights>;
+  discover?: Maybe<VirtualDiscover>;
+  rgs?: Maybe<VirtualRgs>;
+  rgstwo?: Maybe<VirtualRgstwo>;
+  rgsthree?: Maybe<VirtualRgsthree>;
+  faq?: Maybe<VirtualFaq>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type VirtualHeaderFilter = {
+  image?: InputMaybe<ImageFilter>;
+  label1?: InputMaybe<StringFilter>;
+  label2?: InputMaybe<StringFilter>;
+  label3?: InputMaybe<StringFilter>;
+  label4?: InputMaybe<StringFilter>;
+  label5?: InputMaybe<StringFilter>;
+  label6?: InputMaybe<StringFilter>;
+  label7?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+};
+
+export type VirtualHeroTextFilter = {
+  bannerTitle?: InputMaybe<StringFilter>;
+  bannerSpanTitle?: InputMaybe<StringFilter>;
+  bannerContent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+  bannerImage?: InputMaybe<ImageFilter>;
+};
+
+export type VirtualHorizhoverFilter = {
+  title?: InputMaybe<StringFilter>;
+  content?: InputMaybe<StringFilter>;
+  image1?: InputMaybe<ImageFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+};
+
+export type VirtualSectionThreeFilter = {
+  digital?: InputMaybe<StringFilter>;
+  digitalspan?: InputMaybe<StringFilter>;
+  digitalcontent?: InputMaybe<StringFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+};
+
+export type VirtualDisplayinsightsFilter = {
+  Headingone?: InputMaybe<StringFilter>;
+  Headingtwo?: InputMaybe<StringFilter>;
+  insight?: InputMaybe<StringFilter>;
+};
+
+export type VirtualDiscoverFilter = {
+  image1?: InputMaybe<ImageFilter>;
+  date1?: InputMaybe<DatetimeFilter>;
+  content1?: InputMaybe<StringFilter>;
+  btn1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  date2?: InputMaybe<DatetimeFilter>;
+  content2?: InputMaybe<StringFilter>;
+  btn2?: InputMaybe<StringFilter>;
+  image3?: InputMaybe<ImageFilter>;
+  date3?: InputMaybe<DatetimeFilter>;
+  content3?: InputMaybe<StringFilter>;
+  btn3?: InputMaybe<StringFilter>;
+};
+
+export type VirtualRgsFilter = {
+  readyheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  readycontent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+};
+
+export type VirtualRgstwoFilter = {
+  readyheadingtwo?: InputMaybe<StringFilter>;
+  readycontenttwo?: InputMaybe<StringFilter>;
+  bannerButtonText3?: InputMaybe<StringFilter>;
+  readytwoimage?: InputMaybe<ImageFilter>;
+};
+
+export type VirtualRgsthreeFilter = {
+  readyheadingthree?: InputMaybe<StringFilter>;
+  readycontentthree?: InputMaybe<StringFilter>;
+  apibuttons?: InputMaybe<StringFilter>;
+  readythreeimage?: InputMaybe<ImageFilter>;
+};
+
+export type VirtualFaqQuestionsFilter = {
+  question?: InputMaybe<StringFilter>;
+  answer?: InputMaybe<StringFilter>;
+  ctatext?: InputMaybe<StringFilter>;
+  ctalink?: InputMaybe<StringFilter>;
+};
+
+export type VirtualFaqFilter = {
+  faqheading?: InputMaybe<StringFilter>;
+  questions?: InputMaybe<VirtualFaqQuestionsFilter>;
+};
+
+export type VirtualFilter = {
+  header?: InputMaybe<VirtualHeaderFilter>;
+  heroText?: InputMaybe<VirtualHeroTextFilter>;
+  horizhover?: InputMaybe<VirtualHorizhoverFilter>;
+  sectionThree?: InputMaybe<VirtualSectionThreeFilter>;
+  displayinsights?: InputMaybe<VirtualDisplayinsightsFilter>;
+  discover?: InputMaybe<VirtualDiscoverFilter>;
+  rgs?: InputMaybe<VirtualRgsFilter>;
+  rgstwo?: InputMaybe<VirtualRgstwoFilter>;
+  rgsthree?: InputMaybe<VirtualRgsthreeFilter>;
+  faq?: InputMaybe<VirtualFaqFilter>;
+};
+
+export type VirtualConnectionEdges = {
+  __typename?: 'VirtualConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Virtual>;
+};
+
+export type VirtualConnection = Connection & {
+  __typename?: 'VirtualConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<VirtualConnectionEdges>>>;
+};
+
+export type ZelleHeader = {
+  __typename?: 'ZelleHeader';
+  image?: Maybe<Scalars['String']['output']>;
+  label1?: Maybe<Scalars['String']['output']>;
+  label2?: Maybe<Scalars['String']['output']>;
+  label3?: Maybe<Scalars['String']['output']>;
+  label4?: Maybe<Scalars['String']['output']>;
+  label5?: Maybe<Scalars['String']['output']>;
+  label6?: Maybe<Scalars['String']['output']>;
+  label7?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+};
+
+export type ZelleHeroText = {
+  __typename?: 'ZelleHeroText';
+  bannerTitle?: Maybe<Scalars['String']['output']>;
+  bannerSpanTitle?: Maybe<Scalars['String']['output']>;
+  bannerContent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+  bannerImage?: Maybe<Scalars['String']['output']>;
+};
+
+export type ZelleHorizhover = {
+  __typename?: 'ZelleHorizhover';
+  title?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Scalars['String']['output']>;
+  image1?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+};
+
+export type ZelleSectionThree = {
+  __typename?: 'ZelleSectionThree';
+  digital?: Maybe<Scalars['String']['output']>;
+  digitalspan?: Maybe<Scalars['String']['output']>;
+  digitalcontent?: Maybe<Scalars['String']['output']>;
+  title1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  title2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+};
+
+export type ZelleDisplayinsights = {
+  __typename?: 'ZelleDisplayinsights';
+  Headingone?: Maybe<Scalars['String']['output']>;
+  Headingtwo?: Maybe<Scalars['String']['output']>;
+  insight?: Maybe<Scalars['String']['output']>;
+};
+
+export type ZelleDiscover = {
+  __typename?: 'ZelleDiscover';
+  image1?: Maybe<Scalars['String']['output']>;
+  date1?: Maybe<Scalars['String']['output']>;
+  content1?: Maybe<Scalars['String']['output']>;
+  btn1?: Maybe<Scalars['String']['output']>;
+  image2?: Maybe<Scalars['String']['output']>;
+  date2?: Maybe<Scalars['String']['output']>;
+  content2?: Maybe<Scalars['String']['output']>;
+  btn2?: Maybe<Scalars['String']['output']>;
+  image3?: Maybe<Scalars['String']['output']>;
+  date3?: Maybe<Scalars['String']['output']>;
+  content3?: Maybe<Scalars['String']['output']>;
+  btn3?: Maybe<Scalars['String']['output']>;
+};
+
+export type ZelleRgs = {
+  __typename?: 'ZelleRgs';
+  readyheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  readycontent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+};
+
+export type ZelleRgstwo = {
+  __typename?: 'ZelleRgstwo';
+  readyheadingtwo?: Maybe<Scalars['String']['output']>;
+  readycontenttwo?: Maybe<Scalars['String']['output']>;
+  bannerButtonText3?: Maybe<Scalars['String']['output']>;
+  readytwoimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type ZelleRgsthree = {
+  __typename?: 'ZelleRgsthree';
+  readyheadingthree?: Maybe<Scalars['String']['output']>;
+  readycontentthree?: Maybe<Scalars['String']['output']>;
+  apibuttons?: Maybe<Scalars['String']['output']>;
+  readythreeimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type ZelleFaqQuestions = {
+  __typename?: 'ZelleFaqQuestions';
+  question?: Maybe<Scalars['String']['output']>;
+  answer?: Maybe<Scalars['String']['output']>;
+  ctatext?: Maybe<Scalars['String']['output']>;
+  ctalink?: Maybe<Scalars['String']['output']>;
+};
+
+export type ZelleFaq = {
+  __typename?: 'ZelleFaq';
+  faqheading?: Maybe<Scalars['String']['output']>;
+  questions?: Maybe<Array<Maybe<ZelleFaqQuestions>>>;
+};
+
+export type Zelle = Node & Document & {
+  __typename?: 'Zelle';
+  header?: Maybe<ZelleHeader>;
+  heroText?: Maybe<ZelleHeroText>;
+  horizhover?: Maybe<ZelleHorizhover>;
+  sectionThree?: Maybe<ZelleSectionThree>;
+  displayinsights?: Maybe<ZelleDisplayinsights>;
+  discover?: Maybe<ZelleDiscover>;
+  rgs?: Maybe<ZelleRgs>;
+  rgstwo?: Maybe<ZelleRgstwo>;
+  rgsthree?: Maybe<ZelleRgsthree>;
+  faq?: Maybe<ZelleFaq>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type ZelleHeaderFilter = {
+  image?: InputMaybe<ImageFilter>;
+  label1?: InputMaybe<StringFilter>;
+  label2?: InputMaybe<StringFilter>;
+  label3?: InputMaybe<StringFilter>;
+  label4?: InputMaybe<StringFilter>;
+  label5?: InputMaybe<StringFilter>;
+  label6?: InputMaybe<StringFilter>;
+  label7?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+};
+
+export type ZelleHeroTextFilter = {
+  bannerTitle?: InputMaybe<StringFilter>;
+  bannerSpanTitle?: InputMaybe<StringFilter>;
+  bannerContent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+  bannerImage?: InputMaybe<ImageFilter>;
+};
+
+export type ZelleHorizhoverFilter = {
+  title?: InputMaybe<StringFilter>;
+  content?: InputMaybe<StringFilter>;
+  image1?: InputMaybe<ImageFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+};
+
+export type ZelleSectionThreeFilter = {
+  digital?: InputMaybe<StringFilter>;
+  digitalspan?: InputMaybe<StringFilter>;
+  digitalcontent?: InputMaybe<StringFilter>;
+  title1?: InputMaybe<StringFilter>;
+  content1?: InputMaybe<StringFilter>;
+  title2?: InputMaybe<StringFilter>;
+  content2?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+};
+
+export type ZelleDisplayinsightsFilter = {
+  Headingone?: InputMaybe<StringFilter>;
+  Headingtwo?: InputMaybe<StringFilter>;
+  insight?: InputMaybe<StringFilter>;
+};
+
+export type ZelleDiscoverFilter = {
+  image1?: InputMaybe<ImageFilter>;
+  date1?: InputMaybe<DatetimeFilter>;
+  content1?: InputMaybe<StringFilter>;
+  btn1?: InputMaybe<StringFilter>;
+  image2?: InputMaybe<ImageFilter>;
+  date2?: InputMaybe<DatetimeFilter>;
+  content2?: InputMaybe<StringFilter>;
+  btn2?: InputMaybe<StringFilter>;
+  image3?: InputMaybe<ImageFilter>;
+  date3?: InputMaybe<DatetimeFilter>;
+  content3?: InputMaybe<StringFilter>;
+  btn3?: InputMaybe<StringFilter>;
+};
+
+export type ZelleRgsFilter = {
+  readyheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  readycontent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+};
+
+export type ZelleRgstwoFilter = {
+  readyheadingtwo?: InputMaybe<StringFilter>;
+  readycontenttwo?: InputMaybe<StringFilter>;
+  bannerButtonText3?: InputMaybe<StringFilter>;
+  readytwoimage?: InputMaybe<ImageFilter>;
+};
+
+export type ZelleRgsthreeFilter = {
+  readyheadingthree?: InputMaybe<StringFilter>;
+  readycontentthree?: InputMaybe<StringFilter>;
+  apibuttons?: InputMaybe<StringFilter>;
+  readythreeimage?: InputMaybe<ImageFilter>;
+};
+
+export type ZelleFaqQuestionsFilter = {
+  question?: InputMaybe<StringFilter>;
+  answer?: InputMaybe<StringFilter>;
+  ctatext?: InputMaybe<StringFilter>;
+  ctalink?: InputMaybe<StringFilter>;
+};
+
+export type ZelleFaqFilter = {
+  faqheading?: InputMaybe<StringFilter>;
+  questions?: InputMaybe<ZelleFaqQuestionsFilter>;
+};
+
+export type ZelleFilter = {
+  header?: InputMaybe<ZelleHeaderFilter>;
+  heroText?: InputMaybe<ZelleHeroTextFilter>;
+  horizhover?: InputMaybe<ZelleHorizhoverFilter>;
+  sectionThree?: InputMaybe<ZelleSectionThreeFilter>;
+  displayinsights?: InputMaybe<ZelleDisplayinsightsFilter>;
+  discover?: InputMaybe<ZelleDiscoverFilter>;
+  rgs?: InputMaybe<ZelleRgsFilter>;
+  rgstwo?: InputMaybe<ZelleRgstwoFilter>;
+  rgsthree?: InputMaybe<ZelleRgsthreeFilter>;
+  faq?: InputMaybe<ZelleFaqFilter>;
+};
+
+export type ZelleConnectionEdges = {
+  __typename?: 'ZelleConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Zelle>;
+};
+
+export type ZelleConnection = Connection & {
+  __typename?: 'ZelleConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<ZelleConnectionEdges>>>;
 };
 
 export type PageBanner = {
@@ -537,6 +2625,516 @@ export type PageConnection = Connection & {
   edges?: Maybe<Array<Maybe<PageConnectionEdges>>>;
 };
 
+export type TermsConditions = {
+  __typename?: 'TermsConditions';
+  tacheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  spanquote?: Maybe<Scalars['String']['output']>;
+  quote2?: Maybe<Scalars['String']['output']>;
+  spanquote2?: Maybe<Scalars['String']['output']>;
+  quote3?: Maybe<Scalars['String']['output']>;
+  spanquote3?: Maybe<Scalars['String']['output']>;
+  tacOne?: Maybe<Scalars['String']['output']>;
+  termOne?: Maybe<Scalars['String']['output']>;
+  tacTwo?: Maybe<Scalars['String']['output']>;
+  termTwo?: Maybe<Scalars['String']['output']>;
+  tacThree?: Maybe<Scalars['String']['output']>;
+  termThree?: Maybe<Scalars['String']['output']>;
+  tacFour?: Maybe<Scalars['String']['output']>;
+  termFour?: Maybe<Scalars['String']['output']>;
+  tacFive?: Maybe<Scalars['String']['output']>;
+  termFive?: Maybe<Scalars['String']['output']>;
+  tacSix?: Maybe<Scalars['String']['output']>;
+  termSix?: Maybe<Scalars['String']['output']>;
+  termSix2?: Maybe<Scalars['String']['output']>;
+  termSix3?: Maybe<Scalars['String']['output']>;
+  termSix4?: Maybe<Scalars['String']['output']>;
+  tacSeven?: Maybe<Scalars['String']['output']>;
+  termSeven?: Maybe<Scalars['String']['output']>;
+  tacEight?: Maybe<Scalars['String']['output']>;
+  termEight?: Maybe<Scalars['String']['output']>;
+  tacNine?: Maybe<Scalars['String']['output']>;
+  termNine?: Maybe<Scalars['String']['output']>;
+  tacTen?: Maybe<Scalars['String']['output']>;
+  termTen?: Maybe<Scalars['String']['output']>;
+  tacEleven?: Maybe<Scalars['String']['output']>;
+  termEleven?: Maybe<Scalars['String']['output']>;
+  termElevenbold?: Maybe<Scalars['String']['output']>;
+  termEleven2?: Maybe<Scalars['String']['output']>;
+  termElevenbold3?: Maybe<Scalars['String']['output']>;
+  termEleven3?: Maybe<Scalars['String']['output']>;
+  termEleven4?: Maybe<Scalars['String']['output']>;
+  termEleven5?: Maybe<Scalars['String']['output']>;
+  termEleven6?: Maybe<Scalars['String']['output']>;
+  termEleven7?: Maybe<Scalars['String']['output']>;
+  termEleven8?: Maybe<Scalars['String']['output']>;
+  termEleven9?: Maybe<Scalars['String']['output']>;
+  termEleven10?: Maybe<Scalars['String']['output']>;
+  termEleven11?: Maybe<Scalars['String']['output']>;
+  termEleven12?: Maybe<Scalars['String']['output']>;
+  tacTwelve?: Maybe<Scalars['String']['output']>;
+  termTwelve?: Maybe<Scalars['String']['output']>;
+  tacThirteen?: Maybe<Scalars['String']['output']>;
+  termThirteen?: Maybe<Scalars['String']['output']>;
+  termThirteen2?: Maybe<Scalars['String']['output']>;
+};
+
+export type TermsRgs = {
+  __typename?: 'TermsRgs';
+  readyheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  readycontent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+};
+
+export type TermsRgstwo = {
+  __typename?: 'TermsRgstwo';
+  readyheadingtwo?: Maybe<Scalars['String']['output']>;
+  readycontenttwo?: Maybe<Scalars['String']['output']>;
+  bannerButtonText3?: Maybe<Scalars['String']['output']>;
+  readytwoimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type TermsRgsthree = {
+  __typename?: 'TermsRgsthree';
+  readyheadingthree?: Maybe<Scalars['String']['output']>;
+  readycontentthree?: Maybe<Scalars['String']['output']>;
+  apibuttons?: Maybe<Scalars['String']['output']>;
+  readythreeimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type Terms = Node & Document & {
+  __typename?: 'Terms';
+  conditions?: Maybe<TermsConditions>;
+  rgs?: Maybe<TermsRgs>;
+  rgstwo?: Maybe<TermsRgstwo>;
+  rgsthree?: Maybe<TermsRgsthree>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type TermsConditionsFilter = {
+  tacheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  spanquote?: InputMaybe<StringFilter>;
+  quote2?: InputMaybe<StringFilter>;
+  spanquote2?: InputMaybe<StringFilter>;
+  quote3?: InputMaybe<StringFilter>;
+  spanquote3?: InputMaybe<StringFilter>;
+  tacOne?: InputMaybe<StringFilter>;
+  termOne?: InputMaybe<StringFilter>;
+  tacTwo?: InputMaybe<StringFilter>;
+  termTwo?: InputMaybe<StringFilter>;
+  tacThree?: InputMaybe<StringFilter>;
+  termThree?: InputMaybe<StringFilter>;
+  tacFour?: InputMaybe<StringFilter>;
+  termFour?: InputMaybe<StringFilter>;
+  tacFive?: InputMaybe<StringFilter>;
+  termFive?: InputMaybe<StringFilter>;
+  tacSix?: InputMaybe<StringFilter>;
+  termSix?: InputMaybe<StringFilter>;
+  termSix2?: InputMaybe<StringFilter>;
+  termSix3?: InputMaybe<StringFilter>;
+  termSix4?: InputMaybe<StringFilter>;
+  tacSeven?: InputMaybe<StringFilter>;
+  termSeven?: InputMaybe<StringFilter>;
+  tacEight?: InputMaybe<StringFilter>;
+  termEight?: InputMaybe<StringFilter>;
+  tacNine?: InputMaybe<StringFilter>;
+  termNine?: InputMaybe<StringFilter>;
+  tacTen?: InputMaybe<StringFilter>;
+  termTen?: InputMaybe<StringFilter>;
+  tacEleven?: InputMaybe<StringFilter>;
+  termEleven?: InputMaybe<StringFilter>;
+  termElevenbold?: InputMaybe<StringFilter>;
+  termEleven2?: InputMaybe<StringFilter>;
+  termElevenbold3?: InputMaybe<StringFilter>;
+  termEleven3?: InputMaybe<StringFilter>;
+  termEleven4?: InputMaybe<StringFilter>;
+  termEleven5?: InputMaybe<StringFilter>;
+  termEleven6?: InputMaybe<StringFilter>;
+  termEleven7?: InputMaybe<StringFilter>;
+  termEleven8?: InputMaybe<StringFilter>;
+  termEleven9?: InputMaybe<StringFilter>;
+  termEleven10?: InputMaybe<StringFilter>;
+  termEleven11?: InputMaybe<StringFilter>;
+  termEleven12?: InputMaybe<StringFilter>;
+  tacTwelve?: InputMaybe<StringFilter>;
+  termTwelve?: InputMaybe<StringFilter>;
+  tacThirteen?: InputMaybe<StringFilter>;
+  termThirteen?: InputMaybe<StringFilter>;
+  termThirteen2?: InputMaybe<StringFilter>;
+};
+
+export type TermsRgsFilter = {
+  readyheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  readycontent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+};
+
+export type TermsRgstwoFilter = {
+  readyheadingtwo?: InputMaybe<StringFilter>;
+  readycontenttwo?: InputMaybe<StringFilter>;
+  bannerButtonText3?: InputMaybe<StringFilter>;
+  readytwoimage?: InputMaybe<ImageFilter>;
+};
+
+export type TermsRgsthreeFilter = {
+  readyheadingthree?: InputMaybe<StringFilter>;
+  readycontentthree?: InputMaybe<StringFilter>;
+  apibuttons?: InputMaybe<StringFilter>;
+  readythreeimage?: InputMaybe<ImageFilter>;
+};
+
+export type TermsFilter = {
+  conditions?: InputMaybe<TermsConditionsFilter>;
+  rgs?: InputMaybe<TermsRgsFilter>;
+  rgstwo?: InputMaybe<TermsRgstwoFilter>;
+  rgsthree?: InputMaybe<TermsRgsthreeFilter>;
+};
+
+export type TermsConnectionEdges = {
+  __typename?: 'TermsConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Terms>;
+};
+
+export type TermsConnection = Connection & {
+  __typename?: 'TermsConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<TermsConnectionEdges>>>;
+};
+
+export type PolicyPrivacypolicy = {
+  __typename?: 'PolicyPrivacypolicy';
+  heading?: Maybe<Scalars['String']['output']>;
+  date?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Scalars['String']['output']>;
+  contentOne?: Maybe<Scalars['String']['output']>;
+  contentTwo?: Maybe<Scalars['String']['output']>;
+  contentThree?: Maybe<Scalars['String']['output']>;
+  headingTwo?: Maybe<Scalars['String']['output']>;
+  info?: Maybe<Scalars['String']['output']>;
+  headingThree?: Maybe<Scalars['String']['output']>;
+  personalinfo?: Maybe<Scalars['String']['output']>;
+  list?: Maybe<Scalars['String']['output']>;
+  listTwo?: Maybe<Scalars['String']['output']>;
+  listThree?: Maybe<Scalars['String']['output']>;
+  allinfo?: Maybe<Scalars['String']['output']>;
+  headingFour?: Maybe<Scalars['String']['output']>;
+  infocollect?: Maybe<Scalars['String']['output']>;
+  headingFive?: Maybe<Scalars['String']['output']>;
+  spanFive?: Maybe<Scalars['String']['output']>;
+};
+
+export type PolicyPrivacyList = {
+  __typename?: 'PolicyPrivacyList';
+  thirdPartyName?: Maybe<Scalars['String']['output']>;
+  thirdPartyEmail?: Maybe<Scalars['String']['output']>;
+  thirdPartyAddress?: Maybe<Scalars['String']['output']>;
+  thirdPartyPhone?: Maybe<Scalars['String']['output']>;
+  billingHeading?: Maybe<Scalars['String']['output']>;
+  creditCard?: Maybe<Scalars['String']['output']>;
+  billingAddress?: Maybe<Scalars['String']['output']>;
+  financialHeading?: Maybe<Scalars['String']['output']>;
+  bankAccount?: Maybe<Scalars['String']['output']>;
+  taxID?: Maybe<Scalars['String']['output']>;
+  uniqueIdentifiersHeading?: Maybe<Scalars['String']['output']>;
+  userName?: Maybe<Scalars['String']['output']>;
+  accountNumbers?: Maybe<Scalars['String']['output']>;
+  password?: Maybe<Scalars['String']['output']>;
+  businessHeading?: Maybe<Scalars['String']['output']>;
+  companyName?: Maybe<Scalars['String']['output']>;
+  companySize?: Maybe<Scalars['String']['output']>;
+  businessType?: Maybe<Scalars['String']['output']>;
+  transactionVolume?: Maybe<Scalars['String']['output']>;
+  otherInfoHeading?: Maybe<Scalars['String']['output']>;
+  transactionData?: Maybe<Scalars['String']['output']>;
+  generatedInfo?: Maybe<Scalars['String']['output']>;
+  problemReport?: Maybe<Scalars['String']['output']>;
+  correspondence?: Maybe<Scalars['String']['output']>;
+  thirdPartyInfo?: Maybe<Scalars['String']['output']>;
+  autoCollectHeading?: Maybe<Scalars['String']['output']>;
+  autoCollectIntro?: Maybe<Scalars['String']['output']>;
+  ipAddress?: Maybe<Scalars['String']['output']>;
+  browserType?: Maybe<Scalars['String']['output']>;
+  referringExitPages?: Maybe<Scalars['String']['output']>;
+  operatingSystemInfo?: Maybe<Scalars['String']['output']>;
+  otherBrowserInfo?: Maybe<Scalars['String']['output']>;
+  trackingPolicy?: Maybe<Scalars['String']['output']>;
+  howWeUseHeading?: Maybe<Scalars['String']['output']>;
+  usageDetails?: Maybe<Scalars['String']['output']>;
+  cookiesUsage?: Maybe<Scalars['String']['output']>;
+  enforceTermsUsage?: Maybe<Scalars['String']['output']>;
+  sharingInfo?: Maybe<Scalars['String']['output']>;
+  noRentSell?: Maybe<Scalars['String']['output']>;
+  limitedShare?: Maybe<Scalars['String']['output']>;
+  legalReq?: Maybe<Scalars['String']['output']>;
+  businessChanges?: Maybe<Scalars['String']['output']>;
+  otherUses?: Maybe<Scalars['String']['output']>;
+  nonIdentifiable?: Maybe<Scalars['String']['output']>;
+  ccpaHeading?: Maybe<Scalars['String']['output']>;
+  ccpaIntro?: Maybe<Scalars['String']['output']>;
+  right?: Maybe<Scalars['String']['output']>;
+  rightToKnow?: Maybe<Scalars['String']['output']>;
+  rightToKnowDetails?: Maybe<Scalars['String']['output']>;
+  collectedInfoCategories?: Maybe<Scalars['String']['output']>;
+  sourcesInfoCategories?: Maybe<Scalars['String']['output']>;
+  businessPurpose?: Maybe<Scalars['String']['output']>;
+  thirdPartyCategories?: Maybe<Scalars['String']['output']>;
+};
+
+export type PolicyRights = {
+  __typename?: 'PolicyRights';
+  right?: Maybe<Scalars['String']['output']>;
+  right1?: Maybe<Scalars['String']['output']>;
+  head1?: Maybe<Scalars['String']['output']>;
+  right2?: Maybe<Scalars['String']['output']>;
+  head2?: Maybe<Scalars['String']['output']>;
+  right3?: Maybe<Scalars['String']['output']>;
+  right4?: Maybe<Scalars['String']['output']>;
+  euRightsHeading?: Maybe<Scalars['String']['output']>;
+  euRightsIntro?: Maybe<Scalars['String']['output']>;
+  seeInfoAboutYou?: Maybe<Scalars['String']['output']>;
+  seeProvidedInfo?: Maybe<Scalars['String']['output']>;
+  changeCorrectInfo?: Maybe<Scalars['String']['output']>;
+  deleteInfo?: Maybe<Scalars['String']['output']>;
+  stopProcessing?: Maybe<Scalars['String']['output']>;
+  objectToProcessing?: Maybe<Scalars['String']['output']>;
+  withdrawConsent?: Maybe<Scalars['String']['output']>;
+  optOutFutureComms?: Maybe<Scalars['String']['output']>;
+  declineInfo?: Maybe<Scalars['String']['output']>;
+  cookieRefusal?: Maybe<Scalars['String']['output']>;
+  cookieSettingsFirefox?: Maybe<Scalars['String']['output']>;
+  cookieSettingsIE?: Maybe<Scalars['String']['output']>;
+  cookieSettingsChrome?: Maybe<Scalars['String']['output']>;
+  cookieSettingsSafariOSX?: Maybe<Scalars['String']['output']>;
+  cookieSettingsSafariIOS?: Maybe<Scalars['String']['output']>;
+  cookieSettingsAndroid?: Maybe<Scalars['String']['output']>;
+  disableCookiesNote?: Maybe<Scalars['String']['output']>;
+  optOutGoogleAnalytics?: Maybe<Scalars['String']['output']>;
+  compromiseHeading?: Maybe<Scalars['String']['output']>;
+  notificationProcedures?: Maybe<Scalars['String']['output']>;
+  noLiability?: Maybe<Scalars['String']['output']>;
+  linksHeading?: Maybe<Scalars['String']['output']>;
+  noResponsibility?: Maybe<Scalars['String']['output']>;
+  notificationHeading?: Maybe<Scalars['String']['output']>;
+  notificationIntro?: Maybe<Scalars['String']['output']>;
+  contactIntro?: Maybe<Scalars['String']['output']>;
+  supportTeam?: Maybe<Scalars['String']['output']>;
+  support?: Maybe<Scalars['String']['output']>;
+  supportPhone?: Maybe<Scalars['String']['output']>;
+  supportEmail?: Maybe<Scalars['String']['output']>;
+};
+
+export type PolicyReady = {
+  __typename?: 'PolicyReady';
+  readyheading?: Maybe<Scalars['String']['output']>;
+  spanheading?: Maybe<Scalars['String']['output']>;
+  readycontent?: Maybe<Scalars['String']['output']>;
+  bannerButtonText1?: Maybe<Scalars['String']['output']>;
+  bannerButtonText2?: Maybe<Scalars['String']['output']>;
+};
+
+export type PolicyRgstwo = {
+  __typename?: 'PolicyRgstwo';
+  readyheadingtwo?: Maybe<Scalars['String']['output']>;
+  readycontenttwo?: Maybe<Scalars['String']['output']>;
+  bannerButtonText3?: Maybe<Scalars['String']['output']>;
+  readytwoimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type PolicyRgsthree = {
+  __typename?: 'PolicyRgsthree';
+  readyheadingthree?: Maybe<Scalars['String']['output']>;
+  readycontentthree?: Maybe<Scalars['String']['output']>;
+  apibuttons?: Maybe<Scalars['String']['output']>;
+  readythreeimage?: Maybe<Scalars['String']['output']>;
+};
+
+export type Policy = Node & Document & {
+  __typename?: 'Policy';
+  Privacypolicy?: Maybe<PolicyPrivacypolicy>;
+  PrivacyList?: Maybe<PolicyPrivacyList>;
+  rights?: Maybe<PolicyRights>;
+  ready?: Maybe<PolicyReady>;
+  rgstwo?: Maybe<PolicyRgstwo>;
+  rgsthree?: Maybe<PolicyRgsthree>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type PolicyPrivacypolicyFilter = {
+  heading?: InputMaybe<StringFilter>;
+  date?: InputMaybe<StringFilter>;
+  content?: InputMaybe<StringFilter>;
+  contentOne?: InputMaybe<StringFilter>;
+  contentTwo?: InputMaybe<StringFilter>;
+  contentThree?: InputMaybe<StringFilter>;
+  headingTwo?: InputMaybe<StringFilter>;
+  info?: InputMaybe<StringFilter>;
+  headingThree?: InputMaybe<StringFilter>;
+  personalinfo?: InputMaybe<StringFilter>;
+  list?: InputMaybe<StringFilter>;
+  listTwo?: InputMaybe<StringFilter>;
+  listThree?: InputMaybe<StringFilter>;
+  allinfo?: InputMaybe<StringFilter>;
+  headingFour?: InputMaybe<StringFilter>;
+  infocollect?: InputMaybe<StringFilter>;
+  headingFive?: InputMaybe<StringFilter>;
+  spanFive?: InputMaybe<StringFilter>;
+};
+
+export type PolicyPrivacyListFilter = {
+  thirdPartyName?: InputMaybe<StringFilter>;
+  thirdPartyEmail?: InputMaybe<StringFilter>;
+  thirdPartyAddress?: InputMaybe<StringFilter>;
+  thirdPartyPhone?: InputMaybe<StringFilter>;
+  billingHeading?: InputMaybe<StringFilter>;
+  creditCard?: InputMaybe<StringFilter>;
+  billingAddress?: InputMaybe<StringFilter>;
+  financialHeading?: InputMaybe<StringFilter>;
+  bankAccount?: InputMaybe<StringFilter>;
+  taxID?: InputMaybe<StringFilter>;
+  uniqueIdentifiersHeading?: InputMaybe<StringFilter>;
+  userName?: InputMaybe<StringFilter>;
+  accountNumbers?: InputMaybe<StringFilter>;
+  password?: InputMaybe<StringFilter>;
+  businessHeading?: InputMaybe<StringFilter>;
+  companyName?: InputMaybe<StringFilter>;
+  companySize?: InputMaybe<StringFilter>;
+  businessType?: InputMaybe<StringFilter>;
+  transactionVolume?: InputMaybe<StringFilter>;
+  otherInfoHeading?: InputMaybe<StringFilter>;
+  transactionData?: InputMaybe<StringFilter>;
+  generatedInfo?: InputMaybe<StringFilter>;
+  problemReport?: InputMaybe<StringFilter>;
+  correspondence?: InputMaybe<StringFilter>;
+  thirdPartyInfo?: InputMaybe<StringFilter>;
+  autoCollectHeading?: InputMaybe<StringFilter>;
+  autoCollectIntro?: InputMaybe<StringFilter>;
+  ipAddress?: InputMaybe<StringFilter>;
+  browserType?: InputMaybe<StringFilter>;
+  referringExitPages?: InputMaybe<StringFilter>;
+  operatingSystemInfo?: InputMaybe<StringFilter>;
+  otherBrowserInfo?: InputMaybe<StringFilter>;
+  trackingPolicy?: InputMaybe<StringFilter>;
+  howWeUseHeading?: InputMaybe<StringFilter>;
+  usageDetails?: InputMaybe<StringFilter>;
+  cookiesUsage?: InputMaybe<StringFilter>;
+  enforceTermsUsage?: InputMaybe<StringFilter>;
+  sharingInfo?: InputMaybe<StringFilter>;
+  noRentSell?: InputMaybe<StringFilter>;
+  limitedShare?: InputMaybe<StringFilter>;
+  legalReq?: InputMaybe<StringFilter>;
+  businessChanges?: InputMaybe<StringFilter>;
+  otherUses?: InputMaybe<StringFilter>;
+  nonIdentifiable?: InputMaybe<StringFilter>;
+  ccpaHeading?: InputMaybe<StringFilter>;
+  ccpaIntro?: InputMaybe<StringFilter>;
+  right?: InputMaybe<StringFilter>;
+  rightToKnow?: InputMaybe<StringFilter>;
+  rightToKnowDetails?: InputMaybe<StringFilter>;
+  collectedInfoCategories?: InputMaybe<StringFilter>;
+  sourcesInfoCategories?: InputMaybe<StringFilter>;
+  businessPurpose?: InputMaybe<StringFilter>;
+  thirdPartyCategories?: InputMaybe<StringFilter>;
+};
+
+export type PolicyRightsFilter = {
+  right?: InputMaybe<StringFilter>;
+  right1?: InputMaybe<StringFilter>;
+  head1?: InputMaybe<StringFilter>;
+  right2?: InputMaybe<StringFilter>;
+  head2?: InputMaybe<StringFilter>;
+  right3?: InputMaybe<StringFilter>;
+  right4?: InputMaybe<StringFilter>;
+  euRightsHeading?: InputMaybe<StringFilter>;
+  euRightsIntro?: InputMaybe<StringFilter>;
+  seeInfoAboutYou?: InputMaybe<StringFilter>;
+  seeProvidedInfo?: InputMaybe<StringFilter>;
+  changeCorrectInfo?: InputMaybe<StringFilter>;
+  deleteInfo?: InputMaybe<StringFilter>;
+  stopProcessing?: InputMaybe<StringFilter>;
+  objectToProcessing?: InputMaybe<StringFilter>;
+  withdrawConsent?: InputMaybe<StringFilter>;
+  optOutFutureComms?: InputMaybe<StringFilter>;
+  declineInfo?: InputMaybe<StringFilter>;
+  cookieRefusal?: InputMaybe<StringFilter>;
+  cookieSettingsFirefox?: InputMaybe<StringFilter>;
+  cookieSettingsIE?: InputMaybe<StringFilter>;
+  cookieSettingsChrome?: InputMaybe<StringFilter>;
+  cookieSettingsSafariOSX?: InputMaybe<StringFilter>;
+  cookieSettingsSafariIOS?: InputMaybe<StringFilter>;
+  cookieSettingsAndroid?: InputMaybe<StringFilter>;
+  disableCookiesNote?: InputMaybe<StringFilter>;
+  optOutGoogleAnalytics?: InputMaybe<StringFilter>;
+  compromiseHeading?: InputMaybe<StringFilter>;
+  notificationProcedures?: InputMaybe<StringFilter>;
+  noLiability?: InputMaybe<StringFilter>;
+  linksHeading?: InputMaybe<StringFilter>;
+  noResponsibility?: InputMaybe<StringFilter>;
+  notificationHeading?: InputMaybe<StringFilter>;
+  notificationIntro?: InputMaybe<StringFilter>;
+  contactIntro?: InputMaybe<StringFilter>;
+  supportTeam?: InputMaybe<StringFilter>;
+  support?: InputMaybe<StringFilter>;
+  supportPhone?: InputMaybe<StringFilter>;
+  supportEmail?: InputMaybe<StringFilter>;
+};
+
+export type PolicyReadyFilter = {
+  readyheading?: InputMaybe<StringFilter>;
+  spanheading?: InputMaybe<StringFilter>;
+  readycontent?: InputMaybe<StringFilter>;
+  bannerButtonText1?: InputMaybe<StringFilter>;
+  bannerButtonText2?: InputMaybe<StringFilter>;
+};
+
+export type PolicyRgstwoFilter = {
+  readyheadingtwo?: InputMaybe<StringFilter>;
+  readycontenttwo?: InputMaybe<StringFilter>;
+  bannerButtonText3?: InputMaybe<StringFilter>;
+  readytwoimage?: InputMaybe<ImageFilter>;
+};
+
+export type PolicyRgsthreeFilter = {
+  readyheadingthree?: InputMaybe<StringFilter>;
+  readycontentthree?: InputMaybe<StringFilter>;
+  apibuttons?: InputMaybe<StringFilter>;
+  readythreeimage?: InputMaybe<ImageFilter>;
+};
+
+export type PolicyFilter = {
+  Privacypolicy?: InputMaybe<PolicyPrivacypolicyFilter>;
+  PrivacyList?: InputMaybe<PolicyPrivacyListFilter>;
+  rights?: InputMaybe<PolicyRightsFilter>;
+  ready?: InputMaybe<PolicyReadyFilter>;
+  rgstwo?: InputMaybe<PolicyRgstwoFilter>;
+  rgsthree?: InputMaybe<PolicyRgsthreeFilter>;
+};
+
+export type PolicyConnectionEdges = {
+  __typename?: 'PolicyConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Policy>;
+};
+
+export type PolicyConnection = Connection & {
+  __typename?: 'PolicyConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<PolicyConnectionEdges>>>;
+};
+
 export type Post = Node & Document & {
   __typename?: 'Post';
   title: Scalars['String']['output'];
@@ -577,10 +3175,30 @@ export type Mutation = {
   deleteDocument: DocumentNode;
   createDocument: DocumentNode;
   createFolder: DocumentNode;
+  updateAbout: About;
+  createAbout: About;
   updateBlog: Blog;
   createBlog: Blog;
+  updateRealtime: Realtime;
+  createRealtime: Realtime;
+  updateFednow: Fednow;
+  createFednow: Fednow;
+  updateInstant: Instant;
+  createInstant: Instant;
+  updateMailed: Mailed;
+  createMailed: Mailed;
+  updatePrintable: Printable;
+  createPrintable: Printable;
+  updateVirtual: Virtual;
+  createVirtual: Virtual;
+  updateZelle: Zelle;
+  createZelle: Zelle;
   updatePage: Page;
   createPage: Page;
+  updateTerms: Terms;
+  createTerms: Terms;
+  updatePolicy: Policy;
+  createPolicy: Policy;
   updatePost: Post;
   createPost: Post;
 };
@@ -619,6 +3237,18 @@ export type MutationCreateFolderArgs = {
 };
 
 
+export type MutationUpdateAboutArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AboutMutation;
+};
+
+
+export type MutationCreateAboutArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AboutMutation;
+};
+
+
 export type MutationUpdateBlogArgs = {
   relativePath: Scalars['String']['input'];
   params: BlogMutation;
@@ -628,6 +3258,90 @@ export type MutationUpdateBlogArgs = {
 export type MutationCreateBlogArgs = {
   relativePath: Scalars['String']['input'];
   params: BlogMutation;
+};
+
+
+export type MutationUpdateRealtimeArgs = {
+  relativePath: Scalars['String']['input'];
+  params: RealtimeMutation;
+};
+
+
+export type MutationCreateRealtimeArgs = {
+  relativePath: Scalars['String']['input'];
+  params: RealtimeMutation;
+};
+
+
+export type MutationUpdateFednowArgs = {
+  relativePath: Scalars['String']['input'];
+  params: FednowMutation;
+};
+
+
+export type MutationCreateFednowArgs = {
+  relativePath: Scalars['String']['input'];
+  params: FednowMutation;
+};
+
+
+export type MutationUpdateInstantArgs = {
+  relativePath: Scalars['String']['input'];
+  params: InstantMutation;
+};
+
+
+export type MutationCreateInstantArgs = {
+  relativePath: Scalars['String']['input'];
+  params: InstantMutation;
+};
+
+
+export type MutationUpdateMailedArgs = {
+  relativePath: Scalars['String']['input'];
+  params: MailedMutation;
+};
+
+
+export type MutationCreateMailedArgs = {
+  relativePath: Scalars['String']['input'];
+  params: MailedMutation;
+};
+
+
+export type MutationUpdatePrintableArgs = {
+  relativePath: Scalars['String']['input'];
+  params: PrintableMutation;
+};
+
+
+export type MutationCreatePrintableArgs = {
+  relativePath: Scalars['String']['input'];
+  params: PrintableMutation;
+};
+
+
+export type MutationUpdateVirtualArgs = {
+  relativePath: Scalars['String']['input'];
+  params: VirtualMutation;
+};
+
+
+export type MutationCreateVirtualArgs = {
+  relativePath: Scalars['String']['input'];
+  params: VirtualMutation;
+};
+
+
+export type MutationUpdateZelleArgs = {
+  relativePath: Scalars['String']['input'];
+  params: ZelleMutation;
+};
+
+
+export type MutationCreateZelleArgs = {
+  relativePath: Scalars['String']['input'];
+  params: ZelleMutation;
 };
 
 
@@ -643,6 +3357,30 @@ export type MutationCreatePageArgs = {
 };
 
 
+export type MutationUpdateTermsArgs = {
+  relativePath: Scalars['String']['input'];
+  params: TermsMutation;
+};
+
+
+export type MutationCreateTermsArgs = {
+  relativePath: Scalars['String']['input'];
+  params: TermsMutation;
+};
+
+
+export type MutationUpdatePolicyArgs = {
+  relativePath: Scalars['String']['input'];
+  params: PolicyMutation;
+};
+
+
+export type MutationCreatePolicyArgs = {
+  relativePath: Scalars['String']['input'];
+  params: PolicyMutation;
+};
+
+
 export type MutationUpdatePostArgs = {
   relativePath: Scalars['String']['input'];
   params: PostMutation;
@@ -655,16 +3393,78 @@ export type MutationCreatePostArgs = {
 };
 
 export type DocumentUpdateMutation = {
+  about?: InputMaybe<AboutMutation>;
   blog?: InputMaybe<BlogMutation>;
+  realtime?: InputMaybe<RealtimeMutation>;
+  fednow?: InputMaybe<FednowMutation>;
+  instant?: InputMaybe<InstantMutation>;
+  mailed?: InputMaybe<MailedMutation>;
+  printable?: InputMaybe<PrintableMutation>;
+  virtual?: InputMaybe<VirtualMutation>;
+  zelle?: InputMaybe<ZelleMutation>;
   page?: InputMaybe<PageMutation>;
+  terms?: InputMaybe<TermsMutation>;
+  policy?: InputMaybe<PolicyMutation>;
   post?: InputMaybe<PostMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
+  about?: InputMaybe<AboutMutation>;
   blog?: InputMaybe<BlogMutation>;
+  realtime?: InputMaybe<RealtimeMutation>;
+  fednow?: InputMaybe<FednowMutation>;
+  instant?: InputMaybe<InstantMutation>;
+  mailed?: InputMaybe<MailedMutation>;
+  printable?: InputMaybe<PrintableMutation>;
+  virtual?: InputMaybe<VirtualMutation>;
+  zelle?: InputMaybe<ZelleMutation>;
   page?: InputMaybe<PageMutation>;
+  terms?: InputMaybe<TermsMutation>;
+  policy?: InputMaybe<PolicyMutation>;
   post?: InputMaybe<PostMutation>;
+};
+
+export type AboutHeaderMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  label1?: InputMaybe<Scalars['String']['input']>;
+  label2?: InputMaybe<Scalars['String']['input']>;
+  label3?: InputMaybe<Scalars['String']['input']>;
+  label4?: InputMaybe<Scalars['String']['input']>;
+  label5?: InputMaybe<Scalars['String']['input']>;
+  label6?: InputMaybe<Scalars['String']['input']>;
+  label7?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type AboutHeroTextMutation = {
+  bannerTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerSpanTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerContent?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type AboutDisplayinsightsMutation = {
+  Headingone?: InputMaybe<Scalars['String']['input']>;
+  Headingtwo?: InputMaybe<Scalars['String']['input']>;
+  insight?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type AboutMutation = {
+  header?: InputMaybe<AboutHeaderMutation>;
+  heroText?: InputMaybe<AboutHeroTextMutation>;
+  displayinsights?: InputMaybe<AboutDisplayinsightsMutation>;
+};
+
+export type BlogHeaderMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  label1?: InputMaybe<Scalars['String']['input']>;
+  label2?: InputMaybe<Scalars['String']['input']>;
+  label3?: InputMaybe<Scalars['String']['input']>;
+  label4?: InputMaybe<Scalars['String']['input']>;
+  label5?: InputMaybe<Scalars['String']['input']>;
+  label6?: InputMaybe<Scalars['String']['input']>;
+  label7?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type BlogHeroTextMutation = {
@@ -676,27 +3476,47 @@ export type BlogHeroTextMutation = {
   bannerImage?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type BlogSectionTwoMutation = {
+export type BlogHorizhoverMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
-  titlecontent?: InputMaybe<Scalars['String']['input']>;
-  titlecontentimage?: InputMaybe<Scalars['String']['input']>;
+  content?: InputMaybe<Scalars['String']['input']>;
+  image1?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
   title2?: InputMaybe<Scalars['String']['input']>;
-  titlecontent2?: InputMaybe<Scalars['String']['input']>;
-  titlecontentimage3?: InputMaybe<Scalars['String']['input']>;
-  title3?: InputMaybe<Scalars['String']['input']>;
-  titlecontent3?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type BlogSectionThreeMutation = {
   digital?: InputMaybe<Scalars['String']['input']>;
   digitalspan?: InputMaybe<Scalars['String']['input']>;
   digitalcontent?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type BlogDisplayinsightsMutation = {
   Headingone?: InputMaybe<Scalars['String']['input']>;
   Headingtwo?: InputMaybe<Scalars['String']['input']>;
   insight?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type BlogDiscoverMutation = {
+  image1?: InputMaybe<Scalars['String']['input']>;
+  date1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  btn1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  date2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  btn2?: InputMaybe<Scalars['String']['input']>;
+  image3?: InputMaybe<Scalars['String']['input']>;
+  date3?: InputMaybe<Scalars['String']['input']>;
+  content3?: InputMaybe<Scalars['String']['input']>;
+  btn3?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type BlogRgsMutation = {
@@ -734,14 +3554,793 @@ export type BlogFaqMutation = {
 };
 
 export type BlogMutation = {
+  header?: InputMaybe<BlogHeaderMutation>;
   heroText?: InputMaybe<BlogHeroTextMutation>;
-  sectionTwo?: InputMaybe<BlogSectionTwoMutation>;
+  horizhover?: InputMaybe<BlogHorizhoverMutation>;
   sectionThree?: InputMaybe<BlogSectionThreeMutation>;
   displayinsights?: InputMaybe<BlogDisplayinsightsMutation>;
+  discover?: InputMaybe<BlogDiscoverMutation>;
   rgs?: InputMaybe<BlogRgsMutation>;
   rgstwo?: InputMaybe<BlogRgstwoMutation>;
   rgsthree?: InputMaybe<BlogRgsthreeMutation>;
   faq?: InputMaybe<BlogFaqMutation>;
+};
+
+export type RealtimeHeaderMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  label1?: InputMaybe<Scalars['String']['input']>;
+  label2?: InputMaybe<Scalars['String']['input']>;
+  label3?: InputMaybe<Scalars['String']['input']>;
+  label4?: InputMaybe<Scalars['String']['input']>;
+  label5?: InputMaybe<Scalars['String']['input']>;
+  label6?: InputMaybe<Scalars['String']['input']>;
+  label7?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type RealtimeHeroTextMutation = {
+  bannerTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerSpanTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerContent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+  bannerImage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type RealtimeHorizhoverMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  content?: InputMaybe<Scalars['String']['input']>;
+  image1?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type RealtimeSectionThreeMutation = {
+  digital?: InputMaybe<Scalars['String']['input']>;
+  digitalspan?: InputMaybe<Scalars['String']['input']>;
+  digitalcontent?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type RealtimeDisplayinsightsMutation = {
+  Headingone?: InputMaybe<Scalars['String']['input']>;
+  Headingtwo?: InputMaybe<Scalars['String']['input']>;
+  insight?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type RealtimeDiscoverMutation = {
+  image1?: InputMaybe<Scalars['String']['input']>;
+  date1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  btn1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  date2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  btn2?: InputMaybe<Scalars['String']['input']>;
+  image3?: InputMaybe<Scalars['String']['input']>;
+  date3?: InputMaybe<Scalars['String']['input']>;
+  content3?: InputMaybe<Scalars['String']['input']>;
+  btn3?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type RealtimeRgsMutation = {
+  readyheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  readycontent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type RealtimeRgstwoMutation = {
+  readyheadingtwo?: InputMaybe<Scalars['String']['input']>;
+  readycontenttwo?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText3?: InputMaybe<Scalars['String']['input']>;
+  readytwoimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type RealtimeRgsthreeMutation = {
+  readyheadingthree?: InputMaybe<Scalars['String']['input']>;
+  readycontentthree?: InputMaybe<Scalars['String']['input']>;
+  apibuttons?: InputMaybe<Scalars['String']['input']>;
+  readythreeimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type RealtimeFaqQuestionsMutation = {
+  question?: InputMaybe<Scalars['String']['input']>;
+  answer?: InputMaybe<Scalars['String']['input']>;
+  ctatext?: InputMaybe<Scalars['String']['input']>;
+  ctalink?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type RealtimeFaqMutation = {
+  faqheading?: InputMaybe<Scalars['String']['input']>;
+  questions?: InputMaybe<Array<InputMaybe<RealtimeFaqQuestionsMutation>>>;
+};
+
+export type RealtimeMutation = {
+  header?: InputMaybe<RealtimeHeaderMutation>;
+  heroText?: InputMaybe<RealtimeHeroTextMutation>;
+  horizhover?: InputMaybe<RealtimeHorizhoverMutation>;
+  sectionThree?: InputMaybe<RealtimeSectionThreeMutation>;
+  displayinsights?: InputMaybe<RealtimeDisplayinsightsMutation>;
+  discover?: InputMaybe<RealtimeDiscoverMutation>;
+  rgs?: InputMaybe<RealtimeRgsMutation>;
+  rgstwo?: InputMaybe<RealtimeRgstwoMutation>;
+  rgsthree?: InputMaybe<RealtimeRgsthreeMutation>;
+  faq?: InputMaybe<RealtimeFaqMutation>;
+};
+
+export type FednowHeaderMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  label1?: InputMaybe<Scalars['String']['input']>;
+  label2?: InputMaybe<Scalars['String']['input']>;
+  label3?: InputMaybe<Scalars['String']['input']>;
+  label4?: InputMaybe<Scalars['String']['input']>;
+  label5?: InputMaybe<Scalars['String']['input']>;
+  label6?: InputMaybe<Scalars['String']['input']>;
+  label7?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type FednowHeroTextMutation = {
+  bannerTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerSpanTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerContent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+  bannerImage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type FednowHorizhoverMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  content?: InputMaybe<Scalars['String']['input']>;
+  image1?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type FednowSectionThreeMutation = {
+  digital?: InputMaybe<Scalars['String']['input']>;
+  digitalspan?: InputMaybe<Scalars['String']['input']>;
+  digitalcontent?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type FednowDisplayinsightsMutation = {
+  Headingone?: InputMaybe<Scalars['String']['input']>;
+  Headingtwo?: InputMaybe<Scalars['String']['input']>;
+  insight?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type FednowDiscoverMutation = {
+  image1?: InputMaybe<Scalars['String']['input']>;
+  date1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  btn1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  date2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  btn2?: InputMaybe<Scalars['String']['input']>;
+  image3?: InputMaybe<Scalars['String']['input']>;
+  date3?: InputMaybe<Scalars['String']['input']>;
+  content3?: InputMaybe<Scalars['String']['input']>;
+  btn3?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type FednowRgsMutation = {
+  readyheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  readycontent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type FednowRgstwoMutation = {
+  readyheadingtwo?: InputMaybe<Scalars['String']['input']>;
+  readycontenttwo?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText3?: InputMaybe<Scalars['String']['input']>;
+  readytwoimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type FednowRgsthreeMutation = {
+  readyheadingthree?: InputMaybe<Scalars['String']['input']>;
+  readycontentthree?: InputMaybe<Scalars['String']['input']>;
+  apibuttons?: InputMaybe<Scalars['String']['input']>;
+  readythreeimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type FednowFaqQuestionsMutation = {
+  question?: InputMaybe<Scalars['String']['input']>;
+  answer?: InputMaybe<Scalars['String']['input']>;
+  ctatext?: InputMaybe<Scalars['String']['input']>;
+  ctalink?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type FednowFaqMutation = {
+  faqheading?: InputMaybe<Scalars['String']['input']>;
+  questions?: InputMaybe<Array<InputMaybe<FednowFaqQuestionsMutation>>>;
+};
+
+export type FednowMutation = {
+  header?: InputMaybe<FednowHeaderMutation>;
+  heroText?: InputMaybe<FednowHeroTextMutation>;
+  horizhover?: InputMaybe<FednowHorizhoverMutation>;
+  sectionThree?: InputMaybe<FednowSectionThreeMutation>;
+  displayinsights?: InputMaybe<FednowDisplayinsightsMutation>;
+  discover?: InputMaybe<FednowDiscoverMutation>;
+  rgs?: InputMaybe<FednowRgsMutation>;
+  rgstwo?: InputMaybe<FednowRgstwoMutation>;
+  rgsthree?: InputMaybe<FednowRgsthreeMutation>;
+  faq?: InputMaybe<FednowFaqMutation>;
+};
+
+export type InstantHeaderMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  label1?: InputMaybe<Scalars['String']['input']>;
+  label2?: InputMaybe<Scalars['String']['input']>;
+  label3?: InputMaybe<Scalars['String']['input']>;
+  label4?: InputMaybe<Scalars['String']['input']>;
+  label5?: InputMaybe<Scalars['String']['input']>;
+  label6?: InputMaybe<Scalars['String']['input']>;
+  label7?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type InstantHeroTextMutation = {
+  bannerTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerSpanTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerContent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+  bannerImage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type InstantHorizhoverMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  content?: InputMaybe<Scalars['String']['input']>;
+  image1?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type InstantSectionThreeMutation = {
+  digital?: InputMaybe<Scalars['String']['input']>;
+  digitalspan?: InputMaybe<Scalars['String']['input']>;
+  digitalcontent?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type InstantDisplayinsightsMutation = {
+  Headingone?: InputMaybe<Scalars['String']['input']>;
+  Headingtwo?: InputMaybe<Scalars['String']['input']>;
+  insight?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type InstantDiscoverMutation = {
+  image1?: InputMaybe<Scalars['String']['input']>;
+  date1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  btn1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  date2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  btn2?: InputMaybe<Scalars['String']['input']>;
+  image3?: InputMaybe<Scalars['String']['input']>;
+  date3?: InputMaybe<Scalars['String']['input']>;
+  content3?: InputMaybe<Scalars['String']['input']>;
+  btn3?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type InstantRgsMutation = {
+  readyheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  readycontent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type InstantRgstwoMutation = {
+  readyheadingtwo?: InputMaybe<Scalars['String']['input']>;
+  readycontenttwo?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText3?: InputMaybe<Scalars['String']['input']>;
+  readytwoimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type InstantRgsthreeMutation = {
+  readyheadingthree?: InputMaybe<Scalars['String']['input']>;
+  readycontentthree?: InputMaybe<Scalars['String']['input']>;
+  apibuttons?: InputMaybe<Scalars['String']['input']>;
+  readythreeimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type InstantFaqQuestionsMutation = {
+  question?: InputMaybe<Scalars['String']['input']>;
+  answer?: InputMaybe<Scalars['String']['input']>;
+  ctatext?: InputMaybe<Scalars['String']['input']>;
+  ctalink?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type InstantFaqMutation = {
+  faqheading?: InputMaybe<Scalars['String']['input']>;
+  questions?: InputMaybe<Array<InputMaybe<InstantFaqQuestionsMutation>>>;
+};
+
+export type InstantMutation = {
+  header?: InputMaybe<InstantHeaderMutation>;
+  heroText?: InputMaybe<InstantHeroTextMutation>;
+  horizhover?: InputMaybe<InstantHorizhoverMutation>;
+  sectionThree?: InputMaybe<InstantSectionThreeMutation>;
+  displayinsights?: InputMaybe<InstantDisplayinsightsMutation>;
+  discover?: InputMaybe<InstantDiscoverMutation>;
+  rgs?: InputMaybe<InstantRgsMutation>;
+  rgstwo?: InputMaybe<InstantRgstwoMutation>;
+  rgsthree?: InputMaybe<InstantRgsthreeMutation>;
+  faq?: InputMaybe<InstantFaqMutation>;
+};
+
+export type MailedHeaderMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  label1?: InputMaybe<Scalars['String']['input']>;
+  label2?: InputMaybe<Scalars['String']['input']>;
+  label3?: InputMaybe<Scalars['String']['input']>;
+  label4?: InputMaybe<Scalars['String']['input']>;
+  label5?: InputMaybe<Scalars['String']['input']>;
+  label6?: InputMaybe<Scalars['String']['input']>;
+  label7?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MailedHeroTextMutation = {
+  bannerTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerSpanTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerContent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+  bannerImage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MailedHorizhoverMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  content?: InputMaybe<Scalars['String']['input']>;
+  image1?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MailedSectionThreeMutation = {
+  digital?: InputMaybe<Scalars['String']['input']>;
+  digitalspan?: InputMaybe<Scalars['String']['input']>;
+  digitalcontent?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MailedDisplayinsightsMutation = {
+  Headingone?: InputMaybe<Scalars['String']['input']>;
+  Headingtwo?: InputMaybe<Scalars['String']['input']>;
+  insight?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MailedDiscoverMutation = {
+  image1?: InputMaybe<Scalars['String']['input']>;
+  date1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  btn1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  date2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  btn2?: InputMaybe<Scalars['String']['input']>;
+  image3?: InputMaybe<Scalars['String']['input']>;
+  date3?: InputMaybe<Scalars['String']['input']>;
+  content3?: InputMaybe<Scalars['String']['input']>;
+  btn3?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MailedRgsMutation = {
+  readyheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  readycontent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MailedRgstwoMutation = {
+  readyheadingtwo?: InputMaybe<Scalars['String']['input']>;
+  readycontenttwo?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText3?: InputMaybe<Scalars['String']['input']>;
+  readytwoimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MailedRgsthreeMutation = {
+  readyheadingthree?: InputMaybe<Scalars['String']['input']>;
+  readycontentthree?: InputMaybe<Scalars['String']['input']>;
+  apibuttons?: InputMaybe<Scalars['String']['input']>;
+  readythreeimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MailedFaqQuestionsMutation = {
+  question?: InputMaybe<Scalars['String']['input']>;
+  answer?: InputMaybe<Scalars['String']['input']>;
+  ctatext?: InputMaybe<Scalars['String']['input']>;
+  ctalink?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MailedFaqMutation = {
+  faqheading?: InputMaybe<Scalars['String']['input']>;
+  questions?: InputMaybe<Array<InputMaybe<MailedFaqQuestionsMutation>>>;
+};
+
+export type MailedMutation = {
+  header?: InputMaybe<MailedHeaderMutation>;
+  heroText?: InputMaybe<MailedHeroTextMutation>;
+  horizhover?: InputMaybe<MailedHorizhoverMutation>;
+  sectionThree?: InputMaybe<MailedSectionThreeMutation>;
+  displayinsights?: InputMaybe<MailedDisplayinsightsMutation>;
+  discover?: InputMaybe<MailedDiscoverMutation>;
+  rgs?: InputMaybe<MailedRgsMutation>;
+  rgstwo?: InputMaybe<MailedRgstwoMutation>;
+  rgsthree?: InputMaybe<MailedRgsthreeMutation>;
+  faq?: InputMaybe<MailedFaqMutation>;
+};
+
+export type PrintableHeaderMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  label1?: InputMaybe<Scalars['String']['input']>;
+  label2?: InputMaybe<Scalars['String']['input']>;
+  label3?: InputMaybe<Scalars['String']['input']>;
+  label4?: InputMaybe<Scalars['String']['input']>;
+  label5?: InputMaybe<Scalars['String']['input']>;
+  label6?: InputMaybe<Scalars['String']['input']>;
+  label7?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PrintableHeroTextMutation = {
+  bannerTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerSpanTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerContent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+  bannerImage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PrintableHorizhoverMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  content?: InputMaybe<Scalars['String']['input']>;
+  image1?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PrintableSectionThreeMutation = {
+  digital?: InputMaybe<Scalars['String']['input']>;
+  digitalspan?: InputMaybe<Scalars['String']['input']>;
+  digitalcontent?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PrintableDisplayinsightsMutation = {
+  Headingone?: InputMaybe<Scalars['String']['input']>;
+  Headingtwo?: InputMaybe<Scalars['String']['input']>;
+  insight?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PrintableDiscoverMutation = {
+  image1?: InputMaybe<Scalars['String']['input']>;
+  date1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  btn1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  date2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  btn2?: InputMaybe<Scalars['String']['input']>;
+  image3?: InputMaybe<Scalars['String']['input']>;
+  date3?: InputMaybe<Scalars['String']['input']>;
+  content3?: InputMaybe<Scalars['String']['input']>;
+  btn3?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PrintableRgsMutation = {
+  readyheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  readycontent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PrintableRgstwoMutation = {
+  readyheadingtwo?: InputMaybe<Scalars['String']['input']>;
+  readycontenttwo?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText3?: InputMaybe<Scalars['String']['input']>;
+  readytwoimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PrintableRgsthreeMutation = {
+  readyheadingthree?: InputMaybe<Scalars['String']['input']>;
+  readycontentthree?: InputMaybe<Scalars['String']['input']>;
+  apibuttons?: InputMaybe<Scalars['String']['input']>;
+  readythreeimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PrintableFaqQuestionsMutation = {
+  question?: InputMaybe<Scalars['String']['input']>;
+  answer?: InputMaybe<Scalars['String']['input']>;
+  ctatext?: InputMaybe<Scalars['String']['input']>;
+  ctalink?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PrintableFaqMutation = {
+  faqheading?: InputMaybe<Scalars['String']['input']>;
+  questions?: InputMaybe<Array<InputMaybe<PrintableFaqQuestionsMutation>>>;
+};
+
+export type PrintableMutation = {
+  header?: InputMaybe<PrintableHeaderMutation>;
+  heroText?: InputMaybe<PrintableHeroTextMutation>;
+  horizhover?: InputMaybe<PrintableHorizhoverMutation>;
+  sectionThree?: InputMaybe<PrintableSectionThreeMutation>;
+  displayinsights?: InputMaybe<PrintableDisplayinsightsMutation>;
+  discover?: InputMaybe<PrintableDiscoverMutation>;
+  rgs?: InputMaybe<PrintableRgsMutation>;
+  rgstwo?: InputMaybe<PrintableRgstwoMutation>;
+  rgsthree?: InputMaybe<PrintableRgsthreeMutation>;
+  faq?: InputMaybe<PrintableFaqMutation>;
+};
+
+export type VirtualHeaderMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  label1?: InputMaybe<Scalars['String']['input']>;
+  label2?: InputMaybe<Scalars['String']['input']>;
+  label3?: InputMaybe<Scalars['String']['input']>;
+  label4?: InputMaybe<Scalars['String']['input']>;
+  label5?: InputMaybe<Scalars['String']['input']>;
+  label6?: InputMaybe<Scalars['String']['input']>;
+  label7?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VirtualHeroTextMutation = {
+  bannerTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerSpanTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerContent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+  bannerImage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VirtualHorizhoverMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  content?: InputMaybe<Scalars['String']['input']>;
+  image1?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VirtualSectionThreeMutation = {
+  digital?: InputMaybe<Scalars['String']['input']>;
+  digitalspan?: InputMaybe<Scalars['String']['input']>;
+  digitalcontent?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VirtualDisplayinsightsMutation = {
+  Headingone?: InputMaybe<Scalars['String']['input']>;
+  Headingtwo?: InputMaybe<Scalars['String']['input']>;
+  insight?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VirtualDiscoverMutation = {
+  image1?: InputMaybe<Scalars['String']['input']>;
+  date1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  btn1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  date2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  btn2?: InputMaybe<Scalars['String']['input']>;
+  image3?: InputMaybe<Scalars['String']['input']>;
+  date3?: InputMaybe<Scalars['String']['input']>;
+  content3?: InputMaybe<Scalars['String']['input']>;
+  btn3?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VirtualRgsMutation = {
+  readyheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  readycontent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VirtualRgstwoMutation = {
+  readyheadingtwo?: InputMaybe<Scalars['String']['input']>;
+  readycontenttwo?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText3?: InputMaybe<Scalars['String']['input']>;
+  readytwoimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VirtualRgsthreeMutation = {
+  readyheadingthree?: InputMaybe<Scalars['String']['input']>;
+  readycontentthree?: InputMaybe<Scalars['String']['input']>;
+  apibuttons?: InputMaybe<Scalars['String']['input']>;
+  readythreeimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VirtualFaqQuestionsMutation = {
+  question?: InputMaybe<Scalars['String']['input']>;
+  answer?: InputMaybe<Scalars['String']['input']>;
+  ctatext?: InputMaybe<Scalars['String']['input']>;
+  ctalink?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type VirtualFaqMutation = {
+  faqheading?: InputMaybe<Scalars['String']['input']>;
+  questions?: InputMaybe<Array<InputMaybe<VirtualFaqQuestionsMutation>>>;
+};
+
+export type VirtualMutation = {
+  header?: InputMaybe<VirtualHeaderMutation>;
+  heroText?: InputMaybe<VirtualHeroTextMutation>;
+  horizhover?: InputMaybe<VirtualHorizhoverMutation>;
+  sectionThree?: InputMaybe<VirtualSectionThreeMutation>;
+  displayinsights?: InputMaybe<VirtualDisplayinsightsMutation>;
+  discover?: InputMaybe<VirtualDiscoverMutation>;
+  rgs?: InputMaybe<VirtualRgsMutation>;
+  rgstwo?: InputMaybe<VirtualRgstwoMutation>;
+  rgsthree?: InputMaybe<VirtualRgsthreeMutation>;
+  faq?: InputMaybe<VirtualFaqMutation>;
+};
+
+export type ZelleHeaderMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  label1?: InputMaybe<Scalars['String']['input']>;
+  label2?: InputMaybe<Scalars['String']['input']>;
+  label3?: InputMaybe<Scalars['String']['input']>;
+  label4?: InputMaybe<Scalars['String']['input']>;
+  label5?: InputMaybe<Scalars['String']['input']>;
+  label6?: InputMaybe<Scalars['String']['input']>;
+  label7?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ZelleHeroTextMutation = {
+  bannerTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerSpanTitle?: InputMaybe<Scalars['String']['input']>;
+  bannerContent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+  bannerImage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ZelleHorizhoverMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  content?: InputMaybe<Scalars['String']['input']>;
+  image1?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ZelleSectionThreeMutation = {
+  digital?: InputMaybe<Scalars['String']['input']>;
+  digitalspan?: InputMaybe<Scalars['String']['input']>;
+  digitalcontent?: InputMaybe<Scalars['String']['input']>;
+  title1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  title2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ZelleDisplayinsightsMutation = {
+  Headingone?: InputMaybe<Scalars['String']['input']>;
+  Headingtwo?: InputMaybe<Scalars['String']['input']>;
+  insight?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ZelleDiscoverMutation = {
+  image1?: InputMaybe<Scalars['String']['input']>;
+  date1?: InputMaybe<Scalars['String']['input']>;
+  content1?: InputMaybe<Scalars['String']['input']>;
+  btn1?: InputMaybe<Scalars['String']['input']>;
+  image2?: InputMaybe<Scalars['String']['input']>;
+  date2?: InputMaybe<Scalars['String']['input']>;
+  content2?: InputMaybe<Scalars['String']['input']>;
+  btn2?: InputMaybe<Scalars['String']['input']>;
+  image3?: InputMaybe<Scalars['String']['input']>;
+  date3?: InputMaybe<Scalars['String']['input']>;
+  content3?: InputMaybe<Scalars['String']['input']>;
+  btn3?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ZelleRgsMutation = {
+  readyheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  readycontent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ZelleRgstwoMutation = {
+  readyheadingtwo?: InputMaybe<Scalars['String']['input']>;
+  readycontenttwo?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText3?: InputMaybe<Scalars['String']['input']>;
+  readytwoimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ZelleRgsthreeMutation = {
+  readyheadingthree?: InputMaybe<Scalars['String']['input']>;
+  readycontentthree?: InputMaybe<Scalars['String']['input']>;
+  apibuttons?: InputMaybe<Scalars['String']['input']>;
+  readythreeimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ZelleFaqQuestionsMutation = {
+  question?: InputMaybe<Scalars['String']['input']>;
+  answer?: InputMaybe<Scalars['String']['input']>;
+  ctatext?: InputMaybe<Scalars['String']['input']>;
+  ctalink?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ZelleFaqMutation = {
+  faqheading?: InputMaybe<Scalars['String']['input']>;
+  questions?: InputMaybe<Array<InputMaybe<ZelleFaqQuestionsMutation>>>;
+};
+
+export type ZelleMutation = {
+  header?: InputMaybe<ZelleHeaderMutation>;
+  heroText?: InputMaybe<ZelleHeroTextMutation>;
+  horizhover?: InputMaybe<ZelleHorizhoverMutation>;
+  sectionThree?: InputMaybe<ZelleSectionThreeMutation>;
+  displayinsights?: InputMaybe<ZelleDisplayinsightsMutation>;
+  discover?: InputMaybe<ZelleDiscoverMutation>;
+  rgs?: InputMaybe<ZelleRgsMutation>;
+  rgstwo?: InputMaybe<ZelleRgstwoMutation>;
+  rgsthree?: InputMaybe<ZelleRgsthreeMutation>;
+  faq?: InputMaybe<ZelleFaqMutation>;
 };
 
 export type PageBannerMutation = {
@@ -804,23 +4403,295 @@ export type PageMutation = {
   sectionFourText?: InputMaybe<PageSectionFourTextMutation>;
 };
 
+export type TermsConditionsMutation = {
+  tacheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  spanquote?: InputMaybe<Scalars['String']['input']>;
+  quote2?: InputMaybe<Scalars['String']['input']>;
+  spanquote2?: InputMaybe<Scalars['String']['input']>;
+  quote3?: InputMaybe<Scalars['String']['input']>;
+  spanquote3?: InputMaybe<Scalars['String']['input']>;
+  tacOne?: InputMaybe<Scalars['String']['input']>;
+  termOne?: InputMaybe<Scalars['String']['input']>;
+  tacTwo?: InputMaybe<Scalars['String']['input']>;
+  termTwo?: InputMaybe<Scalars['String']['input']>;
+  tacThree?: InputMaybe<Scalars['String']['input']>;
+  termThree?: InputMaybe<Scalars['String']['input']>;
+  tacFour?: InputMaybe<Scalars['String']['input']>;
+  termFour?: InputMaybe<Scalars['String']['input']>;
+  tacFive?: InputMaybe<Scalars['String']['input']>;
+  termFive?: InputMaybe<Scalars['String']['input']>;
+  tacSix?: InputMaybe<Scalars['String']['input']>;
+  termSix?: InputMaybe<Scalars['String']['input']>;
+  termSix2?: InputMaybe<Scalars['String']['input']>;
+  termSix3?: InputMaybe<Scalars['String']['input']>;
+  termSix4?: InputMaybe<Scalars['String']['input']>;
+  tacSeven?: InputMaybe<Scalars['String']['input']>;
+  termSeven?: InputMaybe<Scalars['String']['input']>;
+  tacEight?: InputMaybe<Scalars['String']['input']>;
+  termEight?: InputMaybe<Scalars['String']['input']>;
+  tacNine?: InputMaybe<Scalars['String']['input']>;
+  termNine?: InputMaybe<Scalars['String']['input']>;
+  tacTen?: InputMaybe<Scalars['String']['input']>;
+  termTen?: InputMaybe<Scalars['String']['input']>;
+  tacEleven?: InputMaybe<Scalars['String']['input']>;
+  termEleven?: InputMaybe<Scalars['String']['input']>;
+  termElevenbold?: InputMaybe<Scalars['String']['input']>;
+  termEleven2?: InputMaybe<Scalars['String']['input']>;
+  termElevenbold3?: InputMaybe<Scalars['String']['input']>;
+  termEleven3?: InputMaybe<Scalars['String']['input']>;
+  termEleven4?: InputMaybe<Scalars['String']['input']>;
+  termEleven5?: InputMaybe<Scalars['String']['input']>;
+  termEleven6?: InputMaybe<Scalars['String']['input']>;
+  termEleven7?: InputMaybe<Scalars['String']['input']>;
+  termEleven8?: InputMaybe<Scalars['String']['input']>;
+  termEleven9?: InputMaybe<Scalars['String']['input']>;
+  termEleven10?: InputMaybe<Scalars['String']['input']>;
+  termEleven11?: InputMaybe<Scalars['String']['input']>;
+  termEleven12?: InputMaybe<Scalars['String']['input']>;
+  tacTwelve?: InputMaybe<Scalars['String']['input']>;
+  termTwelve?: InputMaybe<Scalars['String']['input']>;
+  tacThirteen?: InputMaybe<Scalars['String']['input']>;
+  termThirteen?: InputMaybe<Scalars['String']['input']>;
+  termThirteen2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type TermsRgsMutation = {
+  readyheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  readycontent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type TermsRgstwoMutation = {
+  readyheadingtwo?: InputMaybe<Scalars['String']['input']>;
+  readycontenttwo?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText3?: InputMaybe<Scalars['String']['input']>;
+  readytwoimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type TermsRgsthreeMutation = {
+  readyheadingthree?: InputMaybe<Scalars['String']['input']>;
+  readycontentthree?: InputMaybe<Scalars['String']['input']>;
+  apibuttons?: InputMaybe<Scalars['String']['input']>;
+  readythreeimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type TermsMutation = {
+  conditions?: InputMaybe<TermsConditionsMutation>;
+  rgs?: InputMaybe<TermsRgsMutation>;
+  rgstwo?: InputMaybe<TermsRgstwoMutation>;
+  rgsthree?: InputMaybe<TermsRgsthreeMutation>;
+};
+
+export type PolicyPrivacypolicyMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  date?: InputMaybe<Scalars['String']['input']>;
+  content?: InputMaybe<Scalars['String']['input']>;
+  contentOne?: InputMaybe<Scalars['String']['input']>;
+  contentTwo?: InputMaybe<Scalars['String']['input']>;
+  contentThree?: InputMaybe<Scalars['String']['input']>;
+  headingTwo?: InputMaybe<Scalars['String']['input']>;
+  info?: InputMaybe<Scalars['String']['input']>;
+  headingThree?: InputMaybe<Scalars['String']['input']>;
+  personalinfo?: InputMaybe<Scalars['String']['input']>;
+  list?: InputMaybe<Scalars['String']['input']>;
+  listTwo?: InputMaybe<Scalars['String']['input']>;
+  listThree?: InputMaybe<Scalars['String']['input']>;
+  allinfo?: InputMaybe<Scalars['String']['input']>;
+  headingFour?: InputMaybe<Scalars['String']['input']>;
+  infocollect?: InputMaybe<Scalars['String']['input']>;
+  headingFive?: InputMaybe<Scalars['String']['input']>;
+  spanFive?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PolicyPrivacyListMutation = {
+  thirdPartyName?: InputMaybe<Scalars['String']['input']>;
+  thirdPartyEmail?: InputMaybe<Scalars['String']['input']>;
+  thirdPartyAddress?: InputMaybe<Scalars['String']['input']>;
+  thirdPartyPhone?: InputMaybe<Scalars['String']['input']>;
+  billingHeading?: InputMaybe<Scalars['String']['input']>;
+  creditCard?: InputMaybe<Scalars['String']['input']>;
+  billingAddress?: InputMaybe<Scalars['String']['input']>;
+  financialHeading?: InputMaybe<Scalars['String']['input']>;
+  bankAccount?: InputMaybe<Scalars['String']['input']>;
+  taxID?: InputMaybe<Scalars['String']['input']>;
+  uniqueIdentifiersHeading?: InputMaybe<Scalars['String']['input']>;
+  userName?: InputMaybe<Scalars['String']['input']>;
+  accountNumbers?: InputMaybe<Scalars['String']['input']>;
+  password?: InputMaybe<Scalars['String']['input']>;
+  businessHeading?: InputMaybe<Scalars['String']['input']>;
+  companyName?: InputMaybe<Scalars['String']['input']>;
+  companySize?: InputMaybe<Scalars['String']['input']>;
+  businessType?: InputMaybe<Scalars['String']['input']>;
+  transactionVolume?: InputMaybe<Scalars['String']['input']>;
+  otherInfoHeading?: InputMaybe<Scalars['String']['input']>;
+  transactionData?: InputMaybe<Scalars['String']['input']>;
+  generatedInfo?: InputMaybe<Scalars['String']['input']>;
+  problemReport?: InputMaybe<Scalars['String']['input']>;
+  correspondence?: InputMaybe<Scalars['String']['input']>;
+  thirdPartyInfo?: InputMaybe<Scalars['String']['input']>;
+  autoCollectHeading?: InputMaybe<Scalars['String']['input']>;
+  autoCollectIntro?: InputMaybe<Scalars['String']['input']>;
+  ipAddress?: InputMaybe<Scalars['String']['input']>;
+  browserType?: InputMaybe<Scalars['String']['input']>;
+  referringExitPages?: InputMaybe<Scalars['String']['input']>;
+  operatingSystemInfo?: InputMaybe<Scalars['String']['input']>;
+  otherBrowserInfo?: InputMaybe<Scalars['String']['input']>;
+  trackingPolicy?: InputMaybe<Scalars['String']['input']>;
+  howWeUseHeading?: InputMaybe<Scalars['String']['input']>;
+  usageDetails?: InputMaybe<Scalars['String']['input']>;
+  cookiesUsage?: InputMaybe<Scalars['String']['input']>;
+  enforceTermsUsage?: InputMaybe<Scalars['String']['input']>;
+  sharingInfo?: InputMaybe<Scalars['String']['input']>;
+  noRentSell?: InputMaybe<Scalars['String']['input']>;
+  limitedShare?: InputMaybe<Scalars['String']['input']>;
+  legalReq?: InputMaybe<Scalars['String']['input']>;
+  businessChanges?: InputMaybe<Scalars['String']['input']>;
+  otherUses?: InputMaybe<Scalars['String']['input']>;
+  nonIdentifiable?: InputMaybe<Scalars['String']['input']>;
+  ccpaHeading?: InputMaybe<Scalars['String']['input']>;
+  ccpaIntro?: InputMaybe<Scalars['String']['input']>;
+  right?: InputMaybe<Scalars['String']['input']>;
+  rightToKnow?: InputMaybe<Scalars['String']['input']>;
+  rightToKnowDetails?: InputMaybe<Scalars['String']['input']>;
+  collectedInfoCategories?: InputMaybe<Scalars['String']['input']>;
+  sourcesInfoCategories?: InputMaybe<Scalars['String']['input']>;
+  businessPurpose?: InputMaybe<Scalars['String']['input']>;
+  thirdPartyCategories?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PolicyRightsMutation = {
+  right?: InputMaybe<Scalars['String']['input']>;
+  right1?: InputMaybe<Scalars['String']['input']>;
+  head1?: InputMaybe<Scalars['String']['input']>;
+  right2?: InputMaybe<Scalars['String']['input']>;
+  head2?: InputMaybe<Scalars['String']['input']>;
+  right3?: InputMaybe<Scalars['String']['input']>;
+  right4?: InputMaybe<Scalars['String']['input']>;
+  euRightsHeading?: InputMaybe<Scalars['String']['input']>;
+  euRightsIntro?: InputMaybe<Scalars['String']['input']>;
+  seeInfoAboutYou?: InputMaybe<Scalars['String']['input']>;
+  seeProvidedInfo?: InputMaybe<Scalars['String']['input']>;
+  changeCorrectInfo?: InputMaybe<Scalars['String']['input']>;
+  deleteInfo?: InputMaybe<Scalars['String']['input']>;
+  stopProcessing?: InputMaybe<Scalars['String']['input']>;
+  objectToProcessing?: InputMaybe<Scalars['String']['input']>;
+  withdrawConsent?: InputMaybe<Scalars['String']['input']>;
+  optOutFutureComms?: InputMaybe<Scalars['String']['input']>;
+  declineInfo?: InputMaybe<Scalars['String']['input']>;
+  cookieRefusal?: InputMaybe<Scalars['String']['input']>;
+  cookieSettingsFirefox?: InputMaybe<Scalars['String']['input']>;
+  cookieSettingsIE?: InputMaybe<Scalars['String']['input']>;
+  cookieSettingsChrome?: InputMaybe<Scalars['String']['input']>;
+  cookieSettingsSafariOSX?: InputMaybe<Scalars['String']['input']>;
+  cookieSettingsSafariIOS?: InputMaybe<Scalars['String']['input']>;
+  cookieSettingsAndroid?: InputMaybe<Scalars['String']['input']>;
+  disableCookiesNote?: InputMaybe<Scalars['String']['input']>;
+  optOutGoogleAnalytics?: InputMaybe<Scalars['String']['input']>;
+  compromiseHeading?: InputMaybe<Scalars['String']['input']>;
+  notificationProcedures?: InputMaybe<Scalars['String']['input']>;
+  noLiability?: InputMaybe<Scalars['String']['input']>;
+  linksHeading?: InputMaybe<Scalars['String']['input']>;
+  noResponsibility?: InputMaybe<Scalars['String']['input']>;
+  notificationHeading?: InputMaybe<Scalars['String']['input']>;
+  notificationIntro?: InputMaybe<Scalars['String']['input']>;
+  contactIntro?: InputMaybe<Scalars['String']['input']>;
+  supportTeam?: InputMaybe<Scalars['String']['input']>;
+  support?: InputMaybe<Scalars['String']['input']>;
+  supportPhone?: InputMaybe<Scalars['String']['input']>;
+  supportEmail?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PolicyReadyMutation = {
+  readyheading?: InputMaybe<Scalars['String']['input']>;
+  spanheading?: InputMaybe<Scalars['String']['input']>;
+  readycontent?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText1?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText2?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PolicyRgstwoMutation = {
+  readyheadingtwo?: InputMaybe<Scalars['String']['input']>;
+  readycontenttwo?: InputMaybe<Scalars['String']['input']>;
+  bannerButtonText3?: InputMaybe<Scalars['String']['input']>;
+  readytwoimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PolicyRgsthreeMutation = {
+  readyheadingthree?: InputMaybe<Scalars['String']['input']>;
+  readycontentthree?: InputMaybe<Scalars['String']['input']>;
+  apibuttons?: InputMaybe<Scalars['String']['input']>;
+  readythreeimage?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PolicyMutation = {
+  Privacypolicy?: InputMaybe<PolicyPrivacypolicyMutation>;
+  PrivacyList?: InputMaybe<PolicyPrivacyListMutation>;
+  rights?: InputMaybe<PolicyRightsMutation>;
+  ready?: InputMaybe<PolicyReadyMutation>;
+  rgstwo?: InputMaybe<PolicyRgstwoMutation>;
+  rgsthree?: InputMaybe<PolicyRgsthreeMutation>;
+};
+
 export type PostMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type BlogPartsFragment = { __typename: 'Blog', heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, sectionTwo?: { __typename: 'BlogSectionTwo', title?: string | null, titlecontent?: string | null, titlecontentimage?: string | null, title2?: string | null, titlecontent2?: string | null, titlecontentimage3?: string | null, title3?: string | null, titlecontent3?: string | null } | null, sectionThree?: { __typename: 'BlogSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null } | null, displayinsights?: { __typename: 'BlogDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, rgs?: { __typename: 'BlogRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'BlogRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'BlogRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'BlogFaq', faqheading?: string | null, questions?: Array<{ __typename: 'BlogFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null };
+export type AboutPartsFragment = { __typename: 'About', header?: { __typename: 'AboutHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'AboutHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null } | null, displayinsights?: { __typename: 'AboutDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null };
+
+export type BlogPartsFragment = { __typename: 'Blog', header?: { __typename: 'BlogHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'BlogHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'BlogSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'BlogDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'BlogDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'BlogRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'BlogRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'BlogRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'BlogFaq', faqheading?: string | null, questions?: Array<{ __typename: 'BlogFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null };
+
+export type RealtimePartsFragment = { __typename: 'Realtime', header?: { __typename: 'RealtimeHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'RealtimeHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'RealtimeHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'RealtimeSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'RealtimeDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'RealtimeDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'RealtimeRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'RealtimeRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'RealtimeRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'RealtimeFaq', faqheading?: string | null, questions?: Array<{ __typename: 'RealtimeFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null };
+
+export type FednowPartsFragment = { __typename: 'Fednow', header?: { __typename: 'FednowHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'FednowHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'FednowHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'FednowSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'FednowDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'FednowDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'FednowRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'FednowRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'FednowRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'FednowFaq', faqheading?: string | null, questions?: Array<{ __typename: 'FednowFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null };
+
+export type InstantPartsFragment = { __typename: 'Instant', header?: { __typename: 'InstantHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'InstantHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'InstantHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'InstantSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'InstantDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'InstantDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'InstantRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'InstantRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'InstantRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'InstantFaq', faqheading?: string | null, questions?: Array<{ __typename: 'InstantFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null };
+
+export type MailedPartsFragment = { __typename: 'Mailed', header?: { __typename: 'MailedHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'MailedHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'MailedHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'MailedSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'MailedDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'MailedDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'MailedRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'MailedRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'MailedRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'MailedFaq', faqheading?: string | null, questions?: Array<{ __typename: 'MailedFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null };
+
+export type PrintablePartsFragment = { __typename: 'Printable', header?: { __typename: 'PrintableHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'PrintableHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'PrintableHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'PrintableSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'PrintableDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'PrintableDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'PrintableRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'PrintableRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'PrintableRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'PrintableFaq', faqheading?: string | null, questions?: Array<{ __typename: 'PrintableFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null };
+
+export type VirtualPartsFragment = { __typename: 'Virtual', header?: { __typename: 'VirtualHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'VirtualHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'VirtualHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'VirtualSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'VirtualDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'VirtualDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'VirtualRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'VirtualRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'VirtualRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'VirtualFaq', faqheading?: string | null, questions?: Array<{ __typename: 'VirtualFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null };
+
+export type ZellePartsFragment = { __typename: 'Zelle', header?: { __typename: 'ZelleHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'ZelleHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'ZelleHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'ZelleSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'ZelleDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'ZelleDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'ZelleRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'ZelleRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'ZelleRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'ZelleFaq', faqheading?: string | null, questions?: Array<{ __typename: 'ZelleFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null };
 
 export type PagePartsFragment = { __typename: 'Page', banner?: { __typename: 'PageBanner', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerSubTitle?: string | null, bannerButtonText?: string | null } | null, sectionOne?: { __typename: 'PageSectionOne', sectionOneText?: string | null, sectionOneImage?: string | null } | null, sectionTwo?: { __typename: 'PageSectionTwo', TableHead1?: string | null, TableHead2?: string | null, TableHead3?: string | null, TableHead4?: string | null, TableBody1?: string | null, TableBody2?: string | null, TableBody3?: string | null, TableBody4?: string | null, TableImage1?: string | null, TableImage2?: string | null, TableImage3?: string | null, TableImage4?: string | null, TableImageAlt?: string | null } | null, sectionThreeText?: { __typename: 'PageSectionThreeText', Heading?: string | null, Content?: string | null, Button?: string | null } | null, sectionFourText?: { __typename: 'PageSectionFourText', HeadingI?: string | null, HeadingII?: string | null, HeadingIII?: string | null, ImageTopText?: string | null, Image?: string | null, HoverList?: { __typename: 'PageSectionFourTextHoverList', Heading1?: string | null, Content1?: string | null, Heading2?: string | null, Content2?: string | null, Heading3?: string | null, Content3?: string | null } | null } | null };
 
+export type TermsPartsFragment = { __typename: 'Terms', conditions?: { __typename: 'TermsConditions', tacheading?: string | null, spanheading?: string | null, quote?: string | null, spanquote?: string | null, quote2?: string | null, spanquote2?: string | null, quote3?: string | null, spanquote3?: string | null, tacOne?: string | null, termOne?: string | null, tacTwo?: string | null, termTwo?: string | null, tacThree?: string | null, termThree?: string | null, tacFour?: string | null, termFour?: string | null, tacFive?: string | null, termFive?: string | null, tacSix?: string | null, termSix?: string | null, termSix2?: string | null, termSix3?: string | null, termSix4?: string | null, tacSeven?: string | null, termSeven?: string | null, tacEight?: string | null, termEight?: string | null, tacNine?: string | null, termNine?: string | null, tacTen?: string | null, termTen?: string | null, tacEleven?: string | null, termEleven?: string | null, termElevenbold?: string | null, termEleven2?: string | null, termElevenbold3?: string | null, termEleven3?: string | null, termEleven4?: string | null, termEleven5?: string | null, termEleven6?: string | null, termEleven7?: string | null, termEleven8?: string | null, termEleven9?: string | null, termEleven10?: string | null, termEleven11?: string | null, termEleven12?: string | null, tacTwelve?: string | null, termTwelve?: string | null, tacThirteen?: string | null, termThirteen?: string | null, termThirteen2?: string | null } | null, rgs?: { __typename: 'TermsRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'TermsRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'TermsRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null };
+
+export type PolicyPartsFragment = { __typename: 'Policy', Privacypolicy?: { __typename: 'PolicyPrivacypolicy', heading?: string | null, date?: string | null, content?: string | null, contentOne?: string | null, contentTwo?: string | null, contentThree?: string | null, headingTwo?: string | null, info?: string | null, headingThree?: string | null, personalinfo?: string | null, list?: string | null, listTwo?: string | null, listThree?: string | null, allinfo?: string | null, headingFour?: string | null, infocollect?: string | null, headingFive?: string | null, spanFive?: string | null } | null, PrivacyList?: { __typename: 'PolicyPrivacyList', thirdPartyName?: string | null, thirdPartyEmail?: string | null, thirdPartyAddress?: string | null, thirdPartyPhone?: string | null, billingHeading?: string | null, creditCard?: string | null, billingAddress?: string | null, financialHeading?: string | null, bankAccount?: string | null, taxID?: string | null, uniqueIdentifiersHeading?: string | null, userName?: string | null, accountNumbers?: string | null, password?: string | null, businessHeading?: string | null, companyName?: string | null, companySize?: string | null, businessType?: string | null, transactionVolume?: string | null, otherInfoHeading?: string | null, transactionData?: string | null, generatedInfo?: string | null, problemReport?: string | null, correspondence?: string | null, thirdPartyInfo?: string | null, autoCollectHeading?: string | null, autoCollectIntro?: string | null, ipAddress?: string | null, browserType?: string | null, referringExitPages?: string | null, operatingSystemInfo?: string | null, otherBrowserInfo?: string | null, trackingPolicy?: string | null, howWeUseHeading?: string | null, usageDetails?: string | null, cookiesUsage?: string | null, enforceTermsUsage?: string | null, sharingInfo?: string | null, noRentSell?: string | null, limitedShare?: string | null, legalReq?: string | null, businessChanges?: string | null, otherUses?: string | null, nonIdentifiable?: string | null, ccpaHeading?: string | null, ccpaIntro?: string | null, right?: string | null, rightToKnow?: string | null, rightToKnowDetails?: string | null, collectedInfoCategories?: string | null, sourcesInfoCategories?: string | null, businessPurpose?: string | null, thirdPartyCategories?: string | null } | null, rights?: { __typename: 'PolicyRights', right?: string | null, right1?: string | null, head1?: string | null, right2?: string | null, head2?: string | null, right3?: string | null, right4?: string | null, euRightsHeading?: string | null, euRightsIntro?: string | null, seeInfoAboutYou?: string | null, seeProvidedInfo?: string | null, changeCorrectInfo?: string | null, deleteInfo?: string | null, stopProcessing?: string | null, objectToProcessing?: string | null, withdrawConsent?: string | null, optOutFutureComms?: string | null, declineInfo?: string | null, cookieRefusal?: string | null, cookieSettingsFirefox?: string | null, cookieSettingsIE?: string | null, cookieSettingsChrome?: string | null, cookieSettingsSafariOSX?: string | null, cookieSettingsSafariIOS?: string | null, cookieSettingsAndroid?: string | null, disableCookiesNote?: string | null, optOutGoogleAnalytics?: string | null, compromiseHeading?: string | null, notificationProcedures?: string | null, noLiability?: string | null, linksHeading?: string | null, noResponsibility?: string | null, notificationHeading?: string | null, notificationIntro?: string | null, contactIntro?: string | null, supportTeam?: string | null, support?: string | null, supportPhone?: string | null, supportEmail?: string | null } | null, ready?: { __typename: 'PolicyReady', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'PolicyRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'PolicyRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null };
+
 export type PostPartsFragment = { __typename: 'Post', title: string, body?: any | null };
+
+export type AboutQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type AboutQuery = { __typename?: 'Query', about: { __typename: 'About', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'AboutHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'AboutHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null } | null, displayinsights?: { __typename: 'AboutDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null } };
+
+export type AboutConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AboutFilter>;
+}>;
+
+
+export type AboutConnectionQuery = { __typename?: 'Query', aboutConnection: { __typename?: 'AboutConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AboutConnectionEdges', cursor: string, node?: { __typename: 'About', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'AboutHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'AboutHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null } | null, displayinsights?: { __typename: 'AboutDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null } | null } | null> | null } };
 
 export type BlogQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type BlogQuery = { __typename?: 'Query', blog: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, sectionTwo?: { __typename: 'BlogSectionTwo', title?: string | null, titlecontent?: string | null, titlecontentimage?: string | null, title2?: string | null, titlecontent2?: string | null, titlecontentimage3?: string | null, title3?: string | null, titlecontent3?: string | null } | null, sectionThree?: { __typename: 'BlogSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null } | null, displayinsights?: { __typename: 'BlogDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, rgs?: { __typename: 'BlogRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'BlogRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'BlogRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'BlogFaq', faqheading?: string | null, questions?: Array<{ __typename: 'BlogFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } };
+export type BlogQuery = { __typename?: 'Query', blog: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'BlogHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'BlogHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'BlogSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'BlogDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'BlogDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'BlogRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'BlogRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'BlogRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'BlogFaq', faqheading?: string | null, questions?: Array<{ __typename: 'BlogFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } };
 
 export type BlogConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -832,7 +4703,140 @@ export type BlogConnectionQueryVariables = Exact<{
 }>;
 
 
-export type BlogConnectionQuery = { __typename?: 'Query', blogConnection: { __typename?: 'BlogConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'BlogConnectionEdges', cursor: string, node?: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, sectionTwo?: { __typename: 'BlogSectionTwo', title?: string | null, titlecontent?: string | null, titlecontentimage?: string | null, title2?: string | null, titlecontent2?: string | null, titlecontentimage3?: string | null, title3?: string | null, titlecontent3?: string | null } | null, sectionThree?: { __typename: 'BlogSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null } | null, displayinsights?: { __typename: 'BlogDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, rgs?: { __typename: 'BlogRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'BlogRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'BlogRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'BlogFaq', faqheading?: string | null, questions?: Array<{ __typename: 'BlogFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } | null } | null> | null } };
+export type BlogConnectionQuery = { __typename?: 'Query', blogConnection: { __typename?: 'BlogConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'BlogConnectionEdges', cursor: string, node?: { __typename: 'Blog', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'BlogHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'BlogHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'BlogHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'BlogSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'BlogDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'BlogDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'BlogRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'BlogRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'BlogRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'BlogFaq', faqheading?: string | null, questions?: Array<{ __typename: 'BlogFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } | null } | null> | null } };
+
+export type RealtimeQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type RealtimeQuery = { __typename?: 'Query', realtime: { __typename: 'Realtime', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'RealtimeHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'RealtimeHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'RealtimeHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'RealtimeSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'RealtimeDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'RealtimeDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'RealtimeRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'RealtimeRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'RealtimeRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'RealtimeFaq', faqheading?: string | null, questions?: Array<{ __typename: 'RealtimeFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } };
+
+export type RealtimeConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<RealtimeFilter>;
+}>;
+
+
+export type RealtimeConnectionQuery = { __typename?: 'Query', realtimeConnection: { __typename?: 'RealtimeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'RealtimeConnectionEdges', cursor: string, node?: { __typename: 'Realtime', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'RealtimeHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'RealtimeHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'RealtimeHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'RealtimeSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'RealtimeDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'RealtimeDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'RealtimeRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'RealtimeRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'RealtimeRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'RealtimeFaq', faqheading?: string | null, questions?: Array<{ __typename: 'RealtimeFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } | null } | null> | null } };
+
+export type FednowQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type FednowQuery = { __typename?: 'Query', fednow: { __typename: 'Fednow', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'FednowHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'FednowHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'FednowHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'FednowSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'FednowDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'FednowDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'FednowRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'FednowRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'FednowRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'FednowFaq', faqheading?: string | null, questions?: Array<{ __typename: 'FednowFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } };
+
+export type FednowConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<FednowFilter>;
+}>;
+
+
+export type FednowConnectionQuery = { __typename?: 'Query', fednowConnection: { __typename?: 'FednowConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'FednowConnectionEdges', cursor: string, node?: { __typename: 'Fednow', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'FednowHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'FednowHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'FednowHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'FednowSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'FednowDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'FednowDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'FednowRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'FednowRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'FednowRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'FednowFaq', faqheading?: string | null, questions?: Array<{ __typename: 'FednowFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } | null } | null> | null } };
+
+export type InstantQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type InstantQuery = { __typename?: 'Query', instant: { __typename: 'Instant', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'InstantHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'InstantHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'InstantHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'InstantSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'InstantDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'InstantDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'InstantRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'InstantRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'InstantRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'InstantFaq', faqheading?: string | null, questions?: Array<{ __typename: 'InstantFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } };
+
+export type InstantConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<InstantFilter>;
+}>;
+
+
+export type InstantConnectionQuery = { __typename?: 'Query', instantConnection: { __typename?: 'InstantConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'InstantConnectionEdges', cursor: string, node?: { __typename: 'Instant', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'InstantHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'InstantHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'InstantHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'InstantSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'InstantDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'InstantDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'InstantRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'InstantRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'InstantRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'InstantFaq', faqheading?: string | null, questions?: Array<{ __typename: 'InstantFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } | null } | null> | null } };
+
+export type MailedQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type MailedQuery = { __typename?: 'Query', mailed: { __typename: 'Mailed', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'MailedHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'MailedHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'MailedHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'MailedSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'MailedDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'MailedDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'MailedRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'MailedRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'MailedRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'MailedFaq', faqheading?: string | null, questions?: Array<{ __typename: 'MailedFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } };
+
+export type MailedConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<MailedFilter>;
+}>;
+
+
+export type MailedConnectionQuery = { __typename?: 'Query', mailedConnection: { __typename?: 'MailedConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'MailedConnectionEdges', cursor: string, node?: { __typename: 'Mailed', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'MailedHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'MailedHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'MailedHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'MailedSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'MailedDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'MailedDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'MailedRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'MailedRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'MailedRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'MailedFaq', faqheading?: string | null, questions?: Array<{ __typename: 'MailedFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } | null } | null> | null } };
+
+export type PrintableQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type PrintableQuery = { __typename?: 'Query', printable: { __typename: 'Printable', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'PrintableHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'PrintableHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'PrintableHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'PrintableSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'PrintableDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'PrintableDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'PrintableRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'PrintableRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'PrintableRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'PrintableFaq', faqheading?: string | null, questions?: Array<{ __typename: 'PrintableFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } };
+
+export type PrintableConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<PrintableFilter>;
+}>;
+
+
+export type PrintableConnectionQuery = { __typename?: 'Query', printableConnection: { __typename?: 'PrintableConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PrintableConnectionEdges', cursor: string, node?: { __typename: 'Printable', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'PrintableHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'PrintableHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'PrintableHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'PrintableSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'PrintableDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'PrintableDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'PrintableRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'PrintableRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'PrintableRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'PrintableFaq', faqheading?: string | null, questions?: Array<{ __typename: 'PrintableFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } | null } | null> | null } };
+
+export type VirtualQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type VirtualQuery = { __typename?: 'Query', virtual: { __typename: 'Virtual', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'VirtualHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'VirtualHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'VirtualHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'VirtualSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'VirtualDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'VirtualDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'VirtualRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'VirtualRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'VirtualRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'VirtualFaq', faqheading?: string | null, questions?: Array<{ __typename: 'VirtualFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } };
+
+export type VirtualConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<VirtualFilter>;
+}>;
+
+
+export type VirtualConnectionQuery = { __typename?: 'Query', virtualConnection: { __typename?: 'VirtualConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'VirtualConnectionEdges', cursor: string, node?: { __typename: 'Virtual', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'VirtualHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'VirtualHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'VirtualHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'VirtualSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'VirtualDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'VirtualDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'VirtualRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'VirtualRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'VirtualRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'VirtualFaq', faqheading?: string | null, questions?: Array<{ __typename: 'VirtualFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } | null } | null> | null } };
+
+export type ZelleQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type ZelleQuery = { __typename?: 'Query', zelle: { __typename: 'Zelle', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'ZelleHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'ZelleHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'ZelleHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'ZelleSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'ZelleDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'ZelleDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'ZelleRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'ZelleRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'ZelleRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'ZelleFaq', faqheading?: string | null, questions?: Array<{ __typename: 'ZelleFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } };
+
+export type ZelleConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<ZelleFilter>;
+}>;
+
+
+export type ZelleConnectionQuery = { __typename?: 'Query', zelleConnection: { __typename?: 'ZelleConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ZelleConnectionEdges', cursor: string, node?: { __typename: 'Zelle', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, header?: { __typename: 'ZelleHeader', image?: string | null, label1?: string | null, label2?: string | null, label3?: string | null, label4?: string | null, label5?: string | null, label6?: string | null, label7?: string | null, button?: string | null } | null, heroText?: { __typename: 'ZelleHeroText', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerContent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null, bannerImage?: string | null } | null, horizhover?: { __typename: 'ZelleHorizhover', title?: string | null, content?: string | null, image1?: string | null, title1?: string | null, content1?: string | null, image2?: string | null, title2?: string | null, content2?: string | null } | null, sectionThree?: { __typename: 'ZelleSectionThree', digital?: string | null, digitalspan?: string | null, digitalcontent?: string | null, title1?: string | null, content1?: string | null, title2?: string | null, content2?: string | null, image?: string | null } | null, displayinsights?: { __typename: 'ZelleDisplayinsights', Headingone?: string | null, Headingtwo?: string | null, insight?: string | null } | null, discover?: { __typename: 'ZelleDiscover', image1?: string | null, date1?: string | null, content1?: string | null, btn1?: string | null, image2?: string | null, date2?: string | null, content2?: string | null, btn2?: string | null, image3?: string | null, date3?: string | null, content3?: string | null, btn3?: string | null } | null, rgs?: { __typename: 'ZelleRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'ZelleRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'ZelleRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null, faq?: { __typename: 'ZelleFaq', faqheading?: string | null, questions?: Array<{ __typename: 'ZelleFaqQuestions', question?: string | null, answer?: string | null, ctatext?: string | null, ctalink?: string | null } | null> | null } | null } | null } | null> | null } };
 
 export type PageQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -853,6 +4857,44 @@ export type PageConnectionQueryVariables = Exact<{
 
 export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, banner?: { __typename: 'PageBanner', bannerTitle?: string | null, bannerSpanTitle?: string | null, bannerSubTitle?: string | null, bannerButtonText?: string | null } | null, sectionOne?: { __typename: 'PageSectionOne', sectionOneText?: string | null, sectionOneImage?: string | null } | null, sectionTwo?: { __typename: 'PageSectionTwo', TableHead1?: string | null, TableHead2?: string | null, TableHead3?: string | null, TableHead4?: string | null, TableBody1?: string | null, TableBody2?: string | null, TableBody3?: string | null, TableBody4?: string | null, TableImage1?: string | null, TableImage2?: string | null, TableImage3?: string | null, TableImage4?: string | null, TableImageAlt?: string | null } | null, sectionThreeText?: { __typename: 'PageSectionThreeText', Heading?: string | null, Content?: string | null, Button?: string | null } | null, sectionFourText?: { __typename: 'PageSectionFourText', HeadingI?: string | null, HeadingII?: string | null, HeadingIII?: string | null, ImageTopText?: string | null, Image?: string | null, HoverList?: { __typename: 'PageSectionFourTextHoverList', Heading1?: string | null, Content1?: string | null, Heading2?: string | null, Content2?: string | null, Heading3?: string | null, Content3?: string | null } | null } | null } | null } | null> | null } };
 
+export type TermsQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type TermsQuery = { __typename?: 'Query', terms: { __typename: 'Terms', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, conditions?: { __typename: 'TermsConditions', tacheading?: string | null, spanheading?: string | null, quote?: string | null, spanquote?: string | null, quote2?: string | null, spanquote2?: string | null, quote3?: string | null, spanquote3?: string | null, tacOne?: string | null, termOne?: string | null, tacTwo?: string | null, termTwo?: string | null, tacThree?: string | null, termThree?: string | null, tacFour?: string | null, termFour?: string | null, tacFive?: string | null, termFive?: string | null, tacSix?: string | null, termSix?: string | null, termSix2?: string | null, termSix3?: string | null, termSix4?: string | null, tacSeven?: string | null, termSeven?: string | null, tacEight?: string | null, termEight?: string | null, tacNine?: string | null, termNine?: string | null, tacTen?: string | null, termTen?: string | null, tacEleven?: string | null, termEleven?: string | null, termElevenbold?: string | null, termEleven2?: string | null, termElevenbold3?: string | null, termEleven3?: string | null, termEleven4?: string | null, termEleven5?: string | null, termEleven6?: string | null, termEleven7?: string | null, termEleven8?: string | null, termEleven9?: string | null, termEleven10?: string | null, termEleven11?: string | null, termEleven12?: string | null, tacTwelve?: string | null, termTwelve?: string | null, tacThirteen?: string | null, termThirteen?: string | null, termThirteen2?: string | null } | null, rgs?: { __typename: 'TermsRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'TermsRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'TermsRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null } };
+
+export type TermsConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<TermsFilter>;
+}>;
+
+
+export type TermsConnectionQuery = { __typename?: 'Query', termsConnection: { __typename?: 'TermsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'TermsConnectionEdges', cursor: string, node?: { __typename: 'Terms', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, conditions?: { __typename: 'TermsConditions', tacheading?: string | null, spanheading?: string | null, quote?: string | null, spanquote?: string | null, quote2?: string | null, spanquote2?: string | null, quote3?: string | null, spanquote3?: string | null, tacOne?: string | null, termOne?: string | null, tacTwo?: string | null, termTwo?: string | null, tacThree?: string | null, termThree?: string | null, tacFour?: string | null, termFour?: string | null, tacFive?: string | null, termFive?: string | null, tacSix?: string | null, termSix?: string | null, termSix2?: string | null, termSix3?: string | null, termSix4?: string | null, tacSeven?: string | null, termSeven?: string | null, tacEight?: string | null, termEight?: string | null, tacNine?: string | null, termNine?: string | null, tacTen?: string | null, termTen?: string | null, tacEleven?: string | null, termEleven?: string | null, termElevenbold?: string | null, termEleven2?: string | null, termElevenbold3?: string | null, termEleven3?: string | null, termEleven4?: string | null, termEleven5?: string | null, termEleven6?: string | null, termEleven7?: string | null, termEleven8?: string | null, termEleven9?: string | null, termEleven10?: string | null, termEleven11?: string | null, termEleven12?: string | null, tacTwelve?: string | null, termTwelve?: string | null, tacThirteen?: string | null, termThirteen?: string | null, termThirteen2?: string | null } | null, rgs?: { __typename: 'TermsRgs', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'TermsRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'TermsRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null } | null } | null> | null } };
+
+export type PolicyQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type PolicyQuery = { __typename?: 'Query', policy: { __typename: 'Policy', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, Privacypolicy?: { __typename: 'PolicyPrivacypolicy', heading?: string | null, date?: string | null, content?: string | null, contentOne?: string | null, contentTwo?: string | null, contentThree?: string | null, headingTwo?: string | null, info?: string | null, headingThree?: string | null, personalinfo?: string | null, list?: string | null, listTwo?: string | null, listThree?: string | null, allinfo?: string | null, headingFour?: string | null, infocollect?: string | null, headingFive?: string | null, spanFive?: string | null } | null, PrivacyList?: { __typename: 'PolicyPrivacyList', thirdPartyName?: string | null, thirdPartyEmail?: string | null, thirdPartyAddress?: string | null, thirdPartyPhone?: string | null, billingHeading?: string | null, creditCard?: string | null, billingAddress?: string | null, financialHeading?: string | null, bankAccount?: string | null, taxID?: string | null, uniqueIdentifiersHeading?: string | null, userName?: string | null, accountNumbers?: string | null, password?: string | null, businessHeading?: string | null, companyName?: string | null, companySize?: string | null, businessType?: string | null, transactionVolume?: string | null, otherInfoHeading?: string | null, transactionData?: string | null, generatedInfo?: string | null, problemReport?: string | null, correspondence?: string | null, thirdPartyInfo?: string | null, autoCollectHeading?: string | null, autoCollectIntro?: string | null, ipAddress?: string | null, browserType?: string | null, referringExitPages?: string | null, operatingSystemInfo?: string | null, otherBrowserInfo?: string | null, trackingPolicy?: string | null, howWeUseHeading?: string | null, usageDetails?: string | null, cookiesUsage?: string | null, enforceTermsUsage?: string | null, sharingInfo?: string | null, noRentSell?: string | null, limitedShare?: string | null, legalReq?: string | null, businessChanges?: string | null, otherUses?: string | null, nonIdentifiable?: string | null, ccpaHeading?: string | null, ccpaIntro?: string | null, right?: string | null, rightToKnow?: string | null, rightToKnowDetails?: string | null, collectedInfoCategories?: string | null, sourcesInfoCategories?: string | null, businessPurpose?: string | null, thirdPartyCategories?: string | null } | null, rights?: { __typename: 'PolicyRights', right?: string | null, right1?: string | null, head1?: string | null, right2?: string | null, head2?: string | null, right3?: string | null, right4?: string | null, euRightsHeading?: string | null, euRightsIntro?: string | null, seeInfoAboutYou?: string | null, seeProvidedInfo?: string | null, changeCorrectInfo?: string | null, deleteInfo?: string | null, stopProcessing?: string | null, objectToProcessing?: string | null, withdrawConsent?: string | null, optOutFutureComms?: string | null, declineInfo?: string | null, cookieRefusal?: string | null, cookieSettingsFirefox?: string | null, cookieSettingsIE?: string | null, cookieSettingsChrome?: string | null, cookieSettingsSafariOSX?: string | null, cookieSettingsSafariIOS?: string | null, cookieSettingsAndroid?: string | null, disableCookiesNote?: string | null, optOutGoogleAnalytics?: string | null, compromiseHeading?: string | null, notificationProcedures?: string | null, noLiability?: string | null, linksHeading?: string | null, noResponsibility?: string | null, notificationHeading?: string | null, notificationIntro?: string | null, contactIntro?: string | null, supportTeam?: string | null, support?: string | null, supportPhone?: string | null, supportEmail?: string | null } | null, ready?: { __typename: 'PolicyReady', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'PolicyRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'PolicyRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null } };
+
+export type PolicyConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<PolicyFilter>;
+}>;
+
+
+export type PolicyConnectionQuery = { __typename?: 'Query', policyConnection: { __typename?: 'PolicyConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PolicyConnectionEdges', cursor: string, node?: { __typename: 'Policy', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, Privacypolicy?: { __typename: 'PolicyPrivacypolicy', heading?: string | null, date?: string | null, content?: string | null, contentOne?: string | null, contentTwo?: string | null, contentThree?: string | null, headingTwo?: string | null, info?: string | null, headingThree?: string | null, personalinfo?: string | null, list?: string | null, listTwo?: string | null, listThree?: string | null, allinfo?: string | null, headingFour?: string | null, infocollect?: string | null, headingFive?: string | null, spanFive?: string | null } | null, PrivacyList?: { __typename: 'PolicyPrivacyList', thirdPartyName?: string | null, thirdPartyEmail?: string | null, thirdPartyAddress?: string | null, thirdPartyPhone?: string | null, billingHeading?: string | null, creditCard?: string | null, billingAddress?: string | null, financialHeading?: string | null, bankAccount?: string | null, taxID?: string | null, uniqueIdentifiersHeading?: string | null, userName?: string | null, accountNumbers?: string | null, password?: string | null, businessHeading?: string | null, companyName?: string | null, companySize?: string | null, businessType?: string | null, transactionVolume?: string | null, otherInfoHeading?: string | null, transactionData?: string | null, generatedInfo?: string | null, problemReport?: string | null, correspondence?: string | null, thirdPartyInfo?: string | null, autoCollectHeading?: string | null, autoCollectIntro?: string | null, ipAddress?: string | null, browserType?: string | null, referringExitPages?: string | null, operatingSystemInfo?: string | null, otherBrowserInfo?: string | null, trackingPolicy?: string | null, howWeUseHeading?: string | null, usageDetails?: string | null, cookiesUsage?: string | null, enforceTermsUsage?: string | null, sharingInfo?: string | null, noRentSell?: string | null, limitedShare?: string | null, legalReq?: string | null, businessChanges?: string | null, otherUses?: string | null, nonIdentifiable?: string | null, ccpaHeading?: string | null, ccpaIntro?: string | null, right?: string | null, rightToKnow?: string | null, rightToKnowDetails?: string | null, collectedInfoCategories?: string | null, sourcesInfoCategories?: string | null, businessPurpose?: string | null, thirdPartyCategories?: string | null } | null, rights?: { __typename: 'PolicyRights', right?: string | null, right1?: string | null, head1?: string | null, right2?: string | null, head2?: string | null, right3?: string | null, right4?: string | null, euRightsHeading?: string | null, euRightsIntro?: string | null, seeInfoAboutYou?: string | null, seeProvidedInfo?: string | null, changeCorrectInfo?: string | null, deleteInfo?: string | null, stopProcessing?: string | null, objectToProcessing?: string | null, withdrawConsent?: string | null, optOutFutureComms?: string | null, declineInfo?: string | null, cookieRefusal?: string | null, cookieSettingsFirefox?: string | null, cookieSettingsIE?: string | null, cookieSettingsChrome?: string | null, cookieSettingsSafariOSX?: string | null, cookieSettingsSafariIOS?: string | null, cookieSettingsAndroid?: string | null, disableCookiesNote?: string | null, optOutGoogleAnalytics?: string | null, compromiseHeading?: string | null, notificationProcedures?: string | null, noLiability?: string | null, linksHeading?: string | null, noResponsibility?: string | null, notificationHeading?: string | null, notificationIntro?: string | null, contactIntro?: string | null, supportTeam?: string | null, support?: string | null, supportPhone?: string | null, supportEmail?: string | null } | null, ready?: { __typename: 'PolicyReady', readyheading?: string | null, spanheading?: string | null, readycontent?: string | null, bannerButtonText1?: string | null, bannerButtonText2?: string | null } | null, rgstwo?: { __typename: 'PolicyRgstwo', readyheadingtwo?: string | null, readycontenttwo?: string | null, bannerButtonText3?: string | null, readytwoimage?: string | null } | null, rgsthree?: { __typename: 'PolicyRgsthree', readyheadingthree?: string | null, readycontentthree?: string | null, apibuttons?: string | null, readythreeimage?: string | null } | null } | null } | null> | null } };
+
 export type PostQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
@@ -872,9 +4914,50 @@ export type PostConnectionQueryVariables = Exact<{
 
 export type PostConnectionQuery = { __typename?: 'Query', postConnection: { __typename?: 'PostConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PostConnectionEdges', cursor: string, node?: { __typename: 'Post', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
+export const AboutPartsFragmentDoc = gql`
+    fragment AboutParts on About {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+}
+    `;
 export const BlogPartsFragmentDoc = gql`
     fragment BlogParts on Blog {
   __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
   heroText {
     __typename
     bannerTitle
@@ -884,28 +4967,762 @@ export const BlogPartsFragmentDoc = gql`
     bannerButtonText2
     bannerImage
   }
-  sectionTwo {
+  horizhover {
     __typename
     title
-    titlecontent
-    titlecontentimage
+    content
+    image1
+    title1
+    content1
+    image2
     title2
-    titlecontent2
-    titlecontentimage3
-    title3
-    titlecontent3
+    content2
   }
   sectionThree {
     __typename
     digital
     digitalspan
     digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
   }
   displayinsights {
     __typename
     Headingone
     Headingtwo
     insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+    `;
+export const RealtimePartsFragmentDoc = gql`
+    fragment RealtimeParts on Realtime {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+    `;
+export const FednowPartsFragmentDoc = gql`
+    fragment FednowParts on Fednow {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+    `;
+export const InstantPartsFragmentDoc = gql`
+    fragment InstantParts on Instant {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+    `;
+export const MailedPartsFragmentDoc = gql`
+    fragment MailedParts on Mailed {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+    `;
+export const PrintablePartsFragmentDoc = gql`
+    fragment PrintableParts on Printable {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+    `;
+export const VirtualPartsFragmentDoc = gql`
+    fragment VirtualParts on Virtual {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+  faq {
+    __typename
+    faqheading
+    questions {
+      __typename
+      question
+      answer
+      ctatext
+      ctalink
+    }
+  }
+}
+    `;
+export const ZellePartsFragmentDoc = gql`
+    fragment ZelleParts on Zelle {
+  __typename
+  header {
+    __typename
+    image
+    label1
+    label2
+    label3
+    label4
+    label5
+    label6
+    label7
+    button
+  }
+  heroText {
+    __typename
+    bannerTitle
+    bannerSpanTitle
+    bannerContent
+    bannerButtonText1
+    bannerButtonText2
+    bannerImage
+  }
+  horizhover {
+    __typename
+    title
+    content
+    image1
+    title1
+    content1
+    image2
+    title2
+    content2
+  }
+  sectionThree {
+    __typename
+    digital
+    digitalspan
+    digitalcontent
+    title1
+    content1
+    title2
+    content2
+    image
+  }
+  displayinsights {
+    __typename
+    Headingone
+    Headingtwo
+    insight
+  }
+  discover {
+    __typename
+    image1
+    date1
+    content1
+    btn1
+    image2
+    date2
+    content2
+    btn2
+    image3
+    date3
+    content3
+    btn3
   }
   rgs {
     __typename
@@ -998,6 +5815,233 @@ export const PagePartsFragmentDoc = gql`
   }
 }
     `;
+export const TermsPartsFragmentDoc = gql`
+    fragment TermsParts on Terms {
+  __typename
+  conditions {
+    __typename
+    tacheading
+    spanheading
+    quote
+    spanquote
+    quote2
+    spanquote2
+    quote3
+    spanquote3
+    tacOne
+    termOne
+    tacTwo
+    termTwo
+    tacThree
+    termThree
+    tacFour
+    termFour
+    tacFive
+    termFive
+    tacSix
+    termSix
+    termSix2
+    termSix3
+    termSix4
+    tacSeven
+    termSeven
+    tacEight
+    termEight
+    tacNine
+    termNine
+    tacTen
+    termTen
+    tacEleven
+    termEleven
+    termElevenbold
+    termEleven2
+    termElevenbold3
+    termEleven3
+    termEleven4
+    termEleven5
+    termEleven6
+    termEleven7
+    termEleven8
+    termEleven9
+    termEleven10
+    termEleven11
+    termEleven12
+    tacTwelve
+    termTwelve
+    tacThirteen
+    termThirteen
+    termThirteen2
+  }
+  rgs {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+}
+    `;
+export const PolicyPartsFragmentDoc = gql`
+    fragment PolicyParts on Policy {
+  __typename
+  Privacypolicy {
+    __typename
+    heading
+    date
+    content
+    contentOne
+    contentTwo
+    contentThree
+    headingTwo
+    info
+    headingThree
+    personalinfo
+    list
+    listTwo
+    listThree
+    allinfo
+    headingFour
+    infocollect
+    headingFive
+    spanFive
+  }
+  PrivacyList {
+    __typename
+    thirdPartyName
+    thirdPartyEmail
+    thirdPartyAddress
+    thirdPartyPhone
+    billingHeading
+    creditCard
+    billingAddress
+    financialHeading
+    bankAccount
+    taxID
+    uniqueIdentifiersHeading
+    userName
+    accountNumbers
+    password
+    businessHeading
+    companyName
+    companySize
+    businessType
+    transactionVolume
+    otherInfoHeading
+    transactionData
+    generatedInfo
+    problemReport
+    correspondence
+    thirdPartyInfo
+    autoCollectHeading
+    autoCollectIntro
+    ipAddress
+    browserType
+    referringExitPages
+    operatingSystemInfo
+    otherBrowserInfo
+    trackingPolicy
+    howWeUseHeading
+    usageDetails
+    cookiesUsage
+    enforceTermsUsage
+    sharingInfo
+    noRentSell
+    limitedShare
+    legalReq
+    businessChanges
+    otherUses
+    nonIdentifiable
+    ccpaHeading
+    ccpaIntro
+    right
+    rightToKnow
+    rightToKnowDetails
+    collectedInfoCategories
+    sourcesInfoCategories
+    businessPurpose
+    thirdPartyCategories
+  }
+  rights {
+    __typename
+    right
+    right1
+    head1
+    right2
+    head2
+    right3
+    right4
+    euRightsHeading
+    euRightsIntro
+    seeInfoAboutYou
+    seeProvidedInfo
+    changeCorrectInfo
+    deleteInfo
+    stopProcessing
+    objectToProcessing
+    withdrawConsent
+    optOutFutureComms
+    declineInfo
+    cookieRefusal
+    cookieSettingsFirefox
+    cookieSettingsIE
+    cookieSettingsChrome
+    cookieSettingsSafariOSX
+    cookieSettingsSafariIOS
+    cookieSettingsAndroid
+    disableCookiesNote
+    optOutGoogleAnalytics
+    compromiseHeading
+    notificationProcedures
+    noLiability
+    linksHeading
+    noResponsibility
+    notificationHeading
+    notificationIntro
+    contactIntro
+    supportTeam
+    support
+    supportPhone
+    supportEmail
+  }
+  ready {
+    __typename
+    readyheading
+    spanheading
+    readycontent
+    bannerButtonText1
+    bannerButtonText2
+  }
+  rgstwo {
+    __typename
+    readyheadingtwo
+    readycontenttwo
+    bannerButtonText3
+    readytwoimage
+  }
+  rgsthree {
+    __typename
+    readyheadingthree
+    readycontentthree
+    apibuttons
+    readythreeimage
+  }
+}
+    `;
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
   __typename
@@ -1005,6 +6049,61 @@ export const PostPartsFragmentDoc = gql`
   body
 }
     `;
+export const AboutDocument = gql`
+    query about($relativePath: String!) {
+  about(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...AboutParts
+  }
+}
+    ${AboutPartsFragmentDoc}`;
+export const AboutConnectionDocument = gql`
+    query aboutConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutFilter) {
+  aboutConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...AboutParts
+      }
+    }
+  }
+}
+    ${AboutPartsFragmentDoc}`;
 export const BlogDocument = gql`
     query blog($relativePath: String!) {
   blog(relativePath: $relativePath) {
@@ -1060,6 +6159,391 @@ export const BlogConnectionDocument = gql`
   }
 }
     ${BlogPartsFragmentDoc}`;
+export const RealtimeDocument = gql`
+    query realtime($relativePath: String!) {
+  realtime(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...RealtimeParts
+  }
+}
+    ${RealtimePartsFragmentDoc}`;
+export const RealtimeConnectionDocument = gql`
+    query realtimeConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: RealtimeFilter) {
+  realtimeConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...RealtimeParts
+      }
+    }
+  }
+}
+    ${RealtimePartsFragmentDoc}`;
+export const FednowDocument = gql`
+    query fednow($relativePath: String!) {
+  fednow(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...FednowParts
+  }
+}
+    ${FednowPartsFragmentDoc}`;
+export const FednowConnectionDocument = gql`
+    query fednowConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: FednowFilter) {
+  fednowConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...FednowParts
+      }
+    }
+  }
+}
+    ${FednowPartsFragmentDoc}`;
+export const InstantDocument = gql`
+    query instant($relativePath: String!) {
+  instant(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...InstantParts
+  }
+}
+    ${InstantPartsFragmentDoc}`;
+export const InstantConnectionDocument = gql`
+    query instantConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: InstantFilter) {
+  instantConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...InstantParts
+      }
+    }
+  }
+}
+    ${InstantPartsFragmentDoc}`;
+export const MailedDocument = gql`
+    query mailed($relativePath: String!) {
+  mailed(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...MailedParts
+  }
+}
+    ${MailedPartsFragmentDoc}`;
+export const MailedConnectionDocument = gql`
+    query mailedConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: MailedFilter) {
+  mailedConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...MailedParts
+      }
+    }
+  }
+}
+    ${MailedPartsFragmentDoc}`;
+export const PrintableDocument = gql`
+    query printable($relativePath: String!) {
+  printable(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...PrintableParts
+  }
+}
+    ${PrintablePartsFragmentDoc}`;
+export const PrintableConnectionDocument = gql`
+    query printableConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: PrintableFilter) {
+  printableConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...PrintableParts
+      }
+    }
+  }
+}
+    ${PrintablePartsFragmentDoc}`;
+export const VirtualDocument = gql`
+    query virtual($relativePath: String!) {
+  virtual(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...VirtualParts
+  }
+}
+    ${VirtualPartsFragmentDoc}`;
+export const VirtualConnectionDocument = gql`
+    query virtualConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: VirtualFilter) {
+  virtualConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...VirtualParts
+      }
+    }
+  }
+}
+    ${VirtualPartsFragmentDoc}`;
+export const ZelleDocument = gql`
+    query zelle($relativePath: String!) {
+  zelle(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...ZelleParts
+  }
+}
+    ${ZellePartsFragmentDoc}`;
+export const ZelleConnectionDocument = gql`
+    query zelleConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ZelleFilter) {
+  zelleConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...ZelleParts
+      }
+    }
+  }
+}
+    ${ZellePartsFragmentDoc}`;
 export const PageDocument = gql`
     query page($relativePath: String!) {
   page(relativePath: $relativePath) {
@@ -1115,6 +6599,116 @@ export const PageConnectionDocument = gql`
   }
 }
     ${PagePartsFragmentDoc}`;
+export const TermsDocument = gql`
+    query terms($relativePath: String!) {
+  terms(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...TermsParts
+  }
+}
+    ${TermsPartsFragmentDoc}`;
+export const TermsConnectionDocument = gql`
+    query termsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: TermsFilter) {
+  termsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...TermsParts
+      }
+    }
+  }
+}
+    ${TermsPartsFragmentDoc}`;
+export const PolicyDocument = gql`
+    query policy($relativePath: String!) {
+  policy(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...PolicyParts
+  }
+}
+    ${PolicyPartsFragmentDoc}`;
+export const PolicyConnectionDocument = gql`
+    query policyConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: PolicyFilter) {
+  policyConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...PolicyParts
+      }
+    }
+  }
+}
+    ${PolicyPartsFragmentDoc}`;
 export const PostDocument = gql`
     query post($relativePath: String!) {
   post(relativePath: $relativePath) {
@@ -1173,17 +6767,77 @@ export const PostConnectionDocument = gql`
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
-      blog(variables: BlogQueryVariables, options?: C): Promise<{data: BlogQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: BlogQueryVariables, query: string}> {
+      about(variables: AboutQueryVariables, options?: C): Promise<{data: AboutQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutQueryVariables, query: string}> {
+        return requester<{data: AboutQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutQueryVariables, query: string}, AboutQueryVariables>(AboutDocument, variables, options);
+      },
+    aboutConnection(variables?: AboutConnectionQueryVariables, options?: C): Promise<{data: AboutConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutConnectionQueryVariables, query: string}> {
+        return requester<{data: AboutConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutConnectionQueryVariables, query: string}, AboutConnectionQueryVariables>(AboutConnectionDocument, variables, options);
+      },
+    blog(variables: BlogQueryVariables, options?: C): Promise<{data: BlogQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: BlogQueryVariables, query: string}> {
         return requester<{data: BlogQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: BlogQueryVariables, query: string}, BlogQueryVariables>(BlogDocument, variables, options);
       },
     blogConnection(variables?: BlogConnectionQueryVariables, options?: C): Promise<{data: BlogConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: BlogConnectionQueryVariables, query: string}> {
         return requester<{data: BlogConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: BlogConnectionQueryVariables, query: string}, BlogConnectionQueryVariables>(BlogConnectionDocument, variables, options);
+      },
+    realtime(variables: RealtimeQueryVariables, options?: C): Promise<{data: RealtimeQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: RealtimeQueryVariables, query: string}> {
+        return requester<{data: RealtimeQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: RealtimeQueryVariables, query: string}, RealtimeQueryVariables>(RealtimeDocument, variables, options);
+      },
+    realtimeConnection(variables?: RealtimeConnectionQueryVariables, options?: C): Promise<{data: RealtimeConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: RealtimeConnectionQueryVariables, query: string}> {
+        return requester<{data: RealtimeConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: RealtimeConnectionQueryVariables, query: string}, RealtimeConnectionQueryVariables>(RealtimeConnectionDocument, variables, options);
+      },
+    fednow(variables: FednowQueryVariables, options?: C): Promise<{data: FednowQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FednowQueryVariables, query: string}> {
+        return requester<{data: FednowQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FednowQueryVariables, query: string}, FednowQueryVariables>(FednowDocument, variables, options);
+      },
+    fednowConnection(variables?: FednowConnectionQueryVariables, options?: C): Promise<{data: FednowConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FednowConnectionQueryVariables, query: string}> {
+        return requester<{data: FednowConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FednowConnectionQueryVariables, query: string}, FednowConnectionQueryVariables>(FednowConnectionDocument, variables, options);
+      },
+    instant(variables: InstantQueryVariables, options?: C): Promise<{data: InstantQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: InstantQueryVariables, query: string}> {
+        return requester<{data: InstantQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: InstantQueryVariables, query: string}, InstantQueryVariables>(InstantDocument, variables, options);
+      },
+    instantConnection(variables?: InstantConnectionQueryVariables, options?: C): Promise<{data: InstantConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: InstantConnectionQueryVariables, query: string}> {
+        return requester<{data: InstantConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: InstantConnectionQueryVariables, query: string}, InstantConnectionQueryVariables>(InstantConnectionDocument, variables, options);
+      },
+    mailed(variables: MailedQueryVariables, options?: C): Promise<{data: MailedQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MailedQueryVariables, query: string}> {
+        return requester<{data: MailedQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MailedQueryVariables, query: string}, MailedQueryVariables>(MailedDocument, variables, options);
+      },
+    mailedConnection(variables?: MailedConnectionQueryVariables, options?: C): Promise<{data: MailedConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MailedConnectionQueryVariables, query: string}> {
+        return requester<{data: MailedConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MailedConnectionQueryVariables, query: string}, MailedConnectionQueryVariables>(MailedConnectionDocument, variables, options);
+      },
+    printable(variables: PrintableQueryVariables, options?: C): Promise<{data: PrintableQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PrintableQueryVariables, query: string}> {
+        return requester<{data: PrintableQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PrintableQueryVariables, query: string}, PrintableQueryVariables>(PrintableDocument, variables, options);
+      },
+    printableConnection(variables?: PrintableConnectionQueryVariables, options?: C): Promise<{data: PrintableConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PrintableConnectionQueryVariables, query: string}> {
+        return requester<{data: PrintableConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PrintableConnectionQueryVariables, query: string}, PrintableConnectionQueryVariables>(PrintableConnectionDocument, variables, options);
+      },
+    virtual(variables: VirtualQueryVariables, options?: C): Promise<{data: VirtualQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: VirtualQueryVariables, query: string}> {
+        return requester<{data: VirtualQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: VirtualQueryVariables, query: string}, VirtualQueryVariables>(VirtualDocument, variables, options);
+      },
+    virtualConnection(variables?: VirtualConnectionQueryVariables, options?: C): Promise<{data: VirtualConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: VirtualConnectionQueryVariables, query: string}> {
+        return requester<{data: VirtualConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: VirtualConnectionQueryVariables, query: string}, VirtualConnectionQueryVariables>(VirtualConnectionDocument, variables, options);
+      },
+    zelle(variables: ZelleQueryVariables, options?: C): Promise<{data: ZelleQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ZelleQueryVariables, query: string}> {
+        return requester<{data: ZelleQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ZelleQueryVariables, query: string}, ZelleQueryVariables>(ZelleDocument, variables, options);
+      },
+    zelleConnection(variables?: ZelleConnectionQueryVariables, options?: C): Promise<{data: ZelleConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ZelleConnectionQueryVariables, query: string}> {
+        return requester<{data: ZelleConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ZelleConnectionQueryVariables, query: string}, ZelleConnectionQueryVariables>(ZelleConnectionDocument, variables, options);
       },
     page(variables: PageQueryVariables, options?: C): Promise<{data: PageQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PageQueryVariables, query: string}> {
         return requester<{data: PageQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PageQueryVariables, query: string}, PageQueryVariables>(PageDocument, variables, options);
       },
     pageConnection(variables?: PageConnectionQueryVariables, options?: C): Promise<{data: PageConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PageConnectionQueryVariables, query: string}> {
         return requester<{data: PageConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PageConnectionQueryVariables, query: string}, PageConnectionQueryVariables>(PageConnectionDocument, variables, options);
+      },
+    terms(variables: TermsQueryVariables, options?: C): Promise<{data: TermsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TermsQueryVariables, query: string}> {
+        return requester<{data: TermsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TermsQueryVariables, query: string}, TermsQueryVariables>(TermsDocument, variables, options);
+      },
+    termsConnection(variables?: TermsConnectionQueryVariables, options?: C): Promise<{data: TermsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TermsConnectionQueryVariables, query: string}> {
+        return requester<{data: TermsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TermsConnectionQueryVariables, query: string}, TermsConnectionQueryVariables>(TermsConnectionDocument, variables, options);
+      },
+    policy(variables: PolicyQueryVariables, options?: C): Promise<{data: PolicyQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PolicyQueryVariables, query: string}> {
+        return requester<{data: PolicyQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PolicyQueryVariables, query: string}, PolicyQueryVariables>(PolicyDocument, variables, options);
+      },
+    policyConnection(variables?: PolicyConnectionQueryVariables, options?: C): Promise<{data: PolicyConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PolicyConnectionQueryVariables, query: string}> {
+        return requester<{data: PolicyConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PolicyConnectionQueryVariables, query: string}, PolicyConnectionQueryVariables>(PolicyConnectionDocument, variables, options);
       },
     post(variables: PostQueryVariables, options?: C): Promise<{data: PostQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PostQueryVariables, query: string}> {
         return requester<{data: PostQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PostQueryVariables, query: string}, PostQueryVariables>(PostDocument, variables, options);

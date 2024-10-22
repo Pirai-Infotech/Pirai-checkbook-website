@@ -55,6 +55,7 @@ function Verticalhover({ sectionThree,heading, spancon, description, items, imag
                       ? `text-[#7F53E7] opacity-100`
                       : `text-[#404040] opacity-0`
                   } lg:pr-24 font-circular-spotify font-medium text-[25px] leading-[28.62px] xl:text-[39px] xl:leading-[44.65px] group-hover:text-[#7F53E7] pb-3`}
+                  data-tina-field={tinaField(sectionThree, item.headingKey)}
                 >
                   {item.heading}
                 </h4>
@@ -64,6 +65,7 @@ function Verticalhover({ sectionThree,heading, spancon, description, items, imag
                       ? `block text-[#7F53E7] opacity-100`
                       : `opacity-0 hidden text-[#404040]`
                   } lg:group-hover:block font-circular-spotify font-light text-[18px] leading-[25.4px] xl:text-[25px] xl:leading-[35.28px]`}
+                  data-tina-field={tinaField(sectionThree, item.textKey)}
                 >
                   {item.text}
                 </p>
@@ -71,9 +73,11 @@ function Verticalhover({ sectionThree,heading, spancon, description, items, imag
             </div>
           ))}
         </div>
-        <div className="flex-grow-1">
+        <div className="flex-grow-1" data-tina-field={tinaField(sectionThree, "image")}>
           <Image
-            src={imageSrc}
+            src={imageSrc? imageSrc : ""}
+            width={500}
+            height={500}
             alt="Printable Check"
             className="h-[500px] w-[150px] md:w-[500px] lg:w-[775px] lg:h-[100%] object-left object-cover"
           />
